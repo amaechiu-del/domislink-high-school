@@ -1,0 +1,20 @@
+﻿{
+  "name": "DomisLink High School Academy",
+  "short_name": "DomisLink",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#1E1E2E",
+  "theme_color": "#D4AF37",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://via.placeholder.com/512",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

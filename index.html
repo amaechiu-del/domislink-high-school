@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>DomisLink High School</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://js.paystack.co https://pagead2.googlesyndication.com; style-src 'self' 'unsafe-inline'; connect-src 'self' https://domislink-academy.replit.app; img-src 'self' data: https:; font-src 'self' data:; frame-src https://js.paystack.co;">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <meta name="description" content="DomisLink High School – The Digital Empire's premier learning platform for JSS1 to SSS3.">
+    <meta name="theme-color" content="#D4AF37">
+    <link rel="icon" href="favicon.ico">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6475022038162810" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="app-header">
+        <h1>👑 DomisLink High School</h1>
+    </header>
+
+    <main id="app-container">
+        <!-- Home View -->
+        <section id="home-view" class="view">
+            <div class="welcome-card">
+                <h2>Welcome, Scholar</h2>
+                <div class="gamification-stats-card">
+                    <div class="stat-item"><span class="label">XP</span><span id="xp-display">0</span></div>
+                    <div class="stat-item"><span class="label">Rank</span><span id="level-display">Level 1</span></div>
+                    <div class="stat-item"><span class="label">Streak</span><span id="streak-display">0 🔥</span></div>
+                </div>
+                <div id="access-timer" class="access-timer-pill">Access: 00:00:00</div>
+            </div>
+            <div class="quick-actions">
+                <button onclick="switchView('classroom')" class="btn-primary">Go to Classroom</button>
+            </div>
+        </section>
+
+        <!-- Paywall / Subscription Section -->
+        <section id="paywall" class="hidden">
+            <h2>Unlock Access</h2>
+            <div class="subscription-ui">
+                <p><strong>Access Rate: ₦300 / day (24 hours)</strong></p>
+                <div class="input-group-sub">
+                    <label for="sub-email">Email for Receipt:</label>
+                    <input type="email" id="sub-email" placeholder="your@email.com" required>
+                </div>
+                <div class="input-group-sub">
+                    <label for="sub-duration-type">Duration Type:</label>
+                    <select id="sub-duration-type">
+                        <option value="days">Days</option>
+                        <option value="weeks">Weeks</option>
+                        <option value="months">Months</option>
+                        <option value="term">One School Term</option>
+                    </select>
+                </div>
+                <div class="input-group-sub">
+                    <label for="sub-duration-value">Number of <span id="duration-unit-label">Days</span>:</label>
+                    <input type="number" id="sub-duration-value" min="1" value="1" step="1">
+                </div>
+                <p class="total-display">Total Amount: <strong>₦<span id="total-price-display">300</span></strong></p>
+                <p class="note"><small>* 1 Week = 7 days, 1 Month = 30 days, 1 Term = 90 days</small></p>
+            </div>
+            <button id="pay-button" class="btn-primary">Pay via Paystack</button>
+        </section>
+
+        <!-- Classroom Section -->
+        <section id="classroom" class="view hidden">
+            <div class="guidance-panel">
+                <div class="guidance-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <label>📚 Academic Level</label>
+                        <select id="level-toggle">
+                            <option value="jss1">JSS 1 (Junior Secondary 1)</option>
+                            <option value="jss2">JSS 2 (Junior Secondary 2)</option>
+                            <option value="jss3">JSS 3 (Junior Secondary 3)</option>
+                            <option value="sss1">SSS 1 (Senior Secondary 1)</option>
+                            <option value="sss2">SSS 2 (Senior Secondary 2)</option>
+                            <option value="sss3">SSS 3 (Senior Secondary 3)</option>
+                        </select>
+                        <p class="hint">👉 Choose the class you are currently in</p>
+                    </div>
+                </div>
+                <div class="guidance-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <label>📖 Exam Body / Syllabus</label>
+                        <select id="syllabus-toggle">
+                            <option value="nerdc">NERDC (National Curriculum)</option>
+                            <option value="waec">WAEC / NECO (SSCE)</option>
+                            <option value="bece">BECE / JSCE (Junior WAEC)</option>
+                            <option value="nabteb">NABTEB (Technical)</option>
+                        </select>
+                        <p class="hint">👉 Pick the exam you are preparing for</p>
+                    </div>
+                </div>
+                <div class="guidance-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <label>🌐 Language of Instruction</label>
+                        <select id="language-toggle">
+                            <option value="english">English</option>
+                            <option value="pidgin">Nigerian Pidgin</option>
+                            <option value="yoruba">Yoruba</option>
+                            <option value="hausa">Hausa</option>
+                            <option value="igbo">Igbo</option>
+                            <option value="french">French</option>
+                        </select>
+                        <p class="hint">👉 Choose your preferred learning language</p>
+                    </div>
+                </div>
+                <button id="apply-settings-btn" class="btn-primary" style="margin-top: 16px;">✨ Apply & Load Subjects</button>
+            </div>
+
+            <div id="subject-container">
+                <div id="subject-trivia" class="trivia-card hidden"></div>
+                <div id="subject-list"></div>
+            </div>
+            <div id="topic-container" class="hidden">
+                <button id="back-to-subjects" class="btn-secondary">← Back to Subjects</button>
+                <h3 id="current-subject-title"></h3>
+                <div id="topic-list"></div>
+            </div>
+            <div id="lesson-header" class="hidden">
+                <button id="speak-btn" class="btn-audio">🔊 Listen to Lesson</button>
+                <button id="complete-btn" class="btn-audio" style="background:#28a745">Mark as Completed</button>
+                <button id="video-btn" class="btn-audio" style="background:#ff0000">📺 Watch Video Lesson</button>
+                <button id="quiz-btn" class="btn-audio" style="background:#6f42c1">📝 Take Topic Quiz</button>
+            </div>
+            <div id="ai-output" class="teaching-box">
+                <div id="topic-trivia" class="trivia-card hidden"></div>
+                <div id="loader-container" class="hidden">
+                    <div class="progress-bar-wrapper">
+                        <div class="progress-bar-fill" id="progress-bar-fill"></div>
+                    </div>
+                    <div class="progress-text" id="progress-text">0%</div>
+                    <div class="loader-spinner"></div>
+                    <span>Preparing your lesson...</span>
+                </div>
+                <p>Select a topic to start learning...</p>
+            </div>
+            <div id="quiz-container" class="hidden quiz-box"></div>
+            <div id="follow-up-container" class="hidden">
+                <hr>
+                <h4>Have a question? Ask your Teacher:</h4>
+                <div class="input-group">
+                    <input type="text" id="user-question" placeholder="Ask anything about this topic...">
+                    <button id="voice-btn" class="btn-audio-sm">🎤</button>
+                    <button id="ask-btn" class="btn-primary-sm">Ask</button>
+                </div>
+                <div id="follow-up-result" class="follow-up-box"></div>
+            </div>
+        </section>
+
+        <!-- NEW: Settings View -->
+        <section id="settings-view" class="view hidden">
+            <div class="settings-card">
+                <h2>⚙️ Settings</h2>
+                <div class="settings-group">
+                    <h3>Storage</h3>
+                    <button id="clear-cache-btn" class="btn-secondary">🗑️ Clear Cached Lessons</button>
+                    <button id="reset-progress-btn" class="btn-secondary">🔄 Reset XP & Progress</button>
+                    <p id="storage-info" class="storage-info">Loading storage info...</p>
+                </div>
+                <div class="settings-group">
+                    <h3>Appearance</h3>
+                    <label for="theme-select">Theme:</label>
+                    <select id="theme-select">
+                        <option value="auto">Auto (follow system)</option>
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                    </select>
+                </div>
+                <div class="settings-group">
+                    <h3>About</h3>
+                    <p>Version: 1.0.2</p>
+                    <p>© 2024-2025 DomisLink International Business Services Ltd</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <button class="nav-item" data-view="home-view">🏠<br>Home</button>
+        <button class="nav-item" data-view="classroom">📚<br>Learn</button>
+        <button class="nav-item" data-view="paywall">💎<br>Pro</button>
+        <button class="nav-item" data-view="settings-view">⚙️<br>Settings</button>
+    </nav>
+
+    <footer class="production-footer">
+        <p><strong>DomisLink International Business Services Ltd</strong></p>
+        <p>19 Powerline, Asiwaju Dada, Lagos</p>
+        <p>Email: support@domislink.com | Tel: +2347066117100</p>
+        <div class="legal-links">
+            <a href="terms.html" target="_blank">Terms</a> | 
+            <a href="#" onclick="alert('Privacy Policy: We only store your expiry date and completed topics locally on your device.')">Privacy</a>
+        </div>
+        <p class="copyright">&copy; 2024 - 2025 DomisLink. All Rights Reserved. <br> Powered by The Digital Empire 👑</p>
+        <p class="ai-disclaimer"><small>Disclaimer: Lessons are AUTO generated. Verify critical facts with APPLICABLE SYLABUS.</small></p>
+    </footer>
+
+    <div id="update-banner" class="update-banner hidden">
+        A new version is available! <button onclick="window.location.reload()">Refresh to Update</button>
+    </div>
+
+    <script>
+        // View switcher (supports both inline onclick and event listeners)
+        function switchView(viewId) {
+            const views = ['home-view', 'classroom', 'paywall', 'settings-view'];
+            views.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.classList.add('hidden');
+            });
+            const target = document.getElementById(viewId);
+            if (target) target.classList.remove('hidden');
+        }
+
+        // Attach click listeners to bottom navigation buttons
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.bottom-nav .nav-item');
+            buttons.forEach(btn => {
+                const view = btn.getAttribute('data-view');
+                if (view) {
+                    btn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        switchView(view);
+                    });
+                }
+            });
+
+            // --- Settings functionality ---
+            const clearCacheBtn = document.getElementById('clear-cache-btn');
+            const resetProgressBtn = document.getElementById('reset-progress-btn');
+            const storageInfo = document.getElementById('storage-info');
+            const themeSelect = document.getElementById('theme-select');
+
+            // Function to update storage info
+            async function updateStorageInfo() {
+                if (navigator.storage && navigator.storage.estimate) {
+                    const estimate = await navigator.storage.estimate();
+                    const used = (estimate.usage / 1024 / 1024).toFixed(2);
+                    const quota = (estimate.quota / 1024 / 1024).toFixed(2);
+                    storageInfo.innerText = `Used: ${used} MB / ${quota} MB`;
+                } else {
+                    storageInfo.innerText = 'Storage info not available.';
+                }
+            }
+
+            // Clear IndexedDB lessons
+            clearCacheBtn.addEventListener('click', async () => {
+                if (confirm('This will delete all cached lessons. Are you sure?')) {
+                    const dbName = 'DomisLinkOfflineStore';
+                    const request = indexedDB.deleteDatabase(dbName);
+                    request.onsuccess = () => {
+                        alert('Cache cleared. Refresh the page to complete.');
+                        window.location.reload();
+                    };
+                    request.onerror = () => alert('Failed to delete cache.');
+                }
+            });
+
+            // Reset XP, level, streak, completed topics
+            resetProgressBtn.addEventListener('click', () => {
+                if (confirm('Reset all XP, level, streak, and completed topics? This cannot be undone.')) {
+                    localStorage.removeItem('jss1_xp');
+                    localStorage.removeItem('jss1_level');
+                    localStorage.removeItem('jss1_dailyStreak');
+                    localStorage.removeItem('jss1_completed');
+                    alert('Progress reset. Refresh the page to see changes.');
+                    window.location.reload();
+                }
+            });
+
+            // Theme switching (simple)
+            themeSelect.addEventListener('change', (e) => {
+                const theme = e.target.value;
+                if (theme === 'dark') {
+                    document.body.classList.add('dark-theme');
+                    document.body.classList.remove('light-theme');
+                } else if (theme === 'light') {
+                    document.body.classList.add('light-theme');
+                    document.body.classList.remove('dark-theme');
+                } else {
+                    document.body.classList.remove('dark-theme', 'light-theme');
+                }
+                localStorage.setItem('app_theme', theme);
+            });
+
+            // Load saved theme
+            const savedTheme = localStorage.getItem('app_theme');
+            if (savedTheme) {
+                themeSelect.value = savedTheme;
+                if (savedTheme === 'dark') document.body.classList.add('dark-theme');
+                if (savedTheme === 'light') document.body.classList.add('light-theme');
+            }
+
+            updateStorageInfo();
+        });
+
+        // Subscription price calculator
+        (function() {
+            const pricePerDay = 300;
+            const typeSelect = document.getElementById('sub-duration-type');
+            const valueInput = document.getElementById('sub-duration-value');
+            const unitLabel = document.getElementById('duration-unit-label');
+            const totalSpan = document.getElementById('total-price-display');
+
+            if (!typeSelect || !valueInput) return;
+
+            function getDays() {
+                const type = typeSelect.value;
+                let val = parseInt(valueInput.value) || 0;
+                if (type === 'days') return val;
+                if (type === 'weeks') return val * 7;
+                if (type === 'months') return val * 30;
+                if (type === 'term') return 90;
+                return 0;
+            }
+
+            function updatePrice() {
+                const days = getDays();
+                totalSpan.innerText = days * pricePerDay;
+                window.pendingDays = days;
+                window.pendingAmount = days * pricePerDay;
+            }
+
+            function updateLabelAndDisable() {
+                const type = typeSelect.value;
+                if (type === 'days') unitLabel.innerText = 'Days';
+                else if (type === 'weeks') unitLabel.innerText = 'Weeks';
+                else if (type === 'months') unitLabel.innerText = 'Months';
+                else if (type === 'term') {
+                    unitLabel.innerText = 'Terms';
+                    valueInput.value = 1;
+                    valueInput.disabled = true;
+                } else {
+                    valueInput.disabled = false;
+                }
+                updatePrice();
+            }
+
+            typeSelect.addEventListener('change', updateLabelAndDisable);
+            valueInput.addEventListener('input', updatePrice);
+            updateLabelAndDisable();
+        })();
+
+        // Level theme
+        function applyLevelTheme(level) {
+            const body = document.body;
+            body.className = body.className.replace(/level-\w+/g, '');
+            body.classList.add(`level-${level}`);
+        }
+        const levelSelect = document.getElementById('level-toggle');
+        if (levelSelect) {
+            applyLevelTheme(levelSelect.value);
+            levelSelect.addEventListener('change', (e) => applyLevelTheme(e.target.value));
+        }
+        const applyBtn = document.getElementById('apply-settings-btn');
+        if (applyBtn) {
+            applyBtn.addEventListener('click', () => {
+                if (levelSelect) applyLevelTheme(levelSelect.value);
+                const syllabusSelect = document.getElementById('syllabus-toggle');
+                const langSelect = document.getElementById('language-toggle');
+                if (syllabusSelect) syllabusSelect.dispatchEvent(new Event('change'));
+                if (langSelect) langSelect.dispatchEvent(new Event('change'));
+            });
+        }
+    </script>
+    <script src="app.js"></script>
+    <script src="security.js"></script>
+</body>
+</html>

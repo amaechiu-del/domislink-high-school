@@ -1,0 +1,111 @@
+<div class="lesson-container" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.6; max-width: 800px; margin: auto; border: 1px solid #ddd; padding: 20px; border-radius: 10px;">
+    <style>
+        @keyframes swapText {
+            0%, 40% { opacity: 1; transform: translateY(0); }
+            45%, 95% { opacity: 0; transform: translateY(-20px); }
+        }
+        @keyframes showPronoun {
+            0%, 45% { opacity: 0; transform: translateY(20px); }
+            50%, 90% { opacity: 1; transform: translateY(0); }
+        }
+        .fun-fact {
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .quiz-section {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px dashed #999;
+            border-radius: 8px;
+        }
+        .example-box {
+            background-color: #fff4e6;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <h2 style="color: #2c3e50; text-align: center;">English Studies: Nouns and Pronouns</h2>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="120" rx="10" fill="#f0f0f0" />
+            <!-- Noun Label -->
+            <text x="50" y="40" font-weight="bold" fill="#e67e22" font-size="14">NOUN (The Name)</text>
+            <text x="50" y="80" font-size="24" fill="#d35400" font-weight="bold">
+                Bisi
+                <animate attributeName="opacity" values="1;0;0;1" dur="4s" repeatCount="indefinite" />
+            </text>
+            
+            <!-- Arrow -->
+            <path d="M180 70 L220 70" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+            <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                    <polygon points="0 0, 10 3.5, 0 7" />
+                </marker>
+            </defs>
+
+            <!-- Pronoun Label -->
+            <text x="250" y="40" font-weight="bold" fill="#2980b9" font-size="14">PRONOUN (The Replacer)</text>
+            <text x="250" y="80" font-size="24" fill="#3498db" font-weight="bold">
+                She
+                <animate attributeName="opacity" values="0;1;1;0" dur="4s" repeatCount="indefinite" />
+            </text>
+        </svg>
+        <p style="font-size: 0.9em; color: #666;"><i>Wait for the animation to see the noun change into a pronoun!</i></p>
+    </div>
+
+    <h3 style="color: #d35400;">1. What is a Noun?</h3>
+    <p>A <strong>Noun</strong> is a naming word. It names people, places, animals, things, ideas, or qualities.</p>
+    <ul>
+        <li><strong>Common Nouns:</strong> General names like <i>boy, city, school</i>.</li>
+        <li><strong>Proper Nouns:</strong> Specific names (always start with capital letters) like <i>Nigeria, Monday, Emeka</i>.</li>
+        <li><strong>Abstract Nouns:</strong> Things you cannot touch like <i>honesty, love, wisdom</i>.</li>
+    </ul>
+
+    <h3 style="color: #2980b9;">2. What is a Pronoun?</h3>
+    <p>A <strong>Pronoun</strong> is a word used in place of a noun to avoid repeating the noun over and over again.</p>
+    <ul>
+        <li><strong>Personal Pronouns:</strong> I, you, he, she, it, we, they.</li>
+        <li><strong>Possessive Pronouns:</strong> Mine, yours, his, hers, ours, theirs.</li>
+    </ul>
+
+    <h3 style="color: #27ae60;">Nigerian Examples</h3>
+    <div class="example-box">
+        <strong>Example 1:</strong><br>
+        <i>Sentence:</i> <strong>Obinna</strong> is a fast runner. <strong>Obinna</strong> won the race.<br>
+        <i>Better:</i> <strong>Obinna</strong> is a fast runner. <strong>He</strong> won the race. <br>
+        <small>(Here, "Obinna" is the Noun, and "He" is the Pronoun.)</small>
+    </div>
+    <div class="example-box">
+        <strong>Example 2:</strong><br>
+        <i>Sentence:</i> <strong>Lagos</strong> is very crowded because <strong>Lagos</strong> is a commercial hub.<br>
+        <i>Better:</i> <strong>Lagos</strong> is very crowded because <strong>it</strong> is a commercial hub.<br>
+        <small>(Here, "Lagos" is the Noun, and "it" is the Pronoun.)</small>
+    </div>
+
+    <div class="fun-fact">
+        <strong>💡 Fun Fact:</strong> The word "I" is the shortest and oldest word in the English language, and it is also the most commonly used pronoun!
+    </div>
+
+    <div class="quiz-section">
+        <h3 style="margin-top: 0;">Practice Questions</h3>
+        <ol>
+            <li>In the sentence "The <b>teacher</b> forgot <b>her</b> book," which word is the Pronoun?</li>
+            <li>Change the underlined noun to a pronoun: "<u>The students</u> are in the classroom."</li>
+            <li>Is "Happiness" a Noun or a Pronoun?</li>
+        </ol>
+        <details style="margin-top: 10px; cursor: pointer; color: #27ae60;">
+            <summary><strong>Click here to see Answers</strong></summary>
+            <ol>
+                <li><strong>her</strong></li>
+                <li><strong>They</strong> (They are in the classroom.)</li>
+                <li><strong>Noun</strong> (It is an Abstract Noun.)</li>
+            </ol>
+        </details>
+    </div>
+</div>

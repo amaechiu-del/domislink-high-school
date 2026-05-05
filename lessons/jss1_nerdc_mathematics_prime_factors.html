@@ -1,0 +1,149 @@
+<style>
+    .lesson-container {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+    }
+    .highlight-box {
+        background-color: #e7f3ff;
+        border-left: 5px solid #2196F3;
+        padding: 15px;
+        margin: 20px 0;
+    }
+    .fun-fact {
+        background-color: #fff3cd;
+        border: 1px dashed #ffc107;
+        padding: 15px;
+        border-radius: 8px;
+        margin: 20px 0;
+    }
+    .example-box {
+        background-color: #d4edda;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    .svg-container {
+        text-align: center;
+        margin: 30px 0;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .node { fill: #2196F3; }
+    .node-text { fill: white; font-weight: bold; font-size: 14px; }
+    .line { stroke: #666; stroke-width: 2; }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-step { animation: fadeIn 0.8s ease-out forwards; opacity: 0; }
+    .step-1 { animation-delay: 0.5s; }
+    .step-2 { animation-delay: 1.5s; }
+    .step-3 { animation-delay: 2.5s; }
+</style>
+
+<div class="lesson-container">
+    <h1>Understanding Prime Factors</h1>
+    
+    <p>In Mathematics, specifically the JSS1 NERDC curriculum, we learn that numbers can be broken down into smaller building blocks. These building blocks are called <strong>Prime Factors</strong>.</p>
+
+    <h3>What are Prime Factors?</h3>
+    <ul>
+        <li><strong>Factors:</strong> These are numbers that divide another number exactly without leaving a remainder.</li>
+        <li><strong>Prime Numbers:</strong> These are numbers greater than 1 that have only two factors: 1 and themselves (e.g., 2, 3, 5, 7, 11, 13...).</li>
+        <li><strong>Prime Factors:</strong> These are factors of a number that are also prime numbers.</li>
+    </ul>
+
+    <div class="highlight-box">
+        <strong>Key Concept:</strong> Every composite number can be expressed as a product of prime numbers. This is like the "DNA" of the number!
+    </div>
+
+    <h3>The Factor Tree Method</h3>
+    <p>One way to find prime factors is the "Factor Tree". Look at how we break down the number 12:</p>
+
+    <div class="svg-container">
+        <svg width="300" height="200" viewBox="0 0 300 200">
+            <!-- Level 1 -->
+            <g class="animate-step step-1">
+                <circle cx="150" cy="30" r="20" fill="#333" />
+                <text x="150" y="35" text-anchor="middle" class="node-text">12</text>
+            </g>
+            
+            <!-- Lines to Level 2 -->
+            <line x1="150" y1="50" x2="100" y2="80" class="line animate-step step-2" />
+            <line x1="150" y1="50" x2="200" y2="80" class="line animate-step step-2" />
+            
+            <!-- Level 2 -->
+            <g class="animate-step step-2">
+                <circle cx="100" cy="100" r="20" class="node" />
+                <text x="100" y="105" text-anchor="middle" class="node-text">2</text>
+                <circle cx="200" cy="100" r="20" fill="#999" />
+                <text x="200" y="105" text-anchor="middle" class="node-text">6</text>
+            </g>
+
+            <!-- Lines to Level 3 -->
+            <line x1="200" y1="120" x2="170" y2="150" class="line animate-step step-3" />
+            <line x1="200" y1="120" x2="230" y2="150" class="line animate-step step-3" />
+
+            <!-- Level 3 -->
+            <g class="animate-step step-3">
+                <circle cx="170" cy="170" r="20" class="node" />
+                <text x="170" y="175" text-anchor="middle" class="node-text">2</text>
+                <circle cx="230" cy="170" r="20" class="node" />
+                <text x="230" y="175" text-anchor="middle" class="node-text">3</text>
+            </g>
+        </svg>
+        <p><small><i>Blue circles represent Prime Factors: 2 × 2 × 3 = 12</i></small></p>
+    </div>
+
+    <h3>Nigerian Examples</h3>
+
+    <div class="example-box">
+        <strong>Example 1: The Basket of Oranges</strong>
+        <p>Obinna has <strong>30</strong> oranges from the Benue market. He wants to find the prime factors of 30.</p>
+        <ul>
+            <li>Is 30 divisible by 2? Yes. 30 ÷ 2 = 15. (2 is prime)</li>
+            <li>Is 15 divisible by 2? No. Try 3. 15 ÷ 3 = 5. (3 is prime)</li>
+            <li>5 is already a prime number.</li>
+            <li><strong>Answer:</strong> The prime factors of 30 are 2, 3, and 5. (Written as 2 × 3 × 5).</li>
+        </ul>
+    </div>
+
+    <div class="example-box">
+        <strong>Example 2: School Desks</strong>
+        <p>A school in Enugu just received <strong>28</strong> new desks. Express 28 as a product of its prime factors.</p>
+        <ul>
+            <li>28 ÷ 2 = 14</li>
+            <li>14 ÷ 2 = 7</li>
+            <li>7 is a prime number.</li>
+            <li><strong>Answer:</strong> 28 = 2 × 2 × 7 or 2² × 7.</li>
+        </ul>
+    </div>
+
+    <div class="fun-fact">
+        <strong>💡 Fun Fact:</strong> The number <strong>2</strong> is the only even prime number in existence! Every other prime number is odd.
+    </div>
+
+    <h3>Practice Questions</h3>
+    <ol>
+        <li>Express 24 as a product of prime factors.</li>
+        <li>Find the prime factors of 50.</li>
+        <li>What are the prime factors of 45?</li>
+    </ol>
+
+    <hr>
+    <h4>Answers</h4>
+    <p>
+        1. <strong>2 × 2 × 2 × 3</strong> (or 2³ × 3)<br>
+        2. <strong>2 × 5 × 5</strong> (or 2 × 5²)<br>
+        3. <strong>3 × 3 × 5</strong> (or 3² × 5)
+    </p>
+</div>

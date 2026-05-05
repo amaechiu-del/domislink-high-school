@@ -1,0 +1,128 @@
+<style>
+    .algebra-container {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+    }
+    .diagram-box {
+        background: #fff;
+        padding: 20px;
+        text-align: center;
+        border: 2px solid #4CAF50;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    .fun-fact {
+        background-color: #e3f2fd;
+        border-left: 5px solid #2196F3;
+        padding: 15px;
+        margin: 20px 0;
+        font-style: italic;
+    }
+    .example-box {
+        background-color: #fffde7;
+        border: 1px solid #fbc02d;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+    }
+    .practice-section {
+        background-color: #f1f8e9;
+        padding: 15px;
+        border-radius: 5px;
+        border: 1px solid #8bc34a;
+    }
+    .ans {
+        color: #2e7d32;
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+    }
+    h2 { color: #2c3e50; border-bottom: 2px solid #4CAF50; padding-bottom: 5px; }
+    h3 { color: #e67e22; }
+</style>
+
+<div class="algebra-container">
+    <h1>Understanding Algebraic Processes</h1>
+    <p>In Mathematics, Algebra is a way of using <strong>letters</strong> or symbols to represent numbers. These letters are called variables because their values can change.</p>
+
+    <div class="diagram-box">
+        <svg width="300" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+            <!-- Box for the letter -->
+            <rect x="50" y="40" width="60" height="60" fill="#4CAF50" rx="5">
+                <animate attributeName="fill" values="#4CAF50;#2196F3;#4CAF50" dur="4s" repeatCount="indefinite" />
+            </rect>
+            <text x="72" y="82" font-size="40" fill="white" font-weight="bold">x</text>
+            
+            <!-- Plus Sign -->
+            <text x="130" y="80" font-size="30" fill="#333">+</text>
+            
+            <!-- Constant Number -->
+            <circle cx="180" cy="70" r="30" fill="#fbc02d" />
+            <text x="172" y="82" font-size="30" fill="black">5</text>
+            
+            <!-- Description -->
+            <text x="40" y="130" font-size="14" fill="#666">Variable (Unknown)</text>
+            <text x="160" y="130" font-size="14" fill="#666">Constant</text>
+            
+            <!-- Animation of x turning into a number -->
+            <text x="72" y="82" font-size="40" fill="white" font-weight="bold" opacity="0">
+                3
+                <animate attributeName="opacity" values="0;0;1;1;0" dur="4s" repeatCount="indefinite" />
+            </text>
+        </svg>
+        <p><em>Animation: "x" represents a hidden number. If x = 3, then x + 5 = 8.</em></p>
+    </div>
+
+    <h2>Key Concepts</h2>
+    <ul>
+        <li><strong>Variable:</strong> A letter (like \(x, y, a, b\)) that stands for a number we do not know yet.</li>
+        <li><strong>Constant:</strong> A fixed number that does not change (e.g., \(5, 10, 100\)).</li>
+        <li><strong>Expression:</strong> A mathematical phrase combining numbers and variables (e.g., \(2x + 7\)).</li>
+        <li><strong>Coefficient:</strong> The number placed in front of a variable (e.g., in \(4y\), 4 is the coefficient).</li>
+    </ul>
+
+    <div class="fun-fact">
+        <strong>Fun Fact:</strong> The word "Algebra" comes from the Arabic word <em>"Al-Jabr"</em>, which means "reunion of broken parts." It was popularized by the Persian mathematician Al-Khwarizmi!
+    </div>
+
+    <h2>Nigerian Context Examples</h2>
+    
+    <div class="example-box">
+        <h3>Example 1: The Market Trip</h3>
+        <p>Tunde went to Mile 12 Market to buy <strong>tubers of yam</strong>. If one tuber of yam costs ₦\(y\), how much will Tunde pay for 5 tubers?</p>
+        <p><strong>Solution:</strong><br>
+        Cost of 1 tuber = \(y\)<br>
+        Cost of 5 tubers = \(y + y + y + y + y\) or \(5 \times y\)<br>
+        <strong>Algebraic Expression:</strong> \(5y\)</p>
+    </div>
+
+    <div class="example-box">
+        <h3>Example 2: Age Calculation</h3>
+        <p>Chidi is \(n\) years old. His elder sister, Amaka, is 4 years older than him. How old is Amaka?</p>
+        <p><strong>Solution:</strong><br>
+        Chidi's age = \(n\)<br>
+        Amaka's age = Chidi's age + 4 years<br>
+        <strong>Algebraic Expression:</strong> \(n + 4\)</p>
+    </div>
+
+    <div class="practice-section">
+        <h2>Practice Questions</h2>
+        <ol>
+            <li>Simplify the expression: \(3a + 5a - 2a\)</li>
+            <li>If \(x = 10\), find the value of \(2x - 4\).</li>
+            <li>A basket contains \(p\) mangoes. If 3 mangoes are eaten, how many mangoes are left?</li>
+        </ol>
+        
+        <hr>
+        <h3>Answers:</h3>
+        <p class="ans">1. 6a (Process: 3 + 5 - 2 = 6)</p>
+        <p class="ans">2. 16 (Process: 2(10) - 4 = 20 - 4 = 16)</p>
+        <p class="ans">3. p - 3</p>
+    </div>
+</div>

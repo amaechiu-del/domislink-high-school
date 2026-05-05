@@ -1,0 +1,131 @@
+<style>
+    .lesson-container {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+    }
+    .diagram-container {
+        text-align: center;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        margin: 20px 0;
+    }
+    .formula-box {
+        background-color: #e7f3ff;
+        border-left: 5px solid #2196F3;
+        padding: 15px;
+        margin: 20px 0;
+        font-weight: bold;
+    }
+    .fun-fact {
+        background-color: #fff3cd;
+        border: 1px dashed #ffc107;
+        padding: 15px;
+        border-radius: 8px;
+        margin: 20px 0;
+    }
+    .example-box {
+        background-color: #d4edda;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    .practice-section {
+        background-color: #fff;
+        padding: 20px;
+        border-top: 3px solid #28a745;
+        margin-top: 30px;
+    }
+    .answers {
+        font-size: 0.9em;
+        color: #666;
+        margin-top: 20px;
+        font-style: italic;
+    }
+    @keyframes pulse {
+        0% { stroke-width: 2; opacity: 0.7; }
+        50% { stroke-width: 4; opacity: 1; }
+        100% { stroke-width: 2; opacity: 0.7; }
+    }
+    .dimension-line {
+        animation: pulse 2s infinite ease-in-out;
+    }
+</style>
+
+<div class="lesson-container">
+    <h1>Understanding Volume</h1>
+    <p>In Mathematics, <strong>Volume</strong> is the amount of three-dimensional (3D) space that an object occupies. While area measures the surface, volume measures what is <em>inside</em> the object.</p>
+
+    <div class="diagram-container">
+        <svg width="250" height="200" viewBox="0 0 250 200">
+            <!-- Back Face -->
+            <rect x="70" y="40" width="120" height="80" fill="none" stroke="#ccc" stroke-dasharray="4" />
+            <!-- Front Face -->
+            <rect x="40" y="70" width="120" height="80" fill="#e7f3ff" stroke="#2196F3" stroke-width="2" fill-opacity="0.6" />
+            <!-- Connecting Lines -->
+            <line x1="40" y1="70" x2="70" y2="40" stroke="#2196F3" stroke-width="2" />
+            <line x1="160" y1="70" x2="190" y2="40" stroke="#2196F3" stroke-width="2" />
+            <line x1="160" y1="150" x2="190" y2="120" stroke="#2196F3" stroke-width="2" />
+            <line x1="40" y1="150" x2="70" y2="120" stroke="#2196F3" stroke-width="2" />
+            
+            <!-- Dimension Labels with pulse animation -->
+            <text x="100" y="170" font-size="14" fill="#d9534f" font-weight="bold">Length (L)</text>
+            <path d="M40 155 L160 155" stroke="#d9534f" stroke-width="2" class="dimension-line" />
+            
+            <text x="170" y="145" font-size="14" fill="#5cb85c" font-weight="bold" transform="rotate(-45 170,145)">Width (W)</text>
+            <path d="M165 150 L195 120" stroke="#5cb85c" stroke-width="2" class="dimension-line" />
+            
+            <text x="5" y="115" font-size="14" fill="#0275d8" font-weight="bold">Height (H)</text>
+            <path d="M35 70 L35 150" stroke="#0275d8" stroke-width="2" class="dimension-line" />
+        </svg>
+        <p><em>Interactive Cuboid: Visualizing Length, Width, and Height.</em></p>
+    </div>
+
+    <h3>Key Points about Volume:</h3>
+    <ul>
+        <li>Volume is measured in <strong>cubic units</strong>, such as cubic centimeters (cm³) or cubic meters (m³).</li>
+        <li>For a regular box shape (a cuboid), the formula is:
+            <div class="formula-box">Volume = Length × Width × Height</div>
+        </li>
+        <li>If all sides are equal (a cube), the formula is: <strong>Volume = Side × Side × Side (S³)</strong>.</li>
+        <li>Liquid volume is often measured in <strong>Litres (L)</strong>. (1,000cm³ = 1 Litre).</li>
+    </ul>
+
+    <h3>Nigerian Examples</h3>
+    <div class="example-box">
+        <strong>1. The Dangote Cement Block:</strong> 
+        A standard 9-inch building block used in Lagos construction is a cuboid. If a block is 45cm long, 22.5cm wide, and 22.5cm high, its volume helps a builder know how much concrete was used to make it.
+    </div>
+    
+    <div class="example-box">
+        <strong>2. GeePee Water Tank:</strong> 
+        Imagine a rectangular GeePee overhead tank in your school. If the tank is 2m long, 2m wide, and 2m high, it is a cube. Its volume is 2m × 2m × 2m = 8m³, which tells us how much water it can store for students to use.
+    </div>
+
+    <div class="fun-fact">
+        <strong>💡 Fun Fact:</strong> Did you know that the average human body has a volume of about 66,000 cubic centimeters (cm³)? That's about the same volume as 66 large "Eva" water bottles!
+    </div>
+
+    <div class="practice-section">
+        <h3>Practice Questions</h3>
+        <ol>
+            <li>Calculate the volume of a shoebox that is 30cm long, 15cm wide, and 10cm high.</li>
+            <li>A cubic sugar box has a side length of 4cm. What is its volume?</li>
+            <li>A rectangular water reservoir in a village in Kano is 5m long, 4m wide, and 2m deep. How many cubic meters of water can it hold?</li>
+        </ol>
+
+        <div class="answers">
+            <strong>Answers:</strong><br>
+            1. 4,500cm³ (30 × 15 × 10)<br>
+            2. 64cm³ (4 × 4 × 4)<br>
+            3. 40m³ (5 × 4 × 2)
+        </div>
+    </div>
+</div>

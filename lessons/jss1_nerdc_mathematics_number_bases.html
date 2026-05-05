@@ -1,0 +1,126 @@
+<style>
+    .lesson-container {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+    }
+    .highlight-box {
+        background-color: #e7f3fe;
+        border-left: 5px solid #2196F3;
+        padding: 15px;
+        margin: 20px 0;
+    }
+    .fun-fact {
+        background-color: #fff3cd;
+        border: 1px dashed #ffeeba;
+        padding: 15px;
+        border-radius: 8px;
+        font-style: italic;
+    }
+    .example-card {
+        background-color: #d4edda;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    .practice-section {
+        background-color: #ffffff;
+        border: 2px solid #ddd;
+        padding: 20px;
+        margin-top: 30px;
+    }
+    .svg-container {
+        text-align: center;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+</style>
+
+<div class="lesson-container">
+    <h1>Understanding Number Bases</h1>
+
+    <p>In Mathematics, a <strong>Number Base</strong> is the number of different digits that a system of counting uses to represent numbers. The most common base we use every day is <strong>Base 10</strong> (also called the Denary system).</p>
+
+    <div class="svg-container">
+        <h3>How Base 2 (Binary) Groups Units</h3>
+        <svg width="400" height="150" viewBox="0 0 400 150">
+            <!-- Labels -->
+            <text x="50" y="30" font-weight="bold">Units (1s)</text>
+            <text x="250" y="30" font-weight="bold">Twos (2s)</text>
+            
+            <!-- Boxes -->
+            <rect x="20" y="40" width="120" height="80" fill="none" stroke="#333" stroke-width="2" />
+            <rect x="220" y="40" width="120" height="80" fill="none" stroke="#333" stroke-width="2" />
+
+            <!-- Animated Circles for Units -->
+            <circle cx="50" cy="80" r="15" fill="#FF5722">
+                <animate attributeName="opacity" values="0;1;1;0" dur="4s" repeatCount="indefinite" begin="0s" />
+            </circle>
+            <circle cx="100" cy="80" r="15" fill="#FF5722">
+                <animate attributeName="opacity" values="0;0;1;0" dur="4s" repeatCount="indefinite" begin="1s" />
+            </circle>
+
+            <!-- Arrow -->
+            <path d="M 150 80 L 210 80" stroke="#2196F3" stroke-width="4" marker-end="url(#arrowhead)">
+                <animate attributeName="stroke-dashoffset" from="60" to="0" dur="4s" repeatCount="indefinite" />
+            </path>
+
+            <!-- Result in Twos place -->
+            <circle cx="280" cy="80" r="20" fill="#4CAF50">
+                <animate attributeName="opacity" values="0;0;0;1" dur="4s" repeatCount="indefinite" begin="2s" />
+            </circle>
+            <text x="272" y="85" fill="white" font-weight="bold">
+                <animate attributeName="opacity" values="0;0;0;1" dur="4s" repeatCount="indefinite" begin="2s" />
+                1
+            </text>
+        </svg>
+        <p><small>Animation: When we get 2 units in Base 2, they "bundle" to become 1 in the "Twos" column.</small></p>
+    </div>
+
+    <div class="highlight-box">
+        <h3>Key Points to Remember:</h3>
+        <ul>
+            <li><strong>Base 10 (Denary):</strong> Uses ten digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
+            <li><strong>Base 2 (Binary):</strong> Uses only two digits: 0 and 1.</li>
+            <li><strong>Digit Limit:</strong> In any base \(n\), the largest single digit you can use is \(n - 1\). (Example: In Base 5, the largest digit is 4).</li>
+            <li><strong>Place Value:</strong> Each position in a number represents a power of the base.</li>
+        </ul>
+    </div>
+
+    <h3>Nigerian Context Examples</h3>
+    <div class="example-card">
+        <p><strong>Example 1: The Market Trader</strong><br>
+        Musa is selling oranges in <strong>Base 10</strong>. When he counts 10 individual oranges, he ties them together in a small bag. This "bag" represents the "Tens" column in our numbering system.</p>
+    </div>
+    <div class="example-card">
+        <p><strong>Example 2: Local Yam Heaps</strong><br>
+        In some Nigerian villages, farmers count yams in groups of 5. If a farmer says he has "2 heaps and 3 tubers" in a <strong>Base 5</strong> system, he actually has \((2 \times 5) + 3 = 13\) tubers in total.</p>
+    </div>
+
+    <div class="fun-fact">
+        <strong>Fun Fact:</strong> Computers don't understand 1, 2, or 3! They use <strong>Binary (Base 2)</strong> because they are made of tiny switches that are either "ON" (1) or "OFF" (0). Every photo, song, and game you use is just a long string of zeros and ones!
+    </div>
+
+    <div class="practice-section">
+        <h3>Practice Questions</h3>
+        <ol>
+            <li>What are the possible digits used in <strong>Base 8</strong>?</li>
+            <li>If we are counting in <strong>Base 2</strong>, what comes after the number 1?</li>
+            <li>True or False: The number \(452_5\) is a valid number in Base 5.</li>
+        </ol>
+
+        <details>
+            <summary><strong>Click here for Answers</strong></summary>
+            <p>1. 0, 1, 2, 3, 4, 5, 6, and 7. (The base itself is never a digit!)</p>
+            <p>2. 10 (This is read as "one-zero", which represents one group of two and zero units).</p>
+            <p>3. <strong>False</strong>. In Base 5, the digits can only be 0, 1, 2, 3, or 4. A digit of "5" is not allowed.</p>
+        </details>
+    </div>
+</div>

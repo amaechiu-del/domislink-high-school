@@ -1,0 +1,109 @@
+<style>
+    .fraction-lesson {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+    }
+    .fraction-svg-container {
+        text-align: center;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        margin: 20px 0;
+    }
+    .highlight-box {
+        background-color: #e7f3fe;
+        border-left: 6px solid #2196F3;
+        padding: 15px;
+        margin: 20px 0;
+    }
+    .fun-fact {
+        background-color: #fff3cd;
+        border: 1px dashed #ffeeba;
+        padding: 15px;
+        border-radius: 8px;
+        font-style: italic;
+    }
+    .practice-section {
+        background-color: #d4edda;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    .answer-key {
+        margin-top: 10px;
+        font-weight: bold;
+        color: #155724;
+    }
+    @keyframes pulse {
+        0% { fill: #ffcc00; }
+        50% { fill: #ff6600; }
+        100% { fill: #ffcc00; }
+    }
+    .animate-slice {
+        animation: pulse 2s infinite;
+    }
+</style>
+
+<div class="fraction-lesson">
+    <h1>Understanding Fractions</h1>
+    <p>In Mathematics, a <strong>fraction</strong> represents a part of a whole. It consists of two numbers separated by a line.</p>
+
+    <div class="fraction-svg-container">
+        <svg width="200" height="200" viewBox="0 0 100 100">
+            <!-- Background Circle (The Whole) -->
+            <circle cx="50" cy="50" r="45" fill="#eee" stroke="#333" stroke-width="2" />
+            <!-- Four Quarters -->
+            <path d="M 50 50 L 50 5 A 45 45 0 0 1 95 50 Z" fill="#ddd" stroke="#333" />
+            <path d="M 50 50 L 95 50 A 45 45 0 0 1 50 95 Z" fill="#ddd" stroke="#333" />
+            <path d="M 50 50 L 50 95 A 45 45 0 0 1 5 50 Z" fill="#ddd" stroke="#333" />
+            <!-- Animated Fraction Part (1/4) -->
+            <path d="M 50 50 L 5 50 A 45 45 0 0 1 50 5 Z" class="animate-slice" stroke="#333" />
+            <text x="50" y="115" text-anchor="middle" font-weight="bold">Diagram: 1/4 of a circle</text>
+        </svg>
+        <p><em>The orange slice represents 1 part out of 4 equal parts.</em></p>
+    </div>
+
+    <h3>Key Components:</h3>
+    <ul>
+        <li><strong>Numerator (Top Number):</strong> Tells us how many parts we are talking about.</li>
+        <li><strong>Denominator (Bottom Number):</strong> Tells us the total number of equal parts the whole is divided into.</li>
+        <li><strong>Proper Fractions:</strong> The numerator is smaller than the denominator (e.g., 2/5).</li>
+        <li><strong>Improper Fractions:</strong> The numerator is larger than the denominator (e.g., 7/3).</li>
+        <li><strong>Mixed Numbers:</strong> A combination of a whole number and a fraction (e.g., 1 &frac12;).</li>
+    </ul>
+
+    <div class="highlight-box">
+        <h3>Nigerian Examples</h3>
+        <p><strong>Example 1:</strong> If Chidi buys a loaf of <em>Agege Bread</em> and cuts it into 8 equal slices to share with his friends, and he eats 3 slices, he has eaten <strong>3/8</strong> (three-eighths) of the bread.</p>
+        <p><strong>Example 2:</strong> In a crate of 30 eggs bought at Mile 12 Market, if 5 eggs are cracked, the fraction of cracked eggs is <strong>5/30</strong>, which can be simplified to <strong>1/6</strong>.</p>
+    </div>
+
+    <div class="fun-fact">
+        <strong>Fun Fact:</strong> The word "fraction" comes from the Latin word <em>"fractio"</em>, which means "to break". We are literally breaking a whole into smaller pieces!
+    </div>
+
+    <div class="practice-section">
+        <h3>Practice Questions</h3>
+        <ol>
+            <li>In the fraction <strong>7/12</strong>, which number is the denominator?</li>
+            <li>Convert the mixed number <strong>2 &frac34;</strong> into an improper fraction.</li>
+            <li>Simplify the fraction <strong>10/15</strong> to its lowest terms.</li>
+        </ol>
+
+        <details>
+            <summary>Click to see Answers</summary>
+            <div class="answer-key">
+                <p>1. The denominator is 12.</p>
+                <p>2. 11/4 (Multiply 2 by 4, then add 3).</p>
+                <p>3. 2/3 (Divide both numbers by 5).</p>
+            </div>
+        </details>
+    </div>
+</div>

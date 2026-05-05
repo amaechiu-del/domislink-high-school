@@ -1,0 +1,154 @@
+<style>
+    .math-lesson {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+    }
+    .lesson-header {
+        background-color: #2c3e50;
+        color: white;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .diagram-container {
+        text-align: center;
+        background: white;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin: 20px 0;
+    }
+    .fun-fact {
+        background-color: #e8f4fd;
+        border-left: 5px solid #3498db;
+        padding: 15px;
+        margin: 20px 0;
+        font-style: italic;
+    }
+    .example-box {
+        background-color: #fff;
+        border: 1px solid #27ae60;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 5px;
+    }
+    .example-title {
+        color: #27ae60;
+        font-weight: bold;
+        margin-bottom: 10px;
+        display: block;
+    }
+    .practice-section {
+        background-color: #fdf2e9;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid #e67e22;
+    }
+    .answers {
+        margin-top: 15px;
+        font-size: 0.9em;
+        color: #666;
+        border-top: 1px dashed #ccc;
+        padding-top: 10px;
+    }
+</style>
+
+<div class="math-lesson">
+    <div class="lesson-header">
+        <h1>Simple Linear Equations</h1>
+        <p>JSS 1 Mathematics (NERDC Curriculum)</p>
+    </div>
+
+    <h2>What is a Linear Equation?</h2>
+    <p>An equation is a mathematical statement showing that two expressions are equal. Think of it like a <strong>weighing balance</strong>: for the scale to stay level, both sides must have the same value.</p>
+
+    <ul>
+        <li><strong>Variables:</strong> These are letters (like \(x\), \(y\), or \(a\)) that represent unknown numbers.</li>
+        <li><strong>Equality Sign (=):</strong> This shows that the left-hand side (LHS) is exactly the same as the right-hand side (RHS).</li>
+        <li><strong>Solving:</strong> To solve an equation means to find the value of the letter that makes the statement true.</li>
+    </ul>
+
+    <div class="diagram-container">
+        <svg width="300" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+            <!-- Stand -->
+            <path d="M150 120 L130 150 L170 150 Z" fill="#7f8c8d" />
+            <rect x="148" y="40" width="4" height="80" fill="#7f8c8d" />
+            
+            <!-- Moving Arm -->
+            <g id="balance-arm">
+                <line x1="50" y1="40" x2="250" y2="40" stroke="#2c3e50" stroke-width="4" />
+                <!-- Left Scale -->
+                <line x1="50" y1="40" x2="50" y2="90" stroke="#bdc3c7" stroke-width="2" />
+                <path d="M30 90 Q50 110 70 90 Z" fill="#f1c40f" />
+                <text x="45" y="85" font-size="12" font-weight="bold">x + 5</text>
+                
+                <!-- Right Scale -->
+                <line x1="250" y1="40" x2="250" y2="90" stroke="#bdc3c7" stroke-width="2" />
+                <path d="M230 90 Q250 110 270 90 Z" fill="#f1c40f" />
+                <text x="242" y="85" font-size="12" font-weight="bold">12</text>
+
+                <animateTransform 
+                    attributeName="transform" 
+                    type="rotate" 
+                    values="-3 150 40; 3 150 40; -3 150 40" 
+                    dur="4s" 
+                    repeatCount="indefinite" />
+            </g>
+            <text x="110" y="20" font-family="Arial" font-size="14" fill="#2c3e50">The Balance Concept</text>
+        </svg>
+        <p><small>The equation stays balanced as long as we do the same thing to both sides!</small></p>
+    </div>
+
+    <h3>Rules for Solving Equations</h3>
+    <ul>
+        <li>If you <strong>add</strong> a number to one side, you must <strong>add</strong> it to the other side.</li>
+        <li>If you <strong>subtract</strong> from one side, you must <strong>subtract</strong> from the other.</li>
+        <li>The goal is to get the letter (variable) by itself on one side.</li>
+    </ul>
+
+    <div class="example-box">
+        <span class="example-title">Example 1: The Gala Snack</span>
+        <p>Tunde went to a kiosk in Lagos. He bought one Gala and a bottle of water for ₦250. If the water costs ₦100, how much is the Gala?</p>
+        <p><strong>Solution:</strong><br>
+        Let \(g\) be the price of Gala.<br>
+        \(g + 100 = 250\)<br>
+        Subtract 100 from both sides:<br>
+        \(g = 250 - 100\)<br>
+        <strong>\(g = 150\)</strong>. So, the Gala is ₦150.</p>
+    </div>
+
+    <div class="example-box">
+        <span class="example-title">Example 2: School Bus Seats</span>
+        <p>In a school in Abuja, a small bus has \(x\) seats. After 5 students get off the bus, there are 12 students left. How many seats were occupied at the start?</p>
+        <p><strong>Solution:</strong><br>
+        Equation: \(x - 5 = 12\)<br>
+        Add 5 to both sides to isolate \(x\):<br>
+        \(x = 12 + 5\)<br>
+        <strong>\(x = 17\)</strong>. There were 17 students initially.</p>
+    </div>
+
+    <div class="fun-fact">
+        <strong>Fun Fact:</strong> The word "Algebra" comes from the Arabic word <em>"al-jabr"</em>, which means "reunion of broken parts." It was popularized by the mathematician Al-Khwarizmi over 1,000 years ago!
+    </div>
+
+    <div class="practice-section">
+        <h3>Test Your Knowledge!</h3>
+        <ol>
+            <li>Solve for \(y\): \(y + 15 = 40\)</li>
+            <li>Solve for \(m\): \(m - 8 = 22\)</li>
+            <li>If \(3x = 15\), what is the value of \(x\)? (Hint: Divide both sides by 3)</li>
+        </ol>
+
+        <div class="answers">
+            <strong>Answers:</strong><br>
+            1. \(y = 25\) | 2. \(m = 30\) | 3. \(x = 5\)
+        </div>
+    </div>
+</div>

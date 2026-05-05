@@ -1,0 +1,109 @@
+﻿// generate-all-lessons-deepseek.js – uses DeepSeek (paid, no limits)
+const fs = require('fs').promises;
+const path = require('path');
+
+const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY;
+if (!DEEPSEEK_API_KEY) {
+    console.error('❌ Please set DEEPSEEK_API_KEY environment variable');
+    process.exit(1);
+}
+
+const SYLLABUS_FILE = 'syllabuses.json';
+const OUTPUT_DIR = 'lessons';
+const DELAY_MS = 2000;       // 2 seconds between requests
+
+function sanitize(s) {
+    return s.toLowerCase().replace(/[^a-z0-9]/g, '_');
+}
+
+function getTopicId(level, exam, subject, topic) {
+    return `${sanitize(level)}_${sanitize(exam)}_${sanitize(subject)}_${sanitize(topic)}`;
+}
+
+async function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
+
+async function callDeepSeek(prompt) {
+    const response = await fetch('https://api.deepseek.com/chat/completions', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${DEEPSEEK_API_KEY}`
+        },
+        body: JSON.stringify({
+            model: 'deepseek-chat',
+            messages: [{ role: 'user', content: prompt }],
+            temperature: 0.7,
+            max_tokens: 4000
+        })
+    });
+    if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`DeepSeek API error: ${response.status} ${errorText}`);
+    }
+    const data = await response.json();
+    const content = data.choices?.[0]?.message?.content;
+    if (!content) throw new Error('No content in response');
+    return content;
+}
+
+async function generateLesson(level, exam, subject, topic) {
+    const prompt = `Generate a complete, self-contained HTML lesson (just inner content, no <html> or <body> tags) for ${level.toUpperCase()} studying "${topic}" in "${subject}" (${exam} syllabus). Include:
+- an animated SVG diagram (inside <svg> tags)
+- bullet-point explanations
+- two Nigerian examples
+- a "Fun Fact" block
+- three practice questions with answers at the end.
+Return ONLY the HTML fragment. Do not include any extra commentary.`;
+    return await callDeepSeek(prompt);
+}
+
+async function main() {
+    console.log('📖 Reading syllabus...');
+    const raw = await fs.readFile(SYLLABUS_FILE, 'utf8');
+    const syllabus = JSON.parse(raw.replace(/^\uFEFF/, ''));
+    await fs.mkdir(OUTPUT_DIR, { recursive: true });
+
+    const tasks = [];
+    for (const [level, examData] of Object.entries(syllabus))
+        for (const [exam, examContent] of Object.entries(examData))
+            if (examContent.subjects)
+                for (const [subject, topics] of Object.entries(examContent.subjects))
+                    for (const topic of topics)
+                        tasks.push({ level, exam, subject, topic });
+
+    console.log(`📊 Total topics: ${tasks.length}`);
+    let completed = 0;
+    let failed = [];
+
+    for (const t of tasks) {
+        const id = getTopicId(t.level, t.exam, t.subject, t.topic);
+        const filePath = path.join(OUTPUT_DIR, `${id}.html`);
+        try {
+            await fs.access(filePath);
+            console.log(`⏭️ Skipping existing: ${id}`);
+            completed++;
+            continue;
+        } catch {}
+
+        console.log(`📝 Generating: ${t.level}/${t.exam}/${t.subject}/${t.topic}`);
+        try {
+            const html = await generateLesson(t.level, t.exam, t.subject, t.topic);
+            await fs.writeFile(filePath, html, 'utf8');
+            console.log(`✅ Saved: ${id}`);
+        } catch (err) {
+            console.error(`❌ Failed ${id}: ${err.message}`);
+            failed.push(id);
+        }
+        completed++;
+        console.log(`Progress: ${completed}/${tasks.length}`);
+        await sleep(DELAY_MS);
+    }
+
+    console.log(`\n🎉 Done! Generated ${tasks.length - failed.length} lessons.`);
+    if (failed.length) {
+        console.log(`\n⚠️ Failed topics (${failed.length}):`);
+        failed.forEach(f => console.log(`   - ${f}`));
+    }
+}
+
+main().catch(console.error);

@@ -1,4 +1,8 @@
-﻿// DomisLink High School Academy - Complete App
+﻿function getTopicId(level, syllabus, subject, topic) {
+    const sanitize = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, '_');
+    return `${sanitize(level)}_${sanitize(syllabus)}_${sanitize(subject)}_${sanitize(topic)}`;
+}
+// DomisLink High School Academy - Complete App
 const PAYSTACK_PUBLIC_KEY = "pk_live_b9ce8aa36118824d41d49c09824d49161a824a5b";
 const XP_PER_TOPIC = 100;
 const XP_PER_QUIZ_RIGHT = 20;
@@ -218,11 +222,24 @@ function renderSyllabus() {
     }
     const subjects = Object.keys(levelData.subjects);
     subjects.forEach(subject => {
+        // Original topic button
         const btn = document.createElement("button");
         btn.innerText = subject;
         btn.className = "btn-subject";
         btn.onclick = () => { showTopics(subject); fetchSubjectTrivia(subject); };
         list.appendChild(btn);
+        // NEW: Textbook button
+        const textbookBtn = document.createElement("button");
+        textbookBtn.innerText = `📘 ${subject}`;
+        textbookBtn.className = "btn-subject";
+        textbookBtn.onclick = () => {
+            if (typeof openTextbookForSubject === 'function') {
+                openTextbookForSubject(state.currentLevel, state.currentSyllabus, subject);
+            } else {
+                alert("Textbook feature loading...");
+            }
+        };
+        list.appendChild(textbookBtn);
     });
 }
 

@@ -1,0 +1,91 @@
+<h3>Integral Calculus (SSS3 WAEC Mathematics)</h3>
+
+<svg width="500" height="250" viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4CAF50" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#4CAF50" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Axes -->
+  <line x1="50" y1="200" x2="450" y2="200" stroke="#333" stroke-width="2"/>
+  <line x1="50" y1="200" x2="50" y2="30" stroke="#333" stroke-width="2"/>
+  
+  <!-- Labels -->
+  <text x="460" y="205" font-family="Arial" font-size="14" fill="#333">x</text>
+  <text x="40" y="25" font-family="Arial" font-size="14" fill="#333">y</text>
+  <text x="50" y="220" font-family="Arial" font-size="12" fill="#333">0</text>
+  <text x="100" y="220" font-family="Arial" font-size="12" fill="#333">a</text>
+  <text x="340" y="220" font-family="Arial" font-size="12" fill="#333">b</text>
+  
+  <!-- Curve: y = x²/10 + 1 -->
+  <path d="M 50,200 Q 100,180 150,140 Q 200,90 250,70 Q 300,60 350,80" 
+        stroke="#2196F3" stroke-width="3" fill="none"/>
+  
+  <!-- Shaded area under curve from a to b -->
+  <path d="M 100,200 L 100,180 Q 120,165 140,140 Q 160,110 180,95 Q 200,85 220,78 Q 240,74 260,72 Q 280,72 300,75 Q 320,80 340,90 L 340,200 Z" 
+        fill="url(#areaGrad)" stroke="none"/>
+  
+  <!-- Vertical lines at a and b -->
+  <line x1="100" y1="200" x2="100" y2="180" stroke="#E91E63" stroke-width="2" stroke-dasharray="4"/>
+  <line x1="340" y1="200" x2="340" y2="90" stroke="#E91E63" stroke-width="2" stroke-dasharray="4"/>
+  
+  <!-- Animated shading -->
+  <rect x="100" y="200" width="240" height="0" fill="#4CAF50" opacity="0.3">
+    <animate attributeName="height" from="0" to="130" dur="3s" fill="freeze"/>
+    <animate attributeName="y" from="200" to="70" dur="3s" fill="freeze"/>
+  </rect>
+  
+  <!-- Animated point on curve -->
+  <circle cx="220" cy="76" r="5" fill="#FF5722">
+    <animate attributeName="cx" values="100;340;100" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="180;90;180" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  
+  <text x="200" y="160" font-family="Arial" font-size="14" fill="#333" font-style="italic">
+    Area = ∫f(x) dx
+  </text>
+</svg>
+
+<h4>Key Concepts</h4>
+<ul>
+  <li><strong>Integration</strong> is the reverse process of differentiation (antidifferentiation).</li>
+  <li><strong>Definite Integral</strong> ∫<sub>a</sub><sup>b</sup> f(x) dx gives the area under the curve y = f(x) from x = a to x = b.</li>
+  <li><strong>Indefinite Integral</strong> ∫ f(x) dx = F(x) + C, where C is the constant of integration.</li>
+  <li><strong>Power Rule:</strong> ∫ x<sup>n</sup> dx = (x<sup>n+1</sup>)/(n+1) + C, for n ≠ -1.</li>
+  <li>The <strong>Fundamental Theorem of Calculus</strong> links differentiation and integration.</li>
+</ul>
+
+<h4>Nigerian Examples</h4>
+
+<p><strong>Example 1 (Lagos Market Revenue):</strong><br>
+A trader's marginal revenue (in ₦) is given by MR(x) = 2x + 5, where x is the number of bags of rice sold. Find the total revenue function R(x) and the revenue from selling 10 bags.</p>
+<p><em>Solution:</em><br>
+R(x) = ∫ (2x + 5) dx = x² + 5x + C. When x=0, R(0)=0 → C=0.<br>
+So R(x) = x² + 5x. Revenue for 10 bags: R(10) = 100 + 50 = <strong>₦150</strong>.</p>
+
+<p><strong>Example 2 (Kano Irrigation Canal):</strong><br>
+The cross-section of a canal is modeled by y = 4 - x² from x = -2 to x = 2 (in meters). Find the area of the cross-section.</p>
+<p><em>Solution:</em><br>
+Area = ∫<sub>-2</sub><sup>2</sup> (4 - x²) dx = [4x - x³/3]<sub>-2</sub><sup>2</sup><br>
+= (8 - 8/3) - (-8 + 8/3) = (16/3) - (-16/3) = 32/3 = <strong>10.67 m²</strong>.</p>
+
+<div style="background:#FFF3E0; border-left:4px solid #FF9800; padding:10px; margin:15px 0;">
+  <strong>🎯 Fun Fact:</strong> Integration was independently developed by <strong>Isaac Newton</strong> and <strong>Gottfried Leibniz</strong> in the 17th century. The integral sign ∫ is actually an elongated letter 'S', standing for "summa" (Latin for "sum")!
+</div>
+
+<h4>Practice Questions</h4>
+
+<ol>
+  <li><strong>Question 1:</strong> Evaluate ∫ (3x² - 2x + 1) dx.</li>
+  <li><strong>Question 2:</strong> Find the area bounded by the curve y = x² + 1, the x-axis, and the lines x = 0 and x = 3.</li>
+  <li><strong>Question 3:</strong> If dy/dx = 4x³ - 6x and y = 5 when x = 1, find y as a function of x.</li>
+</ol>
+
+<h4>Answers</h4>
+<ol>
+  <li><strong>Answer 1:</strong> x³ - x² + x + C</li>
+  <li><strong>Answer 2:</strong> ∫<sub>0</sub><sup>3</sup> (x²+1) dx = [x³/3 + x]<sub>0</sub><sup>3</sup> = (9 + 3) - 0 = <strong>12 square units</strong></li>
+  <li><strong>Answer 3:</strong> y = ∫ (4x³ - 6x) dx = x⁴ - 3x² + C. Using y=5 when x=1: 5 = 1 - 3 + C → C = 7. So y = <strong>x⁴ - 3x² + 7</strong></li>
+</ol>

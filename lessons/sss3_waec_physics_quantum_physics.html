@@ -1,0 +1,111 @@
+<div class="lesson-content">
+  <h2>Quantum Physics – SSS3 WAEC Physics</h2>
+
+  <!-- Animated SVG Diagram: Photoelectric Effect -->
+  <svg width="100%" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" style="background-color: #f0f8ff; border: 1px solid #ccc; border-radius: 8px;">
+    <defs>
+      <style>
+        .photon { animation: movePhoton 3s linear infinite; }
+        @keyframes movePhoton {
+          0% { opacity: 0.8; transform: translateX(0); }
+          100% { opacity: 0.2; transform: translateX(140px); }
+        }
+        .electron { animation: ejectElectron 3s ease-out infinite; }
+        @keyframes ejectElectron {
+          0% { transform: translate(0, 0); opacity: 1; }
+          100% { transform: translate(80px, -60px); opacity: 0; }
+        }
+        .flash { animation: flashEffect 3s infinite; }
+        @keyframes flashEffect {
+          0%, 100% { opacity: 0; }
+          10%, 30% { opacity: 0.6; }
+        }
+      </style>
+    </defs>
+
+    <!-- Metal surface -->
+    <rect x="150" y="120" width="200" height="100" fill="#b0c4de" stroke="#333" stroke-width="2" rx="5"/>
+    <text x="170" y="175" font-size="14" fill="#333" font-family="Arial">Metal Plate</text>
+
+    <!-- Photon source -->
+    <circle cx="80" cy="100" r="15" fill="#ffaa00" opacity="0.8"/>
+    <text x="55" y="95" font-size="10" fill="#333" font-family="Arial">Light</text>
+
+    <!-- Photon moving -->
+    <circle cx="80" cy="100" r="6" fill="#ff4500" class="photon">
+      <animate attributeName="cx" from="80" to="220" dur="2s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Flash on impact -->
+    <circle cx="220" cy="160" r="20" fill="yellow" class="flash" opacity="0"/>
+
+    <!-- Electron emission -->
+    <circle cx="220" cy="160" r="5" fill="#1e90ff" class="electron">
+      <animate attributeName="cx" from="220" to="320" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="cy" from="160" to="90" dur="2s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Arrow indicating direction -->
+    <line x1="220" y1="160" x2="320" y2="90" stroke="#1e90ff" stroke-width="2" stroke-dasharray="4,4"/>
+    <text x="300" y="85" font-size="10" fill="#1e90ff" font-family="Arial">e⁻</text>
+
+    <!-- Labels -->
+    <text x="40" y="240" font-size="11" fill="#555" font-family="Arial">Photon (hν) strikes metal</text>
+    <text x="40" y="260" font-size="11" fill="#555" font-family="Arial">→ electron ejected (photoelectric effect)</text>
+    <text x="40" y="280" font-size="11" fill="#555" font-family="Arial">E<sub>k</sub> = hν – φ</text>
+  </svg>
+
+  <!-- Bullet-point Explanations -->
+  <h3>Key Concepts</h3>
+  <ul style="list-style-type: disc; padding-left: 20px;">
+    <li><strong>Quantum Theory</strong>: Energy is not continuous but exists in discrete packets called <em>quanta</em> (photons for light).</li>
+    <li><strong>Photoelectric Effect</strong>: When light of sufficient frequency hits a metal surface, electrons are ejected.</li>
+    <li><strong>Threshold Frequency (f₀)</strong>: Minimum frequency needed to eject an electron; below this, no emission occurs regardless of intensity.</li>
+    <li><strong>Work Function (φ)</strong>: Minimum energy required to remove an electron from the metal surface (φ = hf₀).</li>
+    <li><strong>Einstein's Equation</strong>: Kinetic energy of ejected electron = hf – φ, where h = Planck’s constant (6.63 × 10⁻³⁴ Js).</li>
+    <li><strong>Wave-Particle Duality</strong>: Light behaves as both a wave and a particle (photon).</li>
+  </ul>
+
+  <!-- Two Nigerian Examples -->
+  <h3>Nigerian Examples</h3>
+  <div style="background-color: #e7f3ff; padding: 10px; border-left: 4px solid #1e90ff; margin: 10px 0;">
+    <p><strong>Example 1: Solar Panels in Northern Nigeria</strong><br>
+    In states like Kano and Sokoto, solar panels convert sunlight into electricity using the photoelectric effect. Photons from the sun knock electrons free in silicon cells, generating current. The high sunlight intensity in Nigeria makes this ideal for rural electrification.</p>
+  </div>
+  <div style="background-color: #e7f3ff; padding: 10px; border-left: 4px solid #1e90ff; margin: 10px 0;">
+    <p><strong>Example 2: Security Lights in Lagos</strong><br>
+    Automatic streetlights in Lagos use photoelectric sensors. When light intensity falls (at dusk), the sensor stops receiving photons, reducing electron flow and switching the light on. This quantum-based switch saves energy across the city.</p>
+  </div>
+
+  <!-- Fun Fact Block -->
+  <div style="background-color: #fffacd; padding: 10px; border: 2px dashed #ffa500; border-radius: 10px; margin: 15px 0;">
+    <p style="font-weight: bold;">🌟 Fun Fact</p>
+    <p>Albert Einstein won the Nobel Prize in Physics in 1921 for explaining the photoelectric effect, <em>not</em> for his theory of relativity! His work proved that light consists of particles (photons) and helped launch quantum mechanics.</p>
+  </div>
+
+  <!-- Three Practice Questions with Answers -->
+  <h3>Practice Questions</h3>
+  <ol style="padding-left: 20px;">
+    <li>
+      <p><strong>Question 1:</strong> The work function of a metal is 2.0 eV. If light of frequency 6.0 × 10¹⁴ Hz is incident on it, will electrons be ejected? (h = 6.63 × 10⁻³⁴ Js, 1 eV = 1.6 × 10⁻¹⁹ J)</p>
+      <details>
+        <summary><strong>Answer</strong></summary>
+        <p>Energy of photon = hf = 6.63×10⁻³⁴ × 6.0×10¹⁴ = 3.978×10⁻¹⁹ J = 2.49 eV. Since 2.49 eV > 2.0 eV, electrons will be ejected.</p>
+      </details>
+    </li>
+    <li>
+      <p><strong>Question 2:</strong> What is the threshold frequency of a metal with a work function of 3.2 × 10⁻¹⁹ J? (h = 6.63 × 10⁻³⁴ Js)</p>
+      <details>
+        <summary><strong>Answer</strong></summary>
+        <p>f₀ = φ / h = (3.2×10⁻¹⁹) / (6.63×10⁻³⁴) = 4.83 × 10¹⁴ Hz.</p>
+      </details>
+    </li>
+    <li>
+      <p><strong>Question 3:</strong> Explain why increasing the intensity of red light (low frequency) does not eject electrons from a metal, while even dim violet light (high frequency) does.</p>
+      <details>
+        <summary><strong>Answer</strong></summary>
+        <p>Intensity increases the number of photons, but each photon's energy depends on frequency (E = hf). Red light photons have energy below the work function, so no single photon can eject an electron. Violet photons have higher energy per photon, sufficient to overcome the work function even at low intensity.</p>
+      </details>
+    </li>
+  </ol>
+</div>

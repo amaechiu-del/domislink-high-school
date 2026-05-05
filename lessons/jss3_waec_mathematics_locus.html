@@ -1,0 +1,146 @@
+<div class="lesson-content">
+  <h2>Locus in Mathematics (JSS3 WAEC)</h2>
+
+  <div class="section">
+    <h3>What is a Locus?</h3>
+    <p>A <strong>locus</strong> (plural: loci) is the set of all points that satisfy a given condition or rule. Think of it as the path traced by a moving point that follows a specific rule.</p>
+  </div>
+
+  <div class="section">
+    <h3>Animated SVG: Locus of Points Equidistant from a Fixed Point</h3>
+    <svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+      <!-- Background -->
+      <rect width="300" height="300" fill="#f0f8ff" rx="10"/>
+      <!-- Center point -->
+      <circle cx="150" cy="150" r="5" fill="#d32f2f" stroke="#b71c1c" stroke-width="2"/>
+      <text x="150" y="140" text-anchor="middle" font-size="12" fill="#b71c1c" font-weight="bold">Fixed Point</text>
+      <!-- Locus circle -->
+      <circle cx="150" cy="150" r="80" fill="none" stroke="#1976d2" stroke-width="3" stroke-dasharray="8,4">
+        <animate attributeName="stroke-dashoffset" from="0" to="200" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <!-- Moving point -->
+      <circle cx="230" cy="150" r="6" fill="#388e3c">
+        <animate attributeName="cx" values="230;70;230" dur="6s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="150;150;150" dur="6s" repeatCount="indefinite"/>
+      </circle>
+      <!-- Distance label -->
+      <line x1="150" y1="150" x2="230" y2="150" stroke="#555" stroke-width="1.5" stroke-dasharray="4,2">
+        <animate attributeName="x2" values="230;70;230" dur="6s" repeatCount="indefinite"/>
+      </line>
+      <text x="190" y="140" font-size="11" fill="#555">
+        <animate attributeName="x" values="190;110;190" dur="6s" repeatCount="indefinite"/>
+        r = 80
+      </text>
+    </svg>
+    <p style="text-align:center; font-style:italic; color:#555;">The green point moves around the red fixed point, always staying 80 units away. The dashed blue circle is its locus.</p>
+  </div>
+
+  <div class="section">
+    <h3>Key Rules for Common Loci</h3>
+    <ul>
+      <li><strong>Equidistant from a fixed point:</strong> The locus is a <em>circle</em> with the fixed point as centre.</li>
+      <li><strong>Equidistant from two fixed points:</strong> The locus is the <em>perpendicular bisector</em> of the line joining the two points.</li>
+      <li><strong>Equidistant from two intersecting lines:</strong> The locus is the <em>angle bisector</em> of the angle between the lines.</li>
+      <li><strong>At a fixed distance from a line:</strong> The locus is a pair of <em>parallel lines</em> on either side of the given line.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>Nigerian Examples</h3>
+    <div class="example">
+      <p><strong>Example 1:</strong> A goat is tethered to a peg in the ground with a rope of length 5 metres. What is the locus of all positions the goat can reach?</p>
+      <p><em>Solution:</em> The goat can move in any direction but is limited by the rope. The locus is a <strong>circle</strong> of radius 5 metres, with the peg as centre.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2:</strong> In a school football field, two goal posts are 8 metres apart. A player wants to stand such that he is exactly the same distance from both posts. Describe his possible positions.</p>
+      <p><em>Solution:</em> The set of points equidistant from the two goal posts is the <strong>perpendicular bisector</strong> of the line joining the posts. The player must stand anywhere on that straight line.</p>
+    </div>
+  </div>
+
+  <div class="fun-fact">
+    <p><strong>💡 Fun Fact:</strong> In navigation, the locus of points with the same distance from a lighthouse is a circle. Ships use these "circles of position" to determine their location at sea!</p>
+  </div>
+
+  <div class="section">
+    <h3>Practice Questions</h3>
+    <ol>
+      <li>A point moves so that it is always 3 cm from a fixed point X. Draw and describe its locus.</li>
+      <li>Two villages A and B are 10 km apart. A new well is to be built such that it is the same distance from both villages. On a map, where should the well be located?</li>
+      <li>A ladder 6 m long leans against a vertical wall. As the ladder slides down, its foot moves away from the wall. Describe the locus of the midpoint of the ladder.</li>
+    </ol>
+    <div class="answers">
+      <h4>Answers</h4>
+      <ol>
+        <li>A circle of radius 3 cm with centre at X.</li>
+        <li>On the perpendicular bisector of the line joining A and B.</li>
+        <li>The midpoint traces a quarter-circle of radius 3 m (half the ladder length) with centre at the corner where wall meets ground.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<style>
+  .lesson-content {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .lesson-content h2 {
+    color: #1a237e;
+    border-bottom: 3px solid #3949ab;
+    padding-bottom: 8px;
+    margin-top: 0;
+  }
+  .lesson-content h3 {
+    color: #283593;
+    margin-top: 24px;
+  }
+  .lesson-content ul {
+    background: #e8eaf6;
+    padding: 12px 20px 12px 35px;
+    border-radius: 8px;
+    line-height: 1.8;
+  }
+  .lesson-content .example {
+    background: #fff3e0;
+    padding: 12px 16px;
+    border-left: 5px solid #ff9800;
+    margin: 12px 0;
+    border-radius: 6px;
+  }
+  .lesson-content .fun-fact {
+    background: #e0f2f1;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #009688;
+    margin: 20px 0;
+  }
+  .lesson-content .fun-fact p {
+    margin: 0;
+    font-weight: 500;
+  }
+  .lesson-content ol {
+    background: #f3e5f5;
+    padding: 12px 20px 12px 35px;
+    border-radius: 8px;
+    line-height: 1.8;
+  }
+  .lesson-content .answers {
+    background: #e8f5e9;
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin-top: 12px;
+  }
+  .lesson-content .answers h4 {
+    color: #2e7d32;
+    margin: 0 0 8px 0;
+  }
+  .lesson-content svg {
+    display: block;
+    margin: 0 auto;
+  }
+</style>

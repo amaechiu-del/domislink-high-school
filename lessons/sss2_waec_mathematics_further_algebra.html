@@ -1,0 +1,69 @@
+<div class="lesson-content">
+  <h2>Further Algebra: Sequences and Series (SSS2 WAEC)</h2>
+
+  <!-- Animated SVG Diagram -->
+  <svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+    <rect width="400" height="200" fill="#f0f8ff" rx="10"/>
+    <text x="20" y="30" font-family="Arial" font-size="14" fill="#333">Arithmetic Progression (AP):</text>
+    <text x="20" y="50" font-family="Arial" font-size="12" fill="#555">a, a+d, a+2d, a+3d, ...</text>
+    <circle cx="60" cy="100" r="15" fill="#4CAF50" opacity="0.8">
+      <animate attributeName="cx" values="60;340;60" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="fill" values="#4CAF50;#2196F3;#FF9800;#4CAF50" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="20" y="90" font-family="Arial" font-size="12" fill="#333">First term a = 2, common difference d = 3</text>
+    <text x="20" y="110" font-family="Arial" font-size="12" fill="#333">Sequence: 2, 5, 8, 11, 14, ...</text>
+    <text x="20" y="150" font-family="Arial" font-size="14" fill="#333">Geometric Progression (GP):</text>
+    <text x="20" y="170" font-family="Arial" font-size="12" fill="#555">a, ar, ar², ar³, ...</text>
+    <polygon points="320,140 340,160 300,160" fill="#e91e63" opacity="0.7">
+      <animateTransform attributeName="transform" type="rotate" from="0 320 160" to="360 320 160" dur="3s" repeatCount="indefinite"/>
+    </polygon>
+  </svg>
+
+  <!-- Bullet-point Explanations -->
+  <ul style="margin-top: 15px; line-height: 1.8;">
+    <li><strong>Arithmetic Progression (AP):</strong> A sequence where the difference between consecutive terms is constant. The <em>nth term</em> = a + (n-1)d, where <em>a</em> is the first term and <em>d</em> is the common difference.</li>
+    <li><strong>Sum of AP:</strong> S<sub>n</sub> = n/2 [2a + (n-1)d] or S<sub>n</sub> = n/2 (first + last term).</li>
+    <li><strong>Geometric Progression (GP):</strong> A sequence where each term is multiplied by a constant ratio <em>r</em>. The <em>nth term</em> = ar<sup>n-1</sup>.</li>
+    <li><strong>Sum of GP (finite):</strong> S<sub>n</sub> = a(r<sup>n</sup> - 1)/(r - 1) for r ≠ 1.</li>
+    <li><strong>Sum to infinity (GP):</strong> S<sub>∞</sub> = a/(1 - r) when |r| &lt; 1.</li>
+  </ul>
+
+  <!-- Nigerian Examples -->
+  <div style="background: #e8f5e9; padding: 12px; border-radius: 8px; margin: 15px 0;">
+    <h3 style="color: #2e7d32;">🇳🇬 Nigerian Example 1: Market Savings</h3>
+    <p>A trader in Lagos saves ₦500 in the first week, ₦550 in the second week, ₦600 in the third week, and so on in arithmetic progression. How much will she save in the 12th week?</p>
+    <p><strong>Solution:</strong> a = 500, d = 50, n = 12.<br>
+    T<sub>12</sub> = a + (12-1)d = 500 + 11(50) = 500 + 550 = <strong>₦1,050</strong>.</p>
+  </div>
+
+  <div style="background: #fff3e0; padding: 12px; border-radius: 8px; margin: 15px 0;">
+    <h3 style="color: #e65100;">🇳🇬 Nigerian Example 2: Cassava Farming</h3>
+    <p>A farmer in Oyo State plants cassava stems. The number of stems doubles every week. If he starts with 5 stems, how many stems will he have after 6 weeks? (Assume no harvesting in between)</p>
+    <p><strong>Solution:</strong> This is a GP: a = 5, r = 2, n = 6.<br>
+    T<sub>6</sub> = ar<sup>5</sup> = 5 × 2<sup>5</sup> = 5 × 32 = <strong>160 stems</strong>.</p>
+  </div>
+
+  <!-- Fun Fact Block -->
+  <div style="background: #fce4ec; padding: 12px; border-radius: 8px; margin: 15px 0; border-left: 5px solid #c62828;">
+    <h3 style="color: #b71c1c;">🎉 Fun Fact</h3>
+    <p>Did you know? The ancient Nigerian game <em>Mancala</em> (or <em>Ayo</em>) uses geometric progression! The number of seeds in each pit often follows a doubling pattern, just like a GP. This helped players calculate moves quickly without paper!</p>
+  </div>
+
+  <!-- Practice Questions -->
+  <div style="margin-top: 20px;">
+    <h3>📝 Practice Questions</h3>
+    <ol style="line-height: 2;">
+      <li><strong>Question 1:</strong> The 5th term of an AP is 18 and the 9th term is 30. Find the first term and common difference.</li>
+      <li><strong>Question 2:</strong> A GP has first term 3 and common ratio 2. Find the sum of the first 6 terms.</li>
+      <li><strong>Question 3:</strong> The sum to infinity of a GP is 20 and the first term is 8. Find the common ratio.</li>
+    </ol>
+  </div>
+
+  <!-- Answers -->
+  <div style="background: #f5f5f5; padding: 12px; border-radius: 8px; margin-top: 15px;">
+    <h4>✅ Answers</h4>
+    <p><strong>1.</strong> a = 6, d = 3 (since T<sub>5</sub> = a+4d = 18, T<sub>9</sub> = a+8d = 30, subtract: 4d=12 → d=3, then a=6).<br>
+    <strong>2.</strong> S<sub>6</sub> = 3(2<sup>6</sup> - 1)/(2-1) = 3(64-1) = 3×63 = <strong>189</strong>.<br>
+    <strong>3.</strong> S<sub>∞</sub> = a/(1-r) → 20 = 8/(1-r) → 20(1-r) = 8 → 20 - 20r = 8 → 20r = 12 → r = 12/20 = <strong>0.6</strong>.</p>
+  </div>
+</div>

@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" style="display:block;margin:0 auto;max-width:100%;height:auto;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.15"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bgGrad)" rx="15"/>
+
+  <!-- Title -->
+  <text x="300" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2c3e50">The Speech Organs</text>
+
+  <!-- Animated Diagram: Side view of head showing speech organs -->
+  <g filter="url(#shadow)">
+    <!-- Head outline -->
+    <ellipse cx="300" cy="200" rx="120" ry="150" fill="none" stroke="#2c3e50" stroke-width="2.5"/>
+
+    <!-- Nose -->
+    <path d="M300 100 Q310 130 320 140" fill="none" stroke="#2c3e50" stroke-width="2"/>
+
+    <!-- Lips (animated) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,0;0,-3;0,0;0,3;0,0" dur="4s" repeatCount="indefinite"/>
+      <ellipse cx="300" cy="170" rx="25" ry="8" fill="#e74c3c" opacity="0.7"/>
+      <line x1="275" y1="170" x2="325" y2="170" stroke="#2c3e50" stroke-width="1.5"/>
+    </g>
+
+    <!-- Upper teeth -->
+    <rect x="285" y="158" width="30" height="8" rx="2" fill="#ecf0f1" stroke="#2c3e50" stroke-width="1"/>
+
+    <!-- Tongue (animated) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,0;5,0;0,0;-5,0;0,0" dur="3s" repeatCount="indefinite"/>
+      <ellipse cx="290" cy="195" rx="35" ry="20" fill="#e67e22" opacity="0.8"/>
+    </g>
+
+    <!-- Hard palate -->
+    <path d="M260 160 Q300 140 340 160" fill="none" stroke="#3498db" stroke-width="2.5" stroke-dasharray="6,3"/>
+
+    <!-- Soft palate (velum) -->
+    <path d="M340 160 Q355 165 350 180" fill="none" stroke="#9b59b6" stroke-width="2.5" stroke-dasharray="6,3"/>
+
+    <!-- Uvula -->
+    <ellipse cx="348" cy="182" rx="4" ry="6" fill="#8e44ad" opacity="0.7"/>
+
+    <!-- Nasal cavity -->
+    <path d="M280 120 Q300 110 320 120" fill="none" stroke="#1abc9c" stroke-width="2"/>
+
+    <!-- Labels with leader lines -->
+    <line x1="260" y1="160" x2="200" y2="140" stroke="#3498db" stroke-width="1"/>
+    <text x="195" y="138" text-anchor="end" font-family="Arial" font-size="11" fill="#3498db">Hard Palate</text>
+
+    <line x1="355" y1="170" x2="410" y2="155" stroke="#9b59b6" stroke-width="1"/>
+    <text x="413" y="158" font-family="Arial" font-size="11" fill="#9b59b6">Soft Palate</text>
+
+    <line x1="348" y1="188" x2="410" y2="195" stroke="#8e44ad" stroke-width="1"/>
+    <text x="413" y="198" font-family="Arial" font-size="11" fill="#8e44ad">Uvula</text>
+
+    <line x1="290" y1="210" x2="200" y2="220" stroke="#e67e22" stroke-width="1"/>
+    <text x="195" y="223" text-anchor="end" font-family="Arial" font-size="11" fill="#e67e22">Tongue</text>
+
+    <line x1="300" y1="170" x2="200" y2="170" stroke="#e74c3c" stroke-width="1"/>
+    <text x="195" y="173" text-anchor="end" font-family="Arial" font-size="11" fill="#e74c3c">Lips</text>
+
+    <line x1="280" y1="120" x2="200" y2="110" stroke="#1abc9c" stroke-width="1"/>
+    <text x="195" y="113" text-anchor="end" font-family="Arial" font-size="11" fill="#1abc9c">Nasal Cavity</text>
+  </g>
+
+  <!-- Breathing indicator -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-8;0,0" dur="3s" repeatCount="indefinite"/>
+    <text x="300" y="370" text-anchor="middle" font-family="Arial" font-size="12" fill="#7f8c8d" font-style="italic">Airflow during speech</text>
+  </g>
+</svg>
+
+<h3 style="color:#2c3e50;margin-top:20px;">Key Points about Oral English</h3>
+<ul style="list-style-type:disc;padding-left:25px;line-height:1.8;">
+  <li><strong>Oral English</strong> focuses on the correct production of speech sounds using the <em>organs of speech</em> (lips, tongue, teeth, palate, etc.).</li>
+  <li>Proper <strong>articulation</strong> ensures clarity—each sound is formed by precise movements of these organs.</li>
+  <li><strong>Voiced vs. unvoiced sounds:</strong> For example, <em>/b/</em> (voiced) uses vocal cord vibration, while <em>/p/</em> (unvoiced) does not.</li>
+  <li><strong>Intonation and stress</strong> affect meaning. Rising intonation often signals a question, while falling intonation signals a statement.</li>
+  <li>Regular practice with <strong>minimal pairs</strong> (e.g., <em>ship</em> vs. <em>sheep</em>) helps distinguish similar sounds.</li>
+</ul>
+
+<h3 style="color:#2c3e50;margin-top:20px;">Nigerian Examples</h3>
+<ul style="list-style-type:circle;padding-left:25px;line-height:1.8;">
+  <li><strong>Example 1:</strong> A student from Lagos says <em>"I am going to the <u>market</u>"</em> – ensure the <em>/r/</em> sound in "market" is pronounced clearly, not dropped or replaced with <em>/l/</em>.</li>
+  <li><strong>Example 2:</strong> An Igbo speaker practicing <em>"<u>She sells sea shells</u>"</em> – pay attention to the <em>/ʃ/</em> (sh) sound vs. <em>/s/</em> sound, which can be confused in some dialects.</li>
+</ul>
+
+<div style="background:#fff3cd;border-left:5px solid #ffc107;padding:12px 18px;margin:20px 0;border-radius:5px;">
+  <strong style="color:#856404;">Fun Fact!</strong> 
+  <span style="color:#6c5100;">The English language has about <strong>44 distinct sounds</strong> (phonemes), but only 26 letters. That's why one letter can represent different sounds—like the <em>'a'</em> in <em>cat</em>, <em>father</em>, and <em>cake</em>!</span>
+</div>
+
+<h3 style="color:#2c3e50;margin-top:20px;">Practice Questions</h3>
+<ol style="padding-left:25px;line-height:2;">
+  <li><strong>Question 1:</strong> Which speech organ is primarily used to produce the <em>/f/</em> sound (as in <em>fish</em>)?<br>
+    <em style="color:#27ae60;">Answer: The lower lip touches the upper teeth (labiodental sound).</em></li>
+  <li><strong>Question 2:</strong> What is the difference between the <em>/θ/</em> sound (as in <em>think</em>) and the <em>/ð/</em> sound (as in <em>this</em>)?<br>
+    <em style="color:#27ae60;">Answer: <em>/θ/</em> is unvoiced (no vocal cord vibration), while <em>/ð/</em> is voiced (vocal cords vibrate). Both are produced with the tongue tip between the upper and lower teeth.</em></li>
+  <li><strong>Question 3:</strong> In the word <em>“present”</em>, how does stress change the meaning?<br>
+    <em style="color:#27ae60;">Answer: <strong>PRE</strong>sent (noun = a gift) vs. pre<strong>SENT</strong> (verb = to show or introduce). Stress shifts the word class.</em></li>
+</ol>

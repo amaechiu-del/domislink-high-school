@@ -1,0 +1,103 @@
+<div class="physics-lesson">
+  <h2>Gravitation</h2>
+  
+  <!-- Animated SVG Diagram -->
+  <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto; background: #0b0b2b; border-radius: 12px;">
+    <defs>
+      <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#ffdd33"/>
+        <stop offset="100%" stop-color="#ff8800"/>
+      </radialGradient>
+      <radialGradient id="earthGrad" cx="40%" cy="40%" r="50%">
+        <stop offset="0%" stop-color="#4fa3ff"/>
+        <stop offset="100%" stop-color="#1a4a6e"/>
+      </radialGradient>
+    </defs>
+    
+    <!-- Sun -->
+    <circle cx="200" cy="125" r="40" fill="url(#sunGrad)"/>
+    <text x="200" y="130" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Sun</text>
+    
+    <!-- Earth orbit path -->
+    <ellipse cx="200" cy="125" rx="150" ry="80" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="4,4" opacity="0.3"/>
+    
+    <!-- Earth (animated) -->
+    <circle cx="200" cy="125" r="15" fill="url(#earthGrad)">
+      <animateMotion dur="6s" repeatCount="indefinite" path="M200,45 A150,80 0 1,1 200,205 A150,80 0 1,1 200,45"/>
+    </circle>
+    <text x="200" y="125" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">
+      <animateMotion dur="6s" repeatCount="indefinite" path="M200,45 A150,80 0 1,1 200,205 A150,80 0 1,1 200,45"/>
+      Earth
+    </text>
+    
+    <!-- Gravitational force arrows -->
+    <line x1="200" y1="125" x2="200" y2="85" stroke="#ff6b6b" stroke-width="2" marker-end="url(#arrowSun)">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="200" y1="125" x2="200" y2="165" stroke="#ff6b6b" stroke-width="2" marker-end="url(#arrowEarth)">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+    </line>
+    
+    <defs>
+      <marker id="arrowSun" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+        <path d="M0,0 L8,3 L0,6" fill="#ff6b6b"/>
+      </marker>
+      <marker id="arrowEarth" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+        <path d="M0,0 L8,3 L0,6" fill="#ff6b6b"/>
+      </marker>
+    </defs>
+    
+    <text x="160" y="80" fill="#ff6b6b" font-size="12" font-style="italic">F<sub>g</sub></text>
+    <text x="160" y="175" fill="#ff6b6b" font-size="12" font-style="italic">F<sub>g</sub></text>
+    
+    <text x="200" y="240" text-anchor="middle" fill="#aaa" font-size="11">Gravitational force keeps Earth in orbit around the Sun</text>
+  </svg>
+
+  <!-- Bullet-point explanations -->
+  <ul style="margin-top: 20px; line-height: 1.8; font-size: 16px;">
+    <li><strong>Gravitation</strong> is the natural force of attraction between any two objects with mass.</li>
+    <li><strong>Newton's Law of Universal Gravitation</strong> states: Every particle attracts every other particle with a force directly proportional to the product of their masses and inversely proportional to the square of the distance between them.</li>
+    <li>Formula: <em>F = G (m<sub>1</sub>m<sub>2</sub>) / r<sup>2</sup></em>, where G = 6.67 × 10<sup>−11</sup> Nm<sup>2</sup>/kg<sup>2</sup></li>
+    <li>The force is <strong>always attractive</strong> and acts along the line joining the centers of the two masses.</li>
+    <li><strong>Weight</strong> (W = mg) is the gravitational force exerted on an object by a planet (e.g., Earth).</li>
+    <li>Gravitation explains why planets orbit the Sun, the Moon orbits Earth, and objects fall to the ground.</li>
+  </ul>
+
+  <!-- Two Nigerian examples -->
+  <div style="background: #e8f4f8; padding: 15px; border-radius: 10px; margin: 20px 0;">
+    <h3 style="margin-top: 0;">Nigerian Examples</h3>
+    <p><strong>Example 1:</strong> A student in Lagos drops a football from the top of a 10-storey building. The ball falls to the ground because of Earth's gravitational pull. The acceleration due to gravity in Lagos is approximately 9.78 m/s² (slightly less than at the poles due to Earth's rotation and equatorial bulge).</p>
+    <p><strong>Example 2:</strong> The <em>Third Mainland Bridge</em> in Lagos (longest bridge in Africa) was designed with consideration of gravitational forces acting on its massive concrete and steel structure. Engineers calculated the gravitational load to ensure the bridge can support the weight of thousands of cars and trucks daily.</p>
+  </div>
+
+  <!-- Fun Fact block -->
+  <div style="background: #fff3cd; border-left: 5px solid #ffc107; padding: 12px 18px; margin: 20px 0; border-radius: 5px;">
+    <h4 style="margin: 0 0 6px 0; color: #856404;">⭐ Fun Fact</h4>
+    <p style="margin: 0;">Did you know? Your weight is about <strong>0.5% less</strong> at the top of Nigeria's highest peak, <strong>Chappal Waddi</strong> (2,419 m), than at sea level in Port Harcourt! That's because gravitational force decreases slightly as you move farther from Earth's centre.</p>
+  </div>
+
+  <!-- Three practice questions with answers -->
+  <div style="margin-top: 25px;">
+    <h3>Practice Questions</h3>
+    <ol style="font-size: 16px; line-height: 2;">
+      <li><strong>Question 1:</strong> Two identical 5 kg masses are placed 2 metres apart. Calculate the gravitational force between them. (G = 6.67 × 10<sup>−11</sup> Nm²/kg²)<br>
+        <details style="margin-top: 5px;">
+          <summary style="cursor: pointer; color: #0066cc;">Show Answer</summary>
+          <p style="background: #f0f0f0; padding: 8px; border-radius: 5px;"><strong>Answer:</strong> F = G (m₁m₂)/r² = (6.67×10⁻¹¹)(5×5)/(2²) = (6.67×10⁻¹¹)(25)/4 = 4.17 × 10⁻¹⁰ N.</p>
+        </details>
+      </li>
+      <li><strong>Question 2:</strong> A student's mass is 60 kg. What is their weight on Earth? (g = 9.8 m/s²) What would their weight be on the Moon where g = 1.62 m/s²?<br>
+        <details style="margin-top: 5px;">
+          <summary style="cursor: pointer; color: #0066cc;">Show Answer</summary>
+          <p style="background: #f0f0f0; padding: 8px; border-radius: 5px;"><strong>Answer:</strong> Weight on Earth = mg = 60 × 9.8 = 588 N. Weight on Moon = 60 × 1.62 = 97.2 N. (Mass remains 60 kg in both places.)</p>
+        </details>
+      </li>
+      <li><strong>Question 3:</strong> If the distance between two masses is doubled, what happens to the gravitational force between them? Explain.<br>
+        <details style="margin-top: 5px;">
+          <summary style="cursor: pointer; color: #0066cc;">Show Answer</summary>
+          <p style="background: #f0f0f0; padding: 8px; border-radius: 5px;"><strong>Answer:</strong> The force becomes one-quarter (1/4) of its original value. Because F ∝ 1/r², doubling r (2r) gives F ∝ 1/(2r)² = 1/4r², so the force is reduced by a factor of 4.</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+</div>

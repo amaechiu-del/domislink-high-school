@@ -1,0 +1,88 @@
+<div class="physics-lesson">
+  <h2>Dynamics: The Study of Forces and Motion</h2>
+  <p><strong>Key Concept:</strong> Dynamics explains <em>why</em> objects move or remain at rest, focusing on forces as the cause of changes in motion.</p>
+
+  <!-- Animated SVG Diagram -->
+  <svg width="400" height="220" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+    <rect x="10" y="10" width="380" height="200" fill="#e6f0fa" stroke="#2c5f8a" stroke-width="2" rx="10"/>
+    <text x="200" y="40" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c5f8a">Newton's Third Law: Action & Reaction</text>
+    
+    <!-- Person (box) pushing -->
+    <rect x="60" y="90" width="60" height="60" fill="#f4a261" rx="8">
+      <animate attributeName="x" values="60;140;60" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <text x="90" y="128" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">
+      Person
+      <animate attributeName="x" values="90;170;90" dur="4s" repeatCount="indefinite"/>
+    </text>
+    
+    <!-- Arrow from person to wall (action) -->
+    <line x1="120" y1="120" x2="180" y2="120" stroke="#e63946" stroke-width="4" marker-end="url(#arrowRed)">
+      <animate attributeName="x1" values="120;200;120" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="180;260;180" dur="4s" repeatCount="indefinite"/>
+    </line>
+    
+    <!-- Wall -->
+    <rect x="260" y="70" width="30" height="120" fill="#2c5f8a" rx="4"/>
+    <text x="275" y="140" text-anchor="middle" font-size="10" fill="#fff">Wall</text>
+    
+    <!-- Arrow from wall to person (reaction) -->
+    <line x1="260" y1="140" x2="200" y2="140" stroke="#2a9d8f" stroke-width="4" marker-end="url(#arrowGreen)">
+      <animate attributeName="x1" values="260;180;260" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="200;120;200" dur="4s" repeatCount="indefinite"/>
+    </line>
+    
+    <defs>
+      <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 Z" fill="#e63946"/>
+      </marker>
+      <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto">
+        <path d="M8,0 L0,4 L8,8 Z" fill="#2a9d8f"/>
+      </marker>
+    </defs>
+    
+    <text x="155" y="195" text-anchor="middle" font-size="11" fill="#333">
+      Action (red) → Wall &nbsp;&nbsp; Reaction (green) ← Person
+    </text>
+  </svg>
+
+  <h3>Core Principles of Dynamics</h3>
+  <ul>
+    <li><strong>Force:</strong> A push or pull that can change an object's state of motion (measured in Newtons, N).</li>
+    <li><strong>Newton's First Law (Inertia):</strong> An object at rest stays at rest, and a moving object continues at constant velocity, unless acted on by an unbalanced force.</li>
+    <li><strong>Newton's Second Law:</strong> \( F = ma \) (Force = mass × acceleration). The greater the mass, the more force needed to accelerate it.</li>
+    <li><strong>Newton's Third Law:</strong> For every action, there is an equal and opposite reaction. Forces always occur in pairs.</li>
+    <li><strong>Weight vs. Mass:</strong> Weight (\( W = mg \)) is the force of gravity on an object; mass is the amount of matter in it.</li>
+  </ul>
+
+  <h3>🇳🇬 Nigerian Examples</h3>
+  <div class="example">
+    <p><strong>Example 1: Danfo Bus Acceleration</strong><br>
+    A danfo bus (mass 1500 kg) accelerates from rest to 20 m/s in 10 seconds. Using \( F = ma \):<br>
+    Acceleration \( a = \frac{20 - 0}{10} = 2 \, \text{m/s}^2 \)<br>
+    Force needed: \( F = 1500 \times 2 = 3000 \, \text{N} \) (the engine must provide this force).</p>
+  </div>
+  <div class="example">
+    <p><strong>Example 2: Carrying a Bag of Garri</strong><br>
+    A bag of garri (mass 25 kg) feels heavy because of gravity. Weight = \( 25 \times 9.8 = 245 \, \text{N} \).<br>
+    If you lift it upward with a force of 300 N, the net force is \( 300 - 245 = 55 \, \text{N} \) upward, producing upward acceleration.</p>
+  </div>
+
+  <div class="fun-fact" style="background-color: #fef9e7; border-left: 5px solid #f4a261; padding: 10px; margin: 15px 0;">
+    <p><strong>🎉 Fun Fact:</strong> The word "dynamics" comes from the Greek word <em>dynamis</em> meaning "power." In Nigeria, the concept helps engineers design safer cars and bridges that can withstand the forces of heavy traffic on Lagos-Ibadan expressway!</p>
+  </div>
+
+  <h3>Practice Questions</h3>
+  <ol>
+    <li>A motorcycle of mass 200 kg accelerates at 4 m/s². What is the net force acting on it?</li>
+    <li>A student pushes a table with a force of 50 N, but the table does not move. Explain why, using Newton's First Law.</li>
+    <li>Calculate the weight of a 70 kg person on Earth (take \( g = 9.8 \, \text{m/s}^2 \)).</li>
+  </ol>
+
+  <h3>Answers</h3>
+  <ol>
+    <li><strong>Answer:</strong> \( F = ma = 200 \times 4 = 800 \, \text{N} \)</li>
+    <li><strong>Answer:</strong> The table does not move because the force of friction between the table and the floor is equal and opposite to the applied force (50 N). The forces are balanced, so no net force and no acceleration (Newton's First Law).</li>
+    <li><strong>Answer:</strong> Weight = \( 70 \times 9.8 = 686 \, \text{N} \)</li>
+  </ol>
+</div>

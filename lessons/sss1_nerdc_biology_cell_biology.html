@@ -1,0 +1,75 @@
+<div class="lesson">
+  <h1>Cell Biology: The Building Blocks of Life</h1>
+
+  <!-- Animated SVG Diagram -->
+  <svg viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg" style="display:block; margin:0 auto; max-width:100%; background:#e8f5e9; border-radius:12px;">
+    <style>
+      @keyframes moveMitochondria { 0%{transform:translate(0,0)} 50%{transform:translate(5px,-5px)} 100%{transform:translate(0,0)} }
+      @keyframes moveNucleus { 0%{transform:scale(1)} 50%{transform:scale(1.02)} 100%{transform:scale(1)} }
+      @keyframes moveVesicle { 0%{opacity:0.4} 50%{opacity:1} 100%{opacity:0.4} }
+      .mito { animation: moveMitochondria 3s ease-in-out infinite; }
+      .nucleus { animation: moveNucleus 4s ease-in-out infinite; transform-origin: 250px 150px; }
+      .vesicle { animation: moveVesicle 2s ease-in-out infinite; }
+    </style>
+    <!-- Cell membrane -->
+    <ellipse cx="250" cy="175" rx="220" ry="140" fill="none" stroke="#2e7d32" stroke-width="4" stroke-dasharray="8,4" />
+    <!-- Nucleus -->
+    <g class="nucleus">
+      <circle cx="250" cy="150" r="50" fill="#fff9c4" stroke="#f57f17" stroke-width="3" />
+      <circle cx="250" cy="150" r="20" fill="#f57f17" opacity="0.6" />
+      <text x="250" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Nucleus</text>
+    </g>
+    <!-- Mitochondrion -->
+    <g class="mito">
+      <ellipse cx="370" cy="220" rx="40" ry="20" fill="#ffccbc" stroke="#bf360c" stroke-width="2" />
+      <path d="M340,215 Q355,200 370,215 Q385,230 400,215" fill="none" stroke="#bf360c" stroke-width="1.5" />
+      <text x="370" y="250" text-anchor="middle" font-size="10" fill="#bf360c">Mitochondrion</text>
+    </g>
+    <!-- Vacuole -->
+    <g class="vesicle">
+      <circle cx="150" cy="240" r="25" fill="#b3e5fc" stroke="#0277bd" stroke-width="2" />
+      <text x="150" y="245" text-anchor="middle" font-size="9" fill="#01579b">Vacuole</text>
+    </g>
+    <!-- Cell wall (plant cell) -->
+    <rect x="20" y="30" width="460" height="290" rx="20" fill="none" stroke="#1b5e20" stroke-width="3" stroke-dasharray="12,6" />
+    <text x="250" y="320" text-anchor="middle" font-size="12" fill="#1b5e20">Cell Wall (Plant Cell)</text>
+    <!-- Ribosomes -->
+    <circle cx="80" cy="100" r="4" fill="#d32f2f" />
+    <circle cx="420" cy="100" r="4" fill="#d32f2f" />
+    <circle cx="80" cy="280" r="4" fill="#d32f2f" />
+    <text x="250" y="60" text-anchor="middle" font-size="14" fill="#1b5e20" font-weight="bold">Animal Cell (with Plant Cell Wall shown)</text>
+  </svg>
+
+  <h2>Key Parts of a Cell</h2>
+  <ul style="font-size:16px; line-height:1.8;">
+    <li><strong>Cell Membrane</strong> – Controls what enters and leaves the cell.</li>
+    <li><strong>Nucleus</strong> – Contains DNA; controls all cell activities.</li>
+    <li><strong>Mitochondrion</strong> – Powerhouse of the cell; releases energy.</li>
+    <li><strong>Vacuole</strong> – Stores water, food, and waste.</li>
+    <li><strong>Cell Wall</strong> – Provides support and shape (only in plants).</li>
+  </ul>
+
+  <h2>Nigerian Examples</h2>
+  <ul style="font-size:16px;">
+    <li><strong>Cassava Plant Cells:</strong> The cell walls in cassava leaves help support the plant as it grows in Nigerian farms, while vacuoles store water during dry seasons.</li>
+    <li><strong>Yam Tuber Cells:</strong> Yam cells have large vacuoles that store starch, providing energy for sprouting when planted in the rainy season.</li>
+  </ul>
+
+  <div style="background:#fff3e0; border-left:6px solid #ff9800; padding:12px 16px; margin:18px 0; border-radius:8px;">
+    <strong>🎉 Fun Fact!</strong> The longest cell in the human body is the neuron (nerve cell) – some can be over 1 metre long! In Nigeria, the giant African snail also has very long nerve cells to help it sense its environment.
+  </div>
+
+  <h2>Practice Questions</h2>
+  <ol style="font-size:16px; line-height:1.9;">
+    <li>What is the main function of the mitochondrion in a cell?</li>
+    <li>Name one difference between a plant cell and an animal cell.</li>
+    <li>If a cell loses its nucleus, what important process will it not be able to control?</li>
+  </ol>
+
+  <h3>Answers</h3>
+  <ul style="font-size:15px; color:#2e7d32;">
+    <li><strong>1.</strong> The mitochondrion releases energy for the cell through respiration.</li>
+    <li><strong>2.</strong> Plant cells have a cell wall, but animal cells do not. (Other correct answers: plant cells have chloroplasts, or a large central vacuole.)</li>
+    <li><strong>3.</strong> It will not be able to control its activities or reproduce, because the nucleus contains the genetic instructions (DNA).</li>
+  </ul>
+</div>

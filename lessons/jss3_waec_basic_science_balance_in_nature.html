@@ -1,0 +1,119 @@
+<div class="lesson-content">
+  <h2>Balance in Nature</h2>
+  <p><em>Basic Science – JSS3 (WAEC Syllabus)</em></p>
+
+  <!-- Animated SVG Diagram -->
+  <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:600px; height:auto; display:block; margin:20px auto; background:#f0f8e6; border-radius:12px;">
+    <defs>
+      <style>
+        @keyframes sunGlow { 0%,100%{opacity:0.8} 50%{opacity:1} }
+        @keyframes birdFly { 0%{transform:translate(0,0)} 25%{transform:translate(30px,-15px)} 50%{transform:translate(60px,0)} 75%{transform:translate(30px,15px)} 100%{transform:translate(0,0)} }
+        @keyframes fishSwim { 0%{transform:translateX(0)} 50%{transform:translateX(20px)} 100%{transform:translateX(0)} }
+        @keyframes growTree { 0%{transform:scaleY(0.2);transform-origin:bottom} 100%{transform:scaleY(1);transform-origin:bottom} }
+        .sun { animation:sunGlow 3s infinite; }
+        .bird { animation:birdFly 4s infinite; }
+        .fish { animation:fishSwim 3s infinite; }
+        .tree { animation:growTree 2s ease-out; transform-origin:bottom; }
+      </style>
+    </defs>
+
+    <!-- Sky -->
+    <rect x="0" y="0" width="600" height="250" fill="#cce5ff"/>
+
+    <!-- Sun -->
+    <circle class="sun" cx="520" cy="60" r="35" fill="#FFD700"/>
+    <circle cx="520" cy="60" r="45" fill="#FFD700" opacity="0.2"/>
+
+    <!-- Clouds -->
+    <ellipse cx="120" cy="50" rx="40" ry="20" fill="white" opacity="0.8"/>
+    <ellipse cx="150" cy="45" rx="30" ry="18" fill="white" opacity="0.8"/>
+    <ellipse cx="380" cy="80" rx="35" ry="15" fill="white" opacity="0.7"/>
+
+    <!-- Birds -->
+    <g class="bird">
+      <path d="M200 70 Q210 60 220 70 Q230 60 240 70" stroke="#333" stroke-width="2" fill="none"/>
+    </g>
+    <g class="bird" style="animation-delay:0.8s">
+      <path d="M260 55 Q270 45 280 55 Q290 45 300 55" stroke="#333" stroke-width="2" fill="none"/>
+    </g>
+
+    <!-- Ground -->
+    <rect x="0" y="250" width="600" height="150" fill="#8B5E3C"/>
+
+    <!-- Grass -->
+    <rect x="0" y="250" width="600" height="30" fill="#4CAF50"/>
+
+    <!-- Trees -->
+    <g class="tree">
+      <rect x="80" y="200" width="20" height="60" fill="#5D4037"/>
+      <ellipse cx="90" cy="190" rx="40" ry="50" fill="#2E7D32"/>
+    </g>
+    <g class="tree" style="animation-delay:0.3s">
+      <rect x="380" y="210" width="18" height="55" fill="#5D4037"/>
+      <ellipse cx="389" cy="200" rx="35" ry="45" fill="#388E3C"/>
+    </g>
+
+    <!-- River -->
+    <path d="M0 300 Q150 280 300 300 Q450 320 600 295" stroke="#2196F3" stroke-width="25" fill="none" stroke-linecap="round" opacity="0.7"/>
+
+    <!-- Fish -->
+    <g class="fish">
+      <ellipse cx="250" cy="295" rx="15" ry="6" fill="#FF5722"/>
+      <polygon points="265,295 275,288 275,302" fill="#FF5722"/>
+      <circle cx="242" cy="293" r="2" fill="black"/>
+    </g>
+    <g class="fish" style="animation-delay:1.2s">
+      <ellipse cx="400" cy="305" rx="12" ry="5" fill="#FF9800"/>
+      <polygon points="412,305 420,299 420,311" fill="#FF9800"/>
+      <circle cx="394" cy="303" r="1.5" fill="black"/>
+    </g>
+
+    <!-- Label arrows and text -->
+    <text x="50" y="170" font-size="12" fill="white" font-weight="bold">🌳 Trees (Oxygen)</text>
+    <line x1="100" y1="175" x2="90" y2="190" stroke="white" stroke-width="1.5"/>
+
+    <text x="350" y="170" font-size="12" fill="white" font-weight="bold">🐦 Birds (Seed dispersal)</text>
+    <line x1="380" y1="175" x2="250" y2="80" stroke="white" stroke-width="1.5" stroke-dasharray="3"/>
+
+    <text x="200" y="340" font-size="12" fill="white" font-weight="bold">🐟 Fish (Aquatic life)</text>
+    <line x1="260" y1="335" x2="260" y2="310" stroke="white" stroke-width="1.5"/>
+
+    <text x="450" y="360" font-size="13" fill="#1B5E20" font-weight="bold">⚖️ BALANCE IN NATURE</text>
+  </svg>
+
+  <!-- Bullet-point Explanations -->
+  <h3>Key Points</h3>
+  <ul style="line-height:1.8; font-size:16px;">
+    <li><strong>Balance in Nature</strong> means that all living and non-living things interact in a stable, harmonious way.</li>
+    <li>Each organism has a <strong>role</strong>: plants produce oxygen, animals eat plants or other animals, decomposers recycle nutrients.</li>
+    <li><strong>Food chains and webs</strong> show how energy flows from one organism to another.</li>
+    <li>If one part of the chain is removed or added, it can <strong>upset the balance</strong> (e.g., too many hunters → fewer prey → plant overgrowth).</li>
+    <li>Human activities like <strong>deforestation, pollution, and overfishing</strong> can break the natural balance.</li>
+    <li>Conservation efforts help <strong>restore and maintain</strong> the balance for future generations.</li>
+  </ul>
+
+  <!-- Two Nigerian Examples -->
+  <h3>🇳🇬 Nigerian Examples</h3>
+  <div style="background:#e8f5e9; padding:10px 15px; border-radius:8px; margin:10px 0;">
+    <p><strong>Example 1: The Niger Delta Mangroves</strong><br>
+    Mangrove forests in the Niger Delta provide breeding grounds for fish and protect the coast from erosion. When oil spills occur, the mangroves die → fish disappear → fishermen lose their livelihood → the entire ecosystem is thrown off balance.</p>
+    <p><strong>Example 2: The Obudu Plateau (Cross River State)</strong><br>
+    The Obudu Plateau is home to unique plants and animals. When farmers clear large areas for farming (deforestation), soil erosion increases, streams dry up, and animals like the drill monkey lose their habitat. This disrupts the natural balance of the plateau.</p>
+  </div>
+
+  <!-- Fun Fact Block -->
+  <div style="background:#fff3e0; border-left:6px solid #FF9800; padding:10px 15px; border-radius:6px; margin:15px 0;">
+    <p><strong>🌟 Fun Fact:</strong> In Nigeria, the <em>Iroko tree</em> is considered sacred in many cultures. Cutting it down without permission is believed to bring bad luck – but scientifically, removing big trees can collapse the local food web and cause soil erosion! Nature and tradition often agree.</p>
+  </div>
+
+  <!-- Three Practice Questions with Answers -->
+  <h3>📝 Practice Questions</h3>
+  <ol style="font-size:16px; line-height:1.8;">
+    <li><strong>Question 1:</strong> What does "Balance in Nature" mean?<br>
+      <em>Answer:</em> It means that all living things (plants, animals, humans) and non-living things (air, water, soil) interact in a stable and sustainable way, where no species dominates or destroys the others.</li>
+    <li><strong>Question 2:</strong> Give one way human activity can upset the balance in a Nigerian forest.<br>
+      <em>Answer:</em> Cutting down trees (deforestation) for farming or timber removes animal habitats, reduces oxygen, and causes soil erosion – this breaks the natural balance.</li>
+    <li><strong>Question 3:</strong> Why are fish important in the balance of nature in the Niger Delta?<br>
+      <em>Answer:</em> Fish eat small aquatic organisms and are eaten by larger animals (like birds and humans). They help control insect populations and recycle nutrients in the water. Without fish, the entire food web collapses.</li>
+  </ol>
+</div>

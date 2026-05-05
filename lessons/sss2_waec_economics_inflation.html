@@ -1,0 +1,167 @@
+<div class="lesson-content">
+  <h2>Inflation (SSS2 Economics – WAEC Syllabus)</h2>
+
+  <!-- Animated SVG Diagram -->
+  <svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <style>
+        @keyframes demandShift {
+          0% { d: M 100,220 L 180,180 L 260,140 L 340,100 L 420,60; }
+          50% { d: M 100,200 L 180,160 L 260,120 L 340,80 L 420,40; }
+          100% { d: M 100,220 L 180,180 L 260,140 L 340,100 L 420,60; }
+        }
+        @keyframes supplyShift {
+          0% { d: M 100,60 L 180,100 L 260,140 L 340,180 L 420,220; }
+          50% { d: M 100,80 L 180,120 L 260,160 L 340,200 L 420,240; }
+          100% { d: M 100,60 L 180,100 L 260,140 L 340,180 L 420,220; }
+        }
+        @keyframes priceArrow {
+          0% { transform: translate(0,0); }
+          50% { transform: translate(0,-20); }
+          100% { transform: translate(0,0); }
+        }
+        .demand-curve { fill: none; stroke: #e74c3c; stroke-width: 3; stroke-dasharray: 5,5; animation: demandShift 3s infinite; }
+        .supply-curve { fill: none; stroke: #2ecc71; stroke-width: 3; animation: supplyShift 3s infinite; }
+        .price-line { stroke: #f39c12; stroke-width: 2; stroke-dasharray: 4,4; }
+        .price-arrow { fill: #f39c12; animation: priceArrow 3s infinite; }
+        .axis-label { font-family: Arial, sans-serif; font-size: 14px; fill: #333; }
+        .title { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #2c3e50; }
+      </style>
+    </defs>
+    <!-- Axes -->
+    <line x1="80" y1="30" x2="80" y2="250" stroke="#333" stroke-width="2"/>
+    <line x1="80" y1="250" x2="500" y2="250" stroke="#333" stroke-width="2"/>
+    <!-- Labels -->
+    <text x="40" y="140" class="axis-label" transform="rotate(-90,40,140)">Price Level</text>
+    <text x="280" y="280" class="axis-label">Quantity of Goods &amp; Services</text>
+    <text x="280" y="20" class="title">Demand-Pull Inflation</text>
+    <!-- Original Demand (D1) -->
+    <path d="M 100,220 L 180,180 L 260,140 L 340,100 L 420,60" fill="none" stroke="#e74c3c" stroke-width="2"/>
+    <text x="430" y="55" fill="#e74c3c" font-size="12">D₁</text>
+    <!-- Shifted Demand (D2) - animated -->
+    <path class="demand-curve" d="M 100,200 L 180,160 L 260,120 L 340,80 L 420,40"/>
+    <text x="430" y="35" fill="#e74c3c" font-size="12">D₂</text>
+    <!-- Supply (S) -->
+    <path class="supply-curve" d="M 100,60 L 180,100 L 260,140 L 340,180 L 420,220"/>
+    <text x="430" y="225" fill="#2ecc71" font-size="12">S</text>
+    <!-- Equilibrium points -->
+    <circle cx="260" cy="140" r="4" fill="#333"/>
+    <circle cx="260" cy="120" r="4" fill="#333"/>
+    <!-- Price arrows -->
+    <line x1="260" y1="150" x2="260" y2="130" class="price-line"/>
+    <polygon points="255,135 260,120 265,135" class="price-arrow"/>
+    <text x="270" y="135" fill="#f39c12" font-size="12">P↑</text>
+  </svg>
+
+  <h3>What is Inflation?</h3>
+  <p>Inflation is a sustained increase in the general price level of goods and services in an economy over a period of time. When inflation occurs, each unit of currency buys fewer goods and services – meaning your money loses value.</p>
+
+  <h3>Key Points</h3>
+  <ul>
+    <li><strong>Causes:</strong> Demand-pull (too much money chasing too few goods), cost-push (rising production costs), and built-in inflation (wage-price spiral).</li>
+    <li><strong>Types:</strong> Creeping (low, &lt;3%), Walking (moderate, 3-10%), Galloping (very high, 10-1000%), and Hyperinflation (&gt;1000% per year).</li>
+    <li><strong>Effects:</strong> Reduces purchasing power, hurts savers, benefits borrowers, distorts economic decisions, and can lead to social unrest.</li>
+    <li><strong>Measurement:</strong> Consumer Price Index (CPI) and Producer Price Index (PPI) are common measures.</li>
+  </ul>
+
+  <h3>Nigerian Examples</h3>
+  <div class="examples">
+    <p><strong>Example 1 – Fuel Subsidy Removal (2023):</strong> When the Nigerian government removed fuel subsidies in May 2023, the price of petrol tripled overnight. This caused a <em>cost-push inflation</em> as transport costs rose, increasing the prices of food, building materials, and other goods across the country.</p>
+    <p><strong>Example 2 – Food Inflation (2024):</strong> In 2024, Nigeria experienced severe food inflation due to insecurity in farming regions (especially the North), flooding, and the devaluation of the Naira. The price of staples like rice, beans, and garri increased by over 40%, forcing many families to reduce their meals.</p>
+  </div>
+
+  <div class="fun-fact">
+    <h3>💡 Fun Fact</h3>
+    <p>During the "Great Inflation" of the 1970s in Nigeria, the government introduced the "Operation Feed the Nation" programme to boost local food production and reduce reliance on imports – a classic response to cost-push inflation!</p>
+  </div>
+
+  <h3>Practice Questions</h3>
+  <ol class="questions">
+    <li>
+      <strong>Question 1:</strong> Define inflation and distinguish between demand-pull and cost-push inflation. Give one Nigerian example for each type.
+      <br><em>Answer:</em> Inflation is a sustained rise in the general price level. Demand-pull inflation occurs when aggregate demand exceeds supply (e.g., increased government spending during elections). Cost-push inflation occurs when production costs rise (e.g., fuel price hikes increasing transport costs).
+    </li>
+    <li>
+      <strong>Question 2:</strong> Explain two negative effects of inflation on Nigerian households.
+      <br><em>Answer:</em> (i) Reduced purchasing power – families can buy less with the same income. (ii) Erosion of savings – money saved in banks loses value, discouraging saving and reducing future consumption.
+    </li>
+    <li>
+      <strong>Question 3:</strong> If Nigeria's inflation rate rose from 15% to 25% in one year, what type of inflation is this? Suggest one policy the Central Bank of Nigeria (CBN) could use to control it.
+      <br><em>Answer:</em> This is galloping inflation. The CBN could increase the Monetary Policy Rate (MPR) to make borrowing more expensive, reducing money supply and dampening demand-pull pressures.
+    </li>
+  </ol>
+
+  <style>
+    .lesson-content {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f9f9fb;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .lesson-content h2 {
+      color: #2c3e50;
+      border-bottom: 3px solid #e74c3c;
+      padding-bottom: 8px;
+    }
+    .lesson-content h3 {
+      color: #34495e;
+      margin-top: 24px;
+    }
+    .lesson-content ul {
+      background: #fff;
+      padding: 15px 20px 15px 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .lesson-content ul li {
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+    .examples {
+      background: #eaf2f8;
+      padding: 12px 18px;
+      border-left: 4px solid #2980b9;
+      border-radius: 6px;
+      margin: 12px 0;
+    }
+    .examples p {
+      margin: 8px 0;
+    }
+    .fun-fact {
+      background: #fef9e7;
+      border: 2px dashed #f39c12;
+      padding: 12px 18px;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    .fun-fact h3 {
+      margin: 0 0 6px 0;
+      color: #e67e22;
+    }
+    .questions {
+      background: #fff;
+      padding: 15px 20px 15px 35px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .questions li {
+      margin-bottom: 18px;
+      line-height: 1.6;
+    }
+    .questions strong {
+      color: #c0392b;
+    }
+    .questions em {
+      display: block;
+      margin-top: 6px;
+      color: #27ae60;
+      font-style: normal;
+      background: #e8f8f5;
+      padding: 6px 10px;
+      border-radius: 4px;
+    }
+  </style>
+</div>

@@ -1,0 +1,98 @@
+<div class="lesson">
+  <h2>Ecology: The Web of Life</h2>
+  <p>Ecology is the study of how living things (organisms) interact with each other and with their non-living environment. It helps us understand the balance of nature and our role within it.</p>
+
+  <!-- Animated SVG Diagram -->
+  <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:400px; display:block; margin:20px auto; background:#e8f5e9; border-radius:8px;">
+    <defs>
+      <style>
+        @keyframes sunPulse {
+          0% { r: 20; opacity: 0.9; }
+          50% { r: 25; opacity: 1; }
+          100% { r: 20; opacity: 0.9; }
+        }
+        @keyframes arrowFlow {
+          from { stroke-dashoffset: 100; }
+          to { stroke-dashoffset: 0; }
+        }
+        .sun { animation: sunPulse 2s infinite; fill: #ff9800; }
+        .arrow { stroke: #2e7d32; stroke-width: 2; fill: none; stroke-dasharray: 5,5; animation: arrowFlow 3s linear infinite; }
+      </style>
+    </defs>
+    <!-- Sun -->
+    <circle class="sun" cx="200" cy="40" r="20" fill="#ff9800" />
+    <text x="200" y="45" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Sun</text>
+    <!-- Producer (Tree) -->
+    <rect x="175" y="100" width="50" height="60" fill="#4caf50" rx="5" />
+    <text x="200" y="135" text-anchor="middle" fill="white" font-size="9" font-weight="bold">Tree</text>
+    <text x="200" y="150" text-anchor="middle" fill="white" font-size="8">(Producer)</text>
+    <!-- Primary Consumer (Grasshopper) -->
+    <ellipse cx="120" cy="190" rx="25" ry="15" fill="#8bc34a" />
+    <text x="120" y="195" text-anchor="middle" fill="white" font-size="8" font-weight="bold">Grasshopper</text>
+    <!-- Secondary Consumer (Lizard) -->
+    <ellipse cx="280" cy="190" rx="25" ry="15" fill="#ffb74d" />
+    <text x="280" y="195" text-anchor="middle" fill="white" font-size="8" font-weight="bold">Lizard</text>
+    <!-- Tertiary Consumer (Hawk) -->
+    <polygon points="200,270 180,240 220,240" fill="#795548" />
+    <text x="200" y="250" text-anchor="middle" fill="white" font-size="8" font-weight="bold">Hawk</text>
+    <!-- Decomposer (Mushroom) -->
+    <ellipse cx="340" cy="260" rx="20" ry="12" fill="#9e9e9e" />
+    <text x="340" y="265" text-anchor="middle" fill="white" font-size="7" font-weight="bold">Mushroom</text>
+    <!-- Arrows (Energy Flow) -->
+    <line class="arrow" x1="200" y1="60" x2="200" y2="100" />
+    <line class="arrow" x1="175" y1="140" x2="145" y2="180" />
+    <line class="arrow" x1="225" y1="140" x2="255" y2="180" />
+    <line class="arrow" x1="120" y1="205" x2="120" y2="230" />
+    <line class="arrow" x1="280" y1="205" x2="280" y2="230" />
+    <line class="arrow" x1="200" y1="245" x2="200" y2="265" />
+    <line class="arrow" x1="340" y1="272" x2="340" y2="290" />
+    <!-- Labels -->
+    <text x="200" y="85" text-anchor="middle" fill="#2e7d32" font-size="8" font-style="italic">Energy Flow</text>
+    <text x="380" y="150" text-anchor="end" fill="#2e7d32" font-size="8" font-style="italic">Decomposer</text>
+  </svg>
+
+  <!-- Bullet-point Explanations -->
+  <ul style="list-style-type:disc; padding-left:20px; line-height:1.8;">
+    <li><strong>Habitat:</strong> The natural home or environment of an organism (e.g., a pond, forest, or savanna).</li>
+    <li><strong>Population:</strong> All the organisms of the same species living in a habitat (e.g., all the tilapia fish in a pond).</li>
+    <li><strong>Community:</strong> All the different populations living and interacting in a habitat.</li>
+    <li><strong>Ecosystem:</strong> The community of living things plus the non-living (abiotic) factors like sunlight, water, and soil.</li>
+    <li><strong>Food Chain:</strong> A sequence showing who eats whom (e.g., Grass → Grasshopper → Lizard → Hawk).</li>
+    <li><strong>Food Web:</strong> A network of interconnected food chains showing many feeding relationships.</li>
+    <li><strong>Producers:</strong> Organisms that make their own food using sunlight (e.g., green plants).</li>
+    <li><strong>Consumers:</strong> Organisms that eat other organisms (herbivores, carnivores, omnivores).</li>
+    <li><strong>Decomposers:</strong> Organisms that break down dead matter (e.g., bacteria, fungi).</li>
+  </ul>
+
+  <!-- Two Nigerian Examples -->
+  <div style="background:#fff3e0; padding:10px; border-left:4px solid #ff9800; margin:15px 0;">
+    <h4>🇳🇬 Nigerian Example 1: The Niger Delta Mangrove Ecosystem</h4>
+    <p>Mangrove trees (producers) grow in the swampy creeks. Crabs and fish (primary consumers) feed on mangrove leaves. Larger fish and birds (secondary consumers) eat the crabs. Decomposers like bacteria break down dead leaves, recycling nutrients. This ecosystem is vital for local fishing communities.</p>
+  </div>
+  <div style="background:#fff3e0; padding:10px; border-left:4px solid #ff9800; margin:15px 0;">
+    <h4>🇳🇬 Nigerian Example 2: The Guinea Savanna Food Web</h4>
+    <p>Grasses (producers) are eaten by zebras and antelopes (primary consumers). Lions and hyenas (secondary/tertiary consumers) hunt these herbivores. Vultures and termites (decomposers) clean up carcasses. This balance is essential for the savanna's health.</p>
+  </div>
+
+  <!-- Fun Fact Block -->
+  <div style="background:#e3f2fd; padding:10px; border-radius:8px; margin:15px 0; text-align:center;">
+    <h4>⭐ Fun Fact</h4>
+    <p>Did you know? In Nigeria, the <strong>Lake Chad Basin</strong> once supported millions of people and wildlife. Due to climate change and human activities, the lake has shrunk by 90% since the 1960s, showing how fragile an ecosystem can be!</p>
+  </div>
+
+  <!-- Three Practice Questions with Answers -->
+  <div style="margin-top:20px; border-top:2px dashed #2e7d32; padding-top:15px;">
+    <h3>📝 Practice Questions</h3>
+    <ol style="line-height:2;">
+      <li><strong>Question 1:</strong> What is the main difference between a food chain and a food web?</li>
+      <li><strong>Question 2:</strong> In a Nigerian pond ecosystem, name one producer and one primary consumer.</li>
+      <li><strong>Question 3:</strong> Why are decomposers important in an ecosystem? Give one example from Nigeria.</li>
+    </ol>
+    <div style="background:#f1f8e9; padding:10px; border-radius:8px; margin-top:10px;">
+      <h4>✅ Answers</h4>
+      <p><strong>Answer 1:</strong> A food chain shows a single path of energy flow (e.g., grass → zebra → lion), while a food web shows multiple interconnected food chains, representing real-life feeding relationships.</p>
+      <p><strong>Answer 2:</strong> Producer: Water lettuce or algae. Primary consumer: Tilapia fish or tadpoles.</p>
+      <p><strong>Answer 3:</strong> Decomposers break down dead organisms and waste, returning nutrients to the soil for producers. Example: Fungi in a Nigerian forest decompose fallen leaves.</p>
+    </div>
+  </div>
+</div>

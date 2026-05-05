@@ -1,0 +1,94 @@
+<div class="lesson-content">
+  <h2>Public Finance in Economics (SSS2 - NERDC Syllabus)</h2>
+
+  <!-- Animated SVG Diagram -->
+  <svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+    <style>
+      .govt { fill: #1a5276; }
+      .flow { fill: none; stroke: #2e86c1; stroke-width: 2; stroke-dasharray: 6,4; }
+      .tax { fill: #c0392b; font-weight: bold; }
+      .exp { fill: #27ae60; font-weight: bold; }
+      .label { font-family: Arial; font-size: 13px; }
+      @keyframes flowMove {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -20; }
+      }
+      .animate-flow {
+        animation: flowMove 1s linear infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.8; }
+        50% { opacity: 1; }
+      }
+      .pulse { animation: pulse 2s ease-in-out infinite; }
+    </style>
+
+    <!-- Government -->
+    <rect x="220" y="20" width="160" height="60" rx="10" class="govt" />
+    <text x="300" y="55" text-anchor="middle" fill="white" font-weight="bold" font-size="16">Government</text>
+
+    <!-- Households -->
+    <rect x="50" y="140" width="140" height="50" rx="8" fill="#2980b9" />
+    <text x="120" y="170" text-anchor="middle" fill="white" font-size="13">Households</text>
+
+    <!-- Firms -->
+    <rect x="410" y="140" width="140" height="50" rx="8" fill="#2980b9" />
+    <text x="480" y="170" text-anchor="middle" fill="white" font-size="13">Firms</text>
+
+    <!-- Arrow: Households → Government (Taxes) -->
+    <line x1="120" y1="140" x2="250" y2="80" class="flow animate-flow" />
+    <text x="140" y="120" class="tax label" font-size="11">Taxes (PAYE, VAT)</text>
+
+    <!-- Arrow: Firms → Government (Taxes) -->
+    <line x1="480" y1="140" x2="350" y2="80" class="flow animate-flow" />
+    <text x="400" y="120" class="tax label" font-size="11">Company Tax, Customs</text>
+
+    <!-- Arrow: Government → Households (Expenditure) -->
+    <line x1="260" y1="80" x2="160" y2="140" class="flow animate-flow" />
+    <text x="170" y="105" class="exp label" font-size="11">Infrastructure, Schools</text>
+
+    <!-- Arrow: Government → Firms (Expenditure) -->
+    <line x1="340" y1="80" x2="440" y2="140" class="flow animate-flow" />
+    <text x="430" y="105" class="exp label" font-size="11">Contracts, Subsidies</text>
+
+    <!-- Central Pulse -->
+    <circle cx="300" cy="90" r="12" fill="#f1c40f" class="pulse" />
+    <text x="300" y="94" text-anchor="middle" fill="#1a5276" font-size="10" font-weight="bold">₦</text>
+  </svg>
+
+  <h3>Key Concepts</h3>
+  <ul>
+    <li><strong>Public Finance</strong> – The study of how government raises money (revenue) and spends it (expenditure) to manage the economy.</li>
+    <li><strong>Government Revenue</strong> – Money collected through taxes (e.g., PAYE, VAT), fines, and earnings from public enterprises (e.g., NNPC).</li>
+    <li><strong>Government Expenditure</strong> – Spending on public goods like roads, hospitals, education, and defense.</li>
+    <li><strong>Budget</strong> – A financial plan showing expected revenue and proposed expenditure for a fiscal year.</li>
+    <li><strong>Fiscal Policy</strong> – Use of taxation and spending to influence economic growth, inflation, and employment.</li>
+  </ul>
+
+  <h3>Nigerian Examples</h3>
+  <div style="background:#fef9e7; padding:10px; border-left:4px solid #f39c12; margin:10px 0;">
+    <p><strong>Example 1: Lagos State Infrastructure Levy</strong><br>
+    The Lagos State Government introduced the Land Use Charge to fund road repairs and drainage systems. This is a form of public finance where property owners pay tax, and the revenue is used for public infrastructure.</p>
+    <p><strong>Example 2: Federal Government Subsidy on Petroleum</strong><br>
+    The Nigerian government spends billions of naira annually subsidizing petrol to keep prices low for citizens. This expenditure aims to reduce the cost of living but also reduces funds available for other sectors like education.</p>
+  </div>
+
+  <div style="background:#eaf2f8; padding:10px; border-radius:8px; margin:15px 0;">
+    <p><strong>💡 Fun Fact</strong><br>
+    Did you know? Nigeria's first national budget after independence in 1960 was only ₦221 million. By 2024, the proposed budget exceeded ₦28 trillion – a more than 100,000-fold increase!</p>
+  </div>
+
+  <h3>Practice Questions</h3>
+  <ol style="font-weight:bold;">
+    <li>Define public finance and state two sources of government revenue in Nigeria.</li>
+    <li>Explain the difference between a deficit budget and a surplus budget.</li>
+    <li>If the Nigerian government increases spending on education by ₦500 billion and raises taxes by ₦300 billion, what is the effect on the budget balance?</li>
+  </ol>
+
+  <h4>Answers</h4>
+  <ol>
+    <li>Public finance is the study of government revenue and expenditure. Two sources: Petroleum profit tax (from oil companies) and Value Added Tax (VAT) on goods/services.</li>
+    <li>A deficit budget occurs when government expenditure exceeds revenue, while a surplus budget occurs when revenue exceeds expenditure.</li>
+    <li>Spending increases by ₦500 billion, but revenue only rises by ₦300 billion. The budget deficit will increase by ₦200 billion (since extra spending is not fully covered by extra taxes).</li>
+  </ol>
+</div>

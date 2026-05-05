@@ -1,0 +1,107 @@
+<svg width="100%" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8f4f8"/>
+      <stop offset="100%" stop-color="#f0faf0"/>
+    </linearGradient>
+    <linearGradient id="bodyGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffcc99"/>
+      <stop offset="100%" stop-color="#ffb366"/>
+    </linearGradient>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#d32f2f"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2e7d32"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="400" fill="url(#bgGrad)" rx="15"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a237e" font-family="Arial">Homeostasis: The Body's Balancing Act</text>
+
+  <!-- Human body outline -->
+  <ellipse cx="400" cy="220" rx="120" ry="160" fill="url(#bodyGrad)" stroke="#8d6e63" stroke-width="2"/>
+
+  <!-- Brain -->
+  <circle cx="400" cy="120" r="30" fill="#fff3e0" stroke="#8d6e63" stroke-width="2"/>
+  <text x="400" y="125" text-anchor="middle" font-size="11" fill="#4e342e" font-family="Arial">Brain</text>
+  <text x="400" y="138" text-anchor="middle" font-size="9" fill="#4e342e" font-family="Arial">(Control Centre)</text>
+
+  <!-- Sensor 1: Skin (temp) -->
+  <rect x="270" y="180" width="40" height="25" rx="5" fill="#e53935" opacity="0.8"/>
+  <text x="290" y="196" text-anchor="middle" font-size="9" fill="white" font-family="Arial">Skin</text>
+  <text x="290" y="207" text-anchor="middle" font-size="8" fill="white" font-family="Arial">(Temp)</text>
+
+  <!-- Sensor 2: Kidney area -->
+  <ellipse cx="400" cy="280" rx="25" ry="18" fill="#43a047" opacity="0.8"/>
+  <text x="400" y="284" text-anchor="middle" font-size="9" fill="white" font-family="Arial">Kidney</text>
+
+  <!-- Effector 1: Sweat glands -->
+  <rect x="510" y="175" width="45" height="25" rx="5" fill="#1565c0" opacity="0.8"/>
+  <text x="532" y="191" text-anchor="middle" font-size="9" fill="white" font-family="Arial">Sweat</text>
+  <text x="532" y="202" text-anchor="middle" font-size="8" fill="white" font-family="Arial">Glands</text>
+
+  <!-- Effector 2: Blood vessels -->
+  <rect x="510" y="240" width="45" height="25" rx="5" fill="#1565c0" opacity="0.8"/>
+  <text x="532" y="256" text-anchor="middle" font-size="9" fill="white" font-family="Arial">Blood</text>
+  <text x="532" y="267" text-anchor="middle" font-size="8" fill="white" font-family="Arial">Vessels</text>
+
+  <!-- Animated arrows: Skin -> Brain -->
+  <line x1="310" y1="195" x2="365" y2="140" stroke="#d32f2f" stroke-width="3" marker-end="url(#arrowRed)">
+    <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+  </line>
+  <text x="325" y="155" font-size="9" fill="#d32f2f" font-family="Arial" transform="rotate(-45,325,155)">Signal</text>
+
+  <!-- Animated arrows: Kidney -> Brain -->
+  <line x1="400" y1="262" x2="400" y2="155" stroke="#d32f2f" stroke-width="3" marker-end="url(#arrowRed)">
+    <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite"/>
+  </line>
+  <text x="412" y="210" font-size="9" fill="#d32f2f" font-family="Arial">Signal</text>
+
+  <!-- Animated arrows: Brain -> Sweat -->
+  <line x1="430" y1="140" x2="510" y2="190" stroke="#2e7d32" stroke-width="3" marker-end="url(#arrowGreen)">
+    <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
+  </line>
+  <text x="460" y="160" font-size="9" fill="#2e7d32" font-family="Arial">Response</text>
+
+  <!-- Animated arrows: Brain -> Blood vessels -->
+  <line x1="430" y1="150" x2="510" y2="250" stroke="#2e7d32" stroke-width="3" marker-end="url(#arrowGreen)">
+    <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="3.5s" repeatCount="indefinite"/>
+  </line>
+  <text x="460" y="210" font-size="9" fill="#2e7d32" font-family="Arial">Response</text>
+
+  <!-- Labels -->
+  <text x="400" y="370" text-anchor="middle" font-size="12" fill="#4a148c" font-family="Arial" font-weight="bold">Negative Feedback Loop</text>
+  <text x="400" y="388" text-anchor="middle" font-size="10" fill="#6a1b9a" font-family="Arial">Stimulus → Receptor → Control Centre → Effector → Response</text>
+</svg>
+
+<h3 style="color:#1a237e; font-family:Arial; margin-top:10px;">Key Points About Homeostasis</h3>
+<ul style="font-family:Arial; font-size:14px; line-height:1.8; color:#333;">
+  <li><strong>Definition:</strong> Homeostasis is the ability of the body to maintain a stable internal environment despite changes in the external environment.</li>
+  <li><strong>Control Mechanism:</strong> It works through a <em>negative feedback loop</em> — when a condition deviates from normal, the body activates processes to reverse the change.</li>
+  <li><strong>Components:</strong> Every homeostatic system has <strong>receptors</strong> (detect change), a <strong>control centre</strong> (usually the brain), and <strong>effectors</strong> (muscles or glands that make adjustments).</li>
+  <li><strong>Examples of parameters:</strong> Body temperature (37°C), blood glucose (70–110 mg/dL), blood pH (7.35–7.45), and water balance.</li>
+  <li><strong>Failure:</strong> When homeostasis breaks down, diseases occur — e.g., diabetes (blood sugar), dehydration (water balance), or hyperthermia (temperature).</li>
+</ul>
+
+<h3 style="color:#1a237e; font-family:Arial; margin-top:20px;">Nigerian Examples</h3>
+<ul style="font-family:Arial; font-size:14px; line-height:1.8; color:#333;">
+  <li><strong>Example 1 — Harmattan Season:</strong> During the dry, dusty harmattan in Northern Nigeria, the air is cold and dry. The body responds by shivering (muscle contractions generate heat) and reducing blood flow to the skin (vasoconstriction) to conserve heat, keeping the core temperature at 37°C.</li>
+  <li><strong>Example 2 — After Eating Garri:</strong> Garri (cassava flakes) is rich in carbohydrates. After a meal, blood glucose rises. The pancreas releases insulin, which helps cells absorb glucose and stores excess as glycogen in the liver, bringing blood sugar back to normal levels.</li>
+</ul>
+
+<div style="background-color:#fff9c4; border-left:5px solid #f9a825; padding:12px 15px; margin:20px 0; border-radius:5px; font-family:Arial;">
+  <strong style="color:#f57f17;">🌟 Fun Fact:</strong> Did you know that the human body can detect a change in blood temperature as small as <strong>0.1°C</strong>? The hypothalamus in the brain acts like a thermostat, constantly monitoring and adjusting to keep you in the "Goldilocks zone" — not too hot, not too cold!
+</div>
+
+<h3 style="color:#1a237e; font-family:Arial; margin-top:20px;">Practice Questions</h3>
+<ol style="font-family:Arial; font-size:14px; line-height:2; color:#333;">
+  <li><strong>Define homeostasis and name two internal conditions that the body regulates.</strong><br>
+    <span style="color:#2e7d32;">Answer: Homeostasis is the maintenance of a stable internal environment. Examples: body temperature and blood glucose level.</span></li>
+  <li><strong>Explain the role of the pancreas in regulating blood sugar after a Nigerian meal of pounded yam and egusi soup.</strong><br>
+    <span style="color:#2e7d32;">Answer: After eating, blood glucose rises. The pancreas releases insulin, which helps cells take up glucose and stores excess as glycogen in the liver, reducing blood sugar to normal.</span></li>
+  <li><strong>During a hot afternoon in Lagos, you begin to sweat. Identify the receptor, control centre, and effector in this homeostatic response.</strong><br>
+    <span style="color:#2e7d32;">Answer: Receptor = skin temperature sensors; Control centre = hypothalamus in the brain; Effector = sweat glands (produce sweat to cool the body by evaporation).</span></li>
+</ol>

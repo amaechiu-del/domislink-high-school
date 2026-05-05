@@ -1,0 +1,115 @@
+```html
+<section>
+  <h2>Diplomacy in Government (SSS3 NERDC Syllabus)</h2>
+
+  <!-- Animated SVG Diagram -->
+  <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" style="display:block; margin:1.5rem auto; max-width:100%; background:#f0f7ff; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+    <defs>
+      <style>
+        @keyframes handshake {
+          0% { transform: translateX(0px); }
+          50% { transform: translateX(8px); }
+          100% { transform: translateX(0px); }
+        }
+        @keyframes pulse {
+          0% { opacity:0.6; }
+          50% { opacity:1; }
+          100% { opacity:0.6; }
+        }
+        .hand-anim { animation: handshake 2s ease-in-out infinite; }
+        .pulse-anim { animation: pulse 2s ease-in-out infinite; }
+      </style>
+      <linearGradient id="flagGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#008751"/>
+        <stop offset="100%" stop-color="#006b3f"/>
+      </linearGradient>
+      <linearGradient id="flagWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ffffff"/>
+        <stop offset="100%" stop-color="#e6e6e6"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Background globe -->
+    <circle cx="200" cy="100" r="80" fill="none" stroke="#b3d9ff" stroke-width="2" stroke-dasharray="6 4" class="pulse-anim"/>
+    <circle cx="200" cy="100" r="60" fill="none" stroke="#b3d9ff" stroke-width="1.5" stroke-dasharray="4 4" class="pulse-anim"/>
+
+    <!-- Two country poles (Nigeria & Ghana) -->
+    <!-- Nigeria pole -->
+    <rect x="100" y="50" width="12" height="80" fill="#008751" rx="3"/>
+    <rect x="112" y="50" width="12" height="80" fill="#ffffff" rx="3"/>
+    <rect x="124" y="50" width="12" height="80" fill="#008751" rx="3"/>
+    <!-- Ghana pole -->
+    <rect x="260" y="50" width="12" height="80" fill="#ce1126" rx="3"/>
+    <rect x="272" y="50" width="12" height="80" fill="#fcd116" rx="3"/>
+    <rect x="284" y="50" width="12" height="80" fill="#008751" rx="3"/>
+
+    <!-- Handshake (animated) -->
+    <g class="hand-anim">
+      <!-- Left hand (Nigeria) -->
+      <path d="M148 95 Q160 80 175 85 Q185 88 185 95 Q185 102 175 105 Q160 110 148 95Z" fill="#5c3a21" stroke="#3d2616" stroke-width="1"/>
+      <!-- Right hand (Ghana) -->
+      <path d="M252 95 Q240 80 225 85 Q215 88 215 95 Q215 102 225 105 Q240 110 252 95Z" fill="#5c3a21" stroke="#3d2616" stroke-width="1"/>
+      <!-- Overlap fingers -->
+      <path d="M175 88 Q185 82 195 88 Q200 92 195 96 Q185 102 175 96Z" fill="#6b4c2e" stroke="#3d2616" stroke-width="1"/>
+      <path d="M225 88 Q215 82 205 88 Q200 92 205 96 Q215 102 225 96Z" fill="#6b4c2e" stroke="#3d2616" stroke-width="1"/>
+    </g>
+
+    <!-- Labels -->
+    <text x="118" y="160" font-family="Segoe UI, sans-serif" font-size="13" fill="#1a1a1a" text-anchor="middle" font-weight="bold">Nigeria</text>
+    <text x="272" y="160" font-family="Segoe UI, sans-serif" font-size="13" fill="#1a1a1a" text-anchor="middle" font-weight="bold">Ghana</text>
+    <text x="200" y="185" font-family="Segoe UI, sans-serif" font-size="11" fill="#336699" text-anchor="middle" class="pulse-anim">✱ Bilateral Diplomacy ✱</text>
+  </svg>
+
+  <!-- Bullet-point Explanations -->
+  <div style="background:#f9fcf9; border-left:6px solid #008751; padding:1rem 1.5rem; margin:1.5rem 0; border-radius:0 12px 12px 0;">
+    <h3 style="color:#005a3f; margin-top:0;">🔍 Key Concepts of Diplomacy</h3>
+    <ul style="line-height:1.8; padding-left:1.2rem;">
+      <li><strong>Diplomacy</strong> is the art and practice of conducting negotiations between representatives of states or groups to manage international relations.</li>
+      <li><strong>Bilateral diplomacy</strong> involves two countries working directly together (e.g., Nigeria and Ghana).</li>
+      <li><strong>Multilateral diplomacy</strong> involves multiple countries through organizations like the United Nations or African Union.</li>
+      <li>Core tools: <em>negotiation, dialogue, treaties, economic agreements, cultural exchanges, and summit meetings</em>.</li>
+      <li>Diplomatic <strong>immunity</strong> protects diplomats from legal action in host countries to ensure free communication.</li>
+      <li>Modern diplomacy includes <strong>public diplomacy</strong> (engaging foreign publics) and <strong>economic diplomacy</strong> (trade & investment).</li>
+    </ul>
+  </div>
+
+  <!-- Two Nigerian Examples -->
+  <div style="display:flex; flex-wrap:wrap; gap:1.2rem; margin:1.5rem 0;">
+    <div style="flex:1 1 200px; background:#fff7e6; border-radius:12px; padding:1rem; box-shadow:0 2px 6px rgba(0,0,0,0.08);">
+      <h4 style="color:#b36b00; margin-top:0;">🇳🇬 Example 1: Nigeria & South Africa</h4>
+      <p style="font-size:0.95rem;">In 2021, Nigeria and South Africa used diplomatic channels to resolve trade tensions and xenophobic attacks. The <strong>Nigeria-South Africa Bi-National Commission</strong> strengthened consular relations and protected citizens’ rights, showing how diplomacy de-escalates crises.</p>
+    </div>
+    <div style="flex:1 1 200px; background:#e6f3ff; border-radius:12px; padding:1rem; box-shadow:0 2px 6px rgba(0,0,0,0.08);">
+      <h4 style="color:#004080; margin-top:0;">🇳🇬 Example 2: Nigeria & ECOWAS</h4>
+      <p style="font-size:0.95rem;">Nigeria used multilateral diplomacy within ECOWAS to help restore peace in Liberia and Sierra Leone (1990s–2000s). Through negotiations, troop contributions, and sanctions, Nigeria demonstrated regional diplomatic leadership under the principle of <strong>collective security</strong>.</p>
+    </div>
+  </div>
+
+  <!-- Fun Fact Block -->
+  <div style="background:linear-gradient(135deg, #f9e6b3, #ffe680); border-radius:16px; padding:1rem 1.5rem; margin:1.8rem 0; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+    <p style="font-size:1.1rem; margin:0; display:flex; align-items:center; gap:0.5rem;">
+      <span style="font-size:2rem;">🎉</span>
+      <span><strong>Fun Fact:</strong> The word “diplomacy” comes from the Greek <em>diploma</em> (folded document). In ancient Greece, envoys carried official folded documents as credentials. Today, diplomatic passports still serve that purpose!</span>
+    </p>
+  </div>
+
+  <!-- Three Practice Questions + Answers -->
+  <div style="background:#f2f2f2; border-radius:16px; padding:1.5rem; margin-top:2rem;">
+    <h3 style="color:#1a1a1a; margin-top:0;">📝 Practice Questions (SSS3)</h3>
+    <ol style="line-height:1.9; padding-left:1.5rem; font-weight:500;">
+      <li>Define diplomacy and explain two types of diplomacy used by Nigeria in international relations.</li>
+      <li>Describe one specific way Nigeria used diplomacy to resolve a conflict in West Africa.</li>
+      <li>Why is diplomatic immunity important for international relations? Give a brief reason.</li>
+    </ol>
+
+    <details style="background:white; border-radius:12px; padding:0.8rem 1.2rem; margin-top:1rem; cursor:pointer;">
+      <summary style="font-weight:bold; color:#004d40;">📌 Click to see answers</summary>
+      <div style="margin-top:0.8rem; padding-top:0.8rem; border-top:2px dashed #008751;">
+        <p><strong>Answer 1:</strong> Diplomacy is the management of international relations through negotiation and dialogue. Two types: <em>Bilateral diplomacy</em> (e.g., Nigeria–Ghana relations) and <em>Multilateral diplomacy</em> (e.g., Nigeria in the United Nations or ECOWAS).</p>
+        <p><strong>Answer 2:</strong> Nigeria used multilateral diplomacy through ECOWAS to mediate and deploy peacekeeping forces during the civil wars in Liberia and Sierra Leone, helping to restore stability through negotiations and regional cooperation.</p>
+        <p><strong>Answer 3:</strong> Diplomatic immunity ensures diplomats can perform their duties without fear of harassment or legal intimidation by the host country, allowing free communication and negotiation between states.</p>
+      </div>
+    </details>
+  </div>
+</section>
+```

@@ -1,0 +1,122 @@
+<div class="lesson-content">
+  <h2>Conservation in Biology (SSS3 - NERDC Syllabus)</h2>
+
+  <!-- Animated SVG Diagram -->
+  <svg width="100%" height="220" viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg" style="display:block; margin: 0 auto 20px; background: #e8f5e9; border-radius: 12px;">
+    <defs>
+      <style>
+        @keyframes treeGrow {
+          0% { transform: scaleY(0.3); transform-origin: bottom; }
+          100% { transform: scaleY(1); transform-origin: bottom; }
+        }
+        @keyframes waterFlow {
+          0% { stroke-dashoffset: 0; }
+          100% { stroke-dashoffset: 40; }
+        }
+        @keyframes fishSwim {
+          0% { transform: translateX(0px); }
+          50% { transform: translateX(30px); }
+          100% { transform: translateX(0px); }
+        }
+        @keyframes cloudMove {
+          0% { transform: translateX(0px); }
+          50% { transform: translateX(20px); }
+          100% { transform: translateX(0px); }
+        }
+        .tree { animation: treeGrow 3s ease-in-out infinite alternate; }
+        .water { stroke-dasharray: 10 10; animation: waterFlow 2s linear infinite; }
+        .fish { animation: fishSwim 4s ease-in-out infinite; }
+        .cloud { animation: cloudMove 6s ease-in-out infinite; }
+      </style>
+    </defs>
+
+    <!-- Sky -->
+    <rect x="0" y="0" width="600" height="220" fill="#b3e5fc" rx="12"/>
+
+    <!-- Sun -->
+    <circle cx="520" cy="40" r="25" fill="#ffeb3b" opacity="0.9"/>
+
+    <!-- Clouds -->
+    <g class="cloud">
+      <ellipse cx="120" cy="45" rx="30" ry="15" fill="white" opacity="0.8"/>
+      <ellipse cx="140" cy="40" rx="25" ry="12" fill="white" opacity="0.8"/>
+      <ellipse cx="100" cy="42" rx="20" ry="10" fill="white" opacity="0.8"/>
+    </g>
+
+    <!-- Ground -->
+    <rect x="0" y="170" width="600" height="50" fill="#4caf50" rx="0"/>
+
+    <!-- Tree (Trunk & Leaves) -->
+    <g class="tree">
+      <rect x="270" y="110" width="20" height="60" fill="#795548"/>
+      <circle cx="280" cy="90" r="35" fill="#2e7d32"/>
+      <circle cx="260" cy="100" r="25" fill="#388e3c"/>
+      <circle cx="300" cy="100" r="25" fill="#388e3c"/>
+      <circle cx="280" cy="70" r="20" fill="#43a047"/>
+    </g>
+
+    <!-- River -->
+    <path d="M 0 180 Q 150 160 300 180 T 600 175" stroke="#1565c0" stroke-width="12" fill="none" class="water" stroke-linecap="round"/>
+
+    <!-- Fish in river -->
+    <g class="fish">
+      <ellipse cx="340" cy="178" rx="8" ry="4" fill="#ff7043"/>
+      <polygon points="332,178 326,174 326,182" fill="#ff7043"/>
+      <circle cx="344" cy="177" r="1.5" fill="black"/>
+    </g>
+
+    <!-- Bird -->
+    <path d="M 450 70 Q 460 60 470 70 Q 480 60 490 70" stroke="#333" stroke-width="2" fill="none"/>
+
+    <!-- Label -->
+    <text x="280" y="210" text-anchor="middle" font-size="13" fill="white" font-weight="bold" font-family="Arial">🌳 Conserved Ecosystem</text>
+  </svg>
+
+  <!-- Bullet-point Explanations -->
+  <div style="background: #f1f8e9; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+    <h3 style="color: #2e7d32; margin-top: 0;">Key Concepts of Conservation</h3>
+    <ul style="line-height: 1.8; padding-left: 20px;">
+      <li><strong>Conservation</strong> is the sustainable management of natural resources (plants, animals, water, soil) to prevent depletion and extinction.</li>
+      <li><strong>Biodiversity</strong> refers to the variety of life forms in an ecosystem; conservation protects this variety.</li>
+      <li>Methods include <em>in-situ</em> (e.g., national parks, game reserves) and <em>ex-situ</em> (e.g., zoos, seed banks) conservation.</li>
+      <li>Overexploitation, habitat destruction, pollution, and climate change are major threats to conservation.</li>
+      <li>Legislation (like Nigeria's National Parks Service Act) and community-based programs help enforce conservation.</li>
+    </ul>
+  </div>
+
+  <!-- Two Nigerian Examples -->
+  <div style="background: #fff3e0; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+    <h3 style="color: #e65100; margin-top: 0;">🇳🇬 Nigerian Examples</h3>
+    <p><strong>1. Yankari National Park (Bauchi State)</strong> – Nigeria's largest wildlife park, home to elephants, baboons, and antelopes. It is a protected area that promotes eco-tourism and anti-poaching efforts.</p>
+    <p><strong>2. Omo Forest Reserve (Ogun State)</strong> – A tropical rainforest reserve that conserves timber species, rare plants, and wildlife like the endangered white-throated monkey. It also supports sustainable logging and community livelihoods.</p>
+  </div>
+
+  <!-- Fun Fact Block -->
+  <div style="background: #e1f5fe; padding: 12px 15px; border-radius: 8px; border-left: 5px solid #0288d1; margin-bottom: 15px;">
+    <p style="margin: 0; font-weight: bold;">✨ Fun Fact ✨</p>
+    <p style="margin: 5px 0 0;">The Cross River National Park (Nigeria) is one of the last remaining habitats of the <strong>Cross River gorilla</strong> – the world's rarest great ape, with fewer than 300 individuals left in the wild!</p>
+  </div>
+
+  <!-- Three Practice Questions with Answers -->
+  <div style="background: #f3e5f5; padding: 15px; border-radius: 8px;">
+    <h3 style="color: #6a1b9a; margin-top: 0;">📝 Practice Questions</h3>
+
+    <p><strong>Q1.</strong> Define conservation and state two reasons why it is important in Nigeria.</p>
+    <details style="margin-bottom: 10px;">
+      <summary style="cursor: pointer; color: #1565c0; font-weight: bold;">Show Answer</summary>
+      <p>Conservation is the protection and sustainable use of natural resources. Importance: (i) Prevents extinction of species like the Cross River gorilla. (ii) Maintains ecosystem services such as clean water and fertile soil for farming.</p>
+    </details>
+
+    <p><strong>Q2.</strong> Differentiate between <em>in-situ</em> and <em>ex-situ</em> conservation, giving one Nigerian example of each.</p>
+    <details style="margin-bottom: 10px;">
+      <summary style="cursor: pointer; color: #1565c0; font-weight: bold;">Show Answer</summary>
+      <p><em>In-situ</em> conserves species in their natural habitat (e.g., Yankari National Park). <em>Ex-situ</em> conserves species outside their natural habitat (e.g., the National Botanic Garden in Ibadan).</p>
+    </details>
+
+    <p><strong>Q3.</strong> List two human activities that threaten biodiversity in Nigeria and suggest one solution for each.</p>
+    <details>
+      <summary style="cursor: pointer; color: #1565c0; font-weight: bold;">Show Answer</summary>
+      <p>Threats: (i) Deforestation for agriculture – Solution: Enforce reforestation programs. (ii) Poaching of wildlife – Solution: Strengthen anti-poaching patrols and community education.</p>
+    </details>
+  </div>
+</div>

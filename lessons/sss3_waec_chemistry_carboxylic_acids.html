@@ -1,0 +1,78 @@
+<div class="chemistry-lesson">
+  <h2>Carboxylic Acids (WAEC SSS3 Chemistry)</h2>
+
+  <!-- Animated SVG Diagram -->
+  <svg viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg" style="display:block; margin: 1em auto; max-width:100%; background:#f0f8f0; border-radius:12px;">
+    <defs>
+      <style>
+        .atom-c { fill: #444; font: bold 16px sans-serif; }
+        .atom-o { fill: #d32f2f; font: bold 16px sans-serif; }
+        .atom-h { fill: #1976d2; font: bold 16px sans-serif; }
+        .bond { stroke: #333; stroke-width: 2.5; }
+        .bond-double { stroke: #333; stroke-width: 2.5; }
+      </style>
+    </defs>
+    <!-- Carboxyl group: -COOH -->
+    <!-- Carbon atom -->
+    <circle cx="200" cy="80" r="22" fill="#e0e0e0" stroke="#444" stroke-width="2"/>
+    <text x="200" y="86" text-anchor="middle" class="atom-c">C</text>
+    <!-- Double bond to O (right) -->
+    <line x1="222" y1="72" x2="260" y2="60" class="bond-double"/>
+    <line x1="222" y1="88" x2="260" y2="100" class="bond-double"/>
+    <circle cx="268" cy="80" r="22" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2"/>
+    <text x="268" y="86" text-anchor="middle" class="atom-o">O</text>
+    <!-- Single bond to OH (left) -->
+    <line x1="178" y1="72" x2="140" y2="60" class="bond"/>
+    <circle cx="132" cy="80" r="22" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2"/>
+    <text x="132" y="86" text-anchor="middle" class="atom-o">O</text>
+    <!-- H attached to OH -->
+    <line x1="145" y1="95" x2="160" y2="120" class="bond"/>
+    <circle cx="165" cy="128" r="16" fill="#bbdefb" stroke="#1976d2" stroke-width="2"/>
+    <text x="165" y="134" text-anchor="middle" class="atom-h">H</text>
+    <!-- R-group placeholder (methyl) -->
+    <line x1="178" y1="80" x2="130" y2="80" class="bond" stroke-dasharray="4,3"/>
+    <text x="100" y="84" text-anchor="middle" font-size="14" fill="#666" font-style="italic">R</text>
+    <!-- Animated pulse on carboxyl group -->
+    <circle cx="200" cy="80" r="50" fill="none" stroke="#4caf50" stroke-width="1.5" opacity="0.6">
+      <animate attributeName="r" values="50;60;50" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="200" y="170" text-anchor="middle" font-size="14" fill="#2e7d32">Carboxyl Group (–COOH)</text>
+  </svg>
+
+  <!-- Bullet-point explanations -->
+  <ul style="list-style-type: disc; padding-left: 1.5em; line-height: 1.7;">
+    <li><strong>General formula:</strong> R–COOH, where R is an alkyl or aryl group.</li>
+    <li><strong>Functional group:</strong> The carboxyl group (–COOH) consists of a carbonyl (C=O) and a hydroxyl (–OH) on the same carbon.</li>
+    <li><strong>Acidity:</strong> Carboxylic acids are weak acids that donate a proton (H⁺) from the –OH group.</li>
+    <li><strong>Nomenclature:</strong> Replace the final "-e" of the parent alkane with "-oic acid" (e.g., ethanoic acid from ethane).</li>
+    <li><strong>Physical properties:</strong> Higher boiling points than corresponding alcohols due to hydrogen bonding; soluble in water up to 4–5 carbons.</li>
+    <li><strong>Key reactions:</strong> Esterification with alcohols, neutralization with bases, reduction to primary alcohols, and formation of acyl chlorides.</li>
+  </ul>
+
+  <!-- Two Nigerian examples -->
+  <div style="background: #e8f5e9; padding: 0.8em; border-radius: 8px; margin: 1em 0;">
+    <h3 style="margin:0 0 0.5em 0;">🇳🇬 Nigerian Examples</h3>
+    <p><strong>1. Palm Wine Souring:</strong> Fresh palm wine contains glucose. On exposure to air, bacteria oxidize ethanol to <strong>ethanoic acid (acetic acid)</strong>, giving the sour taste.</p>
+    <p><strong>2. Locust Bean (Ogiri) Fermentation:</strong> During fermentation of locust beans, <strong>butanoic acid (butyric acid)</strong> is produced, contributing to the characteristic pungent aroma of ogiri.</p>
+  </div>
+
+  <!-- Fun Fact block -->
+  <div style="background: #fff3e0; border-left: 5px solid #ff9800; padding: 0.8em; border-radius: 8px; margin: 1em 0;">
+    <h4 style="margin:0 0 0.3em 0;">🎉 Fun Fact</h4>
+    <p style="margin:0;">The sting of red ants (common in Nigerian savannahs) contains <strong>methanoic acid (formic acid)</strong>. That's why the bite feels like a sharp burn!</p>
+  </div>
+
+  <!-- Three practice questions with answers -->
+  <div style="margin-top: 1.5em;">
+    <h3>Practice Questions</h3>
+    <ol style="padding-left: 1.2em; line-height: 1.8;">
+      <li><strong>Q1:</strong> What is the functional group present in all carboxylic acids? <br>
+        <em>Answer:</em> The carboxyl group (–COOH).</li>
+      <li><strong>Q2:</strong> Write the structural formula of propanoic acid. <br>
+        <em>Answer:</em> CH₃–CH₂–COOH (or C₂H₅COOH).</li>
+      <li><strong>Q3:</strong> Name the product formed when ethanoic acid reacts with ethanol in the presence of concentrated H₂SO₄. <br>
+        <em>Answer:</em> Ethyl ethanoate (an ester) and water.</li>
+    </ol>
+  </div>
+</div>

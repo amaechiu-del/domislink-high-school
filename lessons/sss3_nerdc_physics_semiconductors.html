@@ -1,0 +1,76 @@
+<div class="lesson-content">
+  <h2>Semiconductors (SSS3 Physics - NERDC Syllabus)</h2>
+
+  <!-- Animated SVG Diagram -->
+  <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" style="display:block; margin:0 auto 20px; background:#f0f4f8; border-radius:8px;">
+    <defs>
+      <style>
+        @keyframes electronFlow {
+          0% { opacity: 0.3; transform: translateX(0); }
+          50% { opacity: 1; transform: translateX(120px); }
+          100% { opacity: 0.3; transform: translateX(0); }
+        }
+        .electron { animation: electronFlow 2s infinite ease-in-out; }
+        @keyframes holeFlow {
+          0% { opacity: 0.3; transform: translateX(0); }
+          50% { opacity: 1; transform: translateX(-120px); }
+          100% { opacity: 0.3; transform: translateX(0); }
+        }
+        .hole { animation: holeFlow 2s infinite ease-in-out; }
+      </style>
+    </defs>
+    <!-- N-type region -->
+    <rect x="20" y="50" width="160" height="100" fill="#d4edda" stroke="#28a745" stroke-width="2" rx="8" />
+    <text x="100" y="110" text-anchor="middle" font-size="14" fill="#155724" font-weight="bold">N-type</text>
+    <text x="100" y="130" text-anchor="middle" font-size="11" fill="#155724">(Excess electrons)</text>
+    <!-- P-type region -->
+    <rect x="220" y="50" width="160" height="100" fill="#f8d7da" stroke="#dc3545" stroke-width="2" rx="8" />
+    <text x="300" y="110" text-anchor="middle" font-size="14" fill="#721c24" font-weight="bold">P-type</text>
+    <text x="300" y="130" text-anchor="middle" font-size="11" fill="#721c24">(Excess holes)</text>
+    <!-- Junction line -->
+    <line x1="180" y1="50" x2="180" y2="150" stroke="#333" stroke-width="3" stroke-dasharray="6,4" />
+    <text x="180" y="40" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">P-N Junction</text>
+    <!-- Electron flow (animated) -->
+    <circle class="electron" r="6" fill="#007bff" cx="100" cy="90" />
+    <text x="80" y="80" font-size="10" fill="#007bff">e⁻</text>
+    <!-- Hole flow (animated) -->
+    <circle class="hole" r="6" fill="#dc3545" cx="300" cy="120" />
+    <text x="320" y="130" font-size="10" fill="#dc3545">h⁺</text>
+    <!-- Current arrow -->
+    <polygon points="185,100 195,95 195,105" fill="#ffc107" />
+    <line x1="180" y1="100" x2="220" y2="100" stroke="#ffc107" stroke-width="2" />
+    <text x="200" y="90" text-anchor="middle" font-size="10" fill="#856404">Current flow</text>
+  </svg>
+
+  <!-- Bullet-point Explanations -->
+  <h3>Key Concepts</h3>
+  <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+    <li><strong>Semiconductors</strong> are materials with electrical conductivity between conductors (e.g., copper) and insulators (e.g., rubber). Examples: Silicon (Si) and Germanium (Ge).</li>
+    <li><strong>P-type</strong> semiconductors are doped with elements that create "holes" (positive charge carriers). Doping with Boron (Group III) produces holes.</li>
+    <li><strong>N-type</strong> semiconductors are doped with elements that provide extra electrons. Doping with Phosphorus (Group V) adds free electrons.</li>
+    <li><strong>P-N Junction</strong> is formed when P-type and N-type materials are joined. It allows current to flow easily in one direction (forward bias) but blocks it in the opposite direction (reverse bias).</li>
+    <li>Applications: Diodes, transistors, solar cells, and light-emitting diodes (LEDs).</li>
+  </ul>
+
+  <!-- Two Nigerian Examples -->
+  <div style="background: #e9ecef; padding: 12px; border-radius: 8px; margin: 20px 0;">
+    <h3>🇳🇬 Nigerian Examples</h3>
+    <ol style="padding-left: 18px;">
+      <li><strong>Solar-Powered Streetlights in Lagos:</strong> Many streetlights in Lagos use solar panels made from semiconductor materials (silicon). The P-N junctions in the solar cells convert sunlight into electricity, powering LED bulbs at night.</li>
+      <li><strong>Mobile Phone Chargers (Abuja Markets):</strong> The rectifier diodes inside phone chargers sold in Wuse Market contain semiconductor P-N junctions. They convert AC mains power to DC power for charging phones.</li>
+    </ol>
+  </div>
+
+  <!-- Fun Fact Block -->
+  <div style="background: #fff3cd; border-left: 6px solid #ffc107; padding: 12px; border-radius: 6px; margin: 20px 0;">
+    <p style="margin:0;"><strong>⚡ Fun Fact:</strong> The first transistor (made of germanium) was invented in 1947 at Bell Labs. Today, a single computer chip can contain billions of tiny semiconductor transistors — smaller than a grain of sand!</p>
+  </div>
+
+  <!-- Practice Questions -->
+  <h3>Practice Questions</h3>
+  <ol style="padding-left: 18px; line-height: 2;">
+    <li><strong>Question 1:</strong> What are the majority charge carriers in a P-type semiconductor? <br><span style="color: #28a745;">Answer: Holes (positive charge carriers).</span></li>
+    <li><strong>Question 2:</strong> A P-N junction is connected so that the P-side is positive and the N-side is negative. Is this forward bias or reverse bias? <br><span style="color: #28a745;">Answer: Forward bias (current flows easily).</span></li>
+    <li><strong>Question 3:</strong> Name one common semiconductor element used in solar cells in Nigeria. <br><span style="color: #28a745;">Answer: Silicon (Si).</span></li>
+  </ol>
+</div>

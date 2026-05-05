@@ -1,0 +1,97 @@
+<div class="lesson-content">
+  <h2>Ecology: The Web of Life</h2>
+  <p>Ecology is the study of how living organisms interact with each other and with their physical environment. It explores the relationships that sustain life on Earth, from tiny microbes to vast forests.</p>
+
+  <!-- Animated SVG Diagram: Food Web in a Nigerian Savanna -->
+  <svg viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:500px; display:block; margin:20px auto; background:#e8f5e9; border-radius:12px;">
+    <style>
+      .sun { animation: pulse 3s infinite; }
+      @keyframes pulse { 0%,100%{opacity:0.7} 50%{opacity:1} }
+      .grass { animation: sway 2s ease-in-out infinite; transform-origin: bottom; }
+      @keyframes sway { 0%,100%{transform:rotate(0deg)} 50%{transform:rotate(2deg)} }
+      .herbivore { animation: moveHerb 5s linear infinite; }
+      @keyframes moveHerb { 0%{transform:translateX(0)} 50%{transform:translateX(20px)} 100%{transform:translateX(0)} }
+      .carnivore { animation: moveCarn 6s linear infinite; }
+      @keyframes moveCarn { 0%{transform:translateX(0)} 50%{transform:translateX(-15px)} 100%{transform:translateX(0)} }
+    </style>
+    <!-- Sun -->
+    <circle cx="420" cy="40" r="25" fill="#FFD700" class="sun"/>
+    <text x="420" y="45" text-anchor="middle" fill="#333" font-size="10" font-weight="bold">SUN</text>
+    <!-- Grass (Producers) -->
+    <g class="grass">
+      <line x1="100" y1="280" x2="95" y2="230" stroke="#2e7d32" stroke-width="4"/>
+      <line x1="140" y1="280" x2="138" y2="225" stroke="#388e3c" stroke-width="4"/>
+      <line x1="180" y1="280" x2="177" y2="235" stroke="#2e7d32" stroke-width="4"/>
+      <ellipse cx="100" cy="280" rx="15" ry="5" fill="#4caf50" opacity="0.5"/>
+      <ellipse cx="140" cy="280" rx="15" ry="5" fill="#4caf50" opacity="0.5"/>
+      <ellipse cx="180" cy="280" rx="15" ry="5" fill="#4caf50" opacity="0.5"/>
+    </g>
+    <text x="140" y="300" text-anchor="middle" fill="#1b5e20" font-size="12" font-weight="bold">Grass &amp; Shrubs (Producers)</text>
+    <!-- Grasscutter (Primary Consumer / Herbivore) -->
+    <g class="herbivore">
+      <rect x="100" y="180" width="40" height="25" rx="10" fill="#8d6e63"/>
+      <circle cx="110" cy="185" r="4" fill="#3e2723"/>
+      <circle cx="130" cy="185" r="4" fill="#3e2723"/>
+      <ellipse cx="120" cy="200" rx="8" ry="4" fill="#6d4c41"/>
+      <text x="120" y="215" text-anchor="middle" fill="#3e2723" font-size="9">Grasscutter</text>
+    </g>
+    <!-- Python (Secondary Consumer / Carnivore) -->
+    <g class="carnivore">
+      <path d="M300 190 Q320 180 340 190 Q360 200 380 190" stroke="#2c3e50" stroke-width="8" fill="none" stroke-linecap="round"/>
+      <circle cx="380" cy="190" r="6" fill="#2c3e50"/>
+      <circle cx="382" cy="188" r="2" fill="#e74c3c"/>
+      <text x="340" y="210" text-anchor="middle" fill="#2c3e50" font-size="9">Python</text>
+    </g>
+    <!-- Hawk (Tertiary Consumer / Top Carnivore) -->
+    <g>
+      <path d="M380 100 Q400 80 420 100 Q430 110 410 120 Q390 110 380 100" fill="#795548"/>
+      <circle cx="405" cy="95" r="5" fill="#5d4037"/>
+      <circle cx="408" cy="93" r="1.5" fill="#ff0"/>
+      <path d="M400 105 L395 115 L405 110" fill="#f44336"/>
+      <text x="410" y="80" text-anchor="middle" fill="#3e2723" font-size="9">Hawk</text>
+    </g>
+    <!-- Decomposers (Fungi/Bacteria) -->
+    <circle cx="250" cy="270" r="8" fill="#7cb342" opacity="0.8"/>
+    <circle cx="260" cy="275" r="5" fill="#558b2f" opacity="0.8"/>
+    <circle cx="240" cy="278" r="6" fill="#7cb342" opacity="0.8"/>
+    <text x="250" y="295" text-anchor="middle" fill="#33691e" font-size="10">Decomposers</text>
+    <!-- Arrows (Energy Flow) -->
+    <line x1="140" y1="225" x2="120" y2="205" stroke="#e65100" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="160" y1="195" x2="300" y2="190" stroke="#e65100" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="340" y1="185" x2="400" y2="120" stroke="#e65100" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="140" y1="270" x2="250" y2="270" stroke="#e65100" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="4"/>
+    <defs>
+      <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+        <path d="M0,0 L8,3 L0,6" fill="#e65100"/>
+      </marker>
+    </defs>
+  </svg>
+
+  <h3>Key Concepts in Ecology</h3>
+  <ul>
+    <li><strong>Ecosystem:</strong> A community of living organisms (biotic) interacting with their non-living (abiotic) environment, e.g., a pond, forest, or savanna.</li>
+    <li><strong>Food Chain &amp; Food Web:</strong> Shows the flow of energy from producers (plants) to consumers (herbivores, carnivores) and decomposers. A food web is more realistic, showing interconnected chains.</li>
+    <li><strong>Trophic Levels:</strong> Feeding positions in a food chain: Producers (Level 1), Primary Consumers (Level 2), Secondary Consumers (Level 3), Tertiary Consumers (Level 4).</li>
+    <li><strong>Energy Flow:</strong> Only about 10% of energy is transferred from one trophic level to the next; the rest is lost as heat or used for life processes.</li>
+    <li><strong>Biogeochemical Cycles:</strong> Nutrients like carbon, nitrogen, and water cycle through ecosystems via processes like photosynthesis, respiration, and decomposition.</li>
+  </ul>
+
+  <h3>Nigerian Examples</h3>
+  <div style="background:#e3f2fd; padding:10px; border-radius:8px; margin:10px 0;">
+    <p><strong>Example 1: The Niger Delta Mangrove Ecosystem</strong><br>
+    Mangrove trees (producers) provide habitat for crabs, fish, and birds. The roots filter pollutants and protect the coastline. Local communities harvest fish and prawns, relying on this rich ecosystem for food and livelihood.</p>
+    <p><strong>Example 2: The Jos Plateau Grasslands</strong><br>
+    Grasses and shrubs support grazing animals like cattle and antelopes. Predators such as pythons and hawks control herbivore populations. Overgrazing by cattle can lead to desertification, a major ecological challenge in the region.</p>
+  </div>
+
+  <div style="background:#fff3e0; padding:10px; border-radius:8px; border-left:5px solid #ff9800; margin:15px 0;">
+    <p><strong>🌟 Fun Fact:</strong> The African baobab tree (found in parts of northern Nigeria) can store up to 120,000 litres of water in its trunk! It acts as a natural reservoir, supporting many animals during the dry season—a perfect example of an ecological adaptation.</p>
+  </div>
+
+  <h3>Practice Questions</h3>
+  <ol style="font-weight:bold;">
+    <li>What is the primary source of energy for almost all ecosystems? <br><span style="font-weight:normal; color:#2e7d32;">Answer: The Sun.</span></li>
+    <li>In a Nigerian savanna food chain (grass → grasscutter → python → hawk), which organism is the secondary consumer? <br><span style="font-weight:normal; color:#2e7d32;">Answer: The python (it eats the grasscutter, a primary consumer).</span></li>
+    <li>Why do decomposers (like fungi and bacteria) play a vital role in an ecosystem? <br><span style="font-weight:normal; color:#2e7d32;">Answer: They break down dead organisms and waste, returning nutrients to the soil for producers to use again.</span></li>
+  </ol>
+</div>

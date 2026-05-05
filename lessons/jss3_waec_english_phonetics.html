@@ -1,0 +1,103 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto;background:#f0f8ff;border-radius:12px;font-family:Arial,sans-serif;">
+  <defs>
+    <linearGradient id="mouthGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="tongueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#922b21;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="earGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fd79a8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e84393;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+
+  <!-- Head outline -->
+  <ellipse cx="300" cy="180" rx="180" ry="170" fill="#ffeaa7" stroke="#d35400" stroke-width="3"/>
+  
+  <!-- Eyes -->
+  <circle cx="240" cy="140" r="18" fill="white" stroke="#2d3436" stroke-width="2"/>
+  <circle cx="360" cy="140" r="18" fill="white" stroke="#2d3436" stroke-width="2"/>
+  <circle cx="245" cy="140" r="8" fill="#2d3436"/>
+  <circle cx="365" cy="140" r="8" fill="#2d3436"/>
+  
+  <!-- Eyebrows (animated) -->
+  <path d="M215 115 Q240 100 265 115" fill="none" stroke="#2d3436" stroke-width="2.5">
+    <animate attributeName="d" values="M215 115 Q240 100 265 115;M215 110 Q240 95 265 110;M215 115 Q240 100 265 115" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <path d="M335 115 Q360 100 385 115" fill="none" stroke="#2d3436" stroke-width="2.5">
+    <animate attributeName="d" values="M335 115 Q360 100 385 115;M335 110 Q360 95 385 110;M335 115 Q360 100 385 115" dur="3s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Nose -->
+  <path d="M290 150 Q300 175 310 150" fill="none" stroke="#d35400" stroke-width="2.5"/>
+
+  <!-- Ears -->
+  <ellipse cx="120" cy="180" rx="25" ry="35" fill="url(#earGrad)" stroke="#e84393" stroke-width="2"/>
+  <ellipse cx="480" cy="180" rx="25" ry="35" fill="url(#earGrad)" stroke="#e84393" stroke-width="2"/>
+
+  <!-- Open mouth (animated) -->
+  <ellipse cx="300" cy="230" rx="60" ry="25" fill="url(#mouthGrad)" stroke="#c0392b" stroke-width="2">
+    <animate attributeName="ry" values="25;35;25" dur="2s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Tongue -->
+  <ellipse cx="300" cy="245" rx="35" ry="12" fill="url(#tongueGrad)">
+    <animate attributeName="ry" values="12;18;12" dur="2s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Sound waves (animated) -->
+  <path d="M370 220 Q400 200 400 230" fill="none" stroke="#0984e3" stroke-width="2" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.2;0.7" dur="1.5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M380 210 Q420 180 420 240" fill="none" stroke="#0984e3" stroke-width="2" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="1.5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M390 200 Q440 160 440 250" fill="none" stroke="#0984e3" stroke-width="2" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.05;0.3" dur="1.5s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Labels -->
+  <text x="300" y="320" text-anchor="middle" font-size="18" font-weight="bold" fill="#2d3436">🔊 Sound Production</text>
+  <text x="300" y="345" text-anchor="middle" font-size="14" fill="#636e72">Vocal cords vibrate → Air passes through mouth</text>
+</svg>
+
+<h2 style="color:#c0392b;border-bottom:3px solid #c0392b;padding-bottom:8px;">🔤 What is Phonetics?</h2>
+<p>Phonetics is the study of <strong>speech sounds</strong> — how they are <em>produced</em>, <em>transmitted</em>, and <em>heard</em>. In the WAEC English syllabus, you must understand the 44 sounds of English (24 consonants + 20 vowels) and how to transcribe them using the International Phonetic Alphabet (IPA).</p>
+
+<h3 style="color:#e74c3c;">📌 Key Concepts</h3>
+<ul style="background:#ffeaa7;padding:15px 25px;border-radius:10px;list-style-type:'🎯 ';">
+  <li><strong>Consonants</strong> — sounds produced with obstruction in the vocal tract (e.g., /p/, /b/, /t/, /d/, /k/, /g/)</li>
+  <li><strong>Vowels</strong> — sounds produced with no obstruction; they can be <em>short</em> (/ɪ/, /e/, /æ/, /ɒ/, /ʌ/, /ʊ/) or <em>long</em> (/iː/, /uː/, /ɔː/, /ɜː/, /ɑː/)</li>
+  <li><strong>Diphthongs</strong> — two vowel sounds gliding together (e.g., /aɪ/ in "price", /ɔɪ/ in "boy", /eə/ in "hair")</li>
+  <li><strong>Voiced vs Voiceless</strong> — feel your throat: /b/ (voiced) vs /p/ (voiceless); /d/ vs /t/; /g/ vs /k/</li>
+  <li><strong>Stress</strong> — syllables pronounced with more force; e.g., <strong>PRE</strong>sent (noun) vs pre<strong>SENT</strong> (verb)</li>
+</ul>
+
+<h3 style="color:#e74c3c;">🇳🇬 Nigerian Examples</h3>
+<div style="background:#dfe6e9;padding:12px 20px;border-radius:10px;margin:10px 0;">
+  <p><strong>Example 1:</strong> The word <em>"water"</em> — Nigerian English often pronounces it /ˈwɔːtə/ instead of /ˈwɔːtə/ (standard). The /t/ is often pronounced as a flap [ɾ] in fast speech.</p>
+  <p><strong>Example 2:</strong> The word <em>"bag"</em> — many Nigerians use /bæg/ with a short /æ/ sound, while standard British English uses /bæɡ/. Also, the final /g/ may be devoiced to /k/ in some Nigerian accents.</p>
+</div>
+
+<div style="background:#fd79a8;color:white;padding:12px 20px;border-radius:15px;margin:15px 0;">
+  <h4 style="margin:0;">🎉 Fun Fact!</h4>
+  <p style="margin:5px 0 0;">The English language has <strong>only 26 letters</strong> but <strong>44 sounds</strong>! That's why spelling can be tricky — the letter 'a' can sound different in <em>cat</em> (/æ/), <em>car</em> (/ɑː/), <em>care</em> (/eə/), and <em>cake</em> (/eɪ/).</p>
+</div>
+
+<h3 style="color:#e74c3c;">📝 Practice Questions</h3>
+<ol style="background:#f0f8ff;padding:15px 30px;border-radius:10px;border:2px solid #0984e3;">
+  <li><strong>Question 1:</strong> Which of the following words contains a <strong>voiceless</strong> consonant at the beginning?<br>
+    A) dog  B) cat  C) goat  D) van</li>
+  <li><strong>Question 2:</strong> Write the IPA symbol for the vowel sound in the Nigerian English pronunciation of <em>"bed"</em> (as commonly spoken in Lagos).</li>
+  <li><strong>Question 3:</strong> Identify the <strong>diphthong</strong> in the word <em>"voice"</em> and give its IPA symbol.</li>
+</ol>
+
+<h4 style="color:#00b894;">✅ Answers</h4>
+<ul style="background:#55efc4;padding:10px 20px;border-radius:8px;list-style-type:'✔ ';">
+  <li><strong>Answer 1:</strong> B) <em>cat</em> — /k/ is voiceless (vocal cords do not vibrate).</li>
+  <li><strong>Answer 2:</strong> /ɛ/ — the short 'e' sound (as in "bed" /bɛd/). Many Nigerians use /ɛ/ rather than /e/.</li>
+  <li><strong>Answer 3:</strong> /ɔɪ/ — the diphthong in "voice" /vɔɪs/.</li>
+</ul>

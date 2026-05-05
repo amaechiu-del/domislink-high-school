@@ -1,0 +1,106 @@
+<div class="lesson-content">
+  <h2>Market Structures in Economics</h2>
+  <p><em>SSS1 Economics – WAEC Syllabus</em></p>
+
+  <!-- Animated SVG Diagram -->
+  <svg viewBox="0 0 600 350" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:600px; height:auto; display:block; margin: 20px auto; background:#f4f9ff; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+    <style>
+      .market-bar { animation: growBar 2s ease-in-out infinite alternate; }
+      @keyframes growBar {
+        0% { height: 20px; }
+        100% { height: 80px; }
+      }
+      .market-circle { animation: pulse 2s ease-in-out infinite alternate; }
+      @keyframes pulse {
+        0% { r: 20; }
+        100% { r: 35; }
+      }
+      .market-label { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #1a3a5c; }
+      .market-desc { font-family: Arial, sans-serif; font-size: 11px; fill: #2c5f8a; }
+      .arrow-line { stroke: #1a3a5c; stroke-width: 2; stroke-dasharray: 6,4; animation: dashMove 1.5s linear infinite; }
+      @keyframes dashMove {
+        from { stroke-dashoffset: 20; }
+        to { stroke-dashoffset: 0; }
+      }
+    </style>
+
+    <!-- Title -->
+    <text x="300" y="30" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#0b2b4a">Types of Market Structures</text>
+
+    <!-- Perfect Competition -->
+    <rect x="30" y="80" width="100" height="80" rx="10" fill="#e6f0fa" stroke="#1a3a5c" stroke-width="2"/>
+    <circle cx="80" cy="120" r="20" fill="#3b82f6" class="market-circle"/>
+    <text x="80" y="215" text-anchor="middle" class="market-label">Perfect</text>
+    <text x="80" y="232" text-anchor="middle" class="market-label">Competition</text>
+    <text x="80" y="250" text-anchor="middle" class="market-desc">Many sellers, identical products</text>
+
+    <!-- Monopolistic Competition -->
+    <rect x="170" y="80" width="100" height="80" rx="10" fill="#e6f0fa" stroke="#1a3a5c" stroke-width="2"/>
+    <rect x="190" y="100" width="60" height="40" rx="5" fill="#f59e0b" class="market-bar"/>
+    <text x="220" y="215" text-anchor="middle" class="market-label">Monopolistic</text>
+    <text x="220" y="232" text-anchor="middle" class="market-label">Competition</text>
+    <text x="220" y="250" text-anchor="middle" class="market-desc">Many sellers, differentiated products</text>
+
+    <!-- Oligopoly -->
+    <rect x="310" y="80" width="100" height="80" rx="10" fill="#e6f0fa" stroke="#1a3a5c" stroke-width="2"/>
+    <circle cx="335" cy="115" r="12" fill="#10b981" class="market-circle"/>
+    <circle cx="365" cy="115" r="12" fill="#10b981" class="market-circle"/>
+    <circle cx="350" cy="140" r="12" fill="#10b981" class="market-circle"/>
+    <text x="360" y="215" text-anchor="middle" class="market-label">Oligopoly</text>
+    <text x="360" y="232" text-anchor="middle" class="market-label">(Few Sellers)</text>
+    <text x="360" y="250" text-anchor="middle" class="market-desc">Interdependent firms</text>
+
+    <!-- Monopoly -->
+    <rect x="450" y="80" width="100" height="80" rx="10" fill="#e6f0fa" stroke="#1a3a5c" stroke-width="2"/>
+    <circle cx="500" cy="120" r="30" fill="#ef4444" class="market-circle"/>
+    <text x="500" y="215" text-anchor="middle" class="market-label">Monopoly</text>
+    <text x="500" y="232" text-anchor="middle" class="market-label">(Single Seller)</text>
+    <text x="500" y="250" text-anchor="middle" class="market-desc">No close substitutes</text>
+
+    <!-- Arrows between boxes -->
+    <line x1="130" y1="120" x2="170" y2="120" class="arrow-line"/>
+    <line x1="270" y1="120" x2="310" y2="120" class="arrow-line"/>
+    <line x1="410" y1="120" x2="450" y2="120" class="arrow-line"/>
+
+    <!-- Bottom note -->
+    <text x="300" y="310" text-anchor="middle" font-family="Arial" font-size="12" fill="#4b6584">← More competition →</text>
+    <text x="300" y="330" text-anchor="middle" font-family="Arial" font-size="12" fill="#4b6584">← Less competition →</text>
+  </svg>
+
+  <!-- Bullet-point Explanations -->
+  <div style="background:#f0f7ff; padding:15px; border-radius:8px; margin:20px 0;">
+    <h3 style="color:#0b2b4a; margin-top:0;">Key Features of Market Structures</h3>
+    <ul style="list-style-type:disc; padding-left:20px; line-height:1.8;">
+      <li><strong>Perfect Competition:</strong> Many buyers and sellers; identical products (e.g., agricultural produce); free entry/exit; no single firm can influence price.</li>
+      <li><strong>Monopolistic Competition:</strong> Many sellers; products are similar but differentiated (e.g., soap brands); non-price competition (advertising, branding).</li>
+      <li><strong>Oligopoly:</strong> Few large firms dominate the market; high barriers to entry; firms are interdependent (e.g., telecom networks).</li>
+      <li><strong>Monopoly:</strong> Single seller dominates; unique product with no close substitutes; high barriers to entry; firm can set price.</li>
+    </ul>
+  </div>
+
+  <!-- Two Nigerian Examples -->
+  <div style="background:#fff4e6; padding:15px; border-radius:8px; margin:20px 0; border-left:4px solid #f59e0b;">
+    <h3 style="color:#b45309; margin-top:0;">🇳🇬 Nigerian Examples</h3>
+    <p><strong>1. Perfect Competition:</strong> The <em>Onion Market</em> in Kano – hundreds of traders sell nearly identical onions, and prices are determined by supply and demand. No single trader can set the price.</p>
+    <p><strong>2. Monopoly:</strong> The <em>Nigerian Postal Service (NIPOST)</em> – for many years, NIPOST was the only provider of letter delivery services in Nigeria, with no close substitute.</p>
+  </div>
+
+  <!-- Fun Fact Block -->
+  <div style="background:#e8f5e9; padding:15px; border-radius:8px; margin:20px 0; border:2px dashed #2e7d32;">
+    <h3 style="color:#1b5e20; margin-top:0;">💡 Fun Fact</h3>
+    <p>Did you know? In a <strong>monopoly</strong>, the firm can be a <em>price maker</em> – it sets the price because consumers have no alternative. However, in Nigeria, the <strong>Nigerian Communications Commission (NCC)</strong> regulates telecom monopolies to protect consumers from unfair pricing!</p>
+  </div>
+
+  <!-- Three Practice Questions with Answers -->
+  <div style="background:#f3e5f5; padding:15px; border-radius:8px; margin:20px 0;">
+    <h3 style="color:#4a148c; margin-top:0;">📝 Practice Questions</h3>
+    <ol style="line-height:1.8;">
+      <li><strong>Question 1:</strong> In which market structure do firms produce identical products and have no control over price?<br>
+        <em>Answer:</em> Perfect Competition.</li>
+      <li><strong>Question 2:</strong> Give one Nigerian example of an oligopoly market.<br>
+        <em>Answer:</em> The mobile telecommunications industry (e.g., MTN, Glo, Airtel, 9mobile) – only a few large firms dominate.</li>
+      <li><strong>Question 3:</strong> What is the main difference between monopolistic competition and monopoly?<br>
+        <em>Answer:</em> In monopolistic competition, there are many sellers with differentiated products; in a monopoly, there is only one seller with a unique product and no close substitutes.</li>
+    </ol>
+  </div>
+</div>

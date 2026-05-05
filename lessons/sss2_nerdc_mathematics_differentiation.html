@@ -1,0 +1,120 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e94560"/>
+    </marker>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgGrad)" rx="15"/>
+  
+  <!-- Axes -->
+  <line x1="50" y1="350" x2="550" y2="350" stroke="#e94560" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+  <line x1="50" y1="350" x2="50" y2="30" stroke="#e94560" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+  
+  <!-- Labels -->
+  <text x="555" y="370" fill="#e94560" font-family="Arial" font-size="18" font-weight="bold">x</text>
+  <text x="30" y="30" fill="#e94560" font-family="Arial" font-size="18" font-weight="bold">y</text>
+  <text x="45" y="370" fill="#e94560" font-family="Arial" font-size="14">O</text>
+
+  <!-- Cubic curve: y = x³/27 - x²/9 + 50 (scaled and shifted) -->
+  <path d="M80,320 
+           C100,310 120,280 140,260 
+           C160,235 180,210 200,200 
+           C220,190 240,185 260,190 
+           C280,195 300,210 320,230 
+           C340,250 360,275 380,290 
+           C400,305 420,315 440,320 
+           C460,325 480,328 500,330"
+        fill="none" stroke="#0f3460" stroke-width="3.5" stroke-linecap="round">
+    <animate attributeName="stroke-dashoffset" from="800" to="0" dur="3s" fill="freeze"/>
+    <animate attributeName="stroke-dasharray" from="800" to="800" dur="3s" fill="freeze"/>
+  </path>
+
+  <!-- Tangent line at x=200 (point A) -->
+  <line x1="120" y1="270" x2="280" y2="170" stroke="#e94560" stroke-width="2.5" stroke-dasharray="8,4" opacity="0.9">
+    <animate attributeName="opacity" from="0" to="0.9" dur="1.5s" begin="3s" fill="freeze"/>
+  </line>
+  
+  <!-- Point A -->
+  <circle cx="200" cy="200" r="6" fill="#e94560">
+    <animate attributeName="r" values="4;8;4" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="205" y="190" fill="#e94560" font-family="Arial" font-size="14" font-weight="bold">A</text>
+
+  <!-- Second tangent at x=320 (point B) -->
+  <line x1="240" y1="260" x2="400" y2="240" stroke="#ffd700" stroke-width="2.5" stroke-dasharray="8,4" opacity="0.9">
+    <animate attributeName="opacity" from="0" to="0.9" dur="1.5s" begin="4.5s" fill="freeze"/>
+  </line>
+  <circle cx="320" cy="230" r="6" fill="#ffd700">
+    <animate attributeName="r" values="4;8;4" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="325" y="220" fill="#ffd700" font-family="Arial" font-size="14" font-weight="bold">B</text>
+
+  <!-- Animated gradient fill under curve -->
+  <path d="M80,320 
+           C100,310 120,280 140,260 
+           C160,235 180,210 200,200 
+           C220,190 240,185 260,190 
+           C280,195 300,210 320,230 
+           C340,250 360,275 380,290 
+           C400,305 420,315 440,320 
+           C460,325 480,328 500,330
+           L500,350 L80,350 Z"
+        fill="#0f3460" opacity="0.3">
+    <animate attributeName="opacity" from="0" to="0.3" dur="2s" fill="freeze"/>
+  </path>
+
+  <!-- Animated title -->
+  <text x="300" y="60" text-anchor="middle" fill="#e94560" font-family="Arial" font-size="22" font-weight="bold" opacity="0">
+    Differentiation: Slope of a Curve
+    <animate attributeName="opacity" from="0" to="1" dur="1s" fill="freeze"/>
+  </text>
+
+  <!-- Derivative notation -->
+  <text x="300" y="85" text-anchor="middle" fill="#ffd700" font-family="Arial" font-size="16" opacity="0">
+    dy/dx = gradient at any point
+    <animate attributeName="opacity" from="0" to="1" dur="1s" begin="0.5s" fill="freeze"/>
+  </text>
+</svg>
+
+<h3>Key Concepts</h3>
+<ul>
+  <li><strong>Differentiation</strong> finds the <em>rate of change</em> of a function at any given point — the slope of the tangent line to the curve.</li>
+  <li>If \( y = x^n \), then \( \frac{dy}{dx} = n x^{n-1} \) (the Power Rule).</li>
+  <li>The derivative \( \frac{dy}{dx} \) tells us how steep the curve is: positive = increasing, negative = decreasing, zero = flat (turning point).</li>
+  <li>Notation: \( f'(x) \) means the same as \( \frac{dy}{dx} \).</li>
+  <li>Differentiation is used in physics (velocity = derivative of displacement), economics (marginal cost), and engineering (optimization).</li>
+</ul>
+
+<h3>Nigerian Example 1: Fuel Consumption</h3>
+<p>The amount of fuel (in litres) used by a car travelling at speed \( v \) km/h is given by \( F(v) = 0.002v^2 + 0.5v + 10 \). Find the rate at which fuel consumption changes when the car is travelling at 60 km/h.</p>
+<p><strong>Solution:</strong></p>
+<p>\( F'(v) = 0.004v + 0.5 \)<br>
+At \( v = 60 \): \( F'(60) = 0.004(60) + 0.5 = 0.24 + 0.5 = 0.74 \) litres per km/h.</p>
+
+<h3>Nigerian Example 2: Cassava Yield</h3>
+<p>A farmer's cassava yield (in tonnes) after \( t \) months is modelled by \( Y(t) = 0.5t^3 - 3t^2 + 8t + 2 \). Determine the rate of change of yield after 4 months.</p>
+<p><strong>Solution:</strong></p>
+<p>\( Y'(t) = 1.5t^2 - 6t + 8 \)<br>
+At \( t = 4 \): \( Y'(4) = 1.5(16) - 6(4) + 8 = 24 - 24 + 8 = 8 \) tonnes per month.</p>
+
+<div style="background:#1a1a2e; border-left:4px solid #ffd700; padding:12px; margin:15px 0; border-radius:6px;">
+  <strong>🎉 Fun Fact:</strong> The word "derivative" comes from the Latin <em>derivare</em>, meaning "to draw off" — like drawing the slope off a curve! The modern notation \( \frac{dy}{dx} \) was introduced by Gottfried Wilhelm Leibniz in 1675, and it's still used today in every calculus class across Nigeria and the world.
+</div>
+
+<h3>Practice Questions</h3>
+<ol>
+  <li>Differentiate \( y = 4x^3 - 2x^2 + 7x - 5 \).</li>
+  <li>Find the gradient of the curve \( y = x^2 + 3x \) at the point where \( x = 2 \).</li>
+  <li>If \( f(x) = 5x^4 - 3x^2 \), find \( f'(1) \).</li>
+</ol>
+
+<h4>Answers</h4>
+<ol>
+  <li>\( \frac{dy}{dx} = 12x^2 - 4x + 7 \)</li>
+  <li>\( \frac{dy}{dx} = 2x + 3 \); at \( x=2 \), gradient = \( 2(2) + 3 = 7 \)</li>
+  <li>\( f'(x) = 20x^3 - 6x \); \( f'(1) = 20(1) - 6(1) = 14 \)</li>
+</ol>

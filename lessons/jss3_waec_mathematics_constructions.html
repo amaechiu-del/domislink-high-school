@@ -1,0 +1,109 @@
+<div class="lesson-content">
+  <h2>Constructions (JSS3 Mathematics – WAEC Syllabus)</h2>
+  
+  <!-- Animated SVG Diagram: Construction of a Perpendicular Bisector -->
+  <div class="diagram" style="text-align: center; margin: 20px 0;">
+    <svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+      <!-- Animated construction lines -->
+      <style>
+        @keyframes drawLine1 { from { stroke-dashoffset: 200; } to { stroke-dashoffset: 0; } }
+        @keyframes drawArc1 { from { stroke-dashoffset: 250; } to { stroke-dashoffset: 0; } }
+        @keyframes drawArc2 { from { stroke-dashoffset: 250; } to { stroke-dashoffset: 0; } }
+        @keyframes drawBisector { from { stroke-dashoffset: 200; } to { stroke-dashoffset: 0; } }
+        .line-anim { stroke-dasharray: 200; animation: drawLine1 2s ease-out forwards; }
+        .arc1-anim { stroke-dasharray: 250; animation: drawArc1 2s ease-out 0.5s forwards; }
+        .arc2-anim { stroke-dasharray: 250; animation: drawArc2 2s ease-out 1s forwards; }
+        .bisector-anim { stroke-dasharray: 200; animation: drawBisector 2s ease-out 1.5s forwards; }
+      </style>
+      
+      <!-- Base line AB -->
+      <line x1="50" y1="200" x2="350" y2="200" stroke="#333" stroke-width="3" class="line-anim" />
+      <circle cx="50" cy="200" r="5" fill="#e74c3c" />
+      <circle cx="350" cy="200" r="5" fill="#e74c3c" />
+      <text x="40" y="220" font-size="16" fill="#e74c3c" font-weight="bold">A</text>
+      <text x="355" y="220" font-size="16" fill="#e74c3c" font-weight="bold">B</text>
+      
+      <!-- Arc from A (above and below) -->
+      <path d="M 50 200 A 120 120 0 0 1 150 80" fill="none" stroke="#3498db" stroke-width="2" class="arc1-anim" />
+      <path d="M 50 200 A 120 120 0 0 0 150 320" fill="none" stroke="#3498db" stroke-width="2" class="arc1-anim" />
+      
+      <!-- Arc from B (above and below) -->
+      <path d="M 350 200 A 120 120 0 0 0 250 80" fill="none" stroke="#2ecc71" stroke-width="2" class="arc2-anim" />
+      <path d="M 350 200 A 120 120 0 0 1 250 320" fill="none" stroke="#2ecc71" stroke-width="2" class="arc2-anim" />
+      
+      <!-- Intersection points -->
+      <circle cx="200" cy="80" r="5" fill="#9b59b6" />
+      <circle cx="200" cy="320" r="5" fill="#9b59b6" />
+      <text x="210" y="75" font-size="14" fill="#9b59b6" font-weight="bold">C</text>
+      <text x="210" y="340" font-size="14" fill="#9b59b6" font-weight="bold">D</text>
+      
+      <!-- Perpendicular bisector CD -->
+      <line x1="200" y1="80" x2="200" y2="320" stroke="#e67e22" stroke-width="3" stroke-dasharray="6,4" class="bisector-anim" />
+      
+      <!-- Midpoint M -->
+      <circle cx="200" cy="200" r="6" fill="#e67e22" />
+      <text x="210" y="195" font-size="14" fill="#e67e22" font-weight="bold">M</text>
+      
+      <!-- Right angle marker -->
+      <rect x="185" y="185" width="15" height="15" fill="none" stroke="#e67e22" stroke-width="1.5" />
+      
+      <!-- Legend -->
+      <text x="20" y="280" font-size="12" fill="#333">AB = base line</text>
+      <text x="20" y="295" font-size="12" fill="#333">CD = perpendicular bisector</text>
+    </svg>
+    <p style="font-style: italic; color: #555;">Animation: Construction of a perpendicular bisector of line AB.</p>
+  </div>
+  
+  <!-- Bullet-point explanations -->
+  <div class="explanations" style="background: #f9f9f9; padding: 15px; border-radius: 8px; margin: 15px 0;">
+    <h3>Key Steps for Geometric Constructions</h3>
+    <ul style="line-height: 1.8; font-size: 16px;">
+      <li><strong>Perpendicular Bisector of a Line Segment:</strong> Draw arcs of equal radius from both endpoints above and below the line. Join the intersection points of the arcs. This line is the perpendicular bisector.</li>
+      <li><strong>Angle Bisector:</strong> Place the compass at the vertex of the angle. Draw an arc cutting both arms. From each intersection point, draw arcs that meet inside the angle. Join the vertex to this meeting point.</li>
+      <li><strong>Constructing a 60° Angle:</strong> Draw a base line. Place compass at the endpoint, draw an arc. Without changing radius, place compass at the arc intersection on the line and draw another arc. Join the endpoint to the arc intersection.</li>
+      <li><strong>Constructing a 90° Angle:</strong> Construct a perpendicular bisector of a line segment, or draw a semicircle from a point on a line and then bisect the 180° angle.</li>
+      <li><strong>Always use sharp pencil and maintain compass radius accurately.</strong></li>
+    </ul>
+  </div>
+  
+  <!-- Two Nigerian Examples -->
+  <div class="examples" style="margin: 20px 0;">
+    <h3>🇳🇬 Nigerian Examples</h3>
+    
+    <div style="background: #e8f4f8; padding: 15px; border-left: 5px solid #2980b9; margin: 10px 0;">
+      <p><strong>Example 1 (Lagos Land Survey):</strong> A surveyor in Ikeja needs to mark the midpoint of a straight fence line AB that is 100 metres long. Using only a rope and pegs (compass and straightedge), construct the perpendicular bisector to locate the midpoint.</p>
+      <p><em>Solution:</em> Tie a rope of length greater than half of AB (say 60 m) to peg A. Draw an arc above and below AB. Repeat from peg B with same rope length. The intersection points of the arcs define the perpendicular bisector. The point where it meets AB is the midpoint.</p>
+    </div>
+    
+    <div style="background: #fef9e7; padding: 15px; border-left: 5px solid #f39c12; margin: 10px 0;">
+      <p><strong>Example 2 (Abuja Road Junction):</strong> A road engineer in Abuja wants to construct a 60° turn off a straight road. Using a compass and ruler, show how to construct a 60° angle at a point on the road.</p>
+      <p><em>Solution:</em> Mark point O on the road. Draw an arc from O cutting the road at P. With same radius, draw an arc from P cutting the first arc at Q. Join OQ. Angle POQ = 60°.</p>
+    </div>
+  </div>
+  
+  <!-- Fun Fact Block -->
+  <div class="fun-fact" style="background: #d5f4e6; padding: 15px; border-radius: 10px; margin: 20px 0; border: 2px dashed #27ae60;">
+    <p style="font-size: 18px; font-weight: bold;">🎯 Fun Fact!</p>
+    <p>Did you know? The ancient Egyptians used geometric constructions (with ropes and pegs) to build the pyramids over 4,500 years ago. They could construct perfect right angles using a 3-4-5 triangle – a method still taught in JSS3 mathematics today!</p>
+  </div>
+  
+  <!-- Three Practice Questions with Answers -->
+  <div class="practice" style="margin: 25px 0;">
+    <h3>📝 Practice Questions</h3>
+    
+    <ol style="font-size: 16px; line-height: 2;">
+      <li>Using a ruler and compass only, construct a perpendicular bisector of a line segment PQ of length 8 cm. Measure and state the distance from P to the midpoint.</li>
+      <li>Construct an angle of 60° at point A on a line AB. Label the constructed ray as AC. What is the measure of angle CAB?</li>
+      <li>Draw a line XY of length 10 cm. Construct a perpendicular line at point X. What is the angle between XY and the constructed line?</li>
+    </ol>
+    
+    <div style="background: #f0f0f0; padding: 15px; border-radius: 8px; margin-top: 15px;">
+      <p><strong>✅ Answers:</strong></p>
+      <ol style="font-size: 16px; line-height: 2;">
+        <li>The midpoint is 4 cm from P (since perpendicular bisector divides PQ into two equal halves of 4 cm each).</li>
+        <li>Angle CAB = 60° (by construction).</li>
+        <li>The angle is 90° (perpendicular lines meet at 90°).</li>
+      </ol>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,99 @@
+<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e94560;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c23152;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="500" height="300" fill="url(#bgGrad)" rx="15"/>
+
+  <!-- Title -->
+  <text x="250" y="35" text-anchor="middle" fill="#ffd700" font-family="Arial" font-size="18" font-weight="bold" filter="url(#glow)">ADVANCED GRAMMAR: COMPLEX SENTENCES</text>
+
+  <!-- Main clause node -->
+  <rect x="170" y="55" width="160" height="40" rx="8" fill="url(#nodeGrad)" filter="url(#glow)"/>
+  <text x="250" y="80" text-anchor="middle" fill="white" font-family="Arial" font-size="13" font-weight="bold">MAIN CLAUSE</text>
+
+  <!-- Subordinate clause node -->
+  <rect x="50" y="130" width="180" height="40" rx="8" fill="#0f3460" stroke="#e94560" stroke-width="1.5" filter="url(#glow)"/>
+  <text x="140" y="155" text-anchor="middle" fill="#a8d8ea" font-family="Arial" font-size="12" font-weight="bold">SUBORDINATE CLAUSE</text>
+
+  <!-- Subordinate clause node 2 -->
+  <rect x="270" y="130" width="180" height="40" rx="8" fill="#0f3460" stroke="#e94560" stroke-width="1.5" filter="url(#glow)"/>
+  <text x="360" y="155" text-anchor="middle" fill="#a8d8ea" font-family="Arial" font-size="12" font-weight="bold">SUBORDINATE CLAUSE</text>
+
+  <!-- Connector lines with animation -->
+  <line x1="250" y1="95" x2="140" y2="130" stroke="#ffd700" stroke-width="2" stroke-dasharray="5,3">
+    <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="1.5s" repeatCount="indefinite"/>
+  </line>
+  <line x1="250" y1="95" x2="360" y2="130" stroke="#ffd700" stroke-width="2" stroke-dasharray="5,3">
+    <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="1.5s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Junction dot -->
+  <circle cx="250" cy="95" r="4" fill="#ffd700">
+    <animate attributeName="r" values="4;6;4" dur="1s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Examples -->
+  <text x="250" y="200" text-anchor="middle" fill="#ffd700" font-family="Arial" font-size="11" font-style="italic">"The students passed <tspan fill="#e94560">because</tspan> they studied hard."</text>
+  <text x="250" y="220" text-anchor="middle" fill="#ffd700" font-family="Arial" font-size="11" font-style="italic">"<tspan fill="#e94560">When</tspan> the rain stopped, the match continued."</text>
+
+  <!-- Animated arrows -->
+  <polygon points="140,130 135,125 145,125" fill="#ffd700">
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-3;0,0" dur="1s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="360,130 355,125 365,125" fill="#ffd700">
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-3;0,0" dur="1s" repeatCount="indefinite"/>
+  </polygon>
+
+  <!-- Subordinate conjunctions label -->
+  <text x="250" y="255" text-anchor="middle" fill="#a8d8ea" font-family="Arial" font-size="10" opacity="0.8">Subordinating Conjunctions: because, when, although, while, since</text>
+
+  <!-- Pulsing ring -->
+  <circle cx="250" cy="75" r="100" fill="none" stroke="#e94560" stroke-width="0.5" opacity="0.3">
+    <animate attributeName="r" values="100;110;100" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.1;0.3" dur="3s" repeatCount="indefinite"/>
+  </circle>
+</svg>
+
+<h3 style="color:#e94560; margin-top:20px;">KEY CONCEPTS</h3>
+<ul style="font-family:Arial; line-height:1.8; color:#333;">
+  <li><strong>Complex Sentence:</strong> Contains one <span style="color:#e94560;">main clause</span> and at least one <span style="color:#0f3460;">subordinate clause</span>.</li>
+  <li>The subordinate clause cannot stand alone — it depends on the main clause for meaning.</li>
+  <li>Subordinating conjunctions (e.g., <em>because, when, although</em>) link the clauses.</li>
+  <li>Comma rules: If the subordinate clause <em>begins</em> the sentence, use a comma after it.</li>
+</ul>
+
+<div style="background:#f0f8ff; border-left:4px solid #e94560; padding:12px; margin:15px 0; border-radius:6px;">
+  <h4 style="color:#1a1a2e; margin:0 0 8px 0;">🇳🇬 NIGERIAN EXAMPLES</h4>
+  <p style="margin:4px 0;"><strong>1.</strong> <em>"<span style="color:#e94560;">Although</span> the traffic was heavy, we arrived at the stadium on time."</em></p>
+  <p style="margin:4px 0;"><strong>2.</strong> <em>"The students were excited <span style="color:#e94560;">because</span> their team won the inter-house sports competition."</em></p>
+</div>
+
+<div style="background:#fff3cd; border:1px solid #ffc107; padding:10px; border-radius:8px; margin:15px 0;">
+  <p style="margin:0; font-weight:bold; color:#856404;">💡 FUN FACT</p>
+  <p style="margin:5px 0 0 0; color:#333;">The longest English sentence ever written (from a novel by James Joyce) contains over 4,000 words and is essentially one complex sentence! In Nigerian English, complex sentences often reflect our rich oral storytelling tradition.</p>
+</div>
+
+<h3 style="color:#e94560; margin-top:20px;">📝 PRACTICE QUESTIONS</h3>
+<ol style="font-family:Arial; line-height:1.8; color:#333;">
+  <li><strong>Identify the subordinate clause:</strong> "When the principal arrived, the students stood up."<br>
+    <span style="color:#28a745;">Answer: "When the principal arrived"</span></li>
+  <li><strong>Combine these sentences into one complex sentence:</strong> "The match was cancelled. It was raining heavily."<br>
+    <span style="color:#28a745;">Answer: "The match was cancelled because it was raining heavily."</span></li>
+  <li><strong>Add a comma if needed:</strong> "Although she was tired she continued reading."<br>
+    <span style="color:#28a745;">Answer: "Although she was tired, she continued reading."</span></li>
+</ol>

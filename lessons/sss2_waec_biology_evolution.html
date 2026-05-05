@@ -1,0 +1,80 @@
+<div class="biology-lesson">
+  <h2>Evolution: The Process of Change Over Time</h2>
+  <p>Evolution is the gradual change in the inherited characteristics of biological populations over successive generations. It explains the diversity of life and the adaptation of organisms to their environment.</p>
+
+  <!-- Animated SVG Diagram: Natural Selection -->
+  <svg width="100%" viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg" style="background: #f0f8ff; border-radius: 12px;">
+    <defs>
+      <style>
+        @keyframes moveBug1 { 0% { cx: 50; } 50% { cx: 150; } 100% { cx: 50; } }
+        @keyframes moveBug2 { 0% { cx: 200; } 50% { cx: 300; } 100% { cx: 200; } }
+        @keyframes moveBug3 { 0% { cx: 350; } 50% { cx: 450; } 100% { cx: 350; } }
+        @keyframes flash { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+        .bug1 { animation: moveBug1 4s ease-in-out infinite; }
+        .bug2 { animation: moveBug2 4s ease-in-out infinite; }
+        .bug3 { animation: moveBug3 4s ease-in-out infinite; }
+        .bird { animation: flash 2s ease-in-out infinite; }
+      </style>
+    </defs>
+    <!-- Background: grass and trees -->
+    <rect x="0" y="180" width="600" height="70" fill="#228B22" rx="10"/>
+    <circle cx="100" cy="140" r="30" fill="#006400"/>
+    <circle cx="120" cy="120" r="25" fill="#2E8B57"/>
+    <circle cx="450" cy="130" r="35" fill="#006400"/>
+    <circle cx="480" cy="110" r="28" fill="#2E8B57"/>
+    <!-- Sun -->
+    <circle cx="550" cy="40" r="30" fill="#FFD700" opacity="0.8"/>
+    <!-- Bird (predator) -->
+    <g class="bird">
+      <path d="M 300 60 Q 310 50 320 60 Q 310 55 300 60" fill="#333"/>
+      <path d="M 300 60 Q 290 50 280 60 Q 290 55 300 60" fill="#333"/>
+      <circle cx="300" cy="58" r="3" fill="#FF4500"/>
+    </g>
+    <!-- Green bugs (camouflaged) -->
+    <circle class="bug1" cx="50" cy="170" r="8" fill="#2E8B57"/>
+    <circle class="bug2" cx="200" cy="175" r="8" fill="#3CB371"/>
+    <circle class="bug3" cx="350" cy="168" r="8" fill="#2E8B57"/>
+    <!-- Brown bug (visible, gets eaten) -->
+    <circle cx="280" cy="172" r="8" fill="#8B4513">
+      <animate attributeName="opacity" values="1;1;1;0;0" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Labels -->
+    <text x="10" y="30" font-size="14" fill="#333" font-weight="bold">Natural Selection</text>
+    <text x="50" y="210" font-size="10" fill="white">Green bugs survive (camouflage)</text>
+    <text x="280" y="210" font-size="10" fill="white">Brown bug eaten (visible)</text>
+  </svg>
+
+  <h3>Key Concepts</h3>
+  <ul>
+    <li><strong>Natural Selection:</strong> Organisms with traits better suited to their environment survive and reproduce more successfully.</li>
+    <li><strong>Adaptation:</strong> Physical or behavioral features that help an organism survive (e.g., long neck of giraffe for reaching high leaves).</li>
+    <li><strong>Variation:</strong> Differences in traits among individuals of the same species (e.g., different skin colours, beak shapes).</li>
+    <li><strong>Speciation:</strong> Formation of new species when populations become isolated and evolve separately.</li>
+  </ul>
+
+  <h3>Nigerian Examples</h3>
+  <ul>
+    <li><strong>Example 1 – Cassava Mealybug Resistance:</strong> In Nigeria, the cassava mealybug (<em>Phenacoccus manihoti</em>) devastated crops. Over time, some cassava varieties developed natural resistance through genetic variation and selection, helping farmers in the south-west reduce pesticide use.</li>
+    <li><strong>Example 2 – Anopheles Mosquito Adaptation:</strong> In the Niger Delta region, the <em>Anopheles gambiae</em> mosquito has evolved resistance to DDT and other insecticides, a classic case of natural selection driven by human intervention.</li>
+  </ul>
+
+  <div style="background: #fff3cd; border-left: 5px solid #ffc107; padding: 10px; margin: 15px 0; border-radius: 6px;">
+    <strong>🧬 Fun Fact:</strong> The Nigerian giraffe (West African giraffe) has a longer neck than its relatives in East Africa — an adaptation to reach leaves in the drier savanna regions of northern Nigeria!
+  </div>
+
+  <h3>Practice Questions</h3>
+  <ol>
+    <li>
+      <strong>Question 1:</strong> Explain how natural selection leads to the evolution of antibiotic resistance in bacteria.
+      <br><em>Answer:</em> Bacteria with random mutations that make them resistant to antibiotics survive when antibiotics are used. They reproduce, passing on the resistance gene, and over time the population becomes mostly resistant.
+    </li>
+    <li>
+      <strong>Question 2:</strong> In a population of grasshoppers in the savanna of northern Nigeria, green and brown varieties exist. Birds eat more brown grasshoppers. Which colour will become more common over generations? Why?
+      <br><em>Answer:</em> Green will become more common because green grasshoppers are better camouflaged in the grass, so fewer are eaten. They survive longer and reproduce more, passing on the green colour allele.
+    </li>
+    <li>
+      <strong>Question 3:</strong> Define the term "speciation" and give one example from Nigerian biodiversity.
+      <br><em>Answer:</em> Speciation is the formation of new species due to isolation and divergent evolution. Example: The different species of cichlid fish in Lake Chad have evolved from a common ancestor due to isolation in different parts of the lake.
+    </li>
+  </ol>
+</div>

@@ -1,0 +1,95 @@
+<div class="lesson-content">
+  <h2>Environmental Biology: Ecosystem Dynamics &amp; Conservation</h2>
+
+  <!-- Animated SVG Diagram -->
+  <div class="svg-container" style="text-align: center; margin: 20px 0;">
+    <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 600px; height: auto;">
+      <defs>
+        <style>
+          @keyframes moveSun {
+            0% { opacity: 0.8; transform: translate(0, 0); }
+            50% { opacity: 1; transform: translate(10px, -5px); }
+            100% { opacity: 0.8; transform: translate(0, 0); }
+          }
+          @keyframes flowArrow {
+            0% { stroke-dashoffset: 100; }
+            100% { stroke-dashoffset: 0; }
+          }
+          .sun-anim { animation: moveSun 3s ease-in-out infinite; }
+          .arrow-flow { stroke-dasharray: 10; animation: flowArrow 2s linear infinite; }
+        </style>
+      </defs>
+      <!-- Background -->
+      <rect width="600" height="400" fill="#e8f5e9" rx="10"/>
+      <!-- Sun -->
+      <circle class="sun-anim" cx="80" cy="60" r="30" fill="#FFD700" stroke="#FFA000" stroke-width="3"/>
+      <text x="80" y="65" text-anchor="middle" fill="#333" font-size="12" font-weight="bold">Sun</text>
+      <!-- Producers (Tree) -->
+      <polygon points="300,200 260,280 340,280" fill="#2e7d32" stroke="#1b5e20" stroke-width="2"/>
+      <rect x="290" y="280" width="20" height="50" fill="#5d4037" stroke="#3e2723" stroke-width="2"/>
+      <circle cx="300" cy="230" r="40" fill="#43a047" opacity="0.6"/>
+      <text x="300" y="310" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Producers</text>
+      <!-- Primary Consumer (Rabbit) -->
+      <ellipse cx="170" cy="330" rx="30" ry="20" fill="#8d6e63" stroke="#5d4037" stroke-width="2"/>
+      <circle cx="150" cy="320" r="12" fill="#a1887f" stroke="#5d4037" stroke-width="2"/>
+      <circle cx="145" cy="318" r="2" fill="#000"/>
+      <text x="170" y="360" text-anchor="middle" fill="#333" font-size="10">Primary Consumer</text>
+      <!-- Secondary Consumer (Snake) -->
+      <path d="M 420 320 Q 450 300 470 330 Q 490 350 510 320" fill="none" stroke="#4e342e" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="420" cy="320" r="8" fill="#3e2723"/>
+      <text x="460" y="360" text-anchor="middle" fill="#333" font-size="10">Secondary Consumer</text>
+      <!-- Decomposers (Fungi) -->
+      <ellipse cx="300" cy="370" rx="60" ry="15" fill="#795548" opacity="0.7"/>
+      <circle cx="280" cy="365" r="6" fill="#d7ccc8" stroke="#8d6e63" stroke-width="1"/>
+      <circle cx="310" cy="368" r="5" fill="#d7ccc8" stroke="#8d6e63" stroke-width="1"/>
+      <text x="300" y="390" text-anchor="middle" fill="#333" font-size="10">Decomposers</text>
+      <!-- Arrows (Energy Flow) -->
+      <line x1="110" y1="80" x2="260" y2="220" stroke="#FFA000" stroke-width="3" stroke-dasharray="8,4" class="arrow-flow"/>
+      <line x1="200" y1="310" x2="230" y2="310" stroke="#e65100" stroke-width="3" marker-end="url(#arrowhead)"/>
+      <line x1="200" y1="320" x2="260" y2="350" stroke="#e65100" stroke-width="3" marker-end="url(#arrowhead)" class="arrow-flow"/>
+      <line x1="340" y1="280" x2="400" y2="320" stroke="#e65100" stroke-width="3" marker-end="url(#arrowhead)" class="arrow-flow"/>
+      <line x1="300" y1="280" x2="300" y2="355" stroke="#6d4c41" stroke-width="3" marker-end="url(#arrowhead)" class="arrow-flow"/>
+      <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#e65100"/>
+        </marker>
+      </defs>
+      <text x="300" y="20" text-anchor="middle" fill="#1b5e20" font-size="16" font-weight="bold">Energy Flow in a Terrestrial Ecosystem</text>
+    </svg>
+  </div>
+
+  <!-- Bullet-point Explanations -->
+  <h3>Key Concepts</h3>
+  <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+    <li><strong>Ecosystem:</strong> A community of living organisms (biotic) interacting with their non-living (abiotic) environment (e.g., soil, water, air).</li>
+    <li><strong>Energy Flow:</strong> Energy from the sun is captured by producers (plants) during photosynthesis and transferred through food chains to consumers and decomposers.</li>
+    <li><strong>Trophic Levels:</strong> Producers (autotrophs) → Primary consumers (herbivores) → Secondary consumers (carnivores) → Tertiary consumers → Decomposers.</li>
+    <li><strong>Nutrient Cycling:</strong> Elements like carbon, nitrogen, and phosphorus are recycled through biogeochemical cycles (e.g., carbon cycle, nitrogen cycle).</li>
+    <li><strong>Ecological Succession:</strong> The gradual change in species composition of an ecosystem over time (primary vs. secondary succession).</li>
+    <li><strong>Conservation:</strong> Sustainable management of natural resources to prevent extinction, habitat loss, and pollution.</li>
+  </ul>
+
+  <!-- Two Nigerian Examples -->
+  <h3>Nigerian Examples</h3>
+  <div style="background: #fff3e0; border-left: 4px solid #e65100; padding: 10px 15px; margin: 15px 0;">
+    <p><strong>1. The Niger Delta Mangrove Ecosystem:</strong> This rich coastal habitat supports fish, crabs, and birds like the African fish eagle. It acts as a carbon sink and protects shorelines. Oil pollution and deforestation threaten this ecosystem, highlighting the need for conservation.</p>
+    <p><strong>2. The Jos Plateau (Savanna Ecosystem):</strong> Characterized by grasses and scattered trees, it supports grazing animals like cattle and wildlife. Overgrazing and bush burning have led to desertification in some areas, demonstrating the impact of human activities on nutrient cycling and soil fertility.</p>
+  </div>
+
+  <!-- Fun Fact Block -->
+  <div style="background: #e0f7fa; border: 2px dashed #00838f; padding: 15px; margin: 20px 0; border-radius: 10px;">
+    <h4 style="margin: 0 0 5px 0; color: #006064;">🌟 Fun Fact!</h4>
+    <p style="margin: 0;">Did you know? The <strong>Moringa tree</strong> (Zogale in Hausa) is a "miracle tree" in Nigeria. It can purify water, provide nutrients, and its leaves are used to combat malnutrition—showing how a single species can support both human health and environmental sustainability!</p>
+  </div>
+
+  <!-- Three Practice Questions with Answers -->
+  <h3>Practice Questions (WAEC-Style)</h3>
+  <ol style="padding-left: 20px; line-height: 2;">
+    <li><strong>Question 1:</strong> In a food chain, which trophic level is responsible for converting solar energy into chemical energy?<br>
+      <em>Answer:</em> Producers (autotrophs, e.g., green plants).</li>
+    <li><strong>Question 2:</strong> Name two human activities that disrupt the carbon cycle in Nigerian ecosystems.<br>
+      <em>Answer:</em> Deforestation (cutting down forests for agriculture) and burning of fossil fuels (e.g., in generators or vehicles).</li>
+    <li><strong>Question 3:</strong> What is the difference between primary and secondary ecological succession? Give one Nigerian example of each.<br>
+      <em>Answer:</em> Primary succession occurs on bare rock or areas with no soil (e.g., new volcanic rock on the Jos Plateau). Secondary succession occurs on sites where soil remains after a disturbance (e.g., farmland abandoned after overgrazing in northern Nigeria).</li>
+  </ol>
+</div>

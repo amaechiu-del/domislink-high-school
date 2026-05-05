@@ -1,0 +1,84 @@
+<div class="lesson">
+  <h2>Statistics: Measures of Central Tendency &amp; Dispersion</h2>
+  <p><em>SSS3 Mathematics (WAEC Syllabus)</em></p>
+
+  <!-- Animated SVG Diagram -->
+  <svg width="100%" height="220" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <style>
+        @keyframes bar1 { 0% {height:0;} 100% {height:80;} }
+        @keyframes bar2 { 0% {height:0;} 100% {height:120;} }
+        @keyframes bar3 { 0% {height:0;} 100% {height:60;} }
+        @keyframes bar4 { 0% {height:0;} 100% {height:100;} }
+        @keyframes bar5 { 0% {height:0;} 100% {height:140;} }
+        @keyframes lineAnim { 0% {stroke-dashoffset:400;} 100% {stroke-dashoffset:0;} }
+        .bar { fill:#1e88e5; animation-duration:2s; animation-fill-mode:forwards; }
+        .mean-line { stroke:#d32f2f; stroke-width:2; stroke-dasharray:400; animation:lineAnim 3s ease-out 1s forwards; }
+      </style>
+    </defs>
+    <!-- Axes -->
+    <line x1="50" y1="180" x2="550" y2="180" stroke="#333" stroke-width="2"/>
+    <line x1="50" y1="180" x2="50" y2="20" stroke="#333" stroke-width="2"/>
+    <!-- Bars (animated) -->
+    <rect class="bar" x="80" y="100" width="60" height="80" style="animation-name:bar1;" rx="4"/>
+    <rect class="bar" x="160" y="60" width="60" height="120" style="animation-name:bar2;" rx="4"/>
+    <rect class="bar" x="240" y="120" width="60" height="60" style="animation-name:bar3;" rx="4"/>
+    <rect class="bar" x="320" y="80" width="60" height="100" style="animation-name:bar4;" rx="4"/>
+    <rect class="bar" x="400" y="40" width="60" height="140" style="animation-name:bar5;" rx="4"/>
+    <!-- Mean line (animated) -->
+    <line class="mean-line" x1="60" y1="95" x2="540" y2="95"/>
+    <text x="420" y="90" fill="#d32f2f" font-size="14" font-weight="bold">Mean</text>
+    <!-- Labels -->
+    <text x="100" y="195" text-anchor="middle" font-size="12">10</text>
+    <text x="180" y="195" text-anchor="middle" font-size="12">20</text>
+    <text x="260" y="195" text-anchor="middle" font-size="12">30</text>
+    <text x="340" y="195" text-anchor="middle" font-size="12">40</text>
+    <text x="420" y="195" text-anchor="middle" font-size="12">50</text>
+    <text x="30" y="140" text-anchor="middle" font-size="12" transform="rotate(-90,30,140)">Frequency</text>
+  </svg>
+
+  <!-- Bullet-point Explanations -->
+  <h3>Key Concepts</h3>
+  <ul>
+    <li><strong>Mean</strong> – The average of all data points. <em>Formula:</em> \(\bar{x} = \frac{\sum x}{n}\)</li>
+    <li><strong>Median</strong> – The middle value when data is arranged in order.</li>
+    <li><strong>Mode</strong> – The most frequently occurring value.</li>
+    <li><strong>Range</strong> – Difference between highest and lowest values.</li>
+    <li><strong>Variance &amp; Standard Deviation</strong> – Measure how spread out the data is from the mean.</li>
+  </ul>
+
+  <!-- Nigerian Example 1 -->
+  <h3>🇳🇬 Example 1: JAMB Scores</h3>
+  <p>Five students scored: 45, 60, 75, 60, 80 in JAMB Mathematics.</p>
+  <p><strong>Mean:</strong> (45+60+75+60+80)/5 = 320/5 = <strong>64</strong></p>
+  <p><strong>Mode:</strong> 60 (appears twice)</p>
+  <p><strong>Median:</strong> Arrange: 45, 60, 60, 75, 80 → Middle = <strong>60</strong></p>
+  <p><strong>Range:</strong> 80 - 45 = <strong>35</strong></p>
+
+  <!-- Nigerian Example 2 -->
+  <h3>🇳🇬 Example 2: Monthly Market Sales (₦)</h3>
+  <p>A trader in Lagos recorded weekly sales: 20,000; 25,000; 20,000; 30,000; 25,000</p>
+  <p><strong>Mean:</strong> (20+25+20+30+25) thousand / 5 = 120,000/5 = <strong>₦24,000</strong></p>
+  <p><strong>Mode:</strong> ₦20,000 and ₦25,000 (bimodal)</p>
+  <p><strong>Median:</strong> 20, 20, 25, 25, 30 → <strong>₦25,000</strong></p>
+
+  <!-- Fun Fact Block -->
+  <div style="background:#fff3e0; border-left:6px solid #ff9800; padding:12px 16px; margin:20px 0; border-radius:6px;">
+    <strong>🎉 Fun Fact:</strong> Nigeria's National Bureau of Statistics uses these same measures to calculate inflation rates and unemployment figures! The mean is often used to report average wages, but the median is more accurate when there are very high or low outliers.
+  </div>
+
+  <!-- Practice Questions -->
+  <h3>📝 Practice Questions</h3>
+  <ol>
+    <li><strong>Question 1:</strong> The ages of 7 students are: 14, 16, 14, 17, 15, 14, 18. Find the mean, median, and mode.</li>
+    <li><strong>Question 2:</strong> A farmer in Kaduna harvested yam tubers (kg): 12, 15, 10, 12, 20, 15, 14. Calculate the range and the mean.</li>
+    <li><strong>Question 3:</strong> The scores of 10 students in a WAEC mock exam are: 55, 60, 65, 70, 75, 80, 85, 90, 95, 100. What is the median? What is the mean?</li>
+  </ol>
+
+  <h4>✅ Answers</h4>
+  <ol>
+    <li><strong>Answer 1:</strong> Mean = 108/7 ≈ 15.43; Median = 15; Mode = 14</li>
+    <li><strong>Answer 2:</strong> Range = 20 - 10 = 10 kg; Mean = 98/7 = 14 kg</li>
+    <li><strong>Answer 3:</strong> Median = (75+80)/2 = 77.5; Mean = 775/10 = 77.5</li>
+  </ol>
+</div>

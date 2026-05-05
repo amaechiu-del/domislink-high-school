@@ -1,0 +1,86 @@
+<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" style="display:block; margin:0 auto; max-width:100%; background:#f0f8ff; border-radius:12px; padding:10px;">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e90ff"/>
+      <stop offset="100%" stop-color="#00bfff"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
+    </marker>
+  </defs>
+  <!-- Axes -->
+  <line x1="40" y1="260" x2="460" y2="260" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="40" y1="260" x2="40" y2="20" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Labels -->
+  <text x="460" y="280" font-family="Arial" font-size="14" fill="#333">x</text>
+  <text x="20" y="25" font-family="Arial" font-size="14" fill="#333">y</text>
+  <!-- Grid lines (log scale) -->
+  <line x1="40" y1="200" x2="460" y2="200" stroke="#ddd" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="40" y1="140" x2="460" y2="140" stroke="#ddd" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="40" y1="80" x2="460" y2="80" stroke="#ddd" stroke-width="1" stroke-dasharray="4,4"/>
+  <!-- Animated curve y = log₂(x) -->
+  <path d="M 60,260 Q 100,220 140,200 Q 200,170 260,140 Q 320,110 380,80 Q 420,60 440,50" 
+        fill="none" stroke="url(#grad1)" stroke-width="3" stroke-linecap="round">
+    <animate attributeName="stroke-dashoffset" from="500" to="0" dur="3s" fill="freeze"/>
+    <animate attributeName="stroke-dasharray" from="500" to="500" dur="0.1s" fill="freeze"/>
+  </path>
+  <!-- Points on curve -->
+  <circle cx="140" cy="200" r="5" fill="#ff4500">
+    <animate attributeName="r" values="5;8;5" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="130" y="190" font-family="Arial" font-size="12" fill="#ff4500">(4,2)</text>
+  <circle cx="260" cy="140" r="5" fill="#ff4500">
+    <animate attributeName="r" values="5;8;5" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="250" y="130" font-family="Arial" font-size="12" fill="#ff4500">(8,3)</text>
+  <circle cx="380" cy="80" r="5" fill="#ff4500">
+    <animate attributeName="r" values="5;8;5" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="370" y="70" font-family="Arial" font-size="12" fill="#ff4500">(16,4)</text>
+  <!-- Title -->
+  <text x="250" y="295" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#1e90ff">y = log₂(x) — Logarithmic Curve</text>
+</svg>
+
+<h2 style="color:#1e90ff; border-bottom:2px solid #1e90ff;">Logarithms — Key Concepts</h2>
+<ul style="font-size:16px; line-height:1.8;">
+  <li><strong>Definition:</strong> If <em>a<sup>x</sup> = N</em>, then <em>x = log<sub>a</sub> N</em> (a > 0, a ≠ 1).</li>
+  <li><strong>Base 10:</strong> Common logarithms — written as <em>log N</em> (no base shown).</li>
+  <li><strong>Base <em>e</em>:</strong> Natural logarithms — written as <em>ln N</em>.</li>
+  <li><strong>Laws of Logarithms:</strong>
+    <ul>
+      <li>log (AB) = log A + log B</li>
+      <li>log (A/B) = log A – log B</li>
+      <li>log (A<sup>n</sup>) = n log A</li>
+    </ul>
+  </li>
+  <li><strong>Change of Base:</strong> log<sub>a</sub> b = log b / log a</li>
+</ul>
+
+<h2 style="color:#1e90ff; border-bottom:2px solid #1e90ff;">🇳🇬 Nigerian Examples</h2>
+<div style="background:#f5faff; padding:12px; border-left:4px solid #1e90ff; margin:10px 0;">
+  <p><strong>Example 1 (WAEC-style):</strong> If log<sub>10</sub> 2 = 0.3010 and log<sub>10</sub> 3 = 0.4771, find log<sub>10</sub> 12.</p>
+  <p><em>Solution:</em> 12 = 2² × 3, so log 12 = 2 log 2 + log 3 = 2(0.3010) + 0.4771 = 0.6020 + 0.4771 = <strong>1.0791</strong>.</p>
+</div>
+<div style="background:#f5faff; padding:12px; border-left:4px solid #1e90ff; margin:10px 0;">
+  <p><strong>Example 2 (Nigerian Market Problem):</strong> A trader's profit (₦) grows such that P = 500 × 2<sup>t</sup>, where t is years. How long to reach ₦4000?</p>
+  <p><em>Solution:</em> 4000 = 500 × 2<sup>t</sup> → 8 = 2<sup>t</sup> → t = log₂ 8 = 3. <strong>3 years</strong>.</p>
+</div>
+
+<div style="background:#ffeb3b; padding:12px; border-radius:8px; margin:15px 0; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+  <p style="font-size:18px; font-weight:bold; margin:0;">💡 Fun Fact</p>
+  <p style="margin:5px 0 0;">The word "logarithm" comes from Greek <em>logos</em> (ratio) and <em>arithmos</em> (number). John Napier invented them in 1614 — they were once used to multiply huge numbers by just adding their logs! In Nigeria, log tables were essential for JAMB and WAEC exams before calculators became common.</p>
+</div>
+
+<h2 style="color:#1e90ff; border-bottom:2px solid #1e90ff;">Practice Questions</h2>
+<ol style="font-size:16px; line-height:2;">
+  <li>Evaluate: log<sub>5</sub> 125 + log<sub>2</sub> 16</li>
+  <li>If log<sub>10</sub> 7 = 0.8451, find log<sub>10</sub> 49.</li>
+  <li>Solve for x: log<sub>3</sub> (x + 1) = 2</li>
+</ol>
+
+<h3 style="color:#1e90ff;">✅ Answers</h3>
+<ol style="font-size:16px; line-height:2;">
+  <li>log<sub>5</sub> 125 = 3 (since 5³=125), log<sub>2</sub> 16 = 4 (2⁴=16) → <strong>7</strong></li>
+  <li>log 49 = log 7² = 2 × 0.8451 = <strong>1.6902</strong></li>
+  <li>x + 1 = 3² = 9 → x = <strong>8</strong></li>
+</ol>

@@ -1,0 +1,125 @@
+<div class="lesson">
+  <h2>Environmental Chemistry – SSS2 (WAEC Syllabus)</h2>
+
+  <!-- Animated SVG Diagram -->
+  <svg width="100%" height="260" viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <style>
+        @keyframes smoke {
+          0% { opacity: 0.3; transform: translateY(0); }
+          50% { opacity: 0.7; transform: translateY(-20px); }
+          100% { opacity: 0.3; transform: translateY(0); }
+        }
+        @keyframes waterflow {
+          0% { stroke-dashoffset: 0; }
+          100% { stroke-dashoffset: -40; }
+        }
+        @keyframes treewave {
+          0% { transform: rotate(0deg); }
+          25% { transform: rotate(3deg); }
+          75% { transform: rotate(-3deg); }
+          100% { transform: rotate(0deg); }
+        }
+        .smoke { animation: smoke 3s infinite; }
+        .water { stroke-dasharray: 10 5; animation: waterflow 2s linear infinite; }
+        .tree { transform-origin: 140px 180px; animation: treewave 4s ease-in-out infinite; }
+      </style>
+    </defs>
+
+    <!-- Background -->
+    <rect width="600" height="260" fill="#e0f7fa" rx="10"/>
+
+    <!-- Factory -->
+    <rect x="30" y="100" width="120" height="100" fill="#78909c" rx="5"/>
+    <rect x="50" y="120" width="20" height="30" fill="#b0bec5" rx="2"/>
+    <rect x="80" y="120" width="20" height="30" fill="#b0bec5" rx="2"/>
+    <rect x="110" y="120" width="20" height="30" fill="#b0bec5" rx="2"/>
+    <!-- Chimney -->
+    <rect x="100" y="50" width="20" height="50" fill="#607d8b"/>
+    <rect x="95" y="40" width="30" height="12" fill="#455a64" rx="3"/>
+    <!-- Smoke -->
+    <circle cx="110" cy="30" r="12" fill="#90a4ae" class="smoke" opacity="0.4"/>
+    <circle cx="120" cy="15" r="10" fill="#b0bec5" class="smoke" opacity="0.3"/>
+    <circle cx="100" cy="10" r="8" fill="#cfd8dc" class="smoke" opacity="0.2"/>
+
+    <!-- River -->
+    <path d="M0 200 Q150 190 300 200 Q450 210 600 200" stroke="#1976d2" stroke-width="12" fill="none" class="water"/>
+    <path d="M0 210 Q150 200 300 210 Q450 220 600 210" stroke="#1565c0" stroke-width="8" fill="none" class="water"/>
+
+    <!-- Dead fish in polluted water -->
+    <g transform="translate(250,195)">
+      <ellipse cx="0" cy="0" rx="12" ry="5" fill="#e57373"/>
+      <polygon points="-12,-5 -18,-10 -18,0" fill="#e57373"/>
+      <circle cx="6" cy="-2" r="1.5" fill="#fff"/>
+    </g>
+
+    <!-- Tree (healthy) -->
+    <g class="tree">
+      <rect x="135" y="170" width="10" height="30" fill="#5d4037"/>
+      <circle cx="140" cy="155" r="25" fill="#388e3c"/>
+      <circle cx="125" cy="165" r="18" fill="#43a047"/>
+      <circle cx="155" cy="165" r="18" fill="#4caf50"/>
+    </g>
+
+    <!-- Another tree (dying) -->
+    <g transform="translate(200,0)">
+      <rect x="135" y="170" width="10" height="30" fill="#5d4037"/>
+      <circle cx="140" cy="155" r="20" fill="#a1887f"/>
+      <circle cx="125" cy="165" r="15" fill="#bcaaa4"/>
+      <circle cx="155" cy="165" r="15" fill="#8d6e63"/>
+    </g>
+
+    <!-- Sun -->
+    <circle cx="520" cy="40" r="30" fill="#ffd54f"/>
+    <line x1="520" y1="0" x2="520" y2="10" stroke="#ffd54f" stroke-width="3"/>
+    <line x1="555" y1="20" x2="545" y2="28" stroke="#ffd54f" stroke-width="3"/>
+    <line x1="555" y1="60" x2="545" y2="52" stroke="#ffd54f" stroke-width="3"/>
+
+    <!-- Labels -->
+    <text x="70" y="220" fill="#37474f" font-size="12" font-weight="bold">Factory</text>
+    <text x="300" y="230" fill="#1565c0" font-size="12" font-weight="bold">Polluted River</text>
+    <text x="120" y="145" fill="#fff" font-size="10">CO₂, SO₂</text>
+  </svg>
+
+  <!-- Bullet-point explanations -->
+  <ul style="margin-top: 20px; line-height: 1.8; padding-left: 20px;">
+    <li><strong>Air Pollution:</strong> Release of harmful gases (CO₂, SO₂, NOₓ) from factories, vehicles, and burning of fossil fuels causes acid rain and respiratory problems.</li>
+    <li><strong>Water Pollution:</strong> Industrial effluents, sewage, and agricultural runoff (fertilizers, pesticides) contaminate rivers and lakes, killing aquatic life.</li>
+    <li><strong>Land/Soil Pollution:</strong> Dumping of non-biodegradable wastes (plastics, e-waste) and oil spills degrade soil fertility and harm ecosystems.</li>
+    <li><strong>Greenhouse Effect &amp; Global Warming:</strong> Increased CO₂ and methane trap heat, leading to rising temperatures, melting ice caps, and climate change.</li>
+    <li><strong>Biodegradable vs. Non-biodegradable:</strong> Organic matter (food scraps) decomposes naturally; plastics and metals persist for hundreds of years.</li>
+  </ul>
+
+  <!-- Two Nigerian examples -->
+  <div style="background: #fff3e0; padding: 15px; border-left: 5px solid #e65100; margin: 20px 0;">
+    <h4 style="margin: 0 0 10px 0; color: #e65100;">🇳🇬 Nigerian Examples</h4>
+    <p><strong>1. Oil Spills in the Niger Delta:</strong> Frequent spills from oil pipelines (e.g., Shell, Chevron) have polluted farmlands, rivers, and creeks, destroying fisheries and causing health issues for local communities.</p>
+    <p><strong>2. E-waste Dumping in Lagos (Alaba Market):</strong> Huge quantities of discarded electronics (computers, phones) are burned or dismantled, releasing toxic lead and mercury into the soil and air, affecting traders and residents.</p>
+  </div>
+
+  <!-- Fun Fact block -->
+  <div style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin: 20px 0;">
+    <p style="font-size: 1.2em; font-weight: bold; color: #2e7d32;">💡 Fun Fact!</p>
+    <p>Did you know? The <strong>Ogoni</strong> region in Nigeria has one of the highest levels of soil hydrocarbon contamination in the world — some areas have over 10,000 mg/kg of crude oil, making the land unfit for farming for decades.</p>
+  </div>
+
+  <!-- Practice Questions -->
+  <div style="background: #f3e5f5; padding: 15px; border-radius: 8px; margin: 20px 0;">
+    <h4 style="color: #6a1b9a;">📝 Practice Questions</h4>
+    <ol style="line-height: 2;">
+      <li>State two major sources of air pollution in Nigerian cities.</li>
+      <li>Explain how acid rain is formed from factory emissions.</li>
+      <li>Give one reason why plastic waste is a serious environmental problem in Nigeria.</li>
+    </ol>
+  </div>
+
+  <!-- Answers -->
+  <div style="background: #e3f2fd; padding: 15px; border-radius: 8px;">
+    <h4 style="color: #0d47a1;">✅ Answers</h4>
+    <ol style="line-height: 2;">
+      <li>Vehicle exhaust fumes and burning of fossil fuels (e.g., generators, industrial boilers).</li>
+      <li>Sulfur dioxide (SO₂) and nitrogen oxides (NOₓ) from factories react with water vapour in the atmosphere to form sulfuric and nitric acids, which fall as acid rain.</li>
+      <li>Plastics are non-biodegradable — they clog drainage systems, cause flooding, and when burned release toxic fumes (dioxins).</li>
+    </ol>
+  </div>
+</div>

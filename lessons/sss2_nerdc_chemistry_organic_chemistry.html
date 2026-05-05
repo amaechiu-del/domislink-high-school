@@ -1,0 +1,131 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="display:block; margin:20px auto; max-width:100%; background:#f8f9fa; border-radius:12px;">
+  <style>
+    .bond { stroke:#333; stroke-width:3; stroke-linecap:round; }
+    .atom { font: bold 16px 'Segoe UI', sans-serif; fill:#1a1a2e; }
+    .label { font: 14px 'Segoe UI', sans-serif; fill:#555; }
+    .arrow { fill:none; stroke:#e63946; stroke-width:2; marker-end:url(#arrowhead); }
+    .highlight { animation: pulse 2s infinite; }
+    @keyframes pulse {
+      0% { opacity:0.7; }
+      50% { opacity:1; }
+      100% { opacity:0.7; }
+    }
+    .sub { font-size:11px; baseline-shift:sub; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e63946"/>
+    </marker>
+  </defs>
+
+  <!-- Methane molecule -->
+  <text x="40" y="30" font-size="18" font-weight="bold" fill="#2b2d42">Methane (CH₄)</text>
+  
+  <!-- Central carbon -->
+  <circle cx="300" cy="200" r="28" fill="#a8dadc" stroke="#1d3557" stroke-width="2.5"/>
+  <text x="300" y="207" text-anchor="middle" class="atom">C</text>
+
+  <!-- Hydrogen atoms with bonds -->
+  <!-- Top H -->
+  <line x1="300" y1="172" x2="300" y2="100" class="bond"/>
+  <circle cx="300" cy="90" r="18" fill="#f1faee" stroke="#1d3557" stroke-width="2.5"/>
+  <text x="300" y="97" text-anchor="middle" class="atom">H</text>
+
+  <!-- Right H -->
+  <line x1="328" y1="200" x2="400" y2="200" class="bond"/>
+  <circle cx="410" cy="200" r="18" fill="#f1faee" stroke="#1d3557" stroke-width="2.5"/>
+  <text x="410" y="207" text-anchor="middle" class="atom">H</text>
+
+  <!-- Bottom H -->
+  <line x1="300" y1="228" x2="300" y2="300" class="bond"/>
+  <circle cx="300" cy="310" r="18" fill="#f1faee" stroke="#1d3557" stroke-width="2.5"/>
+  <text x="300" y="317" text-anchor="middle" class="atom">H</text>
+
+  <!-- Left H -->
+  <line x1="272" y1="200" x2="200" y2="200" class="bond"/>
+  <circle cx="190" cy="200" r="18" fill="#f1faee" stroke="#1d3557" stroke-width="2.5"/>
+  <text x="190" y="207" text-anchor="middle" class="atom">H</text>
+
+  <!-- Bond angles annotation -->
+  <path d="M 300,175 A 25,25 0 0,1 325,200" fill="none" stroke="#e63946" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="318" y="182" font-size="12" fill="#e63946">109.5°</text>
+
+  <!-- Arrow to functional group -->
+  <line x1="440" y1="160" x2="530" y2="100" class="arrow"/>
+  <text x="445" y="150" font-size="11" fill="#e63946">Functional group?</text>
+
+  <!-- Ethanol molecule (right side) -->
+  <text x="440" y="30" font-size="18" font-weight="bold" fill="#2b2d42">Ethanol (C₂H₅OH)</text>
+  
+  <!-- C1 -->
+  <circle cx="480" cy="200" r="22" fill="#a8dadc" stroke="#1d3557" stroke-width="2.5"/>
+  <text x="480" y="207" text-anchor="middle" class="atom">C</text>
+  <!-- C2 -->
+  <circle cx="550" cy="200" r="22" fill="#a8dadc" stroke="#1d3557" stroke-width="2.5"/>
+  <text x="550" y="207" text-anchor="middle" class="atom">C</text>
+  <!-- C-C bond -->
+  <line x1="502" y1="200" x2="528" y2="200" class="bond"/>
+
+  <!-- H on C1 -->
+  <line x1="480" y1="178" x2="480" y2="140" class="bond"/>
+  <circle cx="480" cy="130" r="14" fill="#f1faee" stroke="#1d3557" stroke-width="2"/>
+  <text x="480" y="136" text-anchor="middle" class="atom" font-size="13">H</text>
+
+  <line x1="458" y1="200" x2="420" y2="200" class="bond"/>
+  <circle cx="408" cy="200" r="14" fill="#f1faee" stroke="#1d3557" stroke-width="2"/>
+  <text x="408" y="206" text-anchor="middle" class="atom" font-size="13">H</text>
+
+  <!-- H on C2 -->
+  <line x1="550" y1="178" x2="550" y2="140" class="bond"/>
+  <circle cx="550" cy="130" r="14" fill="#f1faee" stroke="#1d3557" stroke-width="2"/>
+  <text x="550" y="136" text-anchor="middle" class="atom" font-size="13">H</text>
+
+  <line x1="572" y1="200" x2="610" y2="200" class="bond"/>
+  <circle cx="622" cy="200" r="14" fill="#f1faee" stroke="#1d3557" stroke-width="2"/>
+  <text x="622" y="206" text-anchor="middle" class="atom" font-size="13">H</text>
+
+  <!-- OH group (functional) -->
+  <line x1="550" y1="222" x2="550" y2="270" class="bond"/>
+  <circle cx="550" cy="282" r="18" fill="#ffb3ba" stroke="#1d3557" stroke-width="2.5"/>
+  <text x="550" y="289" text-anchor="middle" class="atom">O</text>
+  <line x1="568" y1="282" x2="600" y2="282" class="bond"/>
+  <circle cx="612" cy="282" r="14" fill="#f1faee" stroke="#1d3557" stroke-width="2"/>
+  <text x="612" y="288" text-anchor="middle" class="atom" font-size="13">H</text>
+
+  <!-- Highlight OH -->
+  <rect x="530" y="260" width="95" height="45" rx="8" fill="none" stroke="#e63946" stroke-width="2" stroke-dasharray="6,4" class="highlight"/>
+  <text x="535" y="320" font-size="12" fill="#e63946" font-weight="bold">—OH (Hydroxyl group)</text>
+</svg>
+
+<h3>Key Concepts in Organic Chemistry</h3>
+<ul style="list-style-type:disc; padding-left:20px; line-height:1.8;">
+  <li><strong>Organic chemistry</strong> is the study of carbon-containing compounds — carbon atoms form the backbone of all organic molecules.</li>
+  <li>Carbon can form <strong>four covalent bonds</strong>, allowing it to create chains, rings, and complex structures (e.g., methane, CH₄, shown above).</li>
+  <li><strong>Functional groups</strong> are specific groups of atoms that give organic molecules their characteristic properties. Example: the hydroxyl group (–OH) makes alcohols like ethanol reactive and polar.</li>
+  <li>Organic compounds are classified into <strong>homologous series</strong> — families with similar chemical properties and a general formula (e.g., alkanes: C<sub>n</sub>H<sub>2n+2</sub>).</li>
+  <li>Understanding <strong>isomerism</strong> is vital: molecules with the same formula but different structures (e.g., butane vs. 2-methylpropane).</li>
+</ul>
+
+<h3>Nigerian Examples</h3>
+<ul style="list-style-type:square; padding-left:20px; line-height:1.8;">
+  <li><strong>Palm oil production</strong> — triglycerides (esters) in palm oil are organic compounds. During refining, hydrolysis breaks them into glycerol and fatty acids, used in cooking and soap making across Nigeria.</li>
+  <li><strong>Ethanol from cassava</strong> — in many Nigerian communities, cassava is fermented and distilled to produce ethanol (biofuel or alcoholic beverages). This involves fermentation of glucose (C₆H₁₂O₆) to ethanol (C₂H₅OH) and CO₂.</li>
+</ul>
+
+<div style="background:#fff3cd; border-left:5px solid #ffc107; padding:12px 18px; margin:20px 0; border-radius:6px;">
+  <strong>💡 Fun Fact:</strong> The word "organic" originally came from the idea that these compounds could only come from living organisms. But in 1828, Friedrich Wöhler accidentally synthesized urea (an organic compound) from ammonium cyanate (an inorganic salt) — disproving "vitalism" and birthing modern organic chemistry!
+</div>
+
+<h3>Practice Questions</h3>
+<ol style="padding-left:20px; line-height:2;">
+  <li>Draw the structural formula of propane (C₃H₈). How many carbon-carbon single bonds does it contain?</li>
+  <li>Ethanol (C₂H₅OH) and dimethyl ether (CH₃OCH₃) have the same molecular formula. What term describes this phenomenon? Identify the functional group in each.</li>
+  <li>Name one organic compound found in Nigerian kerosene and state its use in households.</li>
+</ol>
+
+<h4>Answers</h4>
+<ol style="padding-left:20px; line-height:2; color:#2b2d42;">
+  <li>Propane: CH₃–CH₂–CH₃. It contains <strong>two</strong> carbon-carbon single bonds.</li>
+  <li>This is <strong>isomerism</strong> (specifically functional group isomerism). Ethanol has a hydroxyl group (–OH); dimethyl ether has an ether group (–O–).</li>
+  <li>Kerosene contains <strong>decane (C₁₀H₂₂)</strong> and other alkanes — used as fuel for cooking lamps and stoves in many Nigerian homes.</li>
+</ol>

@@ -1,0 +1,107 @@
+<div class="lesson-content">
+  <h2>Excretory Systems – SSS2 Biology (WAEC Syllabus)</h2>
+
+  <p>The excretory system is responsible for removing metabolic waste products from the body. In humans, this involves the kidneys, ureters, bladder, and urethra. The process of <strong>osmoregulation</strong> and waste removal is vital for homeostasis.</p>
+
+  <!-- Animated SVG Diagram -->
+  <svg viewBox="0 0 400 350" width="100%" height="auto" style="max-width:450px; display:block; margin:0 auto;">
+    <defs>
+      <style>
+        .kidney { fill: #c0392b; stroke: #922b21; stroke-width: 2; }
+        .ureter { fill: none; stroke: #2c3e50; stroke-width: 3; stroke-linecap: round; }
+        .bladder { fill: #2980b9; stroke: #1a5276; stroke-width: 2; }
+        .label { font-family: Arial, sans-serif; font-size: 11px; fill: #2c3e50; font-weight: bold; }
+        .arrow { fill: none; stroke: #e67e22; stroke-width: 2; marker-end: url(#arrowhead); }
+      </style>
+      <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="#e67e22" />
+      </marker>
+    </defs>
+
+    <!-- Left Kidney -->
+    <ellipse class="kidney" cx="120" cy="120" rx="45" ry="30">
+      <animate attributeName="rx" values="45;48;45" dur="4s" repeatCount="indefinite" />
+    </ellipse>
+    <text x="100" y="95" class="label">Left Kidney</text>
+
+    <!-- Right Kidney -->
+    <ellipse class="kidney" cx="280" cy="120" rx="45" ry="30">
+      <animate attributeName="rx" values="45;48;45" dur="4s" repeatCount="indefinite" />
+    </ellipse>
+    <text x="260" y="95" class="label">Right Kidney</text>
+
+    <!-- Ureters with animated flow -->
+    <path class="ureter" d="M 120 150 Q 120 200, 160 240">
+      <animate attributeName="stroke-dashoffset" from="0" to="-200" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="stroke-dasharray" values="5,15;10,10;5,15" dur="2s" repeatCount="indefinite" />
+    </path>
+    <path class="ureter" d="M 280 150 Q 280 200, 240 240">
+      <animate attributeName="stroke-dashoffset" from="0" to="-200" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="stroke-dasharray" values="5,15;10,10;5,15" dur="2s" repeatCount="indefinite" />
+    </path>
+
+    <!-- Bladder -->
+    <path class="bladder" d="M 160 240 Q 200 280, 240 240 Z">
+      <animate attributeName="d" values="M 160 240 Q 200 280, 240 240 Z;M 165 235 Q 200 275, 235 235 Z;M 160 240 Q 200 280, 240 240 Z" dur="5s" repeatCount="indefinite" />
+    </path>
+    <text x="178" y="260" class="label">Bladder</text>
+
+    <!-- Urethra -->
+    <line x1="200" y1="280" x2="200" y2="310" stroke="#2c3e50" stroke-width="3" />
+    <text x="180" y="325" class="label">Urethra</text>
+
+    <!-- Arrow showing urine flow -->
+    <path class="arrow" d="M 120 150 Q 110 190, 140 220" />
+    <path class="arrow" d="M 280 150 Q 290 190, 260 220" />
+  </svg>
+
+  <!-- Bullet-point explanations -->
+  <h3>Key Functions &amp; Organs</h3>
+  <ul>
+    <li><strong>Kidneys:</strong> Filter blood to remove urea, excess salts, and water. They produce urine.</li>
+    <li><strong>Ureters:</strong> Muscular tubes that carry urine from the kidneys to the bladder using peristalsis.</li>
+    <li><strong>Urinary Bladder:</strong> A hollow, muscular sac that stores urine until excretion.</li>
+    <li><strong>Urethra:</strong> The tube through which urine is expelled from the body.</li>
+    <li><strong>Nephrons:</strong> The functional units of the kidney where filtration, reabsorption, and secretion occur.</li>
+    <li><strong>Homeostasis:</strong> The excretory system helps regulate blood pH, water balance, and removes toxic nitrogenous wastes.</li>
+  </ul>
+
+  <!-- Two Nigerian Examples -->
+  <h3>Nigerian Examples</h3>
+  <ol>
+    <li><strong>Example 1:</strong> In rural farming communities in northern Nigeria, <em>Ziziphus mauritiana</em> (local name: Magarya) leaves are sometimes used in traditional remedies for urinary tract infections, demonstrating local knowledge of the excretory system.</li>
+    <li><strong>Example 2:</strong> The high rate of kidney disease in parts of southern Nigeria is linked to the consumption of locally brewed alcoholic drinks and the use of herbal concoctions containing nephrotoxic substances, highlighting the importance of kidney health education.</li>
+  </ol>
+
+  <!-- Fun Fact Block -->
+  <div style="background-color: #f0f8ff; border-left: 4px solid #2980b9; padding: 10px 15px; margin: 20px 0;">
+    <h4 style="margin:0 0 5px 0;">Fun Fact</h4>
+    <p style="margin:0;">The kidneys filter about <strong>180 litres</strong> of blood every day, but only about <strong>1.5 litres</strong> of urine is produced. The rest is reabsorbed! Without this process, you would need to drink 180 litres of water daily just to survive.</p>
+  </div>
+
+  <!-- Three Practice Questions with Answers -->
+  <h3>Practice Questions</h3>
+  <ol>
+    <li>
+      <strong>Question:</strong> Name the two major waste products removed by the human kidney and state one function of the urinary bladder.<br>
+      <details>
+        <summary>Show Answer</summary>
+        <p><strong>Answer:</strong> Urea and excess water/salts. The urinary bladder stores urine temporarily until it is expelled from the body.</p>
+      </details>
+    </li>
+    <li>
+      <strong>Question:</strong> Explain how the nephron helps in the formation of urine. (Hint: mention filtration, reabsorption, and secretion).<br>
+      <details>
+        <summary>Show Answer</summary>
+        <p><strong>Answer:</strong> Blood enters the glomerulus where filtration occurs (water, urea, glucose, salts pass into Bowman's capsule). Then, useful substances like glucose and most water are reabsorbed in the tubules. Finally, additional wastes (e.g., hydrogen ions) are secreted into the tubule, producing urine.</p>
+      </details>
+    </li>
+    <li>
+      <strong>Question:</strong> Why is the excretory system important for homeostasis in the human body? Give one Nigerian context example.<br>
+      <details>
+        <summary>Show Answer</summary>
+        <p><strong>Answer:</strong> It regulates water and salt balance, removes toxic urea, and maintains blood pH. For example, in hot regions of northern Nigeria, the kidneys conserve water by producing more concentrated urine, preventing dehydration.</p>
+      </details>
+    </li>
+  </ol>
+</div>

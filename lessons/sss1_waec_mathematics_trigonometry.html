@@ -1,0 +1,74 @@
+<div class="lesson">
+  <h2>Trigonometry: Introduction to Sine, Cosine & Tangent</h2>
+  
+  <!-- Animated SVG Diagram -->
+  <svg viewBox="0 0 400 350" xmlns="http://www.w3.org/2000/svg" style="display:block; margin:0 auto; max-width:100%; height:auto;">
+    <defs>
+      <style>
+        @keyframes pulseAngle {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.4; }
+        }
+        @keyframes dashMove {
+          to { stroke-dashoffset: -20; }
+        }
+        .angle-arc { animation: pulseAngle 2s infinite; }
+        .animated-dash { stroke-dasharray: 4; animation: dashMove 1s linear infinite; }
+      </style>
+    </defs>
+    <!-- Right triangle -->
+    <polygon points="50,280 250,280 250,80" fill="#e6f0fa" stroke="#1a3a5c" stroke-width="2.5"/>
+    <!-- Right angle marker -->
+    <polyline points="235,280 235,265 250,265" fill="none" stroke="#1a3a5c" stroke-width="1.5"/>
+    <!-- Hypotenuse label -->
+    <text x="135" y="165" font-family="Arial" font-size="18" fill="#c0392b" font-weight="bold">Hypotenuse</text>
+    <!-- Opposite side label -->
+    <text x="260" y="185" font-family="Arial" font-size="16" fill="#27ae60" font-weight="bold" transform="rotate(-90,260,185)">Opposite</text>
+    <!-- Adjacent side label -->
+    <text x="130" y="300" font-family="Arial" font-size="16" fill="#2980b9" font-weight="bold">Adjacent</text>
+    <!-- Angle θ -->
+    <path d="M 50 280 L 70 280 A 20 20 0 0 0 63 263" fill="none" stroke="#e67e22" stroke-width="2.5" class="angle-arc"/>
+    <text x="55" y="260" font-family="Arial" font-size="18" fill="#e67e22" font-weight="bold">θ</text>
+    <!-- Dashed projection line for animation -->
+    <line x1="250" y1="280" x2="250" y2="80" stroke="#27ae60" stroke-width="2" stroke-dasharray="4" class="animated-dash" opacity="0.5"/>
+  </svg>
+  
+  <h3>Key Definitions</h3>
+  <ul>
+    <li><strong>Hypotenuse</strong> – the longest side, opposite the right angle.</li>
+    <li><strong>Opposite side</strong> – the side across from the angle θ.</li>
+    <li><strong>Adjacent side</strong> – the side next to angle θ (not the hypotenuse).</li>
+    <li><strong>Sine (sin) θ</strong> = Opposite ÷ Hypotenuse</li>
+    <li><strong>Cosine (cos) θ</strong> = Adjacent ÷ Hypotenuse</li>
+    <li><strong>Tangent (tan) θ</strong> = Opposite ÷ Adjacent</li>
+    <li>Remember: <em>SOH CAH TOA</em> – a simple way to recall the ratios!</li>
+  </ul>
+  
+  <h3>Nigerian Examples</h3>
+  <div class="example">
+    <p><strong>Example 1:</strong> A ladder leans against a wall in Lagos. The ladder reaches 8 m up the wall and its base is 6 m from the wall. Find the angle the ladder makes with the ground.</p>
+    <p><strong>Solution:</strong> Opposite = 8 m, Adjacent = 6 m. Tan θ = 8/6 = 1.3333. θ = tan⁻¹(1.3333) ≈ <strong>53.1°</strong></p>
+  </div>
+  <div class="example">
+    <p><strong>Example 2:</strong> A flagpole in Abuja casts a shadow 12 m long when the angle of elevation of the sun is 60°. How tall is the flagpole?</p>
+    <p><strong>Solution:</strong> Tan 60° = Height / 12. Height = 12 × tan 60° = 12 × 1.732 = <strong>20.78 m</strong></p>
+  </div>
+  
+  <div class="fun-fact" style="background:#fef9e7; border-left:5px solid #f1c40f; padding:12px; margin:20px 0; border-radius:6px;">
+    <p><strong>🎉 Fun Fact:</strong> The word "trigonometry" comes from Greek words <em>trigonon</em> (triangle) and <em>metron</em> (measure). Ancient Nigerian astronomers used similar angle calculations to track the movement of stars across the savannah!</p>
+  </div>
+  
+  <h3>Practice Questions</h3>
+  <ol>
+    <li>In a right-angled triangle, the side opposite angle A is 5 cm and the hypotenuse is 13 cm. Find sin A.</li>
+    <li>A tree casts a shadow 15 m long. The angle of elevation to the top of the tree is 45°. How tall is the tree?</li>
+    <li>If cos θ = 0.6 and the adjacent side is 9 cm, find the length of the hypotenuse.</li>
+  </ol>
+  
+  <h4>Answers</h4>
+  <ol>
+    <li>sin A = 5/13 ≈ 0.3846</li>
+    <li>Height = 15 × tan 45° = 15 × 1 = 15 m</li>
+    <li>Hypotenuse = 9 ÷ 0.6 = 15 cm</li>
+  </ol>
+</div>

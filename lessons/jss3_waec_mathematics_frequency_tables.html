@@ -1,0 +1,100 @@
+<div class="lesson-content">
+  <h1>Frequency Tables – JSS3 Mathematics (WAEC Syllabus)</h1>
+
+  <!-- Animated SVG Diagram -->
+  <svg viewBox="0 0 400 200" width="100%" height="100%" style="background-color: #f0f8ff; border-radius: 10px; margin-bottom: 20px;">
+    <rect x="10" y="10" width="380" height="180" rx="10" fill="#e6f2ff" stroke="#004080" stroke-width="2"/>
+    <text x="200" y="40" text-anchor="middle" font-size="16" fill="#004080" font-weight="bold">📊 Frequency Table Animation</text>
+    
+    <!-- Bars animating -->
+    <rect x="50" y="150" width="40" height="0" fill="#ff6600">
+      <animate attributeName="height" values="0;60;60" dur="3s" fill="freeze" repeatCount="indefinite"/>
+      <animate attributeName="y" values="150;90;90" dur="3s" fill="freeze" repeatCount="indefinite"/>
+    </rect>
+    <text x="70" y="175" text-anchor="middle" font-size="12" fill="#333">A</text>
+    
+    <rect x="120" y="150" width="40" height="0" fill="#3399ff">
+      <animate attributeName="height" values="0;90;90" dur="3s" fill="freeze" repeatCount="indefinite"/>
+      <animate attributeName="y" values="150;60;60" dur="3s" fill="freeze" repeatCount="indefinite"/>
+    </rect>
+    <text x="140" y="175" text-anchor="middle" font-size="12" fill="#333">B</text>
+    
+    <rect x="190" y="150" width="40" height="0" fill="#33cc33">
+      <animate attributeName="height" values="0;40;40" dur="3s" fill="freeze" repeatCount="indefinite"/>
+      <animate attributeName="y" values="150;110;110" dur="3s" fill="freeze" repeatCount="indefinite"/>
+    </rect>
+    <text x="210" y="175" text-anchor="middle" font-size="12" fill="#333">C</text>
+    
+    <rect x="260" y="150" width="40" height="0" fill="#cc33ff">
+      <animate attributeName="height" values="0;75;75" dur="3s" fill="freeze" repeatCount="indefinite"/>
+      <animate attributeName="y" values="150;75;75" dur="3s" fill="freeze" repeatCount="indefinite"/>
+    </rect>
+    <text x="280" y="175" text-anchor="middle" font-size="12" fill="#333">D</text>
+    
+    <text x="200" y="198" text-anchor="middle" font-size="11" fill="#666" font-style="italic">Frequency of each score (animated)</text>
+  </svg>
+
+  <h2>📌 What is a Frequency Table?</h2>
+  <ul style="font-size: 16px; line-height: 1.8;">
+    <li>A <strong>frequency table</strong> organizes data by showing how often each value occurs.</li>
+    <li>It has two columns: <strong>Score (or Class)</strong> and <strong>Frequency</strong>.</li>
+    <li>It helps to quickly see the most common, least common, and spread of data.</li>
+    <li>We can calculate <strong>mean, median, mode, and range</strong> from a frequency table.</li>
+  </ul>
+
+  <h2>🇳🇬 Nigerian Example 1 – Scores in a Mathematics Test</h2>
+  <p>Mr. Ade recorded the test scores of 20 JSS3 students: 2, 3, 3, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 8, 9, 9, 10.</p>
+  <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; margin: 10px 0; width: 100%; max-width: 400px;">
+    <tr style="background-color: #004080; color: white;">
+      <th>Score</th>
+      <th>Tally</th>
+      <th>Frequency</th>
+    </tr>
+    <tr><td>2</td><td>|</td><td>1</td></tr>
+    <tr><td>3</td><td>||</td><td>2</td></tr>
+    <tr><td>4</td><td>|||</td><td>3</td></tr>
+    <tr><td>5</td><td>||||</td><td>4</td></tr>
+    <tr><td>6</td><td>|||</td><td>3</td></tr>
+    <tr><td>7</td><td>||</td><td>2</td></tr>
+    <tr><td>8</td><td>||</td><td>2</td></tr>
+    <tr><td>9</td><td>||</td><td>2</td></tr>
+    <tr><td>10</td><td>|</td><td>1</td></tr>
+  </table>
+  <p><strong>Total frequency:</strong> 1+2+3+4+3+2+2+2+1 = 20 ✅</p>
+
+  <h2>🇳🇬 Nigerian Example 2 – Ages of Students in a Youth Club</h2>
+  <p>In a Lagos youth club, the ages of 15 members are: 12, 13, 13, 14, 14, 14, 15, 15, 15, 15, 16, 16, 17, 17, 18.</p>
+  <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; margin: 10px 0; width: 100%; max-width: 400px;">
+    <tr style="background-color: #008040; color: white;">
+      <th>Age</th>
+      <th>Tally</th>
+      <th>Frequency</th>
+    </tr>
+    <tr><td>12</td><td>|</td><td>1</td></tr>
+    <tr><td>13</td><td>||</td><td>2</td></tr>
+    <tr><td>14</td><td>|||</td><td>3</td></tr>
+    <tr><td>15</td><td>||||</td><td>4</td></tr>
+    <tr><td>16</td><td>||</td><td>2</td></tr>
+    <tr><td>17</td><td>||</td><td>2</td></tr>
+    <tr><td>18</td><td>|</td><td>1</td></tr>
+  </table>
+  <p><strong>Total frequency:</strong> 1+2+3+4+2+2+1 = 15 ✅</p>
+
+  <div style="background-color: #fff3cd; border-left: 6px solid #ffaa00; padding: 12px 18px; margin: 20px 0; border-radius: 6px;">
+    <strong>💡 Fun Fact:</strong> The word “frequency” comes from Latin <em>frequentia</em> meaning “a crowd.” Frequency tables help us “crowd” data into groups so we can understand patterns — just like sorting students into houses in a Nigerian secondary school!
+  </div>
+
+  <h2>📝 Practice Questions</h2>
+  <ol style="font-size: 16px; line-height: 2;">
+    <li><strong>Question 1:</strong> The scores of 10 students in a quiz are: 1, 2, 2, 3, 3, 3, 4, 4, 5, 5. Draw a frequency table and find the modal score.</li>
+    <li><strong>Question 2:</strong> In a market survey, 12 women bought the following numbers of yams: 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 6. Create a frequency table and find the range.</li>
+    <li><strong>Question 3:</strong> The ages of 8 children in a family are: 5, 6, 6, 7, 7, 7, 8, 9. Use a frequency table to find the mean age.</li>
+  </ol>
+
+  <h3>✅ Answers</h3>
+  <ul style="font-size: 16px; line-height: 1.8;">
+    <li><strong>Answer 1:</strong> Modal score = 3 (appears 3 times). Table: Score 1 (1), 2 (2), 3 (3), 4 (2), 5 (2). Total = 10.</li>
+    <li><strong>Answer 2:</strong> Range = 6 - 2 = 4. Table: 2 (2), 3 (3), 4 (4), 5 (2), 6 (1). Total = 12.</li>
+    <li><strong>Answer 3:</strong> Mean = (5×1 + 6×2 + 7×3 + 8×1 + 9×1) ÷ 8 = (5+12+21+8+9) ÷ 8 = 55 ÷ 8 = <strong>6.875</strong>.</li>
+  </ul>
+</div>

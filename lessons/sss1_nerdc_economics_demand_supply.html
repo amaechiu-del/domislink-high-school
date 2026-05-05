@@ -1,0 +1,120 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+    <style>
+      @keyframes demandShift {
+        0% { transform: translate(0, 0); }
+        50% { transform: translate(-20px, 20px); }
+        100% { transform: translate(0, 0); }
+      }
+      @keyframes supplyShift {
+        0% { transform: translate(0, 0); }
+        50% { transform: translate(20px, -20px); }
+        100% { transform: translate(0, 0); }
+      }
+      .demand-line { animation: demandShift 4s ease-in-out infinite; }
+      .supply-line { animation: supplyShift 4s ease-in-out infinite; }
+      .equilibrium-dot { animation: pulse 2s ease-in-out infinite; }
+      @keyframes pulse {
+        0% { opacity: 0.6; r: 6; }
+        50% { opacity: 1; r: 10; }
+        100% { opacity: 0.6; r: 6; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f0f8ff" rx="10"/>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#2c3e50">Demand & Supply Equilibrium</text>
+
+  <!-- Axes -->
+  <line x1="80" y1="50" x2="80" y2="350" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="80" y1="350" x2="720" y2="350" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Axis Labels -->
+  <text x="40" y="200" text-anchor="middle" font-size="16" fill="#333" transform="rotate(-90, 40, 200)">Price (₦)</text>
+  <text x="400" y="380" text-anchor="middle" font-size="16" fill="#333">Quantity (Q)</text>
+
+  <!-- Grid lines (light) -->
+  <line x1="80" y1="100" x2="720" y2="100" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="80" y1="150" x2="720" y2="150" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="80" y1="200" x2="720" y2="200" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="80" y1="250" x2="720" y2="250" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="80" y1="300" x2="720" y2="300" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5"/>
+
+  <line x1="180" y1="50" x2="180" y2="350" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="280" y1="50" x2="280" y2="350" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="380" y1="50" x2="380" y2="350" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="480" y1="50" x2="480" y2="350" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="580" y1="50" x2="580" y2="350" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="680" y1="50" x2="680" y2="350" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5"/>
+
+  <!-- Demand Curve (downward sloping) -->
+  <path class="demand-line" d="M 120 100 Q 300 200 680 300" fill="none" stroke="#e74c3c" stroke-width="3" stroke-dasharray="8,4"/>
+  <text x="690" y="295" font-size="14" fill="#e74c3c" font-weight="bold">Demand</text>
+
+  <!-- Supply Curve (upward sloping) -->
+  <path class="supply-line" d="M 120 300 Q 300 200 680 100" fill="none" stroke="#27ae60" stroke-width="3" stroke-dasharray="8,4"/>
+  <text x="690" y="105" font-size="14" fill="#27ae60" font-weight="bold">Supply</text>
+
+  <!-- Equilibrium Point -->
+  <circle class="equilibrium-dot" cx="380" cy="200" r="8" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+  <text x="390" y="190" font-size="14" fill="#e67e22" font-weight="bold">E</text>
+
+  <!-- Equilibrium price and quantity labels -->
+  <line x1="380" y1="200" x2="380" y2="350" stroke="#999" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="80" y1="200" x2="380" y2="200" stroke="#999" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="380" y="370" text-anchor="middle" font-size="13" fill="#333">Q*</text>
+  <text x="65" y="205" text-anchor="end" font-size="13" fill="#333">P*</text>
+
+  <!-- Arrows showing shortage/surplus areas -->
+  <text x="250" y="260" text-anchor="middle" font-size="12" fill="#e74c3c">Shortage</text>
+  <text x="520" y="150" text-anchor="middle" font-size="12" fill="#27ae60">Surplus</text>
+</svg>
+
+<h2>Understanding Demand & Supply</h2>
+
+<ul>
+  <li><strong>Demand</strong> = How much consumers want to buy at different prices. The <span style="color:#e74c3c">demand curve slopes downward</span> — as price falls, quantity demanded rises.</li>
+  <li><strong>Supply</strong> = How much producers are willing to sell at different prices. The <span style="color:#27ae60">supply curve slopes upward</span> — as price rises, quantity supplied rises.</li>
+  <li><strong>Equilibrium (E)</strong> = The point where demand meets supply. At price <strong>P*</strong> and quantity <strong>Q*</strong>, the market is stable.</li>
+  <li><strong>Shortage</strong> occurs when price is below equilibrium — demand exceeds supply.</li>
+  <li><strong>Surplus</strong> occurs when price is above equilibrium — supply exceeds demand.</li>
+  <li><strong>Market forces</strong> naturally push price toward equilibrium (the "invisible hand").</li>
+</ul>
+
+<h2>Nigeria Examples</h2>
+
+<div style="background:#fff3e0; padding:10px; border-left:4px solid #e67e22; margin:10px 0;">
+  <strong>Example 1: Garri in the Wet Season</strong><br>
+  During the rainy season, cassava harvests increase → supply of garri rises. The supply curve shifts right, causing equilibrium price to drop. Consumers buy more garri at lower prices.
+</div>
+
+<div style="background:#e8f5e9; padding:10px; border-left:4px solid #27ae60; margin:10px 0;">
+  <strong>Example 2: Fuel Price Hike (Subsidy Removal)</strong><br>
+  When the Nigerian government reduced fuel subsidies, the price of petrol increased sharply. At the new higher price, quantity demanded fell (movement along demand curve), while supply remained relatively fixed in the short term.
+</div>
+
+<div style="background:#fef9e7; padding:12px; border-radius:8px; border:2px dashed #f1c40f; margin:15px 0;">
+  <strong>🎉 Fun Fact!</strong><br>
+  In Nigeria, the price of <em>pure water</em> (sachet water) often rises during harmattan season because supply drops (less water production) while demand stays high. This is a real-world example of supply shifting left!
+</div>
+
+<h2>Practice Questions</h2>
+
+<ol style="background:#f9f9f9; padding:15px; border-radius:8px;">
+  <li><strong>Question 1:</strong> If the price of beans in a Lagos market is ₦800 per cup, and at this price, sellers want to sell 500 cups but buyers only want 300 cups, what is this situation called? What should happen to the price?</li>
+  <li><strong>Question 2:</strong> During the Christmas season in Nigeria, demand for chicken increases. Using the demand-supply diagram, explain what happens to the equilibrium price and quantity of chicken.</li>
+  <li><strong>Question 3:</strong> A new technology helps Nigerian rice farmers produce more rice per hectare. Which curve shifts? What happens to the equilibrium price of local rice?</li>
+</ol>
+
+<div style="background:#e8eaf6; padding:12px; border-radius:8px; margin-top:10px;">
+  <strong>Answers:</strong><br>
+  <strong>1.</strong> Surplus (excess supply). Price will <em>fall</em> toward equilibrium as sellers compete to sell their beans.<br>
+  <strong>2.</strong> The demand curve shifts right (increase in demand). Both equilibrium price and equilibrium quantity <em>rise</em>.<br>
+  <strong>3.</strong> The supply curve shifts right (increase in supply). Equilibrium price of local rice <em>falls</em>, while equilibrium quantity <em>rises</em>.
+</div>

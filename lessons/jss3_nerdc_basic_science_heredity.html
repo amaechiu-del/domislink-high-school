@@ -1,0 +1,107 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="display:block; margin:0 auto 20px; background:#f0f9ff; border-radius:12px;">
+  <defs>
+    <linearGradient id="dna1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="dna2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="600" height="400" rx="12" fill="#e0f2fe"/>
+
+  <!-- Title -->
+  <text x="300" y="35" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e3a5f" font-family="Arial">DNA – The Blueprint of Life</text>
+  <text x="300" y="55" text-anchor="middle" font-size="13" fill="#475569" font-family="Arial">Chromosomes carry genes, which determine inherited traits</text>
+
+  <!-- Chromosome pair (animated) -->
+  <g filter="url(#glow)">
+    <animateTransform attributeName="transform" type="rotate" values="-2,300,200;2,300,200;-2,300,200" dur="4s" repeatCount="indefinite"/>
+    <!-- Left chromatid -->
+    <path d="M 240 100 Q 220 150 240 200 Q 260 250 240 300" stroke="url(#dna1)" stroke-width="8" fill="none" stroke-linecap="round">
+      <animate attributeName="stroke-width" values="8;10;8" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <!-- Right chromatid -->
+    <path d="M 360 100 Q 380 150 360 200 Q 340 250 360 300" stroke="url(#dna1)" stroke-width="8" fill="none" stroke-linecap="round">
+      <animate attributeName="stroke-width" values="8;10;8" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <!-- Centromere -->
+    <ellipse cx="300" cy="200" rx="15" ry="8" fill="#f59e0b" stroke="#d97706" stroke-width="2">
+      <animate attributeName="rx" values="15;18;15" dur="1.5s" repeatCount="indefinite"/>
+    </ellipse>
+    <!-- Gene markers -->
+    <circle cx="240" cy="130" r="5" fill="#ef4444">
+      <animate attributeName="r" values="5;7;5" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="360" cy="130" r="5" fill="#ef4444">
+      <animate attributeName="r" values="5;7;5" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="240" cy="270" r="5" fill="#22c55e">
+      <animate attributeName="r" values="5;7;5" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="360" cy="270" r="5" fill="#22c55e">
+      <animate attributeName="r" values="5;7;5" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Labels -->
+    <text x="180" y="130" font-size="10" fill="#dc2626" font-family="Arial">Gene A</text>
+    <text x="380" y="130" font-size="10" fill="#dc2626" font-family="Arial">Gene A′</text>
+    <text x="180" y="275" font-size="10" fill="#16a34a" font-family="Arial">Gene B</text>
+    <text x="380" y="275" font-size="10" fill="#16a34a" font-family="Arial">Gene B′</text>
+  </g>
+
+  <!-- Labels below -->
+  <text x="120" y="355" font-size="11" fill="#334155" font-family="Arial">Chromosome pair</text>
+  <text x="300" y="385" text-anchor="middle" font-size="11" fill="#64748b" font-family="Arial">Each parent contributes one chromosome per pair</text>
+</svg>
+
+<h2 style="color:#1e3a5f; border-bottom:3px solid #3b82f6; padding-bottom:5px;">Key Concepts in Heredity</h2>
+
+<ul style="list-style-type:square; background:#f8fafc; padding:15px 25px; border-radius:8px; line-height:1.8;">
+  <li><strong>Heredity</strong> is the passing of traits from parents to offspring through genes.</li>
+  <li><strong>Genes</strong> are segments of DNA found on chromosomes — they code for specific traits (e.g., eye colour, height).</li>
+  <li><strong>Chromosomes</strong> come in pairs; humans have 23 pairs (46 total). One set comes from the mother, one from the father.</li>
+  <li><strong>Dominant traits</strong> appear when at least one dominant allele is present (e.g., dark skin in some crosses).</li>
+  <li><strong>Recessive traits</strong> only appear when both alleles are recessive (e.g., albinism).</li>
+  <li><strong>Genotype</strong> is the genetic make-up (e.g., AA, Aa, aa); <strong>phenotype</strong> is the observable trait.</li>
+</ul>
+
+<h2 style="color:#1e3a5f; border-bottom:3px solid #3b82f6; padding-bottom:5px;">Nigerian Examples</h2>
+
+<div style="background:#fef3c7; padding:12px 18px; border-left:5px solid #f59e0b; margin:10px 0; border-radius:6px;">
+  <strong>🌍 Example 1 – Sickle Cell Trait (Nigeria)</strong><br>
+  In many Nigerian families, the sickle cell gene (HbS) is inherited. If both parents carry one copy (AS), there is a 25% chance their child will have sickle cell disease (SS). This is a classic example of recessive inheritance.
+</div>
+
+<div style="background:#fef3c7; padding:12px 18px; border-left:5px solid #f59e0b; margin:10px 0; border-radius:6px;">
+  <strong>🌍 Example 2 – Skin Colour Variation (Nigeria)</strong><br>
+  Among the Yoruba, Igbo, and Hausa peoples, skin colour ranges from dark to light. Multiple genes control this trait. A child may have lighter skin than both parents if recessive alleles combine — showing how heredity can produce variety.
+</div>
+
+<div style="background:#dbeafe; padding:12px 18px; border-radius:10px; margin:15px 0;">
+  <span style="font-size:22px;">💡</span> <strong>Fun Fact:</strong> Did you know? The Nigerian dwarf goat passes its small size to kids through a dominant gene! Farmers use this knowledge to breed smaller, easier-to-manage livestock.
+</div>
+
+<h2 style="color:#1e3a5f; border-bottom:3px solid #3b82f6; padding-bottom:5px;">Practice Questions</h2>
+
+<ol style="background:#f1f5f9; padding:15px 30px; border-radius:8px; line-height:2;">
+  <li><strong>What is the difference between genotype and phenotype? Give one example from the lesson.</strong></li>
+  <li><strong>If two parents with genotype AS (sickle cell trait) have a child, what is the probability the child will have genotype SS?</strong></li>
+  <li><strong>Why do children often look like a mix of both parents? Explain using the concept of chromosomes.</strong></li>
+</ol>
+
+<h3 style="color:#16a34a;">✅ Answers</h3>
+<ol style="background:#f0fdf4; padding:15px 30px; border-radius:8px; line-height:2;">
+  <li>Genotype is the genetic makeup (e.g., AS), while phenotype is the observable trait (e.g., having sickle cell trait or disease).</li>
+  <li>25% (or 1 in 4) — from the cross AS × AS, the possible genotypes are AA, AS, AS, SS.</li>
+  <li>Each parent contributes one chromosome from every pair. The child receives half their chromosomes from mother and half from father, so they inherit a blend of both parents’ genes.</li>
+</ol>

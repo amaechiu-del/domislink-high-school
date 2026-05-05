@@ -1,0 +1,76 @@
+<svg viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg" style="display:block; margin:0 auto; max-width:100%; background:#f0f8ff; border-radius:12px;">
+  <defs>
+    <radialGradient id="nucleusGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff4500"/>
+      <stop offset="100%" stop-color="#8b0000"/>
+    </radialGradient>
+    <radialGradient id="electronGrad" cx="40%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#00bfff"/>
+      <stop offset="100%" stop-color="#00008b"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Orbits -->
+  <ellipse cx="250" cy="175" rx="80" ry="40" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <ellipse cx="250" cy="175" rx="140" ry="70" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- Nucleus -->
+  <circle cx="250" cy="175" r="28" fill="url(#nucleusGrad)"/>
+  <text x="250" y="170" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Proton</text>
+  <text x="250" y="186" text-anchor="middle" fill="white" font-size="12">Neutron</text>
+
+  <!-- Electron 1 (inner orbit) -->
+  <circle cx="250" cy="135" r="8" fill="url(#electronGrad)">
+    <animateMotion dur="2s" repeatCount="indefinite" path="M250,135 a80,40 0 1,1 0,80 a80,40 0 1,1 0,-80"/>
+  </circle>
+  <text x="250" y="120" text-anchor="middle" fill="#00008b" font-size="11">e⁻</text>
+
+  <!-- Electron 2 (outer orbit) -->
+  <circle cx="250" cy="105" r="8" fill="url(#electronGrad)">
+    <animateMotion dur="3.5s" repeatCount="indefinite" path="M250,105 a140,70 0 1,1 0,140 a140,70 0 1,1 0,-140"/>
+  </circle>
+  <text x="250" y="90" text-anchor="middle" fill="#00008b" font-size="11">e⁻</text>
+
+  <!-- Labels -->
+  <text x="420" y="130" fill="#333" font-size="13" font-style="italic">Nucleus</text>
+  <line x1="380" y1="132" x2="282" y2="165" stroke="#555" stroke-width="1"/>
+  <text x="170" y="260" fill="#333" font-size="13" font-style="italic">Electron cloud</text>
+  <line x1="200" y1="255" x2="230" y2="210" stroke="#555" stroke-width="1"/>
+</svg>
+
+<h3 style="color:#1a5276; margin-top:20px;">🔬 Key Concepts of Atomic Structure</h3>
+<ul style="line-height:1.8; padding-left:20px;">
+  <li><strong>Atom</strong> – the smallest unit of an element that retains its chemical properties.</li>
+  <li><strong>Nucleus</strong> – dense central core containing protons (positive) and neutrons (neutral).</li>
+  <li><strong>Proton</strong> – positively charged particle; number = atomic number (Z).</li>
+  <li><strong>Neutron</strong> – neutral particle; mass ≈ proton.</li>
+  <li><strong>Electron</strong> – negatively charged particle orbiting the nucleus in shells/energy levels.</li>
+  <li><strong>Atomic number (Z)</strong> = number of protons → identifies the element.</li>
+  <li><strong>Mass number (A)</strong> = protons + neutrons.</li>
+  <li><strong>Isotopes</strong> – same number of protons, different number of neutrons (e.g., Carbon-12, Carbon-14).</li>
+</ul>
+
+<div style="background:#e8f8f5; border-left:5px solid #1e8449; padding:12px 18px; margin:20px 0; border-radius:6px;">
+  <h4 style="color:#1e8449; margin:0 0 8px 0;">🇳🇬 Nigerian Examples</h4>
+  <p><strong>1. Tin (Sn)</strong> – Nigeria is a significant tin producer (Plateau State). Tin has atomic number 50, meaning 50 protons and 50 electrons. Its most common isotope has 70 neutrons (mass number 120).</p>
+  <p><strong>2. Crude oil (Hydrogen & Carbon)</strong> – Nigeria’s oil wealth is based on hydrocarbons. Hydrogen (Z=1) has one proton; Carbon (Z=6) has six protons. Understanding isotopes like Carbon-12 and Carbon-14 helps date ancient organic materials in the Niger Delta.</p>
+</div>
+
+<div style="background:#fff3cd; border:2px dashed #f39c12; padding:12px 18px; margin:20px 0; border-radius:8px;">
+  <h4 style="color:#d35400; margin:0 0 6px 0;">🎉 Fun Fact</h4>
+  <p>If you could line up 100 million atoms side by side, they would stretch only about 1 centimetre! The nucleus is 100,000 times smaller than the whole atom – like a pea in the middle of a football stadium.</p>
+</div>
+
+<h3 style="color:#1a5276; margin-top:25px;">✏️ Practice Questions</h3>
+<ol style="line-height:1.9; padding-left:20px;">
+  <li><strong>Question 1:</strong> An atom has 11 protons and 12 neutrons. What is its atomic number and mass number? Name the element.</li>
+  <li><strong>Question 2:</strong> How many electrons does a neutral atom of oxygen (atomic number 8) have? Explain why.</li>
+  <li><strong>Question 3:</strong> Two atoms have the same number of protons but different numbers of neutrons. What are these atoms called? Give one example.</li>
+</ol>
+
+<h4 style="color:#1a5276; margin-top:15px;">✅ Answers</h4>
+<ol style="line-height:1.9; padding-left:20px; background:#f4f6f7; padding:12px 20px; border-radius:6px;">
+  <li><strong>Answer 1:</strong> Atomic number = 11 (number of protons). Mass number = 11 + 12 = 23. The element is <strong>Sodium (Na)</strong>.</li>
+  <li><strong>Answer 2:</strong> A neutral oxygen atom has <strong>8 electrons</strong> because the number of electrons equals the number of protons (atomic number = 8) to balance charge.</li>
+  <li><strong>Answer 3:</strong> They are called <strong>isotopes</strong>. Example: Carbon-12 and Carbon-14 (both have 6 protons, but 6 and 8 neutrons respectively).</li>
+</ol>

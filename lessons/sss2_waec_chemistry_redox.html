@@ -1,0 +1,95 @@
+<svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" style="display:block; margin:0 auto; background:#f4f9ff; border-radius:12px;">
+  <defs>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#d32f2f"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2e7d32"/>
+    </marker>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <text x="300" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a237e">Redox Reaction: Mg + Cu²⁺ → Mg²⁺ + Cu</text>
+  <!-- Mg atom -->
+  <circle cx="120" cy="120" r="30" fill="#b0bec5" stroke="#37474f" stroke-width="2"/>
+  <text x="120" y="125" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a237e">Mg</text>
+  <!-- Cu²⁺ ion -->
+  <circle cx="480" cy="120" r="30" fill="#d84315" stroke="#bf360c" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="480" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Cu²⁺</text>
+  <text x="480" y="138" text-anchor="middle" font-size="12" fill="#fff9c4">(+2 charge)</text>
+  <!-- Electron e⁻ -->
+  <circle cx="200" cy="80" r="8" fill="#ffd600" filter="url(#glow)">
+    <animate attributeName="cx" from="200" to="400" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="cy" from="80" to="80" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="190" y="68" font-size="12" fill="#f57f17">e⁻</text>
+  <!-- Arrow: loss of electrons (oxidation) -->
+  <line x1="150" y1="100" x2="200" y2="80" stroke="#d32f2f" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <text x="160" y="72" font-size="11" fill="#d32f2f">Oxidation</text>
+  <!-- Arrow: gain of electrons (reduction) -->
+  <line x1="400" y1="80" x2="450" y2="100" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="405" y="72" font-size="11" fill="#2e7d32">Reduction</text>
+  <!-- Products after reaction -->
+  <rect x="80" y="210" rx="8" width="100" height="40" fill="#e0f2f1" stroke="#00796b" stroke-width="1.5"/>
+  <text x="130" y="235" text-anchor="middle" font-size="14" fill="#004d40">Mg²⁺</text>
+  <rect x="410" y="210" rx="8" width="100" height="40" fill="#ffe0b2" stroke="#e65100" stroke-width="1.5"/>
+  <text x="460" y="235" text-anchor="middle" font-size="14" fill="#bf360c">Cu (solid)</text>
+  <!-- Labels -->
+  <text x="130" y="200" text-anchor="middle" font-size="11" fill="#00796b">Mg loses 2e⁻</text>
+  <text x="460" y="200" text-anchor="middle" font-size="11" fill="#e65100">Cu²⁺ gains 2e⁻</text>
+  <!-- Legend -->
+  <rect x="20" y="270" rx="6" width="560" height="40" fill="#e8eaf6" opacity="0.8"/>
+  <circle cx="50" cy="290" r="6" fill="#d32f2f"/>
+  <text x="62" y="294" font-size="12" fill="#1a237e">Oxidation = Loss of electrons</text>
+  <circle cx="300" cy="290" r="6" fill="#2e7d32"/>
+  <text x="312" y="294" font-size="12" fill="#1a237e">Reduction = Gain of electrons</text>
+</svg>
+
+<h3 style="color:#1a237e; margin-top:20px;">🔬 Key Concepts: Redox Reactions</h3>
+<ul style="background:#f5f5f5; padding:15px 20px; border-radius:8px; line-height:1.8; list-style-type:disc;">
+  <li><strong>Redox</strong> = <em>Red</em>uction + <em>Ox</em>idation (two simultaneous processes).</li>
+  <li><strong>Oxidation</strong> is the <span style="color:#d32f2f;">loss of electrons</span> (or gain of oxygen).</li>
+  <li><strong>Reduction</strong> is the <span style="color:#2e7d32;">gain of electrons</span> (or loss of oxygen).</li>
+  <li>Use the mnemonic: <strong>OIL RIG</strong> – <u>O</u>xidation <u>I</u>s <u>L</u>oss, <u>R</u>eduction <u>I</u>s <u>G</u>ain.</li>
+  <li>An <strong>oxidising agent</strong> causes oxidation (gets reduced itself). A <strong>reducing agent</strong> causes reduction (gets oxidised itself).</li>
+  <li>In the diagram above: Mg is the <strong>reducing agent</strong> (loses e⁻), Cu²⁺ is the <strong>oxidising agent</strong> (gains e⁻).</li>
+</ul>
+
+<h3 style="color:#1a237e;">🇳🇬 Nigerian Examples</h3>
+<div style="background:#e3f2fd; padding:12px 18px; border-left:5px solid #1565c0; margin:10px 0;">
+  <strong>Example 1: Rusting of Iron in Lagos</strong><br>
+  Iron (Fe) reacts with oxygen and water to form hydrated iron(III) oxide (rust).  
+  Fe → Fe²⁺ + 2e⁻ (oxidation) — iron loses electrons.  
+  O₂ + 2H₂O + 4e⁻ → 4OH⁻ (reduction) — oxygen gains electrons.  
+  <em>Rusting is accelerated by the humid coastal climate of Lagos.</em>
+</div>
+<div style="background:#e3f2fd; padding:12px 18px; border-left:5px solid #1565c0; margin:10px 0;">
+  <strong>Example 2: Bleaching of Starch by Chlorine (Water Treatment in Kaduna)</strong><br>
+  Chlorine (Cl₂) is used to disinfect water. It oxidises iodide ions (I⁻) to iodine (I₂), which turns starch blue-black.  
+  Cl₂ + 2e⁻ → 2Cl⁻ (reduction of chlorine).  
+  2I⁻ → I₂ + 2e⁻ (oxidation of iodide).  
+  <em>This test is used in Kaduna’s water treatment plants to check for residual chlorine.</em>
+</div>
+
+<div style="background:#fff3e0; padding:12px 18px; border-radius:8px; margin:20px 0; display:flex; align-items:center; gap:12px;">
+  <span style="font-size:28px;">💡</span>
+  <div>
+    <strong>Fun Fact:</strong> The word “redox” was coined in 1928. In the human body, redox reactions power <em>cellular respiration</em> — the process that gives you energy to run in a football match in Surulere!
+  </div>
+</div>
+
+<h3 style="color:#1a237e;">📝 Practice Questions</h3>
+<ol style="background:#f3e5f5; padding:15px 25px; border-radius:8px; line-height:2;">
+  <li><strong>Q1:</strong> In the reaction Zn + CuSO₄ → ZnSO₄ + Cu, identify the substance that is <em>reduced</em> and the substance that is <em>oxidised</em>.</li>
+  <li><strong>Q2:</strong> Give the oxidation number of chlorine in Cl₂ (g) and in Cl⁻ (aq). Which change represents reduction?</li>
+  <li><strong>Q3:</strong> Why is the rusting of iron considered a redox reaction? Name the reducing agent and the oxidising agent.</li>
+</ol>
+
+<div style="background:#e8f5e9; padding:12px 18px; border-radius:8px; margin:15px 0;">
+  <strong>✅ Answers:</strong><br>
+  <strong>A1:</strong> Cu²⁺ is <em>reduced</em> (gains 2e⁻ → Cu). Zn is <em>oxidised</em> (loses 2e⁻ → Zn²⁺).<br>
+  <strong>A2:</strong> In Cl₂, oxidation number = 0. In Cl⁻, oxidation number = -1. Going from 0 to -1 is a <em>gain</em> of electrons → reduction.<br>
+  <strong>A3:</strong> Iron loses electrons (Fe → Fe²⁺ + 2e⁻) = oxidation. Oxygen gains electrons (O₂ + 4e⁻ → 2O²⁻) = reduction. Reducing agent = Fe (iron). Oxidising agent = O₂ (oxygen).
+</div>

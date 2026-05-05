@@ -1,0 +1,76 @@
+<div class="lesson">
+  <h2>Trigonometry: Introduction to Right-Angled Triangles</h2>
+
+  <!-- Animated SVG Diagram -->
+  <svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <style>
+        @keyframes pulseAngle {
+          0% { opacity: 0.3; }
+          50% { opacity: 1; }
+          100% { opacity: 0.3; }
+        }
+        @keyframes flashLabel {
+          0% { fill: #222; }
+          50% { fill: #e63946; }
+          100% { fill: #222; }
+        }
+        .angle-arc { animation: pulseAngle 2s infinite; }
+        .label-flash { animation: flashLabel 2s infinite; }
+      </style>
+    </defs>
+    <!-- Right triangle -->
+    <polygon points="50,250 250,250 50,80" fill="#a8dadc" stroke="#1d3557" stroke-width="2"/>
+    <!-- Right angle marker -->
+    <polyline points="50,230 70,230 70,250" fill="none" stroke="#1d3557" stroke-width="2"/>
+    <!-- Angle θ -->
+    <path d="M 50,250 L 70,250 A 20,20 0 0,0 65.7,232.8 L 50,250" fill="#e63946" class="angle-arc"/>
+    <!-- Labels -->
+    <text x="140" y="270" font-size="18" font-family="Arial" fill="#1d3557" font-weight="bold">Adjacent (A)</text>
+    <text x="10" y="170" font-size="18" font-family="Arial" fill="#1d3557" font-weight="bold" transform="rotate(-90,10,170)">Opposite (O)</text>
+    <text x="120" y="140" font-size="18" font-family="Arial" fill="#1d3557" font-weight="bold" transform="rotate(38,120,140)">Hypotenuse (H)</text>
+    <text x="60" y="240" font-size="20" font-family="Arial" fill="#e63946" font-weight="bold" class="label-flash">θ</text>
+    <!-- Animated dashed line for opposite -->
+    <line x1="50" y1="250" x2="50" y2="80" stroke="#e63946" stroke-width="2" stroke-dasharray="5,5">
+      <animate attributeName="stroke-dashoffset" from="0" to="20" dur="1.5s" repeatCount="indefinite"/>
+    </line>
+  </svg>
+
+  <h3>Key Concepts</h3>
+  <ul>
+    <li><strong>Hypotenuse:</strong> The longest side, opposite the right angle.</li>
+    <li><strong>Opposite:</strong> The side opposite the angle of interest (θ).</li>
+    <li><strong>Adjacent:</strong> The side next to the angle of interest (θ), but not the hypotenuse.</li>
+    <li><strong>Sine (sin) θ = Opposite / Hypotenuse</strong></li>
+    <li><strong>Cosine (cos) θ = Adjacent / Hypotenuse</strong></li>
+    <li><strong>Tangent (tan) θ = Opposite / Adjacent</strong></li>
+  </ul>
+
+  <h3>Nigerian Examples</h3>
+  <div class="example">
+    <p><strong>Example 1:</strong> A ladder leans against a wall in Lagos. The ladder (hypotenuse) is 5 m long, and it reaches 4 m up the wall (opposite side). Find the angle the ladder makes with the ground (θ).</p>
+    <p><em>Solution:</em> sin θ = Opposite / Hypotenuse = 4/5 = 0.8. Using inverse sine: θ = sin⁻¹(0.8) ≈ 53.13°.</p>
+  </div>
+  <div class="example">
+    <p><strong>Example 2:</strong> From the top of a 10 m tall building in Abuja, the distance to a tree on the ground (adjacent side) is 24 m. Find the angle of depression from the top of the building to the tree.</p>
+    <p><em>Solution:</em> tan θ = Opposite / Adjacent = 10/24 = 0.4167. Using inverse tan: θ = tan⁻¹(0.4167) ≈ 22.62°.</p>
+  </div>
+
+  <div class="fun-fact">
+    <p>🌟 <strong>Fun Fact:</strong> The word "trigonometry" comes from Greek words "trigonon" (triangle) and "metron" (measure). Ancient Nigerian astronomers used similar triangle methods to track stars and seasons!</p>
+  </div>
+
+  <h3>Practice Questions</h3>
+  <ol class="practice">
+    <li>In a right-angled triangle, the opposite side is 6 cm and the hypotenuse is 10 cm. Find sin θ.</li>
+    <li>A 12 m tall flagpole in Kaduna casts a shadow 9 m long. What is the angle of elevation of the sun?</li>
+    <li>If cos θ = 0.6 and the hypotenuse is 15 cm, find the length of the adjacent side.</li>
+  </ol>
+
+  <h4>Answers</h4>
+  <ul class="answers">
+    <li>1. sin θ = 6/10 = 0.6</li>
+    <li>2. tan θ = 12/9 = 1.3333, so θ = tan⁻¹(1.3333) ≈ 53.13°</li>
+    <li>3. Adjacent = cos θ × Hypotenuse = 0.6 × 15 = 9 cm</li>
+  </ul>
+</div>

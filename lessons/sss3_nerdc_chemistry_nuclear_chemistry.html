@@ -1,0 +1,91 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px;height:auto;display:block;margin:0 auto 1.5em;background:#f9f9f9;border-radius:8px;font-family:sans-serif">
+  <defs>
+    <radialGradient id="nucleusGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff6666"/>
+      <stop offset="100%" stop-color="#cc0000"/>
+    </radialGradient>
+    <radialGradient id="electronGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#66b3ff"/>
+      <stop offset="100%" stop-color="#0044cc"/>
+    </radialGradient>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#222">Alpha Decay of Uranium-238</text>
+
+  <!-- Parent nucleus (U-238) -->
+  <circle cx="200" cy="180" r="35" fill="url(#nucleusGrad)" stroke="#990000" stroke-width="2"/>
+  <text x="200" y="175" text-anchor="middle" font-size="11" fill="white" font-weight="bold">²³⁸U</text>
+  <text x="200" y="190" text-anchor="middle" font-size="9" fill="white">92 protons</text>
+
+  <!-- Daughter nucleus (Th-234) -->
+  <circle cx="400" cy="300" r="30" fill="url(#nucleusGrad)" stroke="#990000" stroke-width="2" opacity="0.85"/>
+  <text x="400" y="295" text-anchor="middle" font-size="11" fill="white" font-weight="bold">²³⁴Th</text>
+  <text x="400" y="310" text-anchor="middle" font-size="9" fill="white">90 protons</text>
+
+  <!-- Alpha particle (Helium-4 nucleus) -->
+  <circle cx="420" cy="120" r="14" fill="#ffaa33" stroke="#cc7700" stroke-width="2"/>
+  <text x="420" y="125" text-anchor="middle" font-size="9" fill="#663300" font-weight="bold">α</text>
+  <text x="420" y="136" text-anchor="middle" font-size="7" fill="#663300">⁴He²⁺</text>
+
+  <!-- Arrow from U to Th + alpha -->
+  <line x1="230" y1="190" x2="370" y2="280" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" stroke-dasharray="6,3"/>
+  <line x1="215" y1="160" x2="410" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" stroke-dasharray="6,3"/>
+
+  <!-- Electron cloud orbits (decorative) -->
+  <ellipse cx="200" cy="180" rx="65" ry="25" fill="none" stroke="#66b3ff" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/>
+  <ellipse cx="200" cy="180" rx="25" ry="65" fill="none" stroke="#66b3ff" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/>
+
+  <!-- Labels -->
+  <text x="290" y="240" text-anchor="middle" font-size="10" fill="#555" font-style="italic">alpha decay</text>
+  <text x="310" y="100" text-anchor="middle" font-size="10" fill="#cc7700" font-weight="bold">Alpha particle ejected</text>
+
+  <!-- Decay equation -->
+  <text x="300" y="370" text-anchor="middle" font-size="13" fill="#222">²³⁸U → ²³⁴Th + ⁴He²⁺ + energy</text>
+
+  <!-- Legend -->
+  <rect x="20" y="15" width="12" height="12" fill="url(#nucleusGrad)" rx="2"/>
+  <text x="36" y="26" font-size="10" fill="#333">Nucleus</text>
+  <rect x="100" y="15" width="12" height="12" fill="#ffaa33" rx="2"/>
+  <text x="116" y="26" font-size="10" fill="#333">Alpha particle</text>
+</svg>
+
+<h3>Key Concepts in Nuclear Chemistry</h3>
+<ul style="list-style-type:disc;padding-left:1.5em;margin-bottom:1.5em">
+  <li><strong>Radioactive decay</strong> – spontaneous breakdown of an unstable atomic nucleus, releasing energy and particles.</li>
+  <li><strong>Alpha decay</strong> – emission of an alpha particle (⁴He²⁺, 2 protons + 2 neutrons). The atomic number decreases by 2, mass number by 4.</li>
+  <li><strong>Beta decay</strong> – a neutron converts to a proton, emitting an electron (β⁻) and an antineutrino. Atomic number increases by 1.</li>
+  <li><strong>Gamma emission</strong> – release of high-energy photons (γ) from an excited nucleus; no change in atomic or mass number.</li>
+  <li><strong>Half-life</strong> – time taken for half the radioactive nuclei in a sample to decay. Used in dating and medical applications.</li>
+  <li><strong>Nuclear fission</strong> – splitting of a heavy nucleus (e.g., ²³⁵U) into lighter nuclei, releasing neutrons and large energy.</li>
+  <li><strong>Nuclear fusion</strong> – combining light nuclei (e.g., hydrogen isotopes) to form a heavier nucleus, releasing enormous energy (e.g., in stars).</li>
+</ul>
+
+<h3>Nigerian Examples</h3>
+<div style="background:#e8f5e9;padding:0.8em 1.2em;border-left:4px solid #2e7d32;margin-bottom:1.5em;border-radius:4px">
+  <p><strong>🇳🇬 Example 1 – Jos Plateau Uranium Traces:</strong><br>
+  The Jos Plateau in Plateau State has been studied for traces of uranium and thorium minerals. These radioactive elements undergo natural decay series, releasing radon gas. The Nigerian Geological Survey Agency monitors these areas to assess radiation exposure risks to local mining communities.</p>
+  <p><strong>🇳🇬 Example 2 – Medical Radioisotopes in Lagos:</strong><br>
+  The Lagos University Teaching Hospital (LUTH) uses technetium-99m (a gamma emitter) for diagnostic imaging of organs like the heart and kidneys. This radioisotope is produced from molybdenum-99 decay and has a half-life of 6 hours, making it safe for medical use without long-term radiation exposure.</p>
+</div>
+
+<div style="background:#fff3e0;padding:0.8em 1.2em;border-left:4px solid #e65100;margin-bottom:1.5em;border-radius:4px">
+  <p><strong>💡 Fun Fact:</strong> Did you know that the Oklo natural nuclear reactor in Gabon (near Nigeria's border) operated about 2 billion years ago? Groundwater moderated neutrons from uranium-235, causing sustained fission reactions – nature's own nuclear reactor! This discovery helped scientists understand radioactive waste behavior over geological timescales.</p>
+</div>
+
+<h3>Practice Questions</h3>
+<ol style="padding-left:1.5em;margin-bottom:1em">
+  <li style="margin-bottom:0.8em"><strong>Question 1:</strong> Write the balanced nuclear equation for the alpha decay of polonium-210 (²¹⁰Po, atomic number 84). Identify the daughter isotope.</li>
+  <li style="margin-bottom:0.8em"><strong>Question 2:</strong> A sample of iodine-131 (half-life = 8 days) is used for thyroid therapy. If the initial activity is 800 MBq, what will be the activity after 24 days?</li>
+  <li style="margin-bottom:0.8em"><strong>Question 3:</strong> Explain why gamma radiation is often emitted alongside alpha or beta decay, and state one safety measure used in Nigerian hospitals to protect staff from gamma exposure.</li>
+</ol>
+
+<div style="background:#f5f5f5;padding:1em;border-radius:6px;border:1px solid #ccc">
+  <h4 style="margin-top:0">Answers</h4>
+  <p><strong>Answer 1:</strong> ²¹⁰Po → ²⁰⁶Pb + ⁴He²⁺ (Daughter isotope: lead-206, atomic number 82).</p>
+  <p><strong>Answer 2:</strong> 24 days = 3 half-lives. Activity = 800 MBq ÷ 2³ = 800 ÷ 8 = <strong>100 MBq</strong>.</p>
+  <p><strong>Answer 3:</strong> Gamma rays are emitted when the daughter nucleus is in an excited state after alpha/beta decay and de-excites. In Nigerian hospitals, staff use lead aprons, distance (using tongs), and shielding (lead-lined containers) to minimize exposure.</p>
+</div>

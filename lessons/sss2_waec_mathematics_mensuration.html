@@ -1,0 +1,83 @@
+<div class="lesson">
+  <h2>Mensuration: Surface Area &amp; Volume of Solids</h2>
+  <p><em>SSS2 Mathematics (WAEC Syllabus)</em></p>
+
+  <!-- Animated SVG Diagram: Cylinder with dimensions -->
+  <svg viewBox="0 0 400 300" width="100%" height="300" style="display:block; margin:0 auto 20px; background:#f9f9f9; border-radius:8px;">
+    <defs>
+      <linearGradient id="cylGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#4a90e2;stop-opacity:0.8" />
+        <stop offset="100%" style="stop-color:#357abd;stop-opacity:0.8" />
+      </linearGradient>
+    </defs>
+    <!-- Cylinder body -->
+    <ellipse cx="200" cy="60" rx="80" ry="25" fill="#d0e4f5" stroke="#2c5f8a" stroke-width="2" />
+    <rect x="120" y="60" width="160" height="180" fill="url(#cylGrad)" stroke="#2c5f8a" stroke-width="2" />
+    <ellipse cx="200" cy="240" rx="80" ry="25" fill="#b8d4f0" stroke="#2c5f8a" stroke-width="2" />
+    <!-- Dashed hidden lines (bottom half of top ellipse) -->
+    <path d="M120,60 A80,25 0 0,0 280,60" fill="none" stroke="#2c5f8a" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.5" />
+    <!-- Dimension lines: height -->
+    <line x1="310" y1="60" x2="310" y2="240" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="4,3" />
+    <line x1="305" y1="60" x2="315" y2="60" stroke="#e74c3c" stroke-width="1.5" />
+    <line x1="305" y1="240" x2="315" y2="240" stroke="#e74c3c" stroke-width="1.5" />
+    <text x="318" y="155" fill="#e74c3c" font-size="16" font-weight="bold">h</text>
+    <!-- Dimension line: radius -->
+    <line x1="200" y1="245" x2="280" y2="245" stroke="#27ae60" stroke-width="1.5" />
+    <text x="235" y="265" fill="#27ae60" font-size="16" font-weight="bold">r</text>
+    <!-- Animated rotation hint -->
+    <ellipse cx="200" cy="240" rx="80" ry="25" fill="none" stroke="#2c5f8a" stroke-width="1.5">
+      <animate attributeName="ry" values="25;10;25" dur="3s" repeatCount="indefinite" />
+    </ellipse>
+    <text x="10" y="290" fill="#888" font-size="12">Cylinder: V = πr²h, Surface Area = 2πr² + 2πrh</text>
+  </svg>
+
+  <!-- Bullet-point explanations -->
+  <ul style="list-style-type: disc; margin-left: 20px; line-height: 1.8;">
+    <li><strong>Mensuration</strong> deals with the calculation of lengths, areas, and volumes of geometric shapes.</li>
+    <li><strong>Volume</strong> is the amount of space occupied by a solid (measured in cubic units).</li>
+    <li><strong>Surface Area</strong> is the total area of all faces or surfaces of a solid.</li>
+    <li><strong>Key formulas for common solids:</strong>
+      <ul style="margin-left: 20px;">
+        <li>Cube: V = l³, SA = 6l²</li>
+        <li>Cuboid: V = l × w × h, SA = 2(lw + lh + wh)</li>
+        <li>Cylinder: V = πr²h, SA = 2πr² + 2πrh</li>
+        <li>Cone: V = ⅓πr²h, SA = πr² + πrl (l = slant height)</li>
+        <li>Sphere: V = ⁴⁄₃πr³, SA = 4πr²</li>
+      </ul>
+    </li>
+    <li><strong>Units:</strong> Always ensure consistent units (e.g., cm, m). Convert if necessary.</li>
+  </ul>
+
+  <!-- Two Nigerian examples -->
+  <div style="background:#eaf7ea; padding:15px; border-radius:8px; margin:20px 0;">
+    <h3>📘 Nigerian Examples</h3>
+    <p><strong>Example 1:</strong> A cylindrical water tank in Lagos has a radius of 1.4 m and a height of 3 m. Calculate its volume. (Take π = ²²⁄₇)</p>
+    <p style="margin-left:20px;"><em>Solution:</em> V = πr²h = (22/7) × (1.4)² × 3 = (22/7) × 1.96 × 3 = (22/7) × 5.88 = 22 × 0.84 = <strong>18.48 m³</strong></p>
+    <hr style="margin:15px 0;">
+    <p><strong>Example 2:</strong> A rectangular fish pond in Enugu measures 5 m long, 3 m wide, and 1.5 m deep. Find the total surface area of the interior (including the bottom and sides).</p>
+    <p style="margin-left:20px;"><em>Solution:</em> SA = 2(lw + lh + wh) = 2(5×3 + 5×1.5 + 3×1.5) = 2(15 + 7.5 + 4.5) = 2 × 27 = <strong>54 m²</strong></p>
+  </div>
+
+  <!-- Fun Fact block -->
+  <div style="background:#fff3cd; padding:12px 18px; border-left:6px solid #f0c040; border-radius:6px; margin:20px 0;">
+    <p><strong>💡 Fun Fact:</strong> The Great Pyramid of Giza has a base area of about 53,000 m²! Ancient Egyptian builders used mensuration principles thousands of years ago to ensure perfect proportions. In Nigeria, the Zuma Rock near Abuja is a natural monolith with approximate volume of 2.5 million m³ — imagine calculating its surface area!</p>
+  </div>
+
+  <!-- Three practice questions with answers -->
+  <div style="background:#eef2f7; padding:15px; border-radius:8px; margin:20px 0;">
+    <h3>📝 Practice Questions</h3>
+    <ol style="margin-left:20px; line-height:1.8;">
+      <li>A cone has a base radius of 7 cm and a height of 24 cm. Find its volume. (Take π = ²²⁄₇)</li>
+      <li>A sphere has a radius of 6 cm. Calculate its surface area. (Take π = 3.142)</li>
+      <li>A cuboid measures 8 m by 5 m by 2 m. What is its volume in cubic metres?</li>
+    </ol>
+    <div style="background:#d4edda; padding:10px; border-radius:6px; margin-top:15px;">
+      <p><strong>✅ Answers:</strong></p>
+      <ol style="margin-left:20px;">
+        <li>V = ⅓ × (22/7) × 7² × 24 = ⅓ × (22/7) × 49 × 24 = ⅓ × 22 × 7 × 24 = ⅓ × 3696 = <strong>1232 cm³</strong></li>
+        <li>SA = 4 × 3.142 × 6² = 4 × 3.142 × 36 = 4 × 113.112 = <strong>452.448 cm²</strong></li>
+        <li>V = 8 × 5 × 2 = <strong>80 m³</strong></li>
+      </ol>
+    </div>
+  </div>
+</div>

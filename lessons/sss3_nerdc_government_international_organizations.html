@@ -1,0 +1,97 @@
+<div class="lesson-content">
+  <h1>International Organizations (Government – SSS3)</h1>
+
+  <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto; display:block; margin:0 auto 1.5rem;">
+    <defs>
+      <radialGradient id="globe" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#2a7de1" stop-opacity="0.9"/>
+        <stop offset="100%" stop-color="#0a3d6b" stop-opacity="0.9"/>
+      </radialGradient>
+      <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+        <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+      </filter>
+    </defs>
+
+    <!-- Animated rotating globe -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 300 200" to="360 300 200" dur="20s" repeatCount="indefinite"/>
+      <circle cx="300" cy="200" r="80" fill="url(#globe)" filter="url(#shadow)"/>
+      <!-- Continents (simplified) -->
+      <path d="M270 160 Q280 150 290 155 Q300 145 310 155 Q320 160 315 175 Q310 185 300 180 Q285 185 275 175 Z" fill="#3a9d5e" opacity="0.8"/>
+      <path d="M320 190 Q330 185 340 195 Q345 210 335 220 Q320 215 315 205 Z" fill="#3a9d5e" opacity="0.8"/>
+      <path d="M260 205 Q270 200 280 210 Q275 225 265 220 Z" fill="#3a9d5e" opacity="0.8"/>
+      <path d="M300 230 Q310 225 320 235 Q315 245 305 240 Z" fill="#3a9d5e" opacity="0.8"/>
+      <!-- Grid lines -->
+      <ellipse cx="300" cy="200" rx="80" ry="30" fill="none" stroke="white" stroke-width="0.8" opacity="0.3"/>
+      <ellipse cx="300" cy="200" rx="40" ry="80" fill="none" stroke="white" stroke-width="0.8" opacity="0.3"/>
+    </g>
+
+    <!-- Connecting nodes -->
+    <g filter="url(#shadow)">
+      <!-- UN node -->
+      <circle cx="160" cy="100" r="22" fill="#f0c040">
+        <animate attributeName="r" values="22;26;22" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <text x="160" y="105" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a1a2e">UN</text>
+
+      <!-- AU node -->
+      <circle cx="440" cy="100" r="22" fill="#4caf50">
+        <animate attributeName="r" values="22;26;22" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+      </circle>
+      <text x="440" y="105" text-anchor="middle" font-size="10" font-weight="bold" fill="white">AU</text>
+
+      <!-- ECOWAS node -->
+      <circle cx="440" cy="300" r="22" fill="#e91e63">
+        <animate attributeName="r" values="22;26;22" dur="3s" begin="1s" repeatCount="indefinite"/>
+      </circle>
+      <text x="440" y="305" text-anchor="middle" font-size="8" font-weight="bold" fill="white">ECOWAS</text>
+
+      <!-- OPEC node -->
+      <circle cx="160" cy="300" r="22" fill="#ff5722">
+        <animate attributeName="r" values="22;26;22" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <text x="160" y="305" text-anchor="middle" font-size="9" font-weight="bold" fill="white">OPEC</text>
+    </g>
+
+    <!-- Connection lines from globe to nodes -->
+    <line x1="240" y1="170" x2="175" y2="115" stroke="#888" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.6"/>
+    <line x1="360" y1="170" x2="425" y2="115" stroke="#888" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.6"/>
+    <line x1="360" y1="230" x2="425" y2="285" stroke="#888" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.6"/>
+    <line x1="240" y1="230" x2="175" y2="285" stroke="#888" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.6"/>
+  </svg>
+
+  <h2>Key Features of International Organizations</h2>
+  <ul style="line-height:1.8; padding-left:1.5rem;">
+    <li><strong>Membership:</strong> Usually composed of sovereign states that voluntarily join.</li>
+    <li><strong>Objectives:</strong> Promote peace, security, economic cooperation, and human rights.</li>
+    <li><strong>Structure:</strong> Have permanent secretariats, decision-making bodies (e.g., General Assembly, Security Council).</li>
+    <li><strong>Legality:</strong> Operate under international treaties or charters.</li>
+    <li><strong>Sovereignty:</strong> Member states retain sovereignty but agree to abide by collective decisions.</li>
+  </ul>
+
+  <h2>Nigerian Examples</h2>
+  <div style="background:#f5f5f5; padding:1rem; border-radius:8px; margin:1rem 0;">
+    <p><strong>🇳🇬 Example 1 – Nigeria in the African Union (AU):</strong> Nigeria played a key role in the formation of the AU (formerly OAU) and has contributed troops to AU peacekeeping missions in Darfur and Somalia.</p>
+    <p><strong>🇳🇬 Example 2 – Nigeria in ECOWAS:</strong> As a founding member of the Economic Community of West African States, Nigeria has led interventions in Liberia and Sierra Leone (ECOMOG) and promotes regional trade integration.</p>
+  </div>
+
+  <div style="background:#fff3cd; border-left:5px solid #ffc107; padding:1rem; margin:1.5rem 0; border-radius:0 8px 8px 0;">
+    <p style="margin:0;"><strong>💡 Fun Fact:</strong> The United Nations was founded in 1945 with 51 member states. Today it has 193 members – but Nigeria was among the first African countries to join, becoming a member in 1960 right after independence!</p>
+  </div>
+
+  <h2>Practice Questions</h2>
+  <ol style="line-height:1.8;">
+    <li>What is the primary difference between a global international organization (e.g., UN) and a regional one (e.g., ECOWAS)?</li>
+    <li>Name two specific ways Nigeria has benefited from its membership in the African Union.</li>
+    <li>Explain why international organizations like OPEC can influence the economy of member countries like Nigeria.</li>
+  </ol>
+
+  <div style="background:#e8f5e9; padding:1rem; border-radius:8px; margin-top:1.5rem;">
+    <h3 style="margin-top:0;">📝 Answers</h3>
+    <ol style="line-height:1.8;">
+      <li>Global organizations have worldwide membership and address universal issues (peace, climate), while regional organizations focus on a specific geographic area and its unique challenges (e.g., economic integration in West Africa via ECOWAS).</li>
+      <li>Nigeria has received support for infrastructure projects through the AU's New Partnership for Africa's Development (NEPAD) and has gained diplomatic backing on issues like the fight against Boko Haram through AU security frameworks.</li>
+      <li>OPEC coordinates oil production quotas among member countries. As a major oil exporter, Nigeria's revenue and budget are directly affected by OPEC's decisions on output levels, which influence global oil prices.</li>
+    </ol>
+  </div>
+</div>

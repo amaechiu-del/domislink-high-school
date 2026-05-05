@@ -1,0 +1,84 @@
+<div class="lesson-container">
+  <h2>Ecology: The Web of Life</h2>
+  <p>Ecology is the study of how living organisms interact with each other and with their physical environment. It examines the relationships that sustain life on Earth.</p>
+
+  <!-- Animated SVG Diagram -->
+  <div class="svg-wrapper">
+    <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+      <!-- Sun -->
+      <circle cx="350" cy="30" r="25" fill="#FFD700">
+        <animate attributeName="r" values="25;30;25" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <text x="350" y="35" text-anchor="middle" fill="#333" font-size="12" font-weight="bold">Sun</text>
+
+      <!-- Grass -->
+      <rect x="50" y="240" width="300" height="20" fill="#4CAF50" rx="5"/>
+      <line x1="80" y1="240" x2="80" y2="200" stroke="#2E7D32" stroke-width="3"/>
+      <line x1="160" y1="240" x2="160" y2="180" stroke="#2E7D32" stroke-width="3"/>
+      <line x1="240" y1="240" x2="240" y2="210" stroke="#2E7D32" stroke-width="3"/>
+      <line x1="320" y1="240" x2="320" y2="195" stroke="#2E7D32" stroke-width="3"/>
+      <text x="200" y="275" text-anchor="middle" fill="#333" font-size="14">Producers (Grass)</text>
+
+      <!-- Rabbit (Herbivore) -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0;10,-5;0,0" dur="4s" repeatCount="indefinite"/>
+        <ellipse cx="120" cy="160" rx="20" ry="15" fill="#D3D3D3"/>
+        <circle cx="130" cy="150" r="5" fill="#FFC0CB"/>
+        <text x="120" y="145" text-anchor="middle" fill="#333" font-size="10">Rabbit</text>
+      </g>
+
+      <!-- Hawk (Carnivore) -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0;-10,-5;0,0" dur="5s" repeatCount="indefinite"/>
+        <polygon points="280,100 260,130 300,130" fill="#8B4513"/>
+        <circle cx="280" cy="100" r="8" fill="#A0522D"/>
+        <text x="280" y="95" text-anchor="middle" fill="#333" font-size="10">Hawk</text>
+      </g>
+
+      <!-- Arrows -->
+      <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M0,0 L10,5 L0,10 Z" fill="#666"/>
+        </marker>
+      </defs>
+      <line x1="120" y1="180" x2="120" y2="220" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+      <line x1="280" y1="115" x2="280" y2="140" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+      <line x1="140" y1="155" x2="260" y2="115" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+      <line x1="330" y1="55" x2="200" y2="180" stroke="#FFA500" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="5,5"/>
+    </svg>
+  </div>
+
+  <h3>Key Concepts in Ecology</h3>
+  <ul>
+    <li><strong>Population:</strong> A group of organisms of the same species living in a specific area (e.g., a herd of cattle in a field).</li>
+    <li><strong>Community:</strong> All the different populations that live and interact in a particular area (e.g., fish, water plants, and insects in a pond).</li>
+    <li><strong>Ecosystem:</strong> A community of living organisms (biotic) interacting with their non-living (abiotic) environment (e.g., a forest including soil, water, and animals).</li>
+    <li><strong>Food Chain:</strong> A linear sequence showing who eats whom (e.g., Grass → Grasshopper → Frog → Snake).</li>
+    <li><strong>Food Web:</strong> A more complex network of interconnected food chains in an ecosystem.</li>
+  </ul>
+
+  <h3>Nigerian Examples</h3>
+  <ul>
+    <li><strong>Niger Delta Mangrove Ecosystem:</strong> Mangrove trees (producers) provide habitat for crabs and fish, which are eaten by birds like the African Fish Eagle. This ecosystem protects the coastline and supports local fishing communities.</li>
+    <li><strong>Jos Plateau Grasslands:</strong> Grasses and shrubs support grazing animals like cattle and antelopes. Predators such as hyenas and jackals control herbivore populations, maintaining balance in the ecosystem.</li>
+  </ul>
+
+  <div class="fun-fact">
+    <h4>💡 Fun Fact</h4>
+    <p>Did you know? In Nigeria, the <em>Iroko</em> tree (Milicia excelsa) is considered sacred in some cultures. It provides shade and habitat for many animals, acting as a keystone species in forest ecosystems!</p>
+  </div>
+
+  <h3>Practice Questions</h3>
+  <ol>
+    <li><strong>Question 1:</strong> What is the difference between a population and a community in ecology?</li>
+    <li><strong>Question 2:</strong> In a food chain, what role do decomposers play? Give one example from a Nigerian ecosystem.</li>
+    <li><strong>Question 3:</strong> Why are mangrove forests important to the ecology of the Niger Delta?</li>
+  </ol>
+
+  <h4>Answers</h4>
+  <ol>
+    <li><strong>Answer 1:</strong> A population consists of individuals of the same species in an area (e.g., all Tilapia fish in a pond), while a community includes all different populations (e.g., Tilapia, water lilies, frogs) interacting in that area.</li>
+    <li><strong>Answer 2:</strong> Decomposers break down dead organisms and waste, returning nutrients to the soil. Example: Fungi and bacteria in the rainforests of Cross River State decompose fallen leaves.</li>
+    <li><strong>Answer 3:</strong> Mangrove forests prevent coastal erosion, provide breeding grounds for fish and crabs, and support local livelihoods. They are vital for biodiversity and climate regulation in the region.</li>
+  </ol>
+</div>

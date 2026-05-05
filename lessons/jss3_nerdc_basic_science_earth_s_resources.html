@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" style="display:block; margin:0 auto 20px; max-width:100%; height:auto; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+  <defs>
+    <style>
+      @keyframes revolve {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.7; }
+        50% { opacity: 1; }
+      }
+      .sun { fill: #FFD700; }
+      .earth { fill: #2E86AB; }
+      .tree { fill: #27AE60; }
+      .water { fill: #3498DB; }
+      .ground { fill: #8B4513; }
+      .air { fill: #AED6F1; opacity: 0.5; }
+      .label { font-family: Arial, sans-serif; font-size: 14px; fill: #333; }
+      .title-text { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #1a5276; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#E8F8F5" rx="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" class="title-text">Earth’s Resources — A System of Life</text>
+  
+  <!-- Sun -->
+  <circle cx="400" cy="120" r="35" class="sun" stroke="#F39C12" stroke-width="2"/>
+  <text x="400" y="125" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">SUN</text>
+  
+  <!-- Sun rays (animated) -->
+  <g>
+    <line x1="400" y1="85" x2="400" y2="70" stroke="#FFD700" stroke-width="3" opacity="0.6">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="435" y1="120" x2="450" y2="120" stroke="#FFD700" stroke-width="3" opacity="0.6">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.3s" repeatCount="indefinite"/>
+    </line>
+    <line x1="365" y1="120" x2="350" y2="120" stroke="#FFD700" stroke-width="3" opacity="0.6">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite"/>
+    </line>
+    <line x1="400" y1="155" x2="400" y2="170" stroke="#FFD700" stroke-width="3" opacity="0.6">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  
+  <!-- Earth -->
+  <circle cx="400" cy="280" r="60" class="earth" stroke="#1A5276" stroke-width="2"/>
+  <!-- Continents (simplified) -->
+  <ellipse cx="385" cy="270" rx="18" ry="12" fill="#27AE60" opacity="0.8"/>
+  <ellipse cx="415" cy="295" rx="14" ry="10" fill="#27AE60" opacity="0.8"/>
+  <ellipse cx="390" cy="300" rx="8" ry="6" fill="#27AE60" opacity="0.6"/>
+  
+  <!-- Atmosphere layer -->
+  <circle cx="400" cy="280" r="68" fill="none" stroke="#AED6F1" stroke-width="3" opacity="0.4">
+    <animate attributeName="opacity" values="0.2;0.5;0.2" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Trees on Earth -->
+  <g>
+    <rect x="375" y="250" width="4" height="10" fill="#5D4037"/>
+    <polygon points="377,240 370,252 384,252" fill="#27AE60"/>
+  </g>
+  <g>
+    <rect x="408" y="275" width="4" height="10" fill="#5D4037"/>
+    <polygon points="410,265 403,277 417,277" fill="#27AE60"/>
+  </g>
+  
+  <!-- Water drops (animated) -->
+  <g>
+    <ellipse cx="320" cy="200" rx="8" ry="12" fill="#3498DB" opacity="0.7">
+      <animate attributeName="cy" values="200;350;200" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="480" cy="180" rx="8" ry="12" fill="#3498DB" opacity="0.7">
+      <animate attributeName="cy" values="180;330;180" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="7s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  
+  <!-- Ground/Soil layer -->
+  <rect x="330" y="340" width="140" height="20" fill="#8B4513" rx="3" opacity="0.8"/>
+  <rect x="330" y="360" width="140" height="15" fill="#A0522D" rx="2" opacity="0.6"/>
+  
+  <!-- Air/Wind symbol -->
+  <path d="M 200 280 Q 250 270 300 280 Q 350 290 400 280" fill="none" stroke="#5DADE2" stroke-width="2" opacity="0.5">
+    <animate attributeName="d" values="M 200 280 Q 250 270 300 280 Q 350 290 400 280;M 200 285 Q 250 275 300 285 Q 350 295 400 285;M 200 280 Q 250 270 300 280 Q 350 290 400 280" dur="3s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Labels -->
+  <text x="260" y="220" class="label" fill="#1A5276">💧 Water</text>
+  <text x="500" y="210" class="label" fill="#1A5276">🌊 Water Cycle</text>
+  <text x="260" y="350" class="label" fill="#5D4037">🌍 Soil &amp; Minerals</text>
+  <text x="520" y="350" class="label" fill="#2E7D32">🌳 Plants &amp; Trees</text>
+  <text x="200" y="300" class="label" fill="#2980B9">💨 Air (Atmosphere)</text>
+  
+  <!-- Fossil fuel indicator -->
+  <rect x="360" y="365" width="20" height="10" fill="#333" rx="2"/>
+  <text x="350" y="390" class="label" font-size="11" fill="#333">⛽ Fossil Fuels</text>
+  
+  <!-- Renewable energy symbol -->
+  <circle cx="550" cy="140" r="20" fill="#F1C40F" opacity="0.3"/>
+  <path d="M 550 120 L 550 160 M 530 140 L 570 140" stroke="#F1C40F" stroke-width="3"/>
+  <text x="550" y="175" text-anchor="middle" class="label" font-size="11" fill="#333">☀️ Renewable</text>
+</svg>
+
+<h3 style="color:#1a5276; border-bottom:2px solid #2E86AB; padding-bottom:5px;">What Are Earth’s Resources?</h3>
+<p>Earth provides everything we need to survive — from the air we breathe to the food we eat. These are called <strong>natural resources</strong>. They are divided into two main types:</p>
+
+<ul style="background:#f0f9ff; padding:15px 20px 15px 35px; border-radius:8px; line-height:1.8;">
+  <li><strong>Renewable Resources</strong> — Can be replaced naturally over time. Examples: sunlight, wind, water, trees (if replanted).</li>
+  <li><strong>Non-Renewable Resources</strong> — Exist in limited amounts and take millions of years to form. Examples: crude oil, coal, natural gas, minerals.</li>
+  <li><strong>Biotic Resources</strong> — Come from living things. Examples: wood, food crops, animals.</li>
+  <li><strong>Abiotic Resources</strong> — Come from non-living things. Examples: water, air, soil, sunlight, metals.</li>
+</ul>
+
+<h3 style="color:#1a5276; margin-top:20px;">🌍 Two Nigerian Examples</h3>
+<div style="background:#E8F6EF; padding:12px 18px; border-radius:8px; border-left:5px solid #27AE60; margin:10px 0;">
+  <p><strong>1. Crude Oil (Non-Renewable):</strong> Nigeria is one of Africa’s largest oil producers. Crude oil is drilled in the Niger Delta and refined into petrol, diesel, kerosene, and plastics. It is a major source of income for the country, but it is limited and causes pollution.</p>
+  <p><strong>2. Cassava (Renewable Biotic Resource):</strong> Grown widely across Nigeria, cassava is a renewable food resource. It is processed into garri, fufu, and starch. Farmers replant cassava stems each season, making it a sustainable resource when managed well.</p>
+</div>
+
+<div style="background:#FFF9E6; padding:12px 18px; border-radius:8px; border-left:5px solid #F39C12; margin:15px 0;">
+  <p><strong>⭐ Fun Fact:</strong> Did you know that Nigeria has over 34 different solid minerals spread across all 36 states? These include limestone (used for cement), tin, coal, gold, and even gemstones like sapphire! Yet, most of Nigeria’s energy still comes from crude oil.</p>
+</div>
+
+<h3 style="color:#1a5276; margin-top:20px;">📝 Practice Questions</h3>
+<ol style="background:#f5f5f5; padding:15px 20px 15px 35px; border-radius:8px; line-height:2;">
+  <li><strong>Question 1:</strong> State two differences between renewable and non-renewable resources. Give one Nigerian example of each.</li>
+  <li><strong>Question 2:</strong> Explain why crude oil is considered a non-renewable resource even though it is found in large quantities in the Niger Delta.</li>
+  <li><strong>Question 3:</strong> List three abiotic resources and explain how each one is used in everyday life.</li>
+</ol>
+
+<div style="background:#E8F0FE; padding:12px 18px; border-radius:8px; margin-top:15px;">
+  <p><strong>✅ Answers:</strong></p>
+  <p><strong>Answer 1:</strong> Renewable resources can be replaced naturally (e.g., sunlight, cassava), while non-renewable resources cannot be replaced once used up (e.g., crude oil in Nigeria). Renewable resources are unlimited or quickly replenished; non-renewable take millions of years to form.</p>
+  <p><strong>Answer 2:</strong> Crude oil is non-renewable because it takes millions of years to form from dead organisms under heat and pressure. We are using it much faster than nature can replace it. Once Nigeria’s oil reserves are exhausted, they cannot be renewed within human lifetimes.</p>
+  <p><strong>Answer 3:</strong> (i) <strong>Water</strong> — used for drinking, cooking, washing, and irrigation. (ii) <strong>Air</strong> — used for breathing, wind energy, and burning fuel. (iii) <strong>Soil</strong> — used for growing food crops like yam, maize, and vegetables.</p>
+</div>

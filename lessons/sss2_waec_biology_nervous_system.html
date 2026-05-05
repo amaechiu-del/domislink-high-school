@@ -1,0 +1,180 @@
+<div class="biology-lesson">
+  <h2>Nervous System (SSS2 Biology – WAEC Syllabus)</h2>
+  
+  <!-- Animated SVG Diagram -->
+  <svg width="100%" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <style>
+        @keyframes pulse {
+          0% { opacity: 0.6; }
+          50% { opacity: 1; }
+          100% { opacity: 0.6; }
+        }
+        @keyframes signal {
+          0% { stroke-dashoffset: 1000; }
+          100% { stroke-dashoffset: 0; }
+        }
+        .neuron-body { fill: #4CAF50; }
+        .nucleus { fill: #FF9800; }
+        .dendrite { stroke: #2196F3; stroke-width: 3; fill: none; }
+        .axon { stroke: #9C27B0; stroke-width: 4; fill: none; }
+        .myelin { stroke: #E91E63; stroke-width: 6; fill: none; stroke-dasharray: 8,4; }
+        .synapse { fill: #FF5722; }
+        .label { font-family: Arial, sans-serif; font-size: 12px; fill: #333; }
+        .signal-line { stroke: #FFD700; stroke-width: 2; stroke-dasharray: 10,10; fill: none; animation: signal 3s linear infinite; }
+      </style>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="800" height="400" fill="#f0f8ff" rx="10"/>
+    
+    <!-- Title -->
+    <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#2c3e50">Neuron Structure & Signal Transmission</text>
+    
+    <!-- Neuron 1 (Presynaptic) -->
+    <!-- Dendrites -->
+    <path class="dendrite" d="M100,150 Q70,100 40,80" />
+    <path class="dendrite" d="M100,150 Q80,120 50,130" />
+    <path class="dendrite" d="M100,150 Q90,90 70,60" />
+    <path class="dendrite" d="M100,150 Q60,140 30,160" />
+    <path class="dendrite" d="M100,150 Q80,170 50,190" />
+    
+    <!-- Cell Body -->
+    <circle class="neuron-body" cx="120" cy="150" r="30" />
+    <circle class="nucleus" cx="120" cy="150" r="12" />
+    <text x="120" y="153" text-anchor="middle" font-size="8" fill="#fff">Nucleus</text>
+    
+    <!-- Axon hillock -->
+    <rect x="148" y="142" width="15" height="16" fill="#388E3C" rx="3"/>
+    
+    <!-- Axon with myelin sheath -->
+    <path class="axon" d="M163,150 L300,150" />
+    <path class="myelin" d="M180,150 L220,150 M240,150 L280,150" />
+    
+    <!-- Signal traveling -->
+    <line class="signal-line" x1="170" y1="145" x2="290" y2="145" />
+    
+    <!-- Axon terminals -->
+    <circle cx="300" cy="140" r="6" fill="#9C27B0"/>
+    <circle cx="300" cy="160" r="6" fill="#9C27B0"/>
+    <circle cx="310" cy="150" r="5" fill="#7B1FA2"/>
+    
+    <!-- Synapse -->
+    <ellipse class="synapse" cx="340" cy="150" rx="25" ry="12" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite"/>
+    </ellipse>
+    <text x="340" y="135" text-anchor="middle" font-size="10" fill="#FF5722">Synapse</text>
+    
+    <!-- Neurotransmitter dots -->
+    <circle cx="325" cy="145" r="3" fill="#FFD700">
+      <animate attributeName="cx" values="325;355;325" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="330" cy="155" r="3" fill="#FFD700">
+      <animate attributeName="cx" values="330;360;330" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Neuron 2 (Postsynaptic) -->
+    <!-- Dendrites -->
+    <path class="dendrite" d="M400,150 Q420,100 450,80" />
+    <path class="dendrite" d="M400,150 Q430,120 460,130" />
+    <path class="dendrite" d="M400,150 Q410,90 440,60" />
+    <path class="dendrite" d="M400,150 Q430,170 460,190" />
+    
+    <!-- Cell Body -->
+    <circle class="neuron-body" cx="420" cy="150" r="30" />
+    <circle class="nucleus" cx="420" cy="150" r="12" />
+    
+    <!-- Axon hillock -->
+    <rect x="448" y="142" width="15" height="16" fill="#388E3C" rx="3"/>
+    
+    <!-- Axon -->
+    <path class="axon" d="M463,150 L600,150" />
+    <path class="myelin" d="M480,150 L520,150 M540,150 L580,150" />
+    
+    <!-- Axon terminals -->
+    <circle cx="600" cy="140" r="6" fill="#9C27B0"/>
+    <circle cx="600" cy="160" r="6" fill="#9C27B0"/>
+    <circle cx="610" cy="150" r="5" fill="#7B1FA2"/>
+    
+    <!-- Labels -->
+    <text x="70" y="230" class="label">Dendrites</text>
+    <text x="120" y="195" class="label">Cell Body</text>
+    <text x="220" y="170" class="label">Axon (with myelin sheath)</text>
+    <text x="500" y="170" class="label">Axon</text>
+    <text x="590" y="180" class="label">Axon Terminals</text>
+    
+    <!-- Direction arrow -->
+    <polygon points="650,145 670,150 650,155" fill="#2c3e50"/>
+    <text x="660" y="140" font-size="10" fill="#2c3e50">Signal Direction</text>
+    
+    <!-- Legend -->
+    <rect x="50" y="260" width="700" height="120" fill="#fff" stroke="#ccc" rx="8"/>
+    <text x="400" y="280" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">Key Components</text>
+    <rect x="70" y="290" width="20" height="10" fill="#4CAF50"/>
+    <text x="95" y="300" font-size="11">Neuron Cell Body</text>
+    <rect x="200" y="290" width="20" height="10" fill="#FF9800"/>
+    <text x="225" y="300" font-size="11">Nucleus</text>
+    <line x1="340" y1="295" x2="360" y2="295" stroke="#2196F3" stroke-width="3"/>
+    <text x="365" y="300" font-size="11">Dendrites</text>
+    <line x1="480" y1="295" x2="500" y2="295" stroke="#9C27B0" stroke-width="4"/>
+    <text x="505" y="300" font-size="11">Axon</text>
+    <line x1="70" y1="320" x2="90" y2="320" stroke="#E91E63" stroke-width="4" stroke-dasharray="4,2"/>
+    <text x="95" y="325" font-size="11">Myelin Sheath</text>
+    <circle cx="215" cy="318" r="5" fill="#FF5722"/>
+    <text x="225" y="325" font-size="11">Synapse</text>
+    <line x1="340" y1="318" x2="360" y2="318" stroke="#FFD700" stroke-width="2" stroke-dasharray="6,4"/>
+    <text x="365" y="325" font-size="11">Nerve Impulse</text>
+  </svg>
+  
+  <!-- Bullet-point Explanations -->
+  <h3>Key Points on the Nervous System</h3>
+  <ul>
+    <li><strong>Neuron:</strong> The basic functional unit of the nervous system, specialized for transmitting nerve impulses.</li>
+    <li><strong>Dendrites:</strong> Short, branched extensions that receive signals from other neurons or sensory receptors.</li>
+    <li><strong>Cell Body (Soma):</strong> Contains the nucleus and organelles; integrates incoming signals.</li>
+    <li><strong>Axon:</strong> Long fiber that conducts impulses away from the cell body toward other neurons or effectors.</li>
+    <li><strong>Myelin Sheath:</strong> Fatty insulating layer (produced by Schwann cells) that speeds up impulse conduction (saltatory conduction).</li>
+    <li><strong>Synapse:</strong> Junction between two neurons where neurotransmitters (e.g., acetylcholine) relay signals across the synaptic cleft.</li>
+    <li><strong>Central Nervous System (CNS):</strong> Comprises the brain and spinal cord; processes and coordinates information.</li>
+    <li><strong>Peripheral Nervous System (PNS):</strong> Nerves outside the CNS; connects the CNS to limbs and organs.</li>
+  </ul>
+  
+  <!-- Nigerian Examples -->
+  <h3>🇳🇬 Nigerian Examples</h3>
+  <div style="background:#e8f5e9; padding:10px; border-radius:8px; margin:10px 0;">
+    <p><strong>Example 1 – Yam Farming:</strong> When a Nigerian farmer touches a hot yam tuber while harvesting, sensory neurons in the skin send an impulse to the spinal cord (reflex arc). The spinal cord immediately signals motor neurons to pull the hand away—this happens before the brain even registers pain, protecting the farmer from burns.</p>
+    <p><strong>Example 2 – Malaria Fever:</strong> In a malaria patient, the hypothalamus (part of the brain) detects toxins from <em>Plasmodium</em> parasites. It triggers the autonomic nervous system to raise body temperature (fever), causing shivering and sweating. This is the body's way of fighting the infection, common in many Nigerian households.</p>
+  </div>
+  
+  <!-- Fun Fact Block -->
+  <div style="background:#fff3e0; border-left:5px solid #FF9800; padding:12px; border-radius:5px; margin:15px 0;">
+    <h4 style="margin:0 0 5px 0; color:#E65100;">🧠 Fun Fact</h4>
+    <p style="margin:0;">The human brain contains about <strong>86 billion neurons</strong>, and each neuron can form up to 10,000 connections with other neurons. That means the brain has more possible connections than there are stars in the Milky Way galaxy! In Nigeria, the saying "the brain is like a computer" is true—except it's far more powerful.</p>
+  </div>
+  
+  <!-- Practice Questions & Answers -->
+  <h3>✏️ Practice Questions</h3>
+  <ol style="margin-bottom:15px;">
+    <li><strong>Question 1:</strong> Name the three main parts of a neuron and state the function of each.</li>
+    <li><strong>Question 2:</strong> Explain how the myelin sheath increases the speed of nerve impulse conduction.</li>
+    <li><strong>Question 3:</strong> Describe the path of a nerve impulse in a simple reflex arc (e.g., touching a hot object).</li>
+  </ol>
+  
+  <div style="background:#e3f2fd; padding:15px; border-radius:8px;">
+    <h4 style="margin-top:0;">📝 Answers</h4>
+    <p><strong>Answer 1:</strong> 
+      <ul>
+        <li><em>Dendrites</em> – receive signals from other neurons or sensory receptors.</li>
+        <li><em>Cell body (soma)</em> – contains the nucleus and integrates incoming signals.</li>
+        <li><em>Axon</em> – conducts nerve impulses away from the cell body to other neurons, muscles, or glands.</li>
+      </ul>
+    </p>
+    <p><strong>Answer 2:</strong> The myelin sheath acts as an electrical insulator, preventing leakage of the impulse. The impulse "jumps" from one node of Ranvier (gaps in the myelin) to the next—this is called <strong>saltatory conduction</strong>, which speeds up transmission compared to unmyelinated axons.</p>
+    <p><strong>Answer 3:</strong> A simple reflex arc follows this path: 
+      <br/>1. Receptor (skin) detects stimulus (heat) → 
+      <br/>2. Sensory neuron carries impulse to spinal cord → 
+      <br/>3. Relay neuron (in spinal cord) processes signal → 
+      <br/>4. Motor neuron carries impulse to effector (muscle) → 
+      <br/>5. Muscle contracts, pulling hand away. This bypasses the brain for a faster response.</p>
+  </div>
+</div>

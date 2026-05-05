@@ -1,0 +1,98 @@
+<div class="lesson-content">
+  <h2>Statistics: Measures of Central Tendency</h2>
+  
+  <!-- Animated SVG Diagram -->
+  <svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+    <style>
+      .bar { animation: grow 2s ease-in-out infinite alternate; }
+      @keyframes grow {
+        0% { height: 20px; y: 160px; }
+        100% { height: 80px; y: 100px; }
+      }
+      .bar2 { animation: grow2 2.5s ease-in-out infinite alternate; }
+      @keyframes grow2 {
+        0% { height: 40px; y: 140px; }
+        100% { height: 120px; y: 60px; }
+      }
+      .bar3 { animation: grow3 3s ease-in-out infinite alternate; }
+      @keyframes grow3 {
+        0% { height: 60px; y: 120px; }
+        100% { height: 100px; y: 80px; }
+      }
+      .line { animation: draw 3s ease-in-out infinite; }
+      @keyframes draw {
+        0% { stroke-dashoffset: 300; }
+        100% { stroke-dashoffset: 0; }
+      }
+    </style>
+    
+    <!-- Axes -->
+    <line x1="30" y1="180" x2="370" y2="180" stroke="black" stroke-width="2"/>
+    <line x1="30" y1="180" x2="30" y2="20" stroke="black" stroke-width="2"/>
+    
+    <!-- Bars -->
+    <rect class="bar" x="60" y="100" width="40" height="80" fill="#1E90FF" rx="4" opacity="0.8"/>
+    <rect class="bar2" x="130" y="60" width="40" height="120" fill="#32CD32" rx="4" opacity="0.8"/>
+    <rect class="bar3" x="200" y="80" width="40" height="100" fill="#FF6347" rx="4" opacity="0.8"/>
+    <rect class="bar" x="270" y="120" width="40" height="60" fill="#FFD700" rx="4" opacity="0.8"/>
+    
+    <!-- Mean line -->
+    <line class="line" x1="30" y1="110" x2="370" y2="110" stroke="red" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="300" y="105" fill="red" font-size="12" font-weight="bold">Mean</text>
+    
+    <!-- Labels -->
+    <text x="60" y="195" font-size="10" text-anchor="middle">10</text>
+    <text x="130" y="195" font-size="10" text-anchor="middle">15</text>
+    <text x="200" y="195" font-size="10" text-anchor="middle">20</text>
+    <text x="270" y="195" font-size="10" text-anchor="middle">25</text>
+    <text x="15" y="100" font-size="10" text-anchor="end">Frequency</text>
+    
+    <!-- Animated title -->
+    <text x="200" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">
+      Bar Chart with Mean
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="4s" repeatCount="indefinite"/>
+    </text>
+  </svg>
+
+  <!-- Bullet-point explanations -->
+  <ul style="margin-top: 15px; line-height: 1.8;">
+    <li><strong>Mean</strong> = sum of all values ÷ number of values. It is the average.</li>
+    <li><strong>Median</strong> = the middle value when data is arranged in order.</li>
+    <li><strong>Mode</strong> = the value that appears most frequently.</li>
+    <li>For grouped data, use class marks and frequencies to estimate the mean.</li>
+    <li>Measures of central tendency help summarise large data sets into one representative value.</li>
+  </ul>
+
+  <!-- Nigerian Examples -->
+  <div style="background: #f0f8ff; padding: 12px; border-radius: 8px; margin: 15px 0;">
+    <h3>🇳🇬 Nigerian Examples</h3>
+    <p><strong>Example 1:</strong> A farmer in Kano recorded the following yam harvests (in kg) over 5 days: 40, 55, 60, 55, 70. Find the mean and mode.</p>
+    <p><em>Solution:</em> Mean = (40+55+60+55+70)/5 = 280/5 = 56 kg. Mode = 55 kg (appears twice).</p>
+    
+    <p><strong>Example 2:</strong> The ages of 7 students in a Lagos secondary school are: 14, 15, 16, 14, 17, 15, 18. Find the median age.</p>
+    <p><em>Solution:</em> Arrange ages: 14, 14, 15, 15, 16, 17, 18. Median (4th value) = 15 years.</p>
+  </div>
+
+  <!-- Fun Fact Block -->
+  <div style="background: #fff3cd; border-left: 5px solid #ffc107; padding: 10px 15px; margin: 15px 0; border-radius: 5px;">
+    <h4>🎉 Fun Fact</h4>
+    <p>Did you know? The term "statistics" comes from the Latin word <em>status</em> meaning "state". In ancient Nigeria, the Oyo Empire used census data to organise its army and tax collection — an early form of statistics!</p>
+  </div>
+
+  <!-- Practice Questions -->
+  <div style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin-top: 15px;">
+    <h3>📝 Practice Questions</h3>
+    <ol style="line-height: 2;">
+      <li>Find the mean of: 12, 15, 18, 21, 24.</li>
+      <li>What is the median of: 3, 7, 2, 9, 5, 6?</li>
+      <li>In a class of 10 students, the scores out of 10 are: 6, 7, 8, 6, 9, 7, 7, 10, 6, 8. What is the mode?</li>
+    </ol>
+    
+    <h4 style="margin-top: 10px;">✅ Answers</h4>
+    <ol style="line-height: 2; color: #2e7d32;">
+      <li>Mean = (12+15+18+21+24)/5 = 90/5 = <strong>18</strong></li>
+      <li>Arrange: 2, 3, 5, 6, 7, 9 → Median = (5+6)/2 = <strong>5.5</strong></li>
+      <li>Mode = <strong>7</strong> (appears 3 times)</li>
+    </ol>
+  </div>
+</div>

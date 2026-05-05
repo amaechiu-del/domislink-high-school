@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="auto" style="max-width:600px; display:block; margin:0 auto 1.5rem;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f4f8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c9e6f2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2b6cb0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#48bb78;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <rect width="600" height="400" rx="15" fill="url(#bgGrad)" stroke="#2b6cb0" stroke-width="2"/>
+  
+  <!-- Title -->
+  <text x="300" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1a365d">The Planning Process in Economics</text>
+  
+  <!-- Stage 1: Assessment -->
+  <rect x="40" y="65" width="120" height="60" rx="10" fill="#2b6cb0" filter="url(#shadow)"/>
+  <text x="100" y="92" text-anchor="middle" font-family="Arial" font-size="13" fill="white" font-weight="bold">1. Assessment</text>
+  <text x="100" y="110" text-anchor="middle" font-family="Arial" font-size="11" fill="#bee3f8">of Current State</text>
+  
+  <!-- Arrow 1→2 -->
+  <line x1="160" y1="95" x2="200" y2="95" stroke="url(#arrowGrad)" stroke-width="4" marker-end="url(#arrowhead)"/>
+  <defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#48bb78"/></marker></defs>
+  
+  <!-- Stage 2: Goal Setting -->
+  <rect x="210" y="65" width="120" height="60" rx="10" fill="#2b6cb0" filter="url(#shadow)"/>
+  <text x="270" y="92" text-anchor="middle" font-family="Arial" font-size="13" fill="white" font-weight="bold">2. Goal Setting</text>
+  <text x="270" y="110" text-anchor="middle" font-family="Arial" font-size="11" fill="#bee3f8">Clear Objectives</text>
+  
+  <!-- Arrow 2→3 -->
+  <line x1="330" y1="95" x2="370" y2="95" stroke="url(#arrowGrad)" stroke-width="4" marker-end="url(#arrowhead)"/>
+  
+  <!-- Stage 3: Strategy -->
+  <rect x="380" y="65" width="120" height="60" rx="10" fill="#2b6cb0" filter="url(#shadow)"/>
+  <text x="440" y="92" text-anchor="middle" font-family="Arial" font-size="13" fill="white" font-weight="bold">3. Strategy</text>
+  <text x="440" y="110" text-anchor="middle" font-family="Arial" font-size="11" fill="#bee3f8">Design &amp; Options</text>
+  
+  <!-- Down arrow 3→4 -->
+  <line x1="440" y1="125" x2="440" y2="165" stroke="#2b6cb0" stroke-width="4" marker-end="url(#arrowdown)"/>
+  <defs><marker id="arrowdown" markerWidth="10" markerHeight="7" refX="5" refY="7" orient="auto"><polygon points="0 0, 10 0, 5 7" fill="#2b6cb0"/></marker></defs>
+  
+  <!-- Stage 4: Implementation -->
+  <rect x="380" y="170" width="120" height="60" rx="10" fill="#48bb78" filter="url(#shadow)"/>
+  <text x="440" y="197" text-anchor="middle" font-family="Arial" font-size="13" fill="white" font-weight="bold">4. Implementation</text>
+  <text x="440" y="215" text-anchor="middle" font-family="Arial" font-size="11" fill="#c6f6d5">Action &amp; Execution</text>
+  
+  <!-- Left arrow 4→5 -->
+  <line x1="380" y1="200" x2="340" y2="200" stroke="#2b6cb0" stroke-width="4" marker-end="url(#arrowleft)"/>
+  <defs><marker id="arrowleft" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto"><polygon points="10 0, 0 3.5, 10 7" fill="#2b6cb0"/></marker></defs>
+  
+  <!-- Stage 5: Monitoring -->
+  <rect x="210" y="170" width="120" height="60" rx="10" fill="#48bb78" filter="url(#shadow)"/>
+  <text x="270" y="197" text-anchor="middle" font-family="Arial" font-size="13" fill="white" font-weight="bold">5. Monitoring &amp;</text>
+  <text x="270" y="215" text-anchor="middle" font-family="Arial" font-size="11" fill="#c6f6d5">Evaluation</text>
+  
+  <!-- Left arrow 5→6 -->
+  <line x1="210" y1="200" x2="170" y2="200" stroke="#2b6cb0" stroke-width="4" marker-end="url(#arrowleft)"/>
+  
+  <!-- Stage 6: Feedback -->
+  <rect x="40" y="170" width="120" height="60" rx="10" fill="#48bb78" filter="url(#shadow)"/>
+  <text x="100" y="197" text-anchor="middle" font-family="Arial" font-size="13" fill="white" font-weight="bold">6. Feedback &amp;</text>
+  <text x="100" y="215" text-anchor="middle" font-family="Arial" font-size="11" fill="#c6f6d5">Revision</text>
+  
+  <!-- Upward feedback arrow 6→1 -->
+  <line x1="100" y1="170" x2="100" y2="130" stroke="#e53e3e" stroke-width="3" stroke-dasharray="6,4" marker-end="url(#arrowup)"/>
+  <defs><marker id="arrowup" markerWidth="10" markerHeight="7" refX="5" refY="0" orient="auto"><polygon points="0 7, 10 7, 5 0" fill="#e53e3e"/></marker></defs>
+  
+  <!-- Feedback loop label -->
+  <text x="115" y="145" font-family="Arial" font-size="10" fill="#e53e3e" font-style="italic">Feedback Loop</text>
+  
+  <!-- Central cycle arrow -->
+  <path d="M 270 260 Q 270 290 300 300 Q 330 310 350 290 Q 370 270 370 250" fill="none" stroke="#805ad5" stroke-width="3" stroke-dasharray="5,3" marker-end="url(#arrowcycle)"/>
+  <defs><marker id="arrowcycle" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#805ad5"/></marker></defs>
+  <text x="300" y="320" text-anchor="middle" font-family="Arial" font-size="11" fill="#805ad5" font-weight="bold">Continuous Improvement Cycle</text>
+  
+  <!-- Resource box -->
+  <rect x="40" y="340" width="520" height="45" rx="8" fill="#edf2f7" stroke="#a0aec0" stroke-width="1.5"/>
+  <text x="300" y="360" text-anchor="middle" font-family="Arial" font-size="12" fill="#2d3748">Key Resources: Data | Human Capital | Technology | Finance | Policy Framework</text>
+  <text x="300" y="377" text-anchor="middle" font-family="Arial" font-size="11" fill="#718096" font-style="italic">All stages require adequate resource allocation</text>
+</svg>
+
+<h3>Key Concepts of Economic Planning</h3>
+<ul>
+  <li><strong>Planning</strong> is the systematic process of setting economic goals, identifying resources, and designing strategies to achieve national or organizational objectives within a specific timeframe.</li>
+  <li>It involves <strong>resource allocation</strong> — deciding how to distribute scarce resources among competing needs (e.g., education vs. infrastructure).</li>
+  <li>Effective planning follows a <strong>cyclical process</strong>: assessment → goal setting → strategy → implementation → monitoring → feedback/revision.</li>
+  <li>Planning can be <strong>indicative</strong> (market-friendly, guiding private sector) or <strong>directive</strong> (state-controlled, as in command economies).</li>
+  <li>Key principles include: <strong>efficiency, equity, sustainability, and flexibility</strong> to adapt to changing conditions.</li>
+</ul>
+
+<h4>Nigerian Example 1: National Development Plan (NDP) 2021–2025</h4>
+<p>Nigeria's current medium-term plan aims to lift 35 million people out of poverty and achieve GDP growth of 7% annually. The planning process involved assessing infrastructure gaps, setting targets for job creation (21 million jobs), and allocating N348 trillion across sectors like power, roads, and agriculture. Monitoring is done through the Ministry of Finance, Budget and National Planning.</p>
+
+<h4>Nigerian Example 2: Central Bank of Nigeria's Monetary Policy Planning</h4>
+<p>The CBN uses forward-looking planning to manage inflation and exchange rates. Each quarter, the Monetary Policy Committee assesses economic data (e.g., inflation rate, foreign reserves), sets targets (e.g., inflation within 6–9%), and implements tools like adjusting the Monetary Policy Rate (currently 27.50%). Feedback from economic indicators triggers policy revisions.</p>
+
+<div style="background:#fefcbf; border-left:4px solid #d69e2e; padding:12px 16px; margin:1.5rem 0; border-radius:6px;">
+  <strong>🌟 Fun Fact:</strong> The term "economic planning" was popularized by the Soviet Union in the 1920s, but Nigeria's first national plan (the 1946 Ten-Year Plan) was actually introduced by the British colonial government — making it one of the earliest formal planning efforts in West Africa!
+</div>
+
+<h3>Practice Questions</h3>
+<ol>
+  <li>List and briefly explain any <strong>four</strong> stages of the economic planning cycle shown in the diagram above.</li>
+  <li>Distinguish between <strong>indicative planning</strong> and <strong>directive planning</strong>, and give one Nigerian example of each.</li>
+  <li>Why is the <strong>feedback loop</strong> considered essential in the planning process? Use a specific Nigerian economic policy to illustrate your answer.</li>
+</ol>
+
+<h4>Answers</h4>
+<ol>
+  <li><strong>Assessment:</strong> Evaluating current economic conditions (e.g., GDP, unemployment). <strong>Goal Setting:</strong> Defining clear targets (e.g., reduce poverty by 20%). <strong>Implementation:</strong> Executing strategies through policies and projects. <strong>Monitoring &amp; Evaluation:</strong> Tracking progress and measuring outcomes against goals.</li>
+  <li><strong>Indicative planning</strong> uses government guidelines and incentives to influence private sector decisions (e.g., Nigeria's Vision 2020). <strong>Directive planning</strong> involves state control of resources and production targets (e.g., the 1970s indigenization policy under the Nigerian Enterprises Promotion Decree).</li>
+  <li>The feedback loop allows planners to correct errors, adapt to unexpected changes (e.g., oil price shocks), and improve future plans. For example, Nigeria's 2023 fuel subsidy removal plan was revised after feedback showed inflationary pressures — leading to the introduction of a temporary transport grant to cushion the impact.</li>
+</ol>

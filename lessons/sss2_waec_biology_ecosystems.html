@@ -1,0 +1,111 @@
+<div class="lesson-content">
+  <h2>Ecosystems: Structure &amp; Function</h2>
+  <p><strong>Biology (SSS2) – WAEC Syllabus</strong></p>
+
+  <!-- Animated SVG Diagram -->
+  <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="display:block; margin: 1rem auto; max-width:100%; height:auto;">
+    <defs>
+      <style>
+        @keyframes sunPulse {
+          0% { opacity: 1; }
+          50% { opacity: 0.4; }
+          100% { opacity: 1; }
+        }
+        @keyframes arrowFlow {
+          0% { stroke-dashoffset: 100; }
+          100% { stroke-dashoffset: 0; }
+        }
+        .sun { animation: sunPulse 3s ease-in-out infinite; }
+        .arrow { stroke-dasharray: 10 5; animation: arrowFlow 2s linear infinite; }
+      </style>
+    </defs>
+    <!-- Sky background -->
+    <rect width="600" height="400" fill="#e0f7fa" rx="10"/>
+    <!-- Sun -->
+    <circle cx="80" cy="60" r="30" fill="#FFD700" class="sun"/>
+    <text x="80" y="65" text-anchor="middle" font-size="12" fill="#333">Sun</text>
+    
+    <!-- Trees / Producers -->
+    <g transform="translate(150,220)">
+      <rect x="-8" y="-10" width="16" height="60" fill="#8B5A2B"/>
+      <polygon points="0,-50 -40,-10 40,-10" fill="#2E7D32"/>
+      <polygon points="0,-70 -30,-30 30,-30" fill="#388E3C"/>
+      <text x="0" y="20" text-anchor="middle" font-size="11" fill="#fff">Producers</text>
+    </g>
+    <g transform="translate(250,240)">
+      <rect x="-6" y="-8" width="12" height="50" fill="#8B5A2B"/>
+      <polygon points="0,-40 -30,-8 30,-8" fill="#2E7D32"/>
+      <polygon points="0,-55 -20,-25 20,-25" fill="#388E3C"/>
+    </g>
+    
+    <!-- Primary Consumer (Grasshopper) -->
+    <g transform="translate(350,180)">
+      <ellipse cx="0" cy="0" rx="18" ry="10" fill="#4CAF50"/>
+      <circle cx="-15" cy="-5" r="6" fill="#4CAF50"/>
+      <line x1="-21" y1="-8" x2="-25" y2="-15" stroke="#333" stroke-width="2"/>
+      <line x1="-21" y1="-3" x2="-25" y2="-10" stroke="#333" stroke-width="2"/>
+      <text x="0" y="20" text-anchor="middle" font-size="10" fill="#333">Primary Consumer</text>
+    </g>
+    
+    <!-- Secondary Consumer (Lizard) -->
+    <g transform="translate(440,150)">
+      <ellipse cx="0" cy="0" rx="20" ry="12" fill="#FF9800"/>
+      <ellipse cx="-18" cy="-4" rx="8" ry="6" fill="#FF9800"/>
+      <circle cx="-22" cy="-6" r="2" fill="#000"/>
+      <path d="M18,-2 L28,-8 L26,-2 Z" fill="#FF9800"/>
+      <text x="0" y="22" text-anchor="middle" font-size="10" fill="#333">Secondary Consumer</text>
+    </g>
+    
+    <!-- Decomposer (Fungi) -->
+    <g transform="translate(500,300)">
+      <rect x="-5" y="0" width="10" height="20" fill="#D7CCC8"/>
+      <ellipse cx="0" cy="-5" rx="15" ry="8" fill="#8D6E63"/>
+      <ellipse cx="-8" cy="-10" rx="6" ry="4" fill="#A1887F"/>
+      <ellipse cx="8" cy="-10" rx="6" ry="4" fill="#A1887F"/>
+      <text x="0" y="25" text-anchor="middle" font-size="10" fill="#333">Decomposers</text>
+    </g>
+    
+    <!-- Energy flow arrows (animated) -->
+    <line x1="120" y1="70" x2="150" y2="180" stroke="#FFB300" stroke-width="3" class="arrow"/>
+    <line x1="170" y1="200" x2="330" y2="180" stroke="#FFB300" stroke-width="3" class="arrow"/>
+    <line x1="370" y1="180" x2="420" y2="150" stroke="#FFB300" stroke-width="3" class="arrow"/>
+    <line x1="460" y1="155" x2="490" y2="280" stroke="#8D6E63" stroke-width="3" class="arrow"/>
+    
+    <!-- Labels -->
+    <text x="300" y="380" text-anchor="middle" font-size="14" font-weight="bold" fill="#1A237E">Energy Flow in a Terrestrial Ecosystem</text>
+  </svg>
+
+  <h3>Key Concepts</h3>
+  <ul>
+    <li><strong>Ecosystem:</strong> A community of living organisms interacting with their non-living environment (soil, water, air).</li>
+    <li><strong>Producers:</strong> Green plants that convert sunlight into food via photosynthesis (e.g., grasses, trees).</li>
+    <li><strong>Consumers:</strong> Organisms that feed on others. Primary consumers (herbivores) eat producers; secondary consumers (carnivores) eat primary consumers.</li>
+    <li><strong>Decomposers:</strong> Bacteria and fungi that break down dead matter, returning nutrients to the soil.</li>
+    <li><strong>Energy Flow:</strong> Energy moves from the sun → producers → consumers → decomposers. It is <em>not recycled</em>; it diminishes at each trophic level.</li>
+    <li><strong>Nutrient Cycling:</strong> Matter (e.g., carbon, nitrogen) is recycled within the ecosystem.</li>
+  </ul>
+
+  <h3>Nigerian Examples</h3>
+  <ul>
+    <li><strong>🌴 Rainforest Ecosystem (Cross River State):</strong> Tall trees (e.g., Mahogany, Iroko) as producers, monkeys and birds as primary consumers, leopards as secondary consumers, and fungi as decomposers.</li>
+    <li><strong>🏝️ Mangrove Swamp Ecosystem (Niger Delta):</strong> Mangrove trees (producers), crabs and fish (primary consumers), crocodiles (secondary consumers), and bacteria (decomposers) thrive in salty, waterlogged soil.</li>
+  </ul>
+
+  <div style="background-color: #FFF9C4; border-left: 6px solid #F9A825; padding: 0.8rem; margin: 1rem 0; border-radius: 4px;">
+    <strong>💡 Fun Fact:</strong> The term "ecosystem" was first coined by British ecologist Arthur Tansley in 1935. In Nigeria, the <em>Hadejia-Nguru Wetlands</em> support over 1 million waterbirds annually, showing how fragile ecosystems can be vital for biodiversity!
+  </div>
+
+  <h3>Practice Questions</h3>
+  <ol>
+    <li><strong>Q1:</strong> Distinguish between a producer and a consumer in an ecosystem. Give one example of each from a Nigerian savanna.</li>
+    <li><strong>Q2:</strong> Explain why energy flow in an ecosystem is described as "one-way" while nutrients are recycled.</li>
+    <li><strong>Q3:</strong> A pond ecosystem contains algae (producer), tadpoles (primary consumer), and a heron (secondary consumer). If the algae store 1000 kJ of energy, how much energy is available to the heron? (Assume 10% transfer efficiency per trophic level).</li>
+  </ol>
+
+  <h4>Answers</h4>
+  <ul>
+    <li><strong>A1:</strong> Producers (e.g., grass) make their own food via photosynthesis; consumers (e.g., zebra) cannot and must eat other organisms. In a Nigerian savanna: <em>Andropogon</em> grass (producer) and antelope (consumer).</li>
+    <li><strong>A2:</strong> Energy flows one-way because it is lost as heat at each trophic level (e.g., respiration) and cannot be reused. Nutrients (e.g., carbon, nitrogen) are cycled through decomposition and uptake by plants.</li>
+    <li><strong>A3:</strong> Algae (1000 kJ) → tadpoles (10% = 100 kJ) → heron (10% of 100 kJ = <strong>10 kJ</strong>). So the heron gets 10 kJ.</li>
+  </ul>
+</div>

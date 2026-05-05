@@ -1,0 +1,206 @@
+<main class="biology-lesson">
+  <h1>🧬 Genetics: The Blueprint of Life</h1>
+
+  <!-- Animated SVG Diagram: DNA Replication -->
+  <div class="diagram-container">
+    <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+      <!-- DNA Backbone (two strands) -->
+      <g fill="none" stroke-width="3">
+        <!-- Left strand -->
+        <path d="M50,30 Q80,70 50,110 Q20,150 50,190 Q80,230 50,270" stroke="#2c7a4d" stroke-dasharray="4,4">
+          <animate attributeName="stroke-dashoffset" from="0" to="-20" dur="2s" repeatCount="indefinite"/>
+        </path>
+        <!-- Right strand -->
+        <path d="M100,30 Q130,70 100,110 Q70,150 100,190 Q130,230 100,270" stroke="#2c7a4d" stroke-dasharray="4,4">
+          <animate attributeName="stroke-dashoffset" from="0" to="-20" dur="2s" repeatCount="indefinite"/>
+        </path>
+      </g>
+
+      <!-- Base pairs (rungs) -->
+      <g stroke="#1a3b5c" stroke-width="2">
+        <line x1="58" y1="50" x2="92" y2="50">
+          <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite"/>
+        </line>
+        <line x1="42" y1="90" x2="108" y2="90">
+          <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite" begin="0.3s"/>
+        </line>
+        <line x1="58" y1="130" x2="92" y2="130">
+          <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite" begin="0.6s"/>
+        </line>
+        <line x1="42" y1="170" x2="108" y2="170">
+          <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite" begin="0.9s"/>
+        </line>
+        <line x1="58" y1="210" x2="92" y2="210">
+          <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite" begin="1.2s"/>
+        </line>
+        <line x1="42" y1="250" x2="108" y2="250">
+          <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite" begin="1.5s"/>
+        </line>
+      </g>
+
+      <!-- Base labels (A, T, C, G) -->
+      <g font-family="monospace" font-size="12" fill="#1a3b5c" text-anchor="middle">
+        <text x="50" y="45">A</text>
+        <text x="100" y="45">T</text>
+        <text x="35" y="85">C</text>
+        <text x="115" y="85">G</text>
+        <text x="50" y="125">T</text>
+        <text x="100" y="125">A</text>
+        <text x="35" y="165">G</text>
+        <text x="115" y="165">C</text>
+        <text x="50" y="205">A</text>
+        <text x="100" y="205">T</text>
+        <text x="35" y="245">C</text>
+        <text x="115" y="245">G</text>
+      </g>
+
+      <!-- Title -->
+      <text x="200" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a3b5c">DNA Double Helix</text>
+
+      <!-- Replication fork animation -->
+      <g>
+        <polygon points="150,140 170,130 170,150" fill="#e67e22" opacity="0.8">
+          <animate attributeName="opacity" values="0;0.8;0" dur="3s" repeatCount="indefinite"/>
+        </polygon>
+        <text x="160" y="120" text-anchor="middle" font-size="10" fill="#e67e22" font-weight="bold">Replication Fork</text>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Bullet-point explanations -->
+  <div class="explanation">
+    <h2>Key Concepts</h2>
+    <ul>
+      <li><strong>Gene</strong> – A segment of DNA that codes for a specific trait (e.g., seed colour, blood type).</li>
+      <li><strong>Alleles</strong> – Different versions of the same gene (e.g., allele for brown eyes vs. blue eyes).</li>
+      <li><strong>Dominant vs Recessive</strong> – A dominant allele (e.g., <em>B</em>) masks a recessive allele (e.g., <em>b</em>) in heterozygous individuals.</li>
+      <li><strong>Genotype vs Phenotype</strong> – Genotype = genetic makeup (e.g., BB, Bb, bb); Phenotype = observable trait (e.g., brown or blue eyes).</li>
+      <li><strong>DNA Replication</strong> – The process by which DNA copies itself before cell division, using base-pairing rules (A–T, C–G).</li>
+    </ul>
+  </div>
+
+  <!-- Nigerian Examples -->
+  <div class="nigerian-examples">
+    <h2>🌍 Nigerian Examples</h2>
+    <div class="example">
+      <p><strong>1. Sickle Cell Trait (HbA/HbS):</strong> In Nigeria, about 25% of people carry the sickle cell allele. Heterozygous individuals (HbA/HbS) have some resistance to malaria, which is common in many parts of Nigeria. This is an example of <em>balanced polymorphism</em>.</p>
+    </div>
+    <div class="example">
+      <p><strong>2. Skin Pigmentation:</strong> The wide variation in skin colour among Nigerians is controlled by multiple genes (polygenic inheritance). Darker skin (dominant alleles) provides natural protection from intense UV radiation, while lighter skin may be more common in regions with less direct sun exposure.</p>
+    </div>
+  </div>
+
+  <!-- Fun Fact Block -->
+  <div class="fun-fact">
+    <p><strong>⚡ Fun Fact:</strong> Humans share about 60% of their genes with bananas! This is because all living things on Earth share a common ancestor, and many basic cellular processes (like DNA replication) are nearly identical across species.</p>
+  </div>
+
+  <!-- Practice Questions -->
+  <div class="practice-questions">
+    <h2>📝 Practice Questions</h2>
+    <ol>
+      <li>
+        <p><strong>Question 1:</strong> In guinea pigs, the allele for black fur (B) is dominant over white fur (b). If a heterozygous black guinea pig (Bb) mates with a white guinea pig (bb), what percentage of their offspring will have white fur?</p>
+        <details>
+          <summary>Show Answer</summary>
+          <p><strong>Answer:</strong> 50% (Punnett square: Bb × bb → 2 Bb : 2 bb, so half will be white).</p>
+        </details>
+      </li>
+      <li>
+        <p><strong>Question 2:</strong> A Nigerian farmer notices that some of his yam plants are resistant to a common fungal disease, while others are not. He crosses a resistant plant (RR) with a non-resistant plant (rr). What will be the genotype and phenotype of the F1 generation?</p>
+        <details>
+          <summary>Show Answer</summary>
+          <p><strong>Answer:</strong> All F1 offspring will be Rr (heterozygous). Since resistance is dominant, all will be resistant to the fungus.</p>
+        </details>
+      </li>
+      <li>
+        <p><strong>Question 3:</strong> During DNA replication, if one strand has the sequence 5'-ATC GTA-3', what will be the sequence of the complementary strand? (Remember base-pairing rules: A–T, C–G)</p>
+        <details>
+          <summary>Show Answer</summary>
+          <p><strong>Answer:</strong> 3'-TAG CAT-5' (or 5'-TAC GAT-3' depending on orientation).</p>
+        </details>
+      </li>
+    </ol>
+  </div>
+
+  <!-- Simple CSS for styling (inline) -->
+  <style>
+    .biology-lesson {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f7f0;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #1a3b5c;
+    }
+    h1 {
+      color: #1a5c2a;
+      border-bottom: 3px solid #2c7a4d;
+      padding-bottom: 8px;
+    }
+    h2 {
+      color: #2c7a4d;
+      margin-top: 25px;
+    }
+    .diagram-container {
+      background: white;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 20px 0;
+      text-align: center;
+    }
+    ul {
+      background: white;
+      border-radius: 8px;
+      padding: 15px 20px 15px 35px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    ul li {
+      margin: 8px 0;
+      line-height: 1.5;
+    }
+    .example {
+      background: #e8f5e9;
+      border-left: 5px solid #2c7a4d;
+      padding: 10px 15px;
+      margin: 12px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .fun-fact {
+      background: #fff3cd;
+      border: 2px dashed #e67e22;
+      padding: 12px 18px;
+      border-radius: 10px;
+      margin: 20px 0;
+      font-size: 1.05em;
+    }
+    .practice-questions ol {
+      background: white;
+      border-radius: 8px;
+      padding: 15px 20px 15px 35px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .practice-questions li {
+      margin: 15px 0;
+    }
+    details {
+      background: #f1f8e9;
+      padding: 8px 12px;
+      border-radius: 6px;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+    details summary {
+      font-weight: bold;
+      color: #2c7a4d;
+    }
+    details p {
+      margin: 8px 0 0 0;
+      padding: 5px 10px;
+      background: #dcedc8;
+      border-radius: 4px;
+    }
+  </style>
+</main>

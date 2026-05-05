@@ -1,0 +1,98 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:20px auto;max-width:100%;background:#f0f8ff;border-radius:12px;box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2c3e50"/>
+    </marker>
+    <style>
+      @keyframes growBar1 { 0% { height: 0; y: 340; } 100% { height: 200; y: 140; } }
+      @keyframes growBar2 { 0% { height: 0; y: 340; } 100% { height: 280; y: 60; } }
+      @keyframes growBar3 { 0% { height: 0; y: 340; } 100% { height: 320; y: 20; } }
+      @keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+      @keyframes pulse { 0% { opacity: 0.7; } 50% { opacity: 1; } 100% { opacity: 0.7; } }
+      .bar1 { animation: growBar1 1.5s ease-out forwards; }
+      .bar2 { animation: growBar2 1.5s ease-out 0.3s forwards; }
+      .bar3 { animation: growBar3 1.5s ease-out 0.6s forwards; }
+      .label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; fill: #2c3e50; text-anchor: middle; }
+      .title { font-family: 'Segoe UI', Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #1a5276; text-anchor: middle; }
+      .axis-label { font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; fill: #555; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="#f0f8ff" rx="12"/>
+
+  <!-- Title -->
+  <text x="300" y="35" class="title">Economic Development Over Time</text>
+
+  <!-- Y-axis -->
+  <line x1="80" y1="60" x2="80" y2="340" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="75" y="55" class="axis-label" text-anchor="end">GDP per capita</text>
+
+  <!-- X-axis -->
+  <line x1="80" y1="340" x2="560" y2="340" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="300" y="370" class="axis-label">Time (Years)</text>
+
+  <!-- Bars -->
+  <rect x="120" y="340" width="80" height="0" fill="#3498db" rx="4" class="bar1"/>
+  <rect x="260" y="340" width="80" height="0" fill="#2ecc71" rx="4" class="bar2"/>
+  <rect x="400" y="340" width="80" height="0" fill="#e74c3c" rx="4" class="bar3"/>
+
+  <!-- Labels on bars -->
+  <text x="160" y="135" class="label" fill="#fff" font-weight="bold" style="animation:fadeIn 2s 1.5s forwards;opacity:0;">₦</text>
+  <text x="300" y="55" class="label" fill="#fff" font-weight="bold" style="animation:fadeIn 2s 1.8s forwards;opacity:0;">₦₦</text>
+  <text x="440" y="15" class="label" fill="#fff" font-weight="bold" style="animation:fadeIn 2s 2.1s forwards;opacity:0;">₦₦₦</text>
+
+  <!-- X-axis labels -->
+  <text x="160" y="358" class="axis-label">Pre-Development</text>
+  <text x="300" y="358" class="axis-label">Developing</text>
+  <text x="440" y="358" class="axis-label">Developed</text>
+
+  <!-- Animated arrows between bars -->
+  <g style="animation:fadeIn 2s 2.5s forwards;opacity:0;">
+    <line x1="210" y1="240" x2="250" y2="200" stroke="#f39c12" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="350" y1="160" x2="390" y2="100" stroke="#f39c12" stroke-width="2" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- Pulse dots -->
+  <circle cx="160" cy="240" r="6" fill="#3498db" style="animation:pulse 1.5s infinite 0s"/>
+  <circle cx="300" cy="160" r="6" fill="#2ecc71" style="animation:pulse 1.5s infinite 0.5s"/>
+  <circle cx="440" cy="80" r="6" fill="#e74c3c" style="animation:pulse 1.5s infinite 1s"/>
+</svg>
+
+<h3>What is Economic Development?</h3>
+<p>Economic development refers to the process by which a nation improves the economic, political, and social well-being of its people. Unlike economic growth (which focuses on increased output), development includes improvements in living standards, reduction of poverty, access to education, healthcare, and infrastructure.</p>
+
+<h3>Key Indicators of Development</h3>
+<ul>
+  <li><strong>GDP per capita</strong> – average income per person</li>
+  <li><strong>Human Development Index (HDI)</strong> – combines life expectancy, education, and income</li>
+  <li><strong>Infrastructure</strong> – roads, electricity, water supply, internet access</li>
+  <li><strong>Health &amp; Education</strong> – lower infant mortality, higher literacy rates</li>
+  <li><strong>Industrialization</strong> – shift from agriculture to manufacturing and services</li>
+  <li><strong>Reduced inequality</strong> – fair distribution of resources and opportunities</li>
+</ul>
+
+<h3>Nigerian Examples</h3>
+<ul>
+  <li><strong>Lagos State</strong> – In recent years, Lagos has invested heavily in infrastructure (the Lekki Free Trade Zone, new roads, and the Blue Line rail project). This has attracted foreign investment and boosted local employment, contributing to development even though challenges remain in housing and traffic.</li>
+  <li><strong>Agricultural Transformation in Kebbi State</strong> – The Anchor Borrowers' Programme helped rice farmers in Kebbi increase yields significantly. By 2020, Nigeria reduced rice imports and Kebbi became a major rice-producing state, improving incomes and food security for thousands of farming families.</li>
+</ul>
+
+<div style="background:#fff3cd;border-left:5px solid #ffc107;padding:15px;margin:20px 0;border-radius:6px;">
+  <p style="margin:0;font-weight:bold;">🌟 Fun Fact</p>
+  <p style="margin:5px 0 0;">Did you know? Nigeria's film industry, <strong>Nollywood</strong>, is the second-largest film industry in the world by volume. It employs over 1 million people and contributes about 2.3% to Nigeria's GDP — a clear example of how the service sector drives economic development!</p>
+</div>
+
+<h3>Practice Questions</h3>
+<ol>
+  <li>Explain the difference between <strong>economic growth</strong> and <strong>economic development</strong>. Give one Nigerian example to support your answer.</li>
+  <li>List any <strong>three indicators</strong> used to measure economic development besides GDP per capita.</li>
+  <li>How did the Anchor Borrowers' Programme contribute to development in Kebbi State? Mention two specific outcomes.</li>
+</ol>
+
+<h4>Answers</h4>
+<ol>
+  <li>Economic growth refers to an increase in a country's output of goods and services (GDP), while economic development includes improvements in quality of life, education, health, and infrastructure. For example, Nigeria's GDP grew in 2021 due to oil prices, but many citizens still lacked electricity — showing growth without development.</li>
+  <li>Three indicators: (i) Human Development Index (HDI), (ii) literacy rate, (iii) infant mortality rate.</li>
+  <li>The Anchor Borrowers' Programme provided farmers with loans, seeds, and fertilizer. Two outcomes: (a) rice production in Kebbi increased dramatically, reducing Nigeria's dependence on imported rice; (b) thousands of small-scale farmers saw their incomes rise, improving household welfare.</li>
+</ol>

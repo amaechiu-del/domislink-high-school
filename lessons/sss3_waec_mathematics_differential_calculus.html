@@ -1,0 +1,80 @@
+<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" style="display:block; margin:0 auto 20px; background:#f0f8ff; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e90ff"/>
+      <stop offset="100%" stop-color="#00bfff"/>
+    </linearGradient>
+  </defs>
+  <!-- Grid lines -->
+  <line x1="50" y1="250" x2="450" y2="250" stroke="#ccc" stroke-width="1"/>
+  <line x1="50" y1="50" x2="50" y2="280" stroke="#ccc" stroke-width="1"/>
+  <line x1="50" y1="100" x2="450" y2="100" stroke="#eee" stroke-width="0.5"/>
+  <line x1="50" y1="150" x2="450" y2="150" stroke="#eee" stroke-width="0.5"/>
+  <line x1="50" y1="200" x2="450" y2="200" stroke="#eee" stroke-width="0.5"/>
+  <line x1="150" y1="50" x2="150" y2="280" stroke="#eee" stroke-width="0.5"/>
+  <line x1="250" y1="50" x2="250" y2="280" stroke="#eee" stroke-width="0.5"/>
+  <line x1="350" y1="50" x2="350" y2="280" stroke="#eee" stroke-width="0.5"/>
+  <!-- Axes labels -->
+  <text x="445" y="255" font-size="12" fill="#333">x</text>
+  <text x="40" y="55" font-size="12" fill="#333">y</text>
+  <!-- Curve: y = x^2/50 - 2x + 150 -->
+  <path d="M50,200 Q100,100 150,75 Q200,70 250,100 Q300,150 350,200 Q400,250 450,280" fill="none" stroke="url(#grad)" stroke-width="3" stroke-linecap="round">
+    <animate attributeName="stroke-dasharray" from="0 600" to="600 600" dur="2s" fill="freeze"/>
+  </path>
+  <!-- Tangent line at x=200 (point (200, 100)) -->
+  <line x1="120" y1="140" x2="320" y2="60" stroke="#ff4500" stroke-width="2" stroke-dasharray="6,4" opacity="0.8">
+    <animate attributeName="opacity" from="0" to="0.8" dur="1.5s" begin="2s" fill="freeze"/>
+  </line>
+  <!-- Point of tangency -->
+  <circle cx="200" cy="100" r="5" fill="#ff4500">
+    <animate attributeName="r" from="0" to="5" dur="0.5s" begin="3s" fill="freeze"/>
+  </circle>
+  <text x="210" y="95" font-size="11" fill="#ff4500" font-weight="bold">(x, y)</text>
+  <!-- Slope arrow -->
+  <text x="260" y="70" font-size="11" fill="#ff4500">slope = dy/dx</text>
+</svg>
+
+<h2 style="color:#1e3a5f; border-bottom:3px solid #1e90ff; padding-bottom:8px;">📐 Differential Calculus – The Mathematics of Change</h2>
+
+<p style="font-size:1.05em; background:#eef6ff; padding:12px; border-radius:8px;">Differential calculus studies how quantities change. The <strong>derivative</strong> measures the <em>instantaneous rate of change</em> — the slope of a curve at a single point.</p>
+
+<h3 style="color:#1e3a5f;">🔑 Key Concepts</h3>
+<ul style="background:#f9fcff; padding:15px 25px; border-radius:10px; line-height:1.7;">
+  <li><strong>Derivative:</strong> \(\frac{dy}{dx} = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h}\) — the slope of the tangent line.</li>
+  <li><strong>Power Rule:</strong> If \(y = x^n\), then \(\frac{dy}{dx} = n x^{n-1}\).</li>
+  <li><strong>Constant Rule:</strong> Derivative of a constant is 0.</li>
+  <li><strong>Sum/Difference Rule:</strong> Derivative of sum = sum of derivatives.</li>
+  <li><strong>Notation:</strong> \(f'(x)\), \(\frac{dy}{dx}\), \(y'\) all mean derivative.</li>
+</ul>
+
+<h3 style="color:#1e3a5f;">🇳🇬 Nigerian Examples</h3>
+
+<div style="background:#f5f0e0; border-left:5px solid #1e90ff; padding:12px 18px; margin:15px 0; border-radius:6px;">
+  <strong>Example 1 (WAEC Style):</strong> A particle moves along a line such that its displacement \(s(t) = 3t^2 - 6t + 4\) metres after \(t\) seconds. Find its velocity at \(t = 2\) seconds.
+  <br><br>
+  <em>Solution:</em> Velocity \(v(t) = s'(t) = 6t - 6\). At \(t=2\): \(v(2) = 6(2)-6 = 6\) m/s.
+</div>
+
+<div style="background:#f5f0e0; border-left:5px solid #1e90ff; padding:12px 18px; margin:15px 0; border-radius:6px;">
+  <strong>Example 2 (Everyday Context):</strong> The cost (in ₦) of producing \(x\) bags of garri is \(C(x) = 500 + 200x - 0.5x^2\). Find the marginal cost when 50 bags are produced.
+  <br><br>
+  <em>Solution:</em> Marginal cost = \(C'(x) = 200 - x\). At \(x=50\): \(C'(50) = 200 - 50 = ₦150\) per bag.
+</div>
+
+<div style="background:#fffbe6; border:2px dashed #ffaa00; padding:12px 18px; margin:20px 0; border-radius:10px;">
+  <strong>💡 Fun Fact:</strong> The word "calculus" comes from the Latin word for "small stone" — ancient Romans used pebbles for counting! Sir Isaac Newton called derivatives <em>"fluxions"</em> because they measure how quantities <em>flow</em>.
+</div>
+
+<h3 style="color:#1e3a5f;">✏️ Practice Questions</h3>
+<ol style="background:#f0f4fa; padding:15px 30px; border-radius:10px; line-height:2;">
+  <li>Differentiate \(y = 4x^3 - 7x^2 + 2x - 9\).</li>
+  <li>If \(f(x) = \frac{1}{x^2}\), find \(f'(x)\).</li>
+  <li>The height of a projectile is \(h(t) = 40t - 5t^2\) metres. Find the time when its velocity is zero.</li>
+</ol>
+
+<div style="background:#e8f5e9; padding:12px 18px; border-radius:8px; margin-top:15px;">
+  <strong>✅ Answers:</strong><br>
+  1. \(\frac{dy}{dx} = 12x^2 - 14x + 2\)<br>
+  2. \(f'(x) = -\frac{2}{x^3}\) (rewrite as \(x^{-2}\), then power rule)<br>
+  3. \(v(t)=40-10t=0 \Rightarrow t=4\) seconds
+</div>

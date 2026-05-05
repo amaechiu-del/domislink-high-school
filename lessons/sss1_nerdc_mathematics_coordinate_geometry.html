@@ -1,0 +1,79 @@
+<div class="lesson">
+  <h2>Coordinate Geometry (SSS1 Mathematics - NERDC)</h2>
+
+  <!-- Animated SVG Diagram -->
+  <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto 20px; background: #f9f9f9; border: 1px solid #ccc;">
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#333" />
+      </marker>
+    </defs>
+    <!-- Axes -->
+    <line x1="50" y1="200" x2="350" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrow)" />
+    <line x1="200" y1="50" x2="200" y2="350" stroke="#333" stroke-width="2" marker-end="url(#arrow)" />
+    <!-- Labels -->
+    <text x="360" y="205" font-size="14" fill="#333">x</text>
+    <text x="205" y="45" font-size="14" fill="#333">y</text>
+    <text x="195" y="215" font-size="12" fill="#666">O (0,0)</text>
+    <!-- Point A (2,3) -->
+    <circle cx="260" cy="140" r="5" fill="#e74c3c">
+      <animate attributeName="r" values="5;8;5" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="268" y="135" font-size="12" fill="#e74c3c">A (2,3)</text>
+    <!-- Point B (-3,1) -->
+    <circle cx="110" cy="180" r="5" fill="#2980b9">
+      <animate attributeName="r" values="5;8;5" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="85" y="175" font-size="12" fill="#2980b9">B (-3,1)</text>
+    <!-- Dashed lines from A -->
+    <line x1="260" y1="200" x2="260" y2="140" stroke="#e74c3c" stroke-width="1" stroke-dasharray="4,4" />
+    <line x1="200" y1="140" x2="260" y2="140" stroke="#e74c3c" stroke-width="1" stroke-dasharray="4,4" />
+    <!-- Dashed lines from B -->
+    <line x1="110" y1="200" x2="110" y2="180" stroke="#2980b9" stroke-width="1" stroke-dasharray="4,4" />
+    <line x1="200" y1="180" x2="110" y2="180" stroke="#2980b9" stroke-width="1" stroke-dasharray="4,4" />
+    <!-- Grid lines (light) -->
+    <line x1="50" y1="140" x2="350" y2="140" stroke="#ddd" stroke-width="0.5" />
+    <line x1="50" y1="180" x2="350" y2="180" stroke="#ddd" stroke-width="0.5" />
+    <line x1="110" y1="50" x2="110" y2="350" stroke="#ddd" stroke-width="0.5" />
+    <line x1="260" y1="50" x2="260" y2="350" stroke="#ddd" stroke-width="0.5" />
+  </svg>
+
+  <!-- Bullet-point Explanations -->
+  <ul style="text-align: left; max-width: 600px; margin: 0 auto 20px;">
+    <li><strong>Coordinate plane</strong> is formed by two perpendicular number lines: the <em>x-axis</em> (horizontal) and the <em>y-axis</em> (vertical).</li>
+    <li>Point <strong>O (0,0)</strong> is called the <em>origin</em>.</li>
+    <li>Every point is written as <strong>(x, y)</strong> — first the x-coordinate (horizontal position), then the y-coordinate (vertical position).</li>
+    <li>Positive x is to the right, negative x to the left; positive y is upward, negative y downward.</li>
+    <li>The four regions are called <em>quadrants</em> (Q1: top-right, Q2: top-left, Q3: bottom-left, Q4: bottom-right).</li>
+  </ul>
+
+  <!-- Two Nigerian Examples -->
+  <div style="background: #eef; padding: 10px; border-radius: 8px; margin-bottom: 20px; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto;">
+    <h4 style="margin-top: 0;">🇳🇬 Nigerian Examples</h4>
+    <p><strong>Example 1:</strong> A student plots the location of Abuja (FCT) on a map grid. If Abuja is 4 units east and 6 units north of the origin, what are its coordinates?<br />
+    <em>Answer:</em> (4, 6). The x-coordinate is east (positive), y-coordinate is north (positive).</p>
+    <p><strong>Example 2:</strong> A trader in Lagos marks his shop at (5, -3) on a city grid. Which quadrant is his shop in?<br />
+    <em>Answer:</em> Quadrant IV (positive x, negative y).</p>
+  </div>
+
+  <!-- Fun Fact Block -->
+  <div style="background: #fff3cd; border-left: 5px solid #ffc107; padding: 10px; margin-bottom: 20px; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto;">
+    <strong>🎉 Fun Fact:</strong> The coordinate system we use today was invented by French mathematician <strong>René Descartes</strong> in the 17th century. Legend says he came up with the idea while watching a fly crawl across his ceiling tiles!
+  </div>
+
+  <!-- Practice Questions -->
+  <div style="text-align: left; max-width: 600px; margin: 0 auto;">
+    <h4>📝 Practice Questions</h4>
+    <ol>
+      <li>What are the coordinates of the origin?</li>
+      <li>In which quadrant does the point (-2, 5) lie?</li>
+      <li>If a point has x = 0 and y = -4, where is it located on the coordinate plane?</li>
+    </ol>
+    <div style="background: #d4edda; border-left: 5px solid #28a745; padding: 10px; margin-top: 10px;">
+      <strong>Answers:</strong><br />
+      1. (0, 0)<br />
+      2. Quadrant II (top-left)<br />
+      3. On the negative y-axis (directly below the origin, 4 units down)
+    </div>
+  </div>
+</div>

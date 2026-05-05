@@ -1,0 +1,85 @@
+<div>
+  <h2>Polynomials (SSS1 Mathematics – WAEC Syllabus)</h2>
+
+  <!-- Animated SVG Diagram -->
+  <svg width="100%" height="220" viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg" style="display:block; margin:0 auto; background:#f4f9f9; border-radius:12px;">
+    <style>
+      .curve { fill:none; stroke:#1e3a5f; stroke-width:3; }
+      .point { fill:#d62828; }
+      .label { font-family:Arial; font-size:14px; fill:#0b2545; }
+      .axis { stroke:#555; stroke-width:1.5; }
+      .arrow { fill:#555; }
+      .pulse { animation: pulse 2s infinite; }
+      @keyframes pulse {
+        0% { r:4; opacity:1; }
+        50% { r:8; opacity:0.6; }
+        100% { r:4; opacity:1; }
+      }
+    </style>
+
+    <!-- Axes -->
+    <line x1="50" y1="180" x2="550" y2="180" class="axis"/>
+    <line x1="50" y1="180" x2="50" y2="20" class="axis"/>
+    <polygon points="545,180 550,180 547,174" class="arrow"/>
+    <polygon points="50,25 50,20 45,22" class="arrow"/>
+    <text x="555" y="185" class="label">x</text>
+    <text x="35" y="18" class="label">y</text>
+
+    <!-- Curve: y = x³ - 4x (sample cubic polynomial) -->
+    <path d="M 80,180 Q 120,170 160,150 Q 200,130 220,100 Q 240,70 260,60 Q 280,50 300,55 Q 320,60 340,80 Q 360,100 380,130 Q 400,160 420,180 Q 440,200 460,210 Q 480,220 520,220" class="curve"/>
+
+    <!-- Highlighted points -->
+    <circle cx="220" cy="100" r="5" class="point pulse"/>
+    <circle cx="300" cy="55" r="5" class="point pulse"/>
+    <circle cx="380" cy="130" r="5" class="point pulse"/>
+
+    <text x="200" y="90" class="label" fill="#d62828">Root</text>
+    <text x="310" y="50" class="label" fill="#d62828">Turning point</text>
+    <text x="390" y="120" class="label" fill="#d62828">Root</text>
+  </svg>
+
+  <!-- Bullet-point Explanations -->
+  <div style="margin-top:20px;">
+    <h3>Key Concepts</h3>
+    <ul style="list-style-type:disc; padding-left:20px;">
+      <li><strong>Polynomial</strong> – an algebraic expression with one or more terms, e.g., <em>3x² + 2x – 5</em>.</li>
+      <li><strong>Degree</strong> – the highest power of the variable. Example: <em>4x³ – x + 7</em> has degree 3.</li>
+      <li><strong>Leading coefficient</strong> – the coefficient of the term with the highest degree.</li>
+      <li><strong>Constant term</strong> – the term without a variable (e.g., -5 in <em>3x² + 2x – 5</em>).</li>
+      <li><strong>Monomial, Binomial, Trinomial</strong> – one, two, or three terms respectively.</li>
+      <li><strong>Like terms</strong> – terms with same variable and exponent (e.g., 2x² and -5x²).</li>
+    </ul>
+  </div>
+
+  <!-- Two Nigerian Examples -->
+  <div style="margin-top:20px;">
+    <h3>Nigerian Examples</h3>
+    <p><strong>Example 1 (WAEC-style):</strong> Simplify <em>3x² + 5x – 2x² + 4x – 7</em>.</p>
+    <p><em>Solution:</em> Group like terms: (3x² – 2x²) + (5x + 4x) – 7 = <strong>x² + 9x – 7</strong>.</p>
+    <p style="margin-top:10px;"><strong>Example 2 (Everyday context):</strong> A farmer in Oyo State has a rectangular plot. Length = (2x + 3) m, width = (x – 1) m. Find the perimeter as a polynomial.</p>
+    <p><em>Solution:</em> Perimeter = 2(length + width) = 2[(2x+3) + (x–1)] = 2(3x + 2) = <strong>6x + 4</strong> metres.</p>
+  </div>
+
+  <!-- Fun Fact Block -->
+  <div style="margin-top:20px; background:#e0f2fe; border-left:5px solid #0284c7; padding:12px; border-radius:8px;">
+    <p><strong>🧠 Fun Fact:</strong> The word "polynomial" comes from Greek <em>poly</em> (many) and Latin <em>nomen</em> (name). In ancient Nigeria, the Yoruba people used polynomial-like patterns in <em>Ishan</em> art to represent growth and balance!</p>
+  </div>
+
+  <!-- Practice Questions with Answers -->
+  <div style="margin-top:25px;">
+    <h3>Practice Questions</h3>
+    <ol style="padding-left:20px;">
+      <li>Identify the degree and leading coefficient of <em>7 – 4x³ + 2x² – x</em>.</li>
+      <li>Add the polynomials: <em>(5x² – 3x + 2) + (x² + 4x – 6)</em>.</li>
+      <li>A taxi driver in Lagos charges a base fare of ₦200 plus ₦50 per km. Write a polynomial for the fare for x km.</li>
+    </ol>
+    <div style="margin-top:15px; background:#f1f5f9; padding:12px; border-radius:8px;">
+      <p><strong>Answers:</strong></p>
+      <ol style="padding-left:20px;">
+        <li>Degree = 3, Leading coefficient = -4.</li>
+        <li>6x² + x – 4.</li>
+        <li>Fare = 50x + 200.</li>
+      </ol>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" style="display:block; margin:1em auto; max-width:100%; background:#f0f4ff; border-radius:12px;">
+  <style>
+    .curve { stroke: #1a5276; stroke-width: 3; fill: none; }
+    .tangent { stroke: #e74c3c; stroke-width: 2; stroke-dasharray: 4,4; }
+    .arrow { fill: #1a5276; }
+    .label { font-family: Arial, sans-serif; font-size: 14px; fill: #2c3e50; }
+    .title { font-size: 16px; font-weight: bold; fill: #1a5276; }
+  </style>
+  <text x="200" y="25" text-anchor="middle" class="title">Direction Field for dy/dx = x + y</text>
+  <!-- Grid lines -->
+  <line x1="50" y1="50" x2="50" y2="170" stroke="#ccc" stroke-width="1"/>
+  <line x1="50" y1="170" x2="350" y2="170" stroke="#ccc" stroke-width="1"/>
+  <!-- Axes -->
+  <line x1="50" y1="170" x2="350" y2="170" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="50" y1="50" x2="50" y2="190" stroke="#2c3e50" stroke-width="2"/>
+  <polygon points="350,170 345,167 345,173" class="arrow"/>
+  <polygon points="50,50 47,55 53,55" class="arrow"/>
+  <!-- Sample slope segments (small lines) -->
+  <line x1="80" y1="155" x2="90" y2="148" stroke="#2980b9" stroke-width="2"/>
+  <line x1="110" y1="140" x2="120" y2="130" stroke="#2980b9" stroke-width="2"/>
+  <line x1="140" y1="125" x2="150" y2="112" stroke="#2980b9" stroke-width="2"/>
+  <line x1="170" y1="110" x2="180" y2="95" stroke="#2980b9" stroke-width="2"/>
+  <line x1="200" y1="95" x2="210" y2="78" stroke="#2980b9" stroke-width="2"/>
+  <line x1="230" y1="80" x2="240" y2="60" stroke="#2980b9" stroke-width="2"/>
+  <line x1="260" y1="65" x2="270" y2="42" stroke="#2980b9" stroke-width="2"/>
+  <line x1="290" y1="50" x2="300" y2="25" stroke="#2980b9" stroke-width="2"/>
+  <!-- Solution curve -->
+  <path d="M80,170 Q140,140 200,95 Q260,50 320,10" class="curve"/>
+  <!-- Tangent at a point -->
+  <line x1="185" y1="115" x2="215" y2="75" class="tangent"/>
+  <circle cx="200" cy="95" r="4" fill="#e74c3c"/>
+  <text x="200" y="90" class="label" text-anchor="middle">(x₀, y₀)</text>
+  <text x="300" y="190" class="label" text-anchor="middle">x</text>
+  <text x="40" y="55" class="label" text-anchor="middle">y</text>
+</svg>
+
+<h3 style="color:#1a5276;">Key Concepts</h3>
+<ul style="background:#f9f9f9; padding:1em 1.5em; border-radius:8px; line-height:1.8;">
+  <li><strong>Differential Equation (DE):</strong> An equation involving derivatives of a function.</li>
+  <li><strong>Order:</strong> The highest derivative present (e.g., first order if it contains dy/dx).</li>
+  <li><strong>General Solution:</strong> Family of curves satisfying the DE, includes an arbitrary constant.</li>
+  <li><strong>Particular Solution:</strong> Obtained by using an initial condition to find the constant.</li>
+  <li><strong>Separation of Variables:</strong> Rearranging so each variable appears on one side.</li>
+</ul>
+
+<h3 style="color:#1a5276;">Nigerian Examples</h3>
+<div style="background:#eaf2f8; padding:1em; border-radius:8px; margin:0.5em 0;">
+  <p><strong>Example 1 (Population Growth in Lagos):</strong> The rate of population growth of a suburb is proportional to its current population. If the population doubles in 10 years, find the population after 20 years, given initial population \(P_0\).</p>
+  <p style="font-style:italic;">Solution: \(\frac{dP}{dt}=kP \Rightarrow P=P_0 e^{kt}\). Using \(P(10)=2P_0\) gives \(k=\frac{\ln 2}{10}\). After 20 years: \(P=4P_0\).</p>
+</div>
+<div style="background:#eaf2f8; padding:1em; border-radius:8px; margin:0.5em 0;">
+  <p><strong>Example 2 (Cooling of Akara Oil):</strong> A pot of oil cools from 200°C to 150°C in 5 minutes in a room at 30°C. Using Newton's law of cooling, find the temperature after 10 minutes.</p>
+  <p style="font-style:italic;">Solution: \(\frac{dT}{dt}=-k(T-30) \Rightarrow T=30+170e^{-kt}\). Using \(T(5)=150\) gives \(k=\frac{1}{5}\ln\frac{170}{120}\). Then \(T(10)=30+170e^{-10k} \approx 30+170\left(\frac{120}{170}\right)^2 = 30+120\cdot\frac{120}{170} \approx 114.7^\circ\text{C}\).</p>
+</div>
+
+<div style="background:#fef9e7; border-left:5px solid #f39c12; padding:0.8em 1.2em; margin:1em 0;">
+  <p><strong>💡 Fun Fact:</strong> Differential equations are used to model the spread of diseases like malaria in Nigeria — the SIR model (Susceptible, Infected, Recovered) is a system of ODEs!</p>
+</div>
+
+<h3 style="color:#1a5276;">Practice Questions</h3>
+<ol style="background:#f9f9f9; padding:1em 1.5em 1em 2.5em; border-radius:8px; line-height:1.8;">
+  <li>Solve \(\frac{dy}{dx} = 3x^2 + 2x\) given that \(y=5\) when \(x=0\).</li>
+  <li>Find the general solution of \(\frac{dy}{dx} = \frac{y}{x}\) for \(x>0\).</li>
+  <li>A radioactive substance decays at a rate proportional to its mass. If half of it decays in 100 years, what percentage remains after 200 years?</li>
+</ol>
+
+<div style="background:#d5f5e3; padding:0.8em 1.2em; border-radius:8px; margin-top:1em;">
+  <p><strong>Answers:</strong></p>
+  <ol style="margin:0; padding-left:1.5em;">
+    <li>\(y = x^3 + x^2 + 5\)</li>
+    <li>\(y = Cx\) (where \(C\) is constant)</li>
+    <li>25% remains (since half-life is 100 years, after two half-lives: \(\frac{1}{4}\))</li>
+  </ol>
+</div>

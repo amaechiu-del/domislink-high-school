@@ -1,0 +1,117 @@
+<div class="lesson-content">
+  <h2>Chemical Bonding: The Glue of Matter</h2>
+  
+  <!-- Animated SVG Diagram -->
+  <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto 20px; max-width: 100%;">
+    <defs>
+      <radialGradient id="atom1" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
+      </radialGradient>
+      <radialGradient id="atom2" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" style="stop-color:#74b9ff;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+      </radialGradient>
+      <radialGradient id="shared" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" style="stop-color:#ffeaa7;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#fdcb6e;stop-opacity:1" />
+      </radialGradient>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="600" height="400" fill="#f0f4f8" rx="10"/>
+    
+    <!-- Title -->
+    <text x="300" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#2d3436">Covalent Bonding in a Water Molecule</text>
+    
+    <!-- Oxygen atom -->
+    <circle cx="200" cy="220" r="50" fill="url(#atom1)" stroke="#e74c3c" stroke-width="2">
+      <animate attributeName="r" values="50;55;50" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <text x="200" y="225" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="white">O</text>
+    
+    <!-- Hydrogen atom (left) -->
+    <circle cx="80" cy="280" r="35" fill="url(#atom2)" stroke="#0984e3" stroke-width="2">
+      <animate attributeName="cx" values="80;90;80" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <text x="80" y="285" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="white">H</text>
+    
+    <!-- Hydrogen atom (right) -->
+    <circle cx="320" cy="280" r="35" fill="url(#atom2)" stroke="#0984e3" stroke-width="2">
+      <animate attributeName="cx" values="320;330;320" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <text x="320" y="285" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="white">H</text>
+    
+    <!-- Bond lines with electrons -->
+    <line x1="115" y1="275" x2="165" y2="235" stroke="#2d3436" stroke-width="3" stroke-dasharray="5,3">
+      <animate attributeName="stroke-dashoffset" values="0;16;0" dur="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="235" y1="235" x2="285" y2="275" stroke="#2d3436" stroke-width="3" stroke-dasharray="5,3">
+      <animate attributeName="stroke-dashoffset" values="0;16;0" dur="1s" repeatCount="indefinite"/>
+    </line>
+    
+    <!-- Shared electron pairs -->
+    <circle cx="140" cy="250" r="8" fill="url(#shared)">
+      <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="260" cy="250" r="8" fill="url(#shared)">
+      <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Lone pairs on oxygen -->
+    <circle cx="180" cy="170" r="6" fill="#ffeaa7" opacity="0.8"/>
+    <circle cx="220" cy="170" r="6" fill="#ffeaa7" opacity="0.8"/>
+    
+    <!-- Labels -->
+    <text x="300" y="360" text-anchor="middle" font-family="Arial" font-size="14" fill="#636e72">Covalent bonds: Shared electron pairs between O and H</text>
+    <text x="300" y="380" text-anchor="middle" font-family="Arial" font-size="12" fill="#b2bec3">(Animation shows electron sharing and atomic vibration)</text>
+  </svg>
+  
+  <!-- Bullet-point explanations -->
+  <div style="background: #dfe6e9; padding: 15px; border-radius: 8px; margin: 20px 0;">
+    <h3 style="color: #2d3436; margin-top: 0;">Key Concepts of Chemical Bonding</h3>
+    <ul style="list-style-type: disc; padding-left: 20px; color: #2d3436;">
+      <li><strong>Chemical bond</strong> = the force that holds atoms together in a compound.</li>
+      <li><strong>Covalent bonding</strong> = atoms share electrons to achieve a full outer shell (e.g., H₂O, O₂).</li>
+      <li><strong>Ionic bonding</strong> = transfer of electrons from a metal to a non-metal, forming oppositely charged ions (e.g., NaCl).</li>
+      <li><strong>Metallic bonding</strong> = a "sea of delocalized electrons" holds positive metal ions together.</li>
+      <li>Atoms bond to become more stable (like noble gases with 8 valence electrons — the octet rule).</li>
+    </ul>
+  </div>
+  
+  <!-- Nigerian examples -->
+  <div style="background: #fdcb6e; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 5px solid #e17055;">
+    <h3 style="color: #2d3436; margin-top: 0;">🇳🇬 Nigerian Examples</h3>
+    <p><strong>1. Table salt (NaCl) from the Niger Delta salt pans:</strong> Sodium (metal) transfers an electron to chlorine (non-metal), forming Na⁺ and Cl⁻ ions — an ionic bond. This is why salt dissolves in water and conducts electricity when molten.</p>
+    <p><strong>2. Cooking gas (LPG — propane/butane):</strong> Carbon and hydrogen atoms share electrons in covalent bonds. This is why gas burns easily — the bonds break and release energy used for cooking in Nigerian homes.</p>
+  </div>
+  
+  <!-- Fun Fact block -->
+  <div style="background: #a29bfe; padding: 15px; border-radius: 8px; margin: 20px 0; color: white;">
+    <h3 style="margin-top: 0;">💡 Fun Fact</h3>
+    <p>Did you know that the <strong>diamond</strong> found in some Nigerian states (like Kaduna) is pure carbon held together by strong <strong>covalent bonds</strong> in a giant network? That’s why diamond is the hardest natural substance on Earth! Meanwhile, <strong>graphite</strong> (also pure carbon) is soft because its layers are held by weak forces — that's why pencil lead writes on paper!</p>
+  </div>
+  
+  <!-- Practice questions -->
+  <div style="background: #55efc4; padding: 15px; border-radius: 8px; margin: 20px 0;">
+    <h3 style="color: #2d3436; margin-top: 0;">📝 Practice Questions</h3>
+    
+    <p><strong>Q1.</strong> What type of bond is formed when two chlorine atoms combine to form a chlorine molecule (Cl₂)?</p>
+    <details style="margin-bottom: 10px;">
+      <summary style="cursor: pointer; color: #0984e3;">Show Answer</summary>
+      <p style="background: #dfe6e9; padding: 8px; border-radius: 5px;"><strong>Answer:</strong> A covalent bond (specifically a single covalent bond) — each chlorine atom shares one electron to complete its octet.</p>
+    </details>
+    
+    <p><strong>Q2.</strong> In the formation of sodium chloride (NaCl), which atom loses an electron and which atom gains an electron?</p>
+    <details style="margin-bottom: 10px;">
+      <summary style="cursor: pointer; color: #0984e3;">Show Answer</summary>
+      <p style="background: #dfe6e9; padding: 8px; border-radius: 5px;"><strong>Answer:</strong> Sodium (Na) loses one electron to become Na⁺ (positive ion). Chlorine (Cl) gains that electron to become Cl⁻ (negative ion). The opposite charges attract — this is an ionic bond.</p>
+    </details>
+    
+    <p><strong>Q3.</strong> Why does copper metal conduct electricity, but copper(II) oxide (CuO) does not?</p>
+    <details style="margin-bottom: 10px;">
+      <summary style="cursor: pointer; color: #0984e3;">Show Answer</summary>
+      <p style="background: #dfe6e9; padding: 8px; border-radius: 5px;"><strong>Answer:</strong> Copper metal has metallic bonding with a "sea of delocalized electrons" that can move freely and carry electric current. In CuO, the copper and oxygen are held by ionic bonds — electrons are tightly held, so no free electrons exist to conduct electricity.</p>
+    </details>
+  </div>
+</div>

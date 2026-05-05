@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200" width="100%" height="auto">
+  <rect width="500" height="200" fill="#f0f8ff" rx="10"/>
+  <!-- Matrix bracket left -->
+  <path d="M 80 30 L 60 30 L 60 170 L 80 170" fill="none" stroke="#2c3e50" stroke-width="3"/>
+  <!-- Matrix bracket right -->
+  <path d="M 420 30 L 440 30 L 440 170 L 420 170" fill="none" stroke="#2c3e50" stroke-width="3"/>
+  <!-- Grid lines for 3x3 matrix -->
+  <line x1="160" y1="30" x2="160" y2="170" stroke="#3498db" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="260" y1="30" x2="260" y2="170" stroke="#3498db" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="360" y1="30" x2="360" y2="170" stroke="#3498db" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="80" y1="80" x2="440" y2="80" stroke="#3498db" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="80" y1="130" x2="440" y2="130" stroke="#3498db" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <!-- Matrix entries -->
+  <text x="120" y="60" text-anchor="middle" font-size="18" fill="#2c3e50" font-weight="bold">a₁₁</text>
+  <text x="210" y="60" text-anchor="middle" font-size="18" fill="#2c3e50" font-weight="bold">a₁₂</text>
+  <text x="310" y="60" text-anchor="middle" font-size="18" fill="#2c3e50" font-weight="bold">a₁₃</text>
+  <text x="410" y="60" text-anchor="middle" font-size="18" fill="#2c3e50" font-weight="bold">a₁₄</text>
+  <text x="120" y="110" text-anchor="middle" font-size="18" fill="#2c3e50" font-weight="bold">a₂₁</text>
+  <text x="210" y="110" text-anchor="middle" font-size="18" fill="#2c3e50" font-weight="bold">a₂₂</text>
+  <text x="310" y="110" text-anchor="middle" font-size="18" fill="#2c3e50" font-weight="bold">a₂₃</text>
+  <text x="410" y="110" text-anchor="middle" font-size="18" fill="#2c3e50" font-weight="bold">a₂₄</text>
+  <text x="120" y="160" text-anchor="middle" font-size="18" fill="#2c3e50" font-weight="bold">a₃₁</text>
+  <text x="210" y="160" text-anchor="middle" font-size="18" fill="#2c3e50" font-weight="bold">a₃₂</text>
+  <text x="310" y="160" text-anchor="middle" font-size="18" fill="#2c3e50" font-weight="bold">a₃₃</text>
+  <text x="410" y="160" text-anchor="middle" font-size="18" fill="#2c3e50" font-weight="bold">a₃₄</text>
+  <!-- Animated highlight of element a₂₂ -->
+  <rect x="185" y="90" width="50" height="40" fill="none" stroke="#e74c3c" stroke-width="3" rx="5">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Label -->
+  <text x="250" y="25" text-anchor="middle" font-size="14" fill="#7f8c8d">A 3×4 Matrix (3 rows, 4 columns)</text>
+</svg>
+
+<h2>What is a Matrix?</h2>
+<p>A <strong>matrix</strong> is a rectangular arrangement of numbers, symbols, or expressions, arranged in <strong>rows</strong> and <strong>columns</strong>. Matrices are used to solve systems of equations, transform shapes in computer graphics, and manage data in economics and engineering.</p>
+
+<h2>Key Features of Matrices</h2>
+<ul>
+  <li><strong>Order (or dimension)</strong>: Written as <em>rows × columns</em>. For example, a 2×3 matrix has 2 rows and 3 columns.</li>
+  <li><strong>Elements</strong>: Each number inside a matrix is called an <em>element</em>, identified by its row and column position (e.g., <em>a₂₃</em> means row 2, column 3).</li>
+  <li><strong>Square matrix</strong>: Same number of rows and columns (e.g., 3×3).</li>
+  <li><strong>Zero matrix</strong>: All elements are zero.</li>
+  <li><strong>Identity matrix</strong>: A square matrix with 1s on the main diagonal and 0s elsewhere.</li>
+</ul>
+
+<h2>Nigerian Examples</h2>
+<div style="background:#f9f9f9; padding:10px; border-left:4px solid #008751; margin:10px 0;">
+  <p><strong>Example 1: Student Scores</strong><br>
+  The matrix below shows scores of three SSS2 students (Chidi, Amina, and Emeka) in Mathematics, English, and Physics.</p>
+  <pre style="font-size:16px; font-family:monospace;">
+          Math  Eng  Phy
+  Chidi  [ 85   72   90 ]
+  Amina  [ 78   88   84 ]
+  Emeka  [ 92   76   81 ]
+  </pre>
+  <p>This is a <strong>3×3 square matrix</strong>. The element at row 2, column 1 (Amina’s Math score) is <strong>78</strong>.</p>
+</div>
+
+<div style="background:#f9f9f9; padding:10px; border-left:4px solid #008751; margin:10px 0;">
+  <p><strong>Example 2: Market Prices</strong><br>
+  A trader in Lagos records prices (in ₦) of yam, rice, and beans at two different markets (Mile 12 and Ketu).</p>
+  <pre style="font-size:16px; font-family:monospace;">
+          Yam  Rice  Beans
+  Mile12  [ 500  800   400 ]
+  Ketu    [ 550  750   450 ]
+  </pre>
+  <p>This is a <strong>2×3 matrix</strong>. The element at row 1, column 2 (rice price at Mile 12) is <strong>800</strong>.</p>
+</div>
+
+<div style="background:#fff3cd; padding:10px; border-radius:8px; margin:15px 0; border:1px solid #ffeeba;">
+  <p><strong>💡 Fun Fact:</strong> The word "matrix" comes from the Latin word for "womb" — because it was seen as a place where numbers are generated! In Nigeria, matrices are used by the National Bureau of Statistics to analyze census data and economic trends.</p>
+</div>
+
+<h2>Practice Questions</h2>
+<ol>
+  <li>
+    <p><strong>Question 1:</strong> Given matrix \( B = \begin{bmatrix} 4 & 7 & 2 \\ 1 & 0 & 9 \end{bmatrix} \), what is its order? Identify the element \( b_{12} \).</p>
+    <details>
+      <summary><strong>Answer</strong></summary>
+      <p>Order = 2×3 (2 rows, 3 columns). \( b_{12} \) = 7 (row 1, column 2).</p>
+    </details>
+  </li>
+  <li>
+    <p><strong>Question 2:</strong> A 3×2 matrix has how many elements in total?</p>
+    <details>
+      <summary><strong>Answer</strong></summary>
+      <p>3 rows × 2 columns = 6 elements.</p>
+    </details>
+  </li>
+  <li>
+    <p><strong>Question 3:</strong> Write down the 2×2 identity matrix.</p>
+    <details>
+      <summary><strong>Answer</strong></summary>
+      <p>\( I_2 = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} \)</p>
+    </details>
+  </li>
+</ol>

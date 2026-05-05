@@ -1,0 +1,106 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto 20px;max-width:100%;background:#f0f4f8;border-radius:12px;overflow:visible;">
+  <defs>
+    <linearGradient id="legGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2c3e50"/>
+      <stop offset="100%" stop-color="#3498db"/>
+    </linearGradient>
+    <linearGradient id="exeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2c3e50"/>
+      <stop offset="100%" stop-color="#e74c3c"/>
+    </linearGradient>
+    <linearGradient id="judGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2c3e50"/>
+      <stop offset="100%" stop-color="#27ae60"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#2c3e50">Separation of Powers</text>
+
+  <!-- Legislative - Left -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-8;0,0" dur="3s" repeatCount="indefinite"/>
+    <rect x="40" y="100" width="200" height="180" rx="15" fill="url(#legGrad)" opacity="0.95"/>
+    <text x="140" y="145" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="white">🏛️ LEGISLATIVE</text>
+    <text x="140" y="175" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#ecf0f1">Makes Laws</text>
+    <text x="140" y="200" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#bdc3c7">National Assembly</text>
+    <text x="140" y="220" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#bdc3c7">Senate + House of Reps</text>
+    <text x="140" y="250" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#95a5a6">✓ Approves budget</text>
+    <text x="140" y="268" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#95a5a6">✓ Confirms appointments</text>
+  </g>
+
+  <!-- Executive - Center -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-8;0,0" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+    <rect x="300" y="100" width="200" height="180" rx="15" fill="url(#exeGrad)" opacity="0.95"/>
+    <text x="400" y="145" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="white">🏛️ EXECUTIVE</text>
+    <text x="400" y="175" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#ecf0f1">Implements Laws</text>
+    <text x="400" y="200" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#bdc3c7">President + Cabinet</text>
+    <text x="400" y="220" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#bdc3c7">Ministries &amp; Agencies</text>
+    <text x="400" y="250" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#95a5a6">✓ Enforces laws</text>
+    <text x="400" y="268" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#95a5a6">✓ Conducts foreign affairs</text>
+  </g>
+
+  <!-- Judicial - Right -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-8;0,0" dur="3s" begin="1s" repeatCount="indefinite"/>
+    <rect x="560" y="100" width="200" height="180" rx="15" fill="url(#judGrad)" opacity="0.95"/>
+    <text x="660" y="145" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="white">🏛️ JUDICIAL</text>
+    <text x="660" y="175" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#ecf0f1">Interprets Laws</text>
+    <text x="660" y="200" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#bdc3c7">Supreme Court</text>
+    <text x="660" y="220" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#bdc3c7">Appeal &amp; High Courts</text>
+    <text x="660" y="250" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#95a5a6">✓ Settles disputes</text>
+    <text x="660" y="268" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#95a5a6">✓ Judicial review</text>
+  </g>
+
+  <!-- Connecting arrows -->
+  <g stroke="#7f8c8d" stroke-width="2" fill="none">
+    <!-- Legislative to Executive -->
+    <line x1="240" y1="190" x2="300" y2="190" stroke-dasharray="6,4">
+      <animate attributeName="stroke-dashoffset" values="0;20" dur="1.5s" repeatCount="indefinite"/>
+    </line>
+    <!-- Executive to Judicial -->
+    <line x1="500" y1="190" x2="560" y2="190" stroke-dasharray="6,4">
+      <animate attributeName="stroke-dashoffset" values="0;20" dur="1.5s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Checks labels -->
+  <text x="270" y="180" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#7f8c8d">Checks</text>
+  <text x="530" y="180" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#7f8c8d">Checks</text>
+
+  <!-- Bottom note -->
+  <text x="400" y="340" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#7f8c8d" font-style="italic">Each arm operates independently but balances the others</text>
+</svg>
+
+<h3 style="color:#2c3e50;margin-top:0;">Key Principles</h3>
+<ul style="line-height:1.8;padding-left:20px;">
+  <li><strong>Separation of powers</strong> divides government into three distinct branches to prevent concentration of power.</li>
+  <li>The <strong>Legislature</strong> (National Assembly) makes laws, controls public funds, and oversees the executive.</li>
+  <li>The <strong>Executive</strong> (President and Cabinet) implements laws, conducts policy, and manages day-to-day governance.</li>
+  <li>The <strong>Judiciary</strong> (courts) interprets laws, settles disputes, and can declare laws unconstitutional.</li>
+  <li><strong>Checks and balances</strong> ensure each branch can limit the powers of the others—e.g., veto power, judicial review, impeachment.</li>
+</ul>
+
+<h3 style="color:#2c3e50;">Nigerian Examples</h3>
+<div style="background:#eaf2f8;padding:12px 18px;border-radius:8px;margin:10px 0;">
+  <p><strong>🇳🇬 Example 1 – Budget Approval:</strong> The Nigerian President (Executive) proposes the annual budget, but the National Assembly (Legislature) must debate, amend, and approve it before funds can be spent. In 2023, the National Assembly increased the proposed budget from ₦20.5 trillion to ₦21.8 trillion, demonstrating legislative power over finances.</p>
+  <p><strong>🇳🇬 Example 2 – Supreme Court Ruling on 2023 Elections:</strong> After the 2023 presidential election, the Supreme Court (Judiciary) reviewed petitions against the election outcome. It upheld President Tinubu's victory, showing judicial independence in interpreting electoral laws and settling disputes between executive and legislative actors.</p>
+</div>
+
+<div style="background:#fff9e6;border-left:5px solid #f39c12;padding:12px 18px;margin:15px 0;border-radius:5px;">
+  <p style="margin:0;font-weight:bold;color:#e67e22;">🎉 Fun Fact!</p>
+  <p style="margin:5px 0 0;">Nigeria’s 1999 Constitution borrowed the separation of powers model from the United States. However, Nigeria uniquely combines a presidential system with federalism, giving states their own executive and legislative branches—creating <em>three levels</em> of separated powers!</p>
+</div>
+
+<h3 style="color:#2c3e50;">Practice Questions</h3>
+<ol style="line-height:2;padding-left:20px;">
+  <li><strong>What is the primary function of the Executive branch in Nigeria?</strong><br>
+  <span style="color:#27ae60;">Answer:</span> To implement and enforce laws made by the Legislature, conduct foreign policy, and oversee government ministries and agencies.</li>
+
+  <li><strong>Name one way the Nigerian Legislature can check the power of the Executive.</strong><br>
+  <span style="color:#27ae60;">Answer:</span> The National Assembly can reject or amend the President’s budget proposal, confirm or reject ministerial appointments, or impeach the President for gross misconduct.</li>
+
+  <li><strong>Why is an independent Judiciary important for separation of powers?</strong><br>
+  <span style="color:#27ae60;">Answer:</span> An independent Judiciary can impartially interpret laws, declare executive actions or legislative acts unconstitutional, and ensure no branch exceeds its constitutional limits—protecting citizens' rights.</li>
+</ol>

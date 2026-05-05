@@ -1,0 +1,112 @@
+<svg viewBox="0 0 500 450" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .axis { stroke: #333; stroke-width: 2; }
+    .grid { stroke: #ddd; stroke-width: 0.5; }
+    .point { fill: #e63946; }
+    .label { font-family: Arial; font-size: 14px; fill: #333; }
+    .title { font-family: Arial; font-size: 16px; font-weight: bold; fill: #1d3557; }
+    .line { stroke: #457b9d; stroke-width: 2.5; }
+    .animated-dot { fill: #e63946; animation: bounce 2s infinite; }
+    @keyframes bounce {
+      0%, 100% { r: 6; }
+      50% { r: 10; }
+    }
+    .coordinate { font-family: monospace; font-size: 12px; fill: #1d3557; }
+  </style>
+
+  <!-- Grid lines -->
+  <line x1="50" y1="50" x2="50" y2="400" class="grid"/>
+  <line x1="100" y1="50" x2="100" y2="400" class="grid"/>
+  <line x1="150" y1="50" x2="150" y2="400" class="grid"/>
+  <line x1="200" y1="50" x2="200" y2="400" class="grid"/>
+  <line x1="250" y1="50" x2="250" y2="400" class="grid"/>
+  <line x1="300" y1="50" x2="300" y2="400" class="grid"/>
+  <line x1="350" y1="50" x2="350" y2="400" class="grid"/>
+  <line x1="400" y1="50" x2="400" y2="400" class="grid"/>
+  <line x1="50" y1="50" x2="450" y2="50" class="grid"/>
+  <line x1="50" y1="100" x2="450" y2="100" class="grid"/>
+  <line x1="50" y1="150" x2="450" y2="150" class="grid"/>
+  <line x1="50" y1="200" x2="450" y2="200" class="grid"/>
+  <line x1="50" y1="250" x2="450" y2="250" class="grid"/>
+  <line x1="50" y1="300" x2="450" y2="300" class="grid"/>
+  <line x1="50" y1="350" x2="450" y2="350" class="grid"/>
+
+  <!-- Axes -->
+  <line x1="50" y1="400" x2="450" y2="400" class="axis"/> <!-- x-axis -->
+  <line x1="50" y1="50" x2="50" y2="400" class="axis"/>   <!-- y-axis -->
+
+  <!-- Axis labels -->
+  <text x="440" y="415" class="label">x</text>
+  <text x="30" y="55" class="label">y</text>
+  <text x="40" y="405" class="label">O</text>
+
+  <!-- Tick marks -->
+  <text x="95" y="415" class="coordinate">1</text>
+  <text x="145" y="415" class="coordinate">2</text>
+  <text x="195" y="415" class="coordinate">3</text>
+  <text x="245" y="415" class="coordinate">4</text>
+  <text x="295" y="415" class="coordinate">5</text>
+  <text x="345" y="415" class="coordinate">6</text>
+  <text x="395" y="415" class="coordinate">7</text>
+
+  <text x="30" y="105" class="coordinate">6</text>
+  <text x="30" y="155" class="coordinate">5</text>
+  <text x="30" y="205" class="coordinate">4</text>
+  <text x="30" y="255" class="coordinate">3</text>
+  <text x="30" y="305" class="coordinate">2</text>
+  <text x="30" y="355" class="coordinate">1</text>
+
+  <!-- Line y = 2x + 1 -->
+  <line x1="75" y1="350" x2="400" y2="100" class="line"/>
+
+  <!-- Animated point at (2, 5) -->
+  <circle cx="150" cy="250" class="animated-dot"/>
+  <text x="155" y="245" class="coordinate" font-weight="bold">(2, 5)</text>
+
+  <!-- Point at (1, 3) -->
+  <circle cx="100" cy="300" r="5" class="point"/>
+  <text x="105" y="295" class="coordinate">(1, 3)</text>
+
+  <!-- Point at (3, 7) -->
+  <circle cx="200" cy="200" r="5" class="point"/>
+  <text x="205" y="195" class="coordinate">(3, 7)</text>
+
+  <!-- Equation label -->
+  <text x="300" y="80" class="title">y = 2x + 1</text>
+</svg>
+
+<h3>Key Concepts in Coordinate Geometry</h3>
+<ul>
+  <li><strong>Cartesian Plane:</strong> Two perpendicular axes (x-axis horizontal, y-axis vertical) intersect at the origin (0,0).</li>
+  <li><strong>Coordinates:</strong> Points are written as (x, y) — first the horizontal position, then the vertical position.</li>
+  <li><strong>Quadrants:</strong> The axes divide the plane into four quadrants (I: x>0, y>0; II: x<0, y>0; III: x<0, y<0; IV: x>0, y<0).</li>
+  <li><strong>Distance Formula:</strong> Distance between two points (x₁, y₁) and (x₂, y₂) = √[(x₂ - x₁)² + (y₂ - y₁)²]</li>
+  <li><strong>Midpoint Formula:</strong> Midpoint = ((x₁ + x₂)/2, (y₁ + y₂)/2)</li>
+  <li><strong>Gradient (Slope):</strong> m = (y₂ - y₁)/(x₂ - x₁). Positive slope = line rises; negative slope = line falls.</li>
+</ul>
+
+<h3>Nigerian Example 1: Distance Between Two Cities</h3>
+<p>On a map of Nigeria, Lagos is at point L(2, 3) and Abuja is at point A(7, 15). Find the straight-line distance between them (units in km).</p>
+<p><strong>Solution:</strong> Distance = √[(7 - 2)² + (15 - 3)²] = √[5² + 12²] = √(25 + 144) = √169 = <strong>13 km</strong></p>
+
+<h3>Nigerian Example 2: Midpoint of a Road</h3>
+<p>A straight road connects Ibadan at I(1, 4) and Kano at K(9, 10). A petrol station is built exactly halfway. Find its coordinates.</p>
+<p><strong>Solution:</strong> Midpoint = ((1 + 9)/2, (4 + 10)/2) = (10/2, 14/2) = <strong>(5, 7)</strong></p>
+
+<div style="background: #f0f8ff; border-left: 4px solid #1d3557; padding: 10px; margin: 15px 0;">
+  <strong>💡 Fun Fact:</strong> The coordinate system is named after French mathematician <strong>René Descartes</strong>, who supposedly thought of it while watching a fly crawl across his ceiling tiles! In Nigeria, coordinate geometry helps surveyors map land boundaries and plan new roads.
+</div>
+
+<h3>Practice Questions</h3>
+<ol>
+  <li>Find the gradient of the line passing through points P(2, 5) and Q(6, 13).</li>
+  <li>Calculate the distance between points A(-3, 4) and B(5, -2).</li>
+  <li>If the midpoint of a segment joining X(4, y) and Y(10, 8) is (7, 6), find the value of y.</li>
+</ol>
+
+<h4>Answers</h4>
+<ol>
+  <li>m = (13 - 5)/(6 - 2) = 8/4 = <strong>2</strong></li>
+  <li>Distance = √[(5 - (-3))² + (-2 - 4)²] = √[8² + (-6)²] = √(64 + 36) = √100 = <strong>10 units</strong></li>
+  <li>Midpoint y-coordinate: (y + 8)/2 = 6 → y + 8 = 12 → y = <strong>4</strong></li>
+</ol>

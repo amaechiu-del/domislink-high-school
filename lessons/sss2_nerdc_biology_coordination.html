@@ -1,0 +1,94 @@
+<div class="lesson">
+  <h2>Coordination in Biology (SSS2 NERDC Syllabus)</h2>
+
+  <!-- Animated SVG Diagram -->
+  <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:500px; height:auto; display:block; margin:0 auto;">
+    <title>Neuron and Synaptic Transmission</title>
+    <style>
+      .neuron { fill: #e0f0ff; stroke: #2c6fb0; stroke-width: 2; }
+      .synapse { fill: #ffd966; stroke: #b8860b; stroke-width: 1.5; }
+      .arrow { fill: none; stroke: #d32f2f; stroke-width: 2; marker-end: url(#arrowhead); }
+      .label { font-family: Arial, sans-serif; font-size: 12px; fill: #333; }
+      @keyframes pulse {
+        0% { opacity: 0.3; }
+        50% { opacity: 1; }
+        100% { opacity: 0.3; }
+      }
+      .pulse { animation: pulse 1.5s infinite; }
+    </style>
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#d32f2f" />
+      </marker>
+    </defs>
+    <!-- Neuron 1 (Pre-synaptic) -->
+    <g>
+      <path class="neuron" d="M 50,150 Q 80,100 120,120 Q 160,140 180,110 L 200,80 L 220,100 L 200,130 Q 180,160 150,150 Q 120,140 100,170 Z" />
+      <line x1="200" y1="105" x2="240" y2="105" stroke="#2c6fb0" stroke-width="3" />
+      <circle cx="240" cy="105" r="6" fill="#ffd966" stroke="#b8860b" stroke-width="1.5" />
+      <!-- Neurotransmitter vesicles -->
+      <circle cx="250" cy="95" r="3" fill="#d32f2f" class="pulse" />
+      <circle cx="255" cy="110" r="3" fill="#d32f2f" class="pulse" style="animation-delay:0.3s;" />
+      <circle cx="260" cy="100" r="3" fill="#d32f2f" class="pulse" style="animation-delay:0.6s;" />
+    </g>
+    <!-- Synaptic cleft -->
+    <line x1="265" y1="95" x2="280" y2="95" stroke="#b8860b" stroke-width="1" stroke-dasharray="4,2" />
+    <line x1="265" y1="105" x2="280" y2="105" stroke="#b8860b" stroke-width="1" stroke-dasharray="4,2" />
+    <line x1="265" y1="115" x2="280" y2="115" stroke="#b8860b" stroke-width="1" stroke-dasharray="4,2" />
+    <!-- Neuron 2 (Post-synaptic) -->
+    <g>
+      <path class="neuron" d="M 300,100 Q 330,80 370,90 Q 410,100 430,120 L 450,150 L 420,170 L 400,140 Q 380,110 350,120 Q 320,130 300,120 Z" />
+      <line x1="280" y1="105" x2="300" y2="105" stroke="#2c6fb0" stroke-width="3" />
+      <!-- Receptors -->
+      <rect x="295" y="98" width="6" height="14" rx="2" fill="#4caf50" />
+    </g>
+    <!-- Arrow showing direction -->
+    <path class="arrow" d="M 230,140 Q 250,180 300,160" />
+    <text x="250" y="195" class="label" text-anchor="middle">Direction of impulse</text>
+    <!-- Labels -->
+    <text x="100" y="60" class="label" text-anchor="middle">Pre-synaptic</text>
+    <text x="100" y="75" class="label" text-anchor="middle">Neuron</text>
+    <text x="390" y="60" class="label" text-anchor="middle">Post-synaptic</text>
+    <text x="390" y="75" class="label" text-anchor="middle">Neuron</text>
+    <text x="260" y="135" class="label" text-anchor="middle">Synaptic</text>
+    <text x="260" y="148" class="label" text-anchor="middle">Cleft</text>
+  </svg>
+
+  <!-- Bullet-point Explanations -->
+  <h3>Key Concepts</h3>
+  <ul>
+    <li><strong>Coordination</strong> is the process by which different parts of the body work together to respond to stimuli. It involves the <em>nervous system</em> and the <em>endocrine system</em>.</li>
+    <li><strong>Neurons</strong> (nerve cells) transmit electrical impulses. The diagram above shows a synapse – the gap between two neurons where chemical messengers (neurotransmitters) carry the signal.</li>
+    <li><strong>Central Nervous System (CNS)</strong>: Brain and spinal cord – processes information and sends out commands.</li>
+    <li><strong>Peripheral Nervous System (PNS)</strong>: Nerves connecting the CNS to the rest of the body – carries sensory and motor signals.</li>
+    <li><strong>Reflex actions</strong> are rapid, automatic responses (e.g., pulling hand from a hot surface) that bypass the brain for speed.</li>
+  </ul>
+
+  <!-- Two Nigerian Examples -->
+  <h3>Nigerian Examples</h3>
+  <div style="background:#f5f5f5; padding:10px; border-radius:8px;">
+    <p><strong>1. The "NEPA" Reflex:</strong> When electricity suddenly goes off (common in many Nigerian homes), you automatically reach for your phone torch or a candle. This is a coordinated response – your eyes detect darkness, nerves send signals to your brain, and your brain commands your hand to move.</p>
+    <p><strong>2. Avoiding a Pothole While Driving:</strong> A driver in Lagos sees a pothole ahead. The eyes (sensory organs) send signals via the PNS to the brain. The brain processes this and sends motor signals to the hands and feet to steer and brake – a perfect example of voluntary coordination.</p>
+  </div>
+
+  <!-- Fun Fact Block -->
+  <div style="background:#fff3cd; border-left:5px solid #ffc107; padding:10px; margin:15px 0;">
+    <strong>🧠 Fun Fact:</strong> The human brain contains about 86 billion neurons! When you learn a new skill (like playing <em>ayo</em> or dancing <em>shaku shaku</em>), your neurons form new connections – a process called <strong>synaptic plasticity</strong>.
+  </div>
+
+  <!-- Three Practice Questions -->
+  <h3>Practice Questions</h3>
+  <ol>
+    <li><strong>Question 1:</strong> Name the two main systems involved in coordination in the human body.</li>
+    <li><strong>Question 2:</strong> In the SVG diagram, what is the name of the gap between two neurons where chemical transmission occurs?</li>
+    <li><strong>Question 3:</strong> Give one reason why reflex actions are faster than voluntary actions.</li>
+  </ol>
+
+  <!-- Answers -->
+  <h4>Answers</h4>
+  <ul style="list-style-type: none; padding-left: 0;">
+    <li><strong>Answer 1:</strong> The nervous system and the endocrine system.</li>
+    <li><strong>Answer 2:</strong> The synaptic cleft (or synapse).</li>
+    <li><strong>Answer 3:</strong> Reflex actions bypass the brain and involve only the spinal cord, so the signal travels a shorter distance and does not require conscious processing.</li>
+  </ul>
+</div>

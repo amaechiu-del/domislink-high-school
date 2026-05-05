@@ -1,0 +1,107 @@
+<svg viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto;max-width:100%;background:#f0f8ff;border-radius:12px;border:2px solid #2e7d32;">
+  <defs>
+    <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#b71c1c"/>
+    </linearGradient>
+    <linearGradient id="lungGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffab91"/>
+      <stop offset="100%" stop-color="#e64a19"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Animated pulse rings -->
+  <circle cx="250" cy="150" r="60" fill="none" stroke="#e53935" stroke-width="2" opacity="0.4">
+    <animate attributeName="r" values="60;80;60" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0;0.4" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="250" cy="150" r="60" fill="none" stroke="#e53935" stroke-width="1.5" opacity="0.3">
+    <animate attributeName="r" values="60;90;60" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0;0.3" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Heart -->
+  <path d="M250 120 Q250 95 270 95 Q295 95 295 120 Q295 145 250 170 Q205 145 205 120 Q205 95 230 95 Q250 95 250 120Z" fill="url(#heartGrad)" filter="url(#shadow)">
+    <animate attributeName="transform" type="scale" values="1;1.08;1" dur="0.8s" repeatCount="indefinite" additive="sum"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-3;0,0" dur="0.8s" repeatCount="indefinite" additive="sum"/>
+  </path>
+
+  <!-- Left lung -->
+  <ellipse cx="180" cy="230" rx="45" ry="65" fill="url(#lungGrad)" stroke="#bf360c" stroke-width="2" filter="url(#shadow)">
+    <animate attributeName="rx" values="45;42;45" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="65;60;65" dur="3s" repeatCount="indefinite"/>
+  </ellipse>
+  <!-- Right lung -->
+  <ellipse cx="320" cy="230" rx="45" ry="65" fill="url(#lungGrad)" stroke="#bf360c" stroke-width="2" filter="url(#shadow)">
+    <animate attributeName="rx" values="45;42;45" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="65;60;65" dur="3s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Trachea -->
+  <rect x="240" y="170" width="20" height="40" rx="10" fill="#78909c" stroke="#546e7a" stroke-width="1.5"/>
+  <line x1="240" y1="190" x2="260" y2="190" stroke="#546e7a" stroke-width="1.5"/>
+  <line x1="240" y1="200" x2="260" y2="200" stroke="#546e7a" stroke-width="1.5"/>
+
+  <!-- Bronchi -->
+  <path d="M240 210 Q220 220 200 215" fill="none" stroke="#78909c" stroke-width="6" stroke-linecap="round"/>
+  <path d="M260 210 Q280 220 300 215" fill="none" stroke="#78909c" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Labels -->
+  <text x="250" y="80" text-anchor="middle" font-size="18" font-weight="bold" fill="#1b5e20" font-family="Arial">Cardiorespiratory System</text>
+  <text x="250" y="185" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold" font-family="Arial">HEART</text>
+  <text x="130" y="235" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold" font-family="Arial">LUNG</text>
+  <text x="370" y="235" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold" font-family="Arial">LUNG</text>
+
+  <!-- Arrows showing oxygen flow -->
+  <defs>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2e7d32"/>
+    </marker>
+  </defs>
+  <line x1="150" y1="280" x2="170" y2="260" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <line x1="350" y1="280" x2="330" y2="260" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="100" y="290" font-size="10" fill="#2e7d32" font-family="Arial">O₂ in</text>
+  <text x="380" y="290" font-size="10" fill="#2e7d32" font-family="Arial">O₂ in</text>
+
+  <!-- CO2 out arrows -->
+  <line x1="190" y1="300" x2="170" y2="320" stroke="#b71c1c" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <line x1="310" y1="300" x2="330" y2="320" stroke="#b71c1c" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="140" y="335" font-size="10" fill="#b71c1c" font-family="Arial">CO₂ out</text>
+  <text x="340" y="335" font-size="10" fill="#b71c1c" font-family="Arial">CO₂ out</text>
+</svg>
+
+<h3 style="color:#1b5e20;margin-top:20px;">Key Concepts in Health (Cardiorespiratory System)</h3>
+<ul style="font-size:16px;line-height:1.8;padding-left:20px;">
+  <li><strong>Heart function:</strong> The heart pumps oxygenated blood from the lungs to all body tissues and returns deoxygenated blood to the lungs.</li>
+  <li><strong>Lung function:</strong> Alveoli in the lungs facilitate gas exchange — oxygen enters the blood, carbon dioxide is removed.</li>
+  <li><strong>Cardiorespiratory fitness:</strong> The ability of the heart, lungs, and blood vessels to supply oxygen during sustained physical activity.</li>
+  <li><strong>Common health issues:</strong> Hypertension (high blood pressure), asthma, bronchitis, and pneumonia affect these organs.</li>
+  <li><strong>Preventive measures:</strong> Regular exercise, balanced diet, avoiding smoking, and managing stress maintain cardiorespiratory health.</li>
+</ul>
+
+<h3 style="color:#1b5e20;margin-top:20px;">Nigerian Examples</h3>
+<ul style="font-size:16px;line-height:1.8;padding-left:20px;">
+  <li><strong>Example 1 – Urban Pollution & Asthma:</strong> In Lagos, high levels of vehicular emissions and industrial smoke contribute to increased asthma cases among schoolchildren. Wearing face masks and avoiding outdoor exercise during peak traffic hours are recommended preventive strategies.</li>
+  <li><strong>Example 2 – Hypertension & Diet:</strong> Many adults in Northern Nigeria consume diets high in sodium (e.g., suya, miyan kuka). This contributes to hypertension—a major risk factor for heart disease. Health workers promote reduced salt intake and regular blood pressure checks at local clinics.</li>
+</ul>
+
+<div style="background:#fff3e0;border-left:6px solid #ff6f00;padding:12px 18px;margin:20px 0;border-radius:8px;">
+  <p style="margin:0;font-size:16px;"><strong>💡 Fun Fact:</strong> The human heart beats about 100,000 times per day — that's 35 million times a year! In one day, your heart pumps enough blood to travel nearly 20,000 kilometres through your blood vessels.</p>
+</div>
+
+<h3 style="color:#1b5e20;margin-top:20px;">Practice Questions</h3>
+<ol style="font-size:16px;line-height:2;padding-left:20px;">
+  <li><strong>Question 1:</strong> Name the two main organs of the cardiorespiratory system and state one function of each.</li>
+  <li><strong>Question 2:</strong> List two lifestyle habits that can help prevent hypertension in Nigeria.</li>
+  <li><strong>Question 3:</strong> Explain why gas exchange in the lungs is essential for maintaining health.</li>
+</ol>
+
+<div style="background:#e8f5e9;border:2px dashed #2e7d32;padding:15px;margin-top:20px;border-radius:8px;">
+  <h4 style="color:#1b5e20;margin:0 0 10px 0;">✅ Answers</h4>
+  <p style="margin:5px 0;"><strong>Answer 1:</strong> Heart – pumps blood around the body; Lungs – exchange oxygen and carbon dioxide between blood and air.</p>
+  <p style="margin:5px 0;"><strong>Answer 2:</strong> Reducing salt intake (e.g., less suya seasoning) and regular blood pressure checks at primary health centres.</p>
+  <p style="margin:5px 0;"><strong>Answer 3:</strong> Gas exchange supplies oxygen to body cells for energy production (respiration) and removes toxic carbon dioxide, preventing acidosis and organ damage.</p>
+</div>

@@ -1,0 +1,113 @@
+<div>
+  <h2>Development Planning in Economics (SSS2)</h2>
+  
+  <!-- Animated SVG Diagram -->
+  <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 20px auto; max-width: 100%;">
+    <defs>
+      <style>
+        @keyframes cycle {
+          0% { opacity: 0; transform: translateY(10px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+        .step1 { animation: cycle 2s ease-in-out infinite alternate; }
+        .step2 { animation: cycle 2s ease-in-out 0.5s infinite alternate; }
+        .step3 { animation: cycle 2s ease-in-out 1s infinite alternate; }
+        .step4 { animation: cycle 2s ease-in-out 1.5s infinite alternate; }
+        .arrow { animation: pulse 1.5s ease-in-out infinite; }
+        @keyframes pulse {
+          0%, 100% { opacity: 0.6; }
+          50% { opacity: 1; }
+        }
+      </style>
+    </defs>
+    <!-- Background -->
+    <rect width="600" height="300" fill="#f0f8ff" rx="15" />
+    <text x="300" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a5276">The Development Planning Cycle</text>
+    
+    <!-- Stage 1: Goal Setting -->
+    <g class="step1">
+      <rect x="20" y="60" width="120" height="60" rx="10" fill="#2e86c1" />
+      <text x="80" y="85" text-anchor="middle" font-size="12" fill="white" font-weight="bold">1. Goal Setting</text>
+      <text x="80" y="105" text-anchor="middle" font-size="10" fill="#d5f5e3">(e.g., 70% literacy)</text>
+    </g>
+    
+    <!-- Stage 2: Resource Assessment -->
+    <g class="step2">
+      <rect x="240" y="60" width="120" height="60" rx="10" fill="#27ae60" />
+      <text x="300" y="85" text-anchor="middle" font-size="12" fill="white" font-weight="bold">2. Resource Assessment</text>
+      <text x="300" y="105" text-anchor="middle" font-size="10" fill="#f9e79f">(Finance, Labour)</text>
+    </g>
+    
+    <!-- Stage 3: Implementation -->
+    <g class="step3">
+      <rect x="460" y="60" width="120" height="60" rx="10" fill="#e67e22" />
+      <text x="520" y="85" text-anchor="middle" font-size="12" fill="white" font-weight="bold">3. Implementation</text>
+      <text x="520" y="105" text-anchor="middle" font-size="10" fill="#fdfefe">(Policy execution)</text>
+    </g>
+    
+    <!-- Stage 4: Monitoring & Evaluation -->
+    <g class="step4">
+      <rect x="240" y="180" width="120" height="60" rx="10" fill="#8e44ad" />
+      <text x="300" y="205" text-anchor="middle" font-size="12" fill="white" font-weight="bold">4. M &amp; E</text>
+      <text x="300" y="225" text-anchor="middle" font-size="10" fill="#f9e79f">(Review &amp; adjust)</text>
+    </g>
+    
+    <!-- Arrows connecting stages -->
+    <g class="arrow">
+      <line x1="140" y1="90" x2="235" y2="90" stroke="#34495e" stroke-width="3" marker-end="url(#arrowhead)" />
+      <line x1="360" y1="90" x2="455" y2="90" stroke="#34495e" stroke-width="3" marker-end="url(#arrowhead)" />
+      <line x1="520" y1="120" x2="520" y2="175" stroke="#34495e" stroke-width="3" marker-end="url(#arrowhead)" />
+      <line x1="300" y1="240" x2="300" y2="125" stroke="#34495e" stroke-width="3" marker-end="url(#arrowhead)" stroke-dasharray="5,5" />
+    </g>
+    
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#34495e" />
+      </marker>
+    </defs>
+    
+    <!-- Feedback label -->
+    <text x="170" y="210" font-size="11" fill="#8e44ad" font-style="italic">Feedback Loop</text>
+  </svg>
+  
+  <!-- Bullet-point explanations -->
+  <h3>Key Concepts</h3>
+  <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+    <li><strong>Development Planning</strong> is the process by which a government sets economic goals, allocates resources, and monitors progress to improve living standards.</li>
+    <li><strong>Indicative Planning</strong> (used in Nigeria) provides guidelines for the private sector, while <strong>Imperative Planning</strong> involves direct state control (e.g., Soviet model).</li>
+    <li>Plans can be <strong>short-term</strong> (1–2 years), <strong>medium-term</strong> (3–5 years), or <strong>long-term</strong> (10–20 years).</li>
+    <li>Key features: setting targets, mobilizing resources, coordinating sectors, and periodic evaluation.</li>
+    <li>Benefits include: reduced uncertainty, balanced regional development, and efficient resource use.</li>
+  </ul>
+  
+  <!-- Two Nigerian examples -->
+  <h3>Nigerian Examples</h3>
+  <div style="background-color: #eaf2f8; padding: 10px; border-left: 4px solid #2e86c1; margin: 10px 0;">
+    <p><strong>Example 1: Nigeria's Vision 20:2020</strong><br>
+    A long-term development plan launched in 2009 aiming to make Nigeria one of the top 20 economies by 2020. It focused on infrastructure, agriculture, and manufacturing. Although the target was not fully met, it spurred investments in power (e.g., privatization of PHCN) and road construction.</p>
+  </div>
+  <div style="background-color: #eafaf1; padding: 10px; border-left: 4px solid #27ae60; margin: 10px 0;">
+    <p><strong>Example 2: Economic Recovery and Growth Plan (ERGP) 2017–2020</strong><br>
+    Implemented after the 2016 recession, this medium-term plan aimed to restore growth, invest in infrastructure (e.g., Lagos-Ibadan railway), and improve agriculture (e.g., Anchor Borrowers' Programme). It successfully lifted Nigeria out of recession by Q4 2017.</p>
+  </div>
+  
+  <!-- Fun Fact block -->
+  <div style="background-color: #fef9e7; border: 2px dashed #f1c40f; padding: 15px; margin: 15px 0; border-radius: 8px;">
+    <p><strong>⭐ Fun Fact:</strong> Did you know that Nigeria's first national development plan (1962–1968) was partly funded by the sale of cocoa and groundnuts? It aimed to achieve a 4% annual growth rate and built the first oil refinery in Port Harcourt!</p>
+  </div>
+  
+  <!-- Three practice questions with answers -->
+  <h3>Practice Questions</h3>
+  <ol style="line-height: 1.8;">
+    <li><strong>Question 1:</strong> Define development planning and state two reasons why it is important for an economy like Nigeria.</li>
+    <li><strong>Question 2:</strong> Distinguish between indicative planning and imperative planning. Give one Nigerian example of indicative planning.</li>
+    <li><strong>Question 3:</strong> Explain the term "feedback loop" in the development planning cycle and why it is crucial for success.</li>
+  </ol>
+  
+  <h4>Answers</h4>
+  <div style="background-color: #f7f9fc; padding: 10px; border: 1px solid #d5dbdb; border-radius: 5px;">
+    <p><strong>Answer 1:</strong> Development planning is a systematic process of setting economic goals and allocating resources to achieve them over a specific period. Importance: (i) It helps reduce regional disparities (e.g., developing rural areas). (ii) It ensures efficient use of scarce resources (e.g., prioritizing infrastructure).</p>
+    <p><strong>Answer 2:</strong> Indicative planning involves the government setting broad targets and using incentives to guide the private sector (e.g., Nigeria's ERGP). Imperative planning involves direct state control over production and resource allocation (e.g., central planning in the former USSR).</p>
+    <p><strong>Answer 3:</strong> A feedback loop is the process of using monitoring and evaluation results to adjust the plan. It is crucial because it allows policymakers to correct mistakes (e.g., reallocating funds from underperforming sectors) and adapt to changing circumstances (e.g., oil price shocks).</p>
+  </div>
+</div>

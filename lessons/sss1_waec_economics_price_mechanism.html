@@ -1,0 +1,91 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:20px auto;max-width:100%;background:#f9fafc;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1);font-family:Arial,sans-serif;">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a5276">Price Mechanism – Supply & Demand Interaction</text>
+
+  <!-- Axes -->
+  <line x1="80" y1="340" x2="720" y2="340" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="80" y1="340" x2="80" y2="40" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Labels -->
+  <text x="720" y="365" text-anchor="end" font-size="14" fill="#2c3e50">Quantity (Q)</text>
+  <text x="50" y="40" text-anchor="middle" font-size="14" fill="#2c3e50" transform="rotate(-90,50,40)">Price (P)</text>
+
+  <!-- Demand curve (downward sloping) -->
+  <path d="M100,60 Q250,180 650,320" fill="none" stroke="#2980b9" stroke-width="3" stroke-dasharray="8,4">
+    <animate attributeName="stroke-dashoffset" from="0" to="-200" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <text x="660" y="310" font-size="13" fill="#2980b9" font-weight="bold">Demand</text>
+
+  <!-- Supply curve (upward sloping) -->
+  <path d="M100,320 Q350,200 650,60" fill="none" stroke="#e74c3c" stroke-width="3" stroke-dasharray="8,4">
+    <animate attributeName="stroke-dashoffset" from="0" to="-200" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <text x="660" y="55" font-size="13" fill="#e74c3c" font-weight="bold">Supply</text>
+
+  <!-- Equilibrium point -->
+  <circle cx="380" cy="190" r="7" fill="#27ae60">
+    <animate attributeName="r" values="7;10;7" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="395" y="180" font-size="13" fill="#27ae60" font-weight="bold">E (Equilibrium)</text>
+
+  <!-- Dotted lines from equilibrium to axes -->
+  <line x1="380" y1="190" x2="380" y2="340" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="80" y1="190" x2="380" y2="190" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- Axis labels -->
+  <text x="380" y="360" text-anchor="middle" font-size="12" fill="#27ae60">Q<sub>e</sub></text>
+  <text x="65" y="195" text-anchor="end" font-size="12" fill="#27ae60">P<sub>e</sub></text>
+
+  <!-- Surplus / shortage annotations -->
+  <text x="580" y="130" font-size="11" fill="#c0392b">Surplus (excess supply)</text>
+  <text x="160" y="280" font-size="11" fill="#2980b9">Shortage (excess demand)</text>
+
+  <!-- Arrows for surplus -->
+  <line x1="520" y1="120" x2="520" y2="150" stroke="#c0392b" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="520" y1="150" x2="520" y2="120" stroke="#c0392b" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrows for shortage -->
+  <line x1="220" y1="270" x2="220" y2="240" stroke="#2980b9" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="220" y1="240" x2="220" y2="270" stroke="#2980b9" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+</svg>
+
+<h3 style="color:#1a5276;margin-top:20px;">What is the Price Mechanism?</h3>
+<p>The price mechanism is the process by which the forces of demand and supply interact to determine the market price and quantity of goods and services. It acts as an invisible hand that allocates scarce resources efficiently.</p>
+
+<h4 style="color:#2c3e50;">Key Functions of the Price Mechanism</h4>
+<ul style="line-height:1.8;">
+  <li><strong>Rationing Function:</strong> When demand exceeds supply, prices rise, rationing scarce goods to those willing to pay more.</li>
+  <li><strong>Signalling Function:</strong> Rising prices signal producers to increase supply; falling prices signal them to reduce output.</li>
+  <li><strong>Incentive Function:</strong> Higher prices motivate firms to produce more, while lower prices encourage consumers to buy more.</li>
+  <li><strong>Allocation of Resources:</strong> Resources flow toward goods and services with the highest demand (and price).</li>
+</ul>
+
+<h4 style="color:#2c3e50;">Nigerian Examples</h4>
+<ul style="line-height:1.8;">
+  <li><strong>Petrol (PMS) Scarcity:</strong> During fuel shortages in Nigeria, prices at black markets rise sharply. This high price rations the limited fuel to those who need it most (e.g., transport workers), while encouraging black-market suppliers to bring in more fuel.</li>
+  <li><strong>Tomato Price Surge (Dry Season):</strong> During dry seasons, tomato supply falls drastically in northern Nigeria. Prices rise, signalling farmers to store and transport tomatoes from other regions, while consumers reduce waste or switch to alternatives like tinned tomatoes.</li>
+</ul>
+
+<div style="background:#eaf7e1;border-left:4px solid #27ae60;padding:12px 16px;margin:18px 0;border-radius:6px;">
+  <strong>💡 Fun Fact:</strong> In medieval times, the price of bread was legally fixed in England. Bakers who cheated by selling underweight loaves could be fined or pilloried! Today, Nigeria's bread price still fluctuates with the cost of imported wheat — a real-world example of the price mechanism at work.
+</div>
+
+<h4 style="color:#2c3e50;">Practice Questions</h4>
+<ol style="line-height:2;">
+  <li><strong>Question 1:</strong> Explain how the price mechanism helps to solve the economic problem of scarcity in a market economy.</li>
+  <li><strong>Question 2:</strong> In the diagram above, what happens when the market price is set above the equilibrium price? Use the terms "surplus" and "shortage" in your answer.</li>
+  <li><strong>Question 3:</strong> With a Nigerian example, describe the signalling function of the price mechanism.</li>
+</ol>
+
+<h4 style="color:#2c3e50;">Answers</h4>
+<ol style="line-height:2;">
+  <li><strong>Answer 1:</strong> The price mechanism allocates scarce resources by adjusting prices. When a good becomes scarce, its price rises, which rations it to those who value it most and incentivises producers to supply more, thereby reducing the scarcity.</li>
+  <li><strong>Answer 2:</strong> When price is above equilibrium, quantity supplied exceeds quantity demanded, creating a <strong>surplus</strong> (excess supply). Producers will then lower prices to clear the surplus, moving the market back toward equilibrium. A <strong>shortage</strong> occurs when price is below equilibrium.</li>
+  <li><strong>Answer 3:</strong> In Nigeria, when the price of garri rises sharply due to poor cassava harvest, this price signal tells farmers to plant more cassava in the next season. It also signals consumers to reduce garri consumption or switch to rice or yam, helping to balance demand and supply.</li>
+</ol>

@@ -1,0 +1,79 @@
+<div class="lesson-content">
+  <h2>Probability (SSS3 Mathematics - WAEC Syllabus)</h2>
+
+  <!-- Animated SVG Diagram: Probability Scale and Coin Toss -->
+  <svg width="100%" height="220" viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <style>
+        @keyframes tossCoin {
+          0% { transform: translate(0,0); opacity: 1; }
+          50% { transform: translate(0,-30px); opacity: 0.6; }
+          100% { transform: translate(0,0); opacity: 1; }
+        }
+        @keyframes fadeInBar {
+          0% { width: 0; opacity: 0; }
+          100% { width: 100%; opacity: 1; }
+        }
+        .coin { animation: tossCoin 2s infinite ease-in-out; }
+        .scale-bar { animation: fadeInBar 1.5s ease-out forwards; }
+      </style>
+    </defs>
+    <!-- Probability Scale -->
+    <text x="20" y="30" font-size="14" font-weight="bold">Probability Scale</text>
+    <line x1="50" y1="60" x2="550" y2="60" stroke="#333" stroke-width="4"/>
+    <text x="50" y="80" font-size="12" text-anchor="middle">0</text>
+    <text x="200" y="80" font-size="12" text-anchor="middle">0.25</text>
+    <text x="300" y="80" font-size="12" text-anchor="middle">0.5</text>
+    <text x="400" y="80" font-size="12" text-anchor="middle">0.75</text>
+    <text x="550" y="80" font-size="12" text-anchor="middle">1</text>
+    <rect x="50" y="55" width="500" height="5" fill="#4CAF50" opacity="0.3" class="scale-bar"/>
+    <text x="50" y="105" font-size="10" fill="#555">Impossible</text>
+    <text x="300" y="105" font-size="10" fill="#555" text-anchor="middle">Equally Likely</text>
+    <text x="550" y="105" font-size="10" fill="#555" text-anchor="end">Certain</text>
+
+    <!-- Animated Coin Toss -->
+    <g transform="translate(300, 160)">
+      <ellipse cx="0" cy="0" rx="20" ry="20" fill="#FFD700" stroke="#B8860B" stroke-width="2" class="coin"/>
+      <text x="0" y="5" font-size="14" text-anchor="middle" fill="#333" font-weight="bold">H</text>
+    </g>
+    <text x="300" y="210" font-size="12" text-anchor="middle" fill="#555">P(Head) = 0.5</text>
+  </svg>
+
+  <!-- Bullet-point Explanations -->
+  <h3>Key Concepts</h3>
+  <ul style="list-style-type: disc; padding-left: 20px;">
+    <li><strong>Probability</strong> measures how likely an event is to occur, ranging from <strong>0</strong> (impossible) to <strong>1</strong> (certain).</li>
+    <li><strong>Formula:</strong> P(Event) = (Number of favourable outcomes) / (Total number of possible outcomes).</li>
+    <li><strong>Sample Space (S)</strong> is the set of all possible outcomes. Example: For a die, S = {1, 2, 3, 4, 5, 6}.</li>
+    <li><strong>Event (E)</strong> is a subset of the sample space. Example: Getting an even number = {2, 4, 6}.</li>
+    <li><strong>Mutually Exclusive Events</strong> cannot happen at the same time. P(A or B) = P(A) + P(B).</li>
+    <li><strong>Complementary Events:</strong> P(not E) = 1 - P(E).</li>
+  </ul>
+
+  <!-- Nigerian Examples -->
+  <h3>🇳🇬 Nigerian Examples</h3>
+  <div style="background: #f9f9f9; padding: 10px; border-left: 4px solid #008751; margin-bottom: 10px;">
+    <p><strong>Example 1:</strong> In a bag, there are 5 red balls, 3 green balls, and 2 blue balls. If a ball is picked at random, what is the probability of picking a green ball?</p>
+    <p><em>Solution:</em> Total balls = 5 + 3 + 2 = 10. Favourable (green) = 3. So P(green) = 3/10 = 0.3.</p>
+  </div>
+  <div style="background: #f9f9f9; padding: 10px; border-left: 4px solid #008751; margin-bottom: 10px;">
+    <p><strong>Example 2:</strong> In a WAEC examination, 60% of students passed Mathematics. If a student is selected at random, what is the probability that the student <em>failed</em> Mathematics?</p>
+    <p><em>Solution:</em> P(pass) = 0.6. P(fail) = 1 - 0.6 = 0.4.</p>
+  </div>
+
+  <!-- Fun Fact Block -->
+  <div style="background: #e3f2fd; padding: 10px; border-radius: 8px; margin: 15px 0;">
+    <p><strong>💡 Fun Fact:</strong> The word "probability" comes from the Latin <em>probabilitas</em>, meaning "to prove". In the 17th century, French mathematicians Blaise Pascal and Pierre de Fermat laid the foundation of probability theory while solving a gambling problem!</p>
+  </div>
+
+  <!-- Practice Questions with Answers -->
+  <h3>📝 Practice Questions</h3>
+  <ol style="padding-left: 20px;">
+    <li>A fair coin is tossed twice. What is the probability of getting at least one head?<br>
+      <em>Answer:</em> 3/4 (Sample space: HH, HT, TH, TT; favourable: HH, HT, TH).</li>
+    <li>A bag contains 4 white, 5 black, and 1 red marble. If one marble is drawn at random, find the probability that it is <strong>not</strong> black.<br>
+      <em>Answer:</em> 5/10 = 1/2 (Total = 10; not black = white + red = 5).</li>
+    <li>In a class of 40 students, 25 are girls. If a student is chosen at random, what is the probability that the student is a boy?<br>
+      <em>Answer:</em> 15/40 = 3/8 (Boys = 40 - 25 = 15).</li>
+  </ol>
+</div>

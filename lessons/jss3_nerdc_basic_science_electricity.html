@@ -1,0 +1,99 @@
+<svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .wire { stroke: #333; stroke-width: 3; fill: none; }
+      .battery { fill: #e74c3c; stroke: #c0392b; stroke-width: 2; }
+      .battery-positive { fill: #e74c3c; }
+      .battery-negative { fill: #2ecc71; }
+      .bulb { fill: #f1c40f; stroke: #f39c12; stroke-width: 2; }
+      .bulb-filament { stroke: #e67e22; stroke-width: 2; }
+      .switch-base { fill: #95a5a6; stroke: #7f8c8d; stroke-width: 2; }
+      .switch-lever { stroke: #7f8c8d; stroke-width: 3; }
+      .electron { fill: #3498db; }
+      .label { font-family: Arial, sans-serif; font-size: 14px; fill: #2c3e50; }
+      .current-arrow { fill: #e74c3c; font-size: 20px; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e74c3c"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="300" fill="#f8f9fa" rx="10"/>
+
+  <!-- Title -->
+  <text x="300" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#2c3e50">Simple Electric Circuit</text>
+
+  <!-- Battery -->
+  <rect x="80" y="120" width="60" height="40" rx="5" class="battery"/>
+  <rect x="80" y="120" width="60" height="20" rx="5" class="battery-positive"/>
+  <rect x="80" y="140" width="60" height="20" rx="5" class="battery-negative"/>
+  <text x="110" y="135" text-anchor="middle" font-size="12" fill="white" font-weight="bold">+</text>
+  <text x="110" y="155" text-anchor="middle" font-size="12" fill="white" font-weight="bold">−</text>
+  <text x="110" y="180" text-anchor="middle" class="label">Battery</text>
+
+  <!-- Bulb -->
+  <circle cx="300" cy="140" r="30" class="bulb"/>
+  <path d="M285 140 Q300 120 315 140" class="bulb-filament"/>
+  <path d="M285 140 Q300 160 315 140" class="bulb-filament"/>
+  <text x="300" y="190" text-anchor="middle" class="label">Bulb</text>
+
+  <!-- Switch -->
+  <rect x="430" y="130" width="50" height="20" rx="3" class="switch-base"/>
+  <line x1="430" y1="140" x2="480" y2="140" stroke="#e74c3c" stroke-width="2" stroke-dasharray="4,4"/>
+  <line x1="430" y1="125" x2="480" y2="125" class="switch-lever"/>
+  <text x="455" y="175" text-anchor="middle" class="label">Switch (ON)</text>
+
+  <!-- Wires -->
+  <path d="M140 140 L270 140" class="wire"/>
+  <path d="M330 140 L430 140" class="wire" stroke-dasharray="5,5"/>
+  <path d="M480 140 L520 140 L520 260 L80 260 L80 160" class="wire"/>
+
+  <!-- Current flow arrows -->
+  <line x1="200" y1="140" x2="240" y2="140" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="350" y1="140" x2="390" y2="140" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="500" y1="220" x2="500" y2="180" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="120" y1="200" x2="120" y2="160" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Animated electrons -->
+  <circle r="4" fill="#3498db" opacity="0.8">
+    <animateMotion dur="3s" repeatCount="indefinite" path="M140 140 L270 140 L300 140 L330 140 L430 140 L480 140 L520 140 L520 260 L80 260 L80 160 L140 140"/>
+  </circle>
+  <circle r="4" fill="#3498db" opacity="0.6">
+    <animateMotion dur="3s" repeatCount="indefinite" begin="1s" path="M140 140 L270 140 L300 140 L330 140 L430 140 L480 140 L520 140 L520 260 L80 260 L80 160 L140 140"/>
+  </circle>
+  <circle r="4" fill="#3498db" opacity="0.4">
+    <animateMotion dur="3s" repeatCount="indefinite" begin="2s" path="M140 140 L270 140 L300 140 L330 140 L430 140 L480 140 L520 140 L520 260 L80 260 L80 160 L140 140"/>
+  </circle>
+</svg>
+
+<h3>Key Concepts</h3>
+<ul>
+  <li><strong>Electric Current:</strong> The flow of electrons through a conductor (like copper wire). Measured in <em>amperes (A)</em>.</li>
+  <li><strong>Circuit:</strong> A closed loop that allows current to flow from the battery's positive terminal, through components, and back to the negative terminal.</li>
+  <li><strong>Switch:</strong> Controls the circuit — when ON, current flows; when OFF, the circuit is broken.</li>
+  <li><strong>Bulb:</strong> Converts electrical energy into light and heat energy.</li>
+  <li><strong>Battery:</strong> Provides the voltage (push) that makes electrons move. Voltage is measured in <em>volts (V)</em>.</li>
+</ul>
+
+<h3>Nigerian Examples</h3>
+<ol>
+  <li><strong>PHCN Prepaid Meter:</strong> In many Nigerian homes, the prepaid meter uses an electric circuit to measure how much current your household uses. When you buy electricity units, the circuit allows current to flow; when units run out, the circuit is broken (like a switch turning off).</li>
+  <li><strong>NEPA Generator Change-over Switch:</strong> During power outages (often called "NEPA" in Nigeria), many homes use a generator. The change-over switch is a special circuit that safely disconnects the house from the PHCN grid and connects to the generator, preventing dangerous back-feeding.</li>
+</ol>
+
+<div style="background-color: #e8f8f5; border-left: 5px solid #1abc9c; padding: 12px; margin: 15px 0; border-radius: 5px;">
+  <strong>⚡ Fun Fact:</strong> The first electric power plant in Nigeria was built in 1896 in Lagos, just 14 years after Thomas Edison built the world's first power plant in New York! It was used to power the Lagos Colony's streetlights.
+</div>
+
+<h3>Practice Questions</h3>
+<ol>
+  <li>What is the function of a switch in an electric circuit?<br>
+    <strong>Answer:</strong> A switch controls the flow of current — it can complete (ON) or break (OFF) the circuit, allowing or stopping the flow of electrons.</li>
+  <br>
+  <li>If a bulb in a circuit does not light up, list two possible reasons.<br>
+    <strong>Answer:</strong> (i) The switch is OFF, breaking the circuit. (ii) The bulb is faulty (blown filament) or the battery is dead (no voltage).</li>
+  <br>
+  <li>In the animated diagram above, what path do the electrons follow from the battery back to the battery?<br>
+    <strong>Answer:</strong> Electrons leave the negative (−) terminal of the battery, travel through the wire to the bulb, then through the switch (when ON), continue through the wire around the loop, and return to the positive (+) terminal of the battery.</li>
+</ol>

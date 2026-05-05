@@ -1,0 +1,124 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto;max-width:100%;height:auto;background:#f0f8ff;border-radius:12px;overflow:visible">
+  <defs>
+    <style>
+      @keyframes pulse {
+        0% { opacity: 0.6; }
+        50% { opacity: 1; }
+        100% { opacity: 0.6; }
+      }
+      @keyframes orbit {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .node { fill: #2c7a7b; }
+      .node-text { fill: white; font: bold 12px Arial; text-anchor: middle; dominant-baseline: central; }
+      .label { fill: #1a202c; font: 11px Arial; text-anchor: middle; }
+      .arrow { stroke: #2b6cb0; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2b6cb0" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="30" font-size="20" font-weight="bold" fill="#1a365d" text-anchor="middle">International Economic Organizations</text>
+
+  <!-- Central node: International Organizations -->
+  <g>
+    <rect x="210" y="60" width="180" height="40" rx="20" class="node" />
+    <text x="300" y="80" class="node-text">International Organizations</text>
+  </g>
+
+  <!-- IMF Node -->
+  <g>
+    <rect x="40" y="140" width="140" height="36" rx="18" fill="#3182ce" />
+    <text x="110" y="158" class="node-text">IMF</text>
+    <line x1="210" y1="90" x2="110" y2="140" class="arrow" />
+  </g>
+
+  <!-- World Bank Node -->
+  <g>
+    <rect x="230" y="140" width="140" height="36" rx="18" fill="#d69e2e" />
+    <text x="300" y="158" class="node-text">World Bank</text>
+    <line x1="300" y1="100" x2="300" y2="140" class="arrow" />
+  </g>
+
+  <!-- WTO Node -->
+  <g>
+    <rect x="420" y="140" width="140" height="36" rx="18" fill="#e53e3e" />
+    <text x="490" y="158" class="node-text">WTO</text>
+    <line x1="390" y1="90" x2="490" y2="140" class="arrow" />
+  </g>
+
+  <!-- Functions under IMF -->
+  <g>
+    <text x="110" y="200" class="label">• Stabilizes currencies</text>
+    <text x="110" y="218" class="label">• Provides loans</text>
+    <text x="110" y="236" class="label">• Technical assistance</text>
+  </g>
+
+  <!-- Functions under World Bank -->
+  <g>
+    <text x="300" y="200" class="label">• Development projects</text>
+    <text x="300" y="218" class="label">• Poverty reduction</text>
+    <text x="300" y="236" class="label">• Infrastructure funding</text>
+  </g>
+
+  <!-- Functions under WTO -->
+  <g>
+    <text x="490" y="200" class="label">• Trade rules</text>
+    <text x="490" y="218" class="label">• Dispute resolution</text>
+    <text x="490" y="236" class="label">• Tariff negotiations</text>
+  </g>
+
+  <!-- Nigeria examples at bottom -->
+  <g>
+    <rect x="80" y="280" width="200" height="50" rx="10" fill="#edf2f7" stroke="#2c7a7b" stroke-width="1.5" />
+    <text x="180" y="300" font-size="11" fill="#1a202c" text-anchor="middle"><tspan font-weight="bold">Nigeria &amp; IMF:</tspan></text>
+    <text x="180" y="318" font-size="10" fill="#4a5568" text-anchor="middle">$3.4 billion loan (2020)</text>
+  </g>
+  <g>
+    <rect x="320" y="280" width="200" height="50" rx="10" fill="#edf2f7" stroke="#2c7a7b" stroke-width="1.5" />
+    <text x="420" y="300" font-size="11" fill="#1a202c" text-anchor="middle"><tspan font-weight="bold">Nigeria &amp; WTO:</tspan></text>
+    <text x="420" y="318" font-size="10" fill="#4a5568" text-anchor="middle">Joined 1995; trade policy reviews</text>
+  </g>
+
+  <!-- Animated pulsing circles -->
+  <circle cx="110" cy="158" r="4" fill="#3182ce" style="animation:pulse 2s infinite" />
+  <circle cx="300" cy="158" r="4" fill="#d69e2e" style="animation:pulse 2s infinite 0.5s" />
+  <circle cx="490" cy="158" r="4" fill="#e53e3e" style="animation:pulse 2s infinite 1s" />
+</svg>
+
+<h3 style="color:#1a365d;margin:20px 0 10px">Key Points</h3>
+<ul style="background:#f7fafc;padding:15px 25px;border-radius:8px;line-height:1.8;list-style-type:disc">
+  <li><strong>IMF</strong> (International Monetary Fund): Promotes global monetary cooperation, provides short-term loans to countries with balance-of-payments problems, and offers policy advice.</li>
+  <li><strong>World Bank</strong>: Focuses on long-term economic development and poverty reduction through funding infrastructure, education, and health projects.</li>
+  <li><strong>WTO</strong> (World Trade Organization): Oversees international trade rules, resolves trade disputes, and negotiates tariff reductions to promote free trade.</li>
+  <li>These organizations help stabilize the global economy, encourage trade, and support developing nations.</li>
+</ul>
+
+<h3 style="color:#1a365d;margin:20px 0 10px">Nigerian Examples</h3>
+<div style="background:#ebf8ff;border-left:5px solid #3182ce;padding:12px 18px;border-radius:6px;margin:10px 0">
+  <strong>Example 1:</strong> In 2020, Nigeria secured a $3.4 billion emergency loan from the IMF to combat the economic impact of COVID-19 and falling oil prices.
+</div>
+<div style="background:#ebf8ff;border-left:5px solid #d69e2e;padding:12px 18px;border-radius:6px;margin:10px 0">
+  <strong>Example 2:</strong> Nigeria has been a WTO member since 1995, participating in trade policy reviews and benefiting from dispute resolution mechanisms to protect its exports.
+</div>
+
+<div style="background:#fefcbf;border:2px dashed #d69e2e;border-radius:10px;padding:15px;margin:20px 0">
+  <span style="font-size:1.5em;margin-right:8px;">💡</span> <strong>Fun Fact:</strong> The World Bank was originally created to help rebuild Europe after World War II. Today, it lends over $60 billion annually to developing countries — Nigeria has received over $30 billion in World Bank loans since 1960!
+</div>
+
+<h3 style="color:#1a365d;margin:20px 0 10px">Practice Questions</h3>
+<ol style="background:#f0fff4;padding:15px 30px;border-radius:8px;line-height:2">
+  <li>What is the main difference between the IMF and the World Bank in terms of their lending focus?</li>
+  <li>Name one way the WTO has helped Nigeria's trade interests.</li>
+  <li>Why might a country like Nigeria seek a loan from the IMF rather than from a commercial bank?</li>
+</ol>
+
+<h3 style="color:#1a365d;margin:20px 0 10px">Answers</h3>
+<div style="background:#e2e8f0;padding:15px 20px;border-radius:8px;line-height:1.8">
+  <p><strong>Answer 1:</strong> The IMF provides <em>short-term</em> loans to stabilize currencies and fix balance-of-payments crises, while the World Bank provides <em>long-term</em> loans for development projects like roads, schools, and power plants.</p>
+  <p><strong>Answer 2:</strong> Through the WTO, Nigeria can challenge unfair trade barriers (e.g., when the EU restricted Nigerian cocoa exports) and participate in rule-making that affects its agricultural and oil exports.</p>
+  <p><strong>Answer 3:</strong> IMF loans usually have lower interest rates and longer repayment periods than commercial banks, and they come with technical advice to help the country implement economic reforms.</p>
+</div>

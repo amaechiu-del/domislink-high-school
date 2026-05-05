@@ -1,0 +1,76 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto 1rem;background:#f0f8ff;border-radius:12px;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
+    </marker>
+  </defs>
+  <!-- Animated parallel lines with transversal -->
+  <line x1="40" y1="80" x2="360" y2="80" stroke="#1e3a5f" stroke-width="2.5" marker-end="url(#arrow)">
+    <animate attributeName="y1" values="80;85;80" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="80;85;80" dur="4s" repeatCount="indefinite"/>
+  </line>
+  <line x1="40" y1="200" x2="360" y2="200" stroke="#1e3a5f" stroke-width="2.5" marker-end="url(#arrow)">
+    <animate attributeName="y1" values="200;195;200" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="200;195;200" dur="4s" repeatCount="indefinite"/>
+  </line>
+  <!-- Transversal line -->
+  <line x1="100" y1="40" x2="300" y2="240" stroke="#c0392b" stroke-width="2" stroke-dasharray="6,3">
+    <animate attributeName="x1" values="100;95;100" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="y1" values="40;45;40" dur="5s" repeatCount="indefinite"/>
+  </line>
+  <!-- Angle arcs with labels -->
+  <path d="M 120 80 A 30 30 0 0 1 138 100" fill="none" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="130" y="78" font-size="14" fill="#27ae60" font-weight="bold">θ</text>
+  <path d="M 280 200 A 30 30 0 0 0 262 180" fill="none" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="272" y="200" font-size="14" fill="#e67e22" font-weight="bold">θ</text>
+  <!-- Labels -->
+  <text x="20" y="85" font-size="12" fill="#1e3a5f">l₁</text>
+  <text x="20" y="205" font-size="12" fill="#1e3a5f">l₂</text>
+  <text x="305" y="130" font-size="12" fill="#c0392b">t (transversal)</text>
+  <!-- Alternate angles indicator -->
+  <circle cx="132" cy="108" r="3" fill="#27ae60">
+    <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="268" cy="192" r="3" fill="#e67e22">
+    <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>
+
+<h2 style="color:#1e3a5f;border-bottom:2px solid #1e3a5f;padding-bottom:0.3rem;">Plane Geometry – Parallel Lines and Transversals</h2>
+
+<ul style="list-style-type:disc;padding-left:1.5rem;line-height:1.7;">
+  <li><strong>Parallel lines</strong> are lines in a plane that never meet (e.g., l₁ and l₂ above).</li>
+  <li>A <strong>transversal</strong> is a line that cuts across two or more parallel lines.</li>
+  <li><strong>Corresponding angles</strong> are equal (e.g., the green θ and orange θ in the animation).</li>
+  <li><strong>Alternate interior angles</strong> are equal – they lie on opposite sides of the transversal.</li>
+  <li><strong>Co-interior (allied) angles</strong> sum to 180° – they lie inside the parallel lines on the same side.</li>
+  <li>Vertically opposite angles formed by intersecting lines are always equal.</li>
+</ul>
+
+<div style="background:#eaf7e1;padding:0.8rem;border-left:5px solid #27ae60;margin:1rem 0;border-radius:6px;">
+  <strong>🇳🇬 Example 1 (Lagos Road Junction):</strong> At a major intersection in Ikeja, two parallel roads (Allen Avenue and Opebi Road) are crossed by a transversal road (Ikorodu Road). If one angle on the transversal is 110°, find the corresponding angle on the other parallel road.<br>
+  <span style="color:#1e3a5f;"><strong>Solution:</strong> Corresponding angles are equal → the other angle is also <strong>110°</strong>.</span>
+</div>
+
+<div style="background:#fef9e7;padding:0.8rem;border-left:5px solid #f39c12;margin:1rem 0;border-radius:6px;">
+  <strong>🇳🇬 Example 2 (Abuja City Planning):</strong> A transversal road crosses two parallel streets in Wuse. One co-interior angle is 75°. What is the other co-interior angle?<br>
+  <span style="color:#1e3a5f;"><strong>Solution:</strong> Co-interior angles sum to 180°. 180° – 75° = <strong>105°</strong>.</span>
+</div>
+
+<div style="background:#f0e6f6;padding:0.8rem;border-radius:12px;margin:1rem 0;">
+  <span style="font-size:1.3rem;">💡</span> <strong>Fun Fact:</strong> The word "geometry" comes from Greek <em>geo</em> (earth) and <em>metron</em> (measure). Ancient Egyptians used plane geometry over 4,000 years ago to rebuild land boundaries after the Nile flooded!
+</div>
+
+<h3 style="color:#1e3a5f;">📝 Practice Questions</h3>
+<ol style="line-height:1.8;">
+  <li>Two parallel lines are cut by a transversal. One alternate interior angle is 48°. Find the other alternate interior angle.</li>
+  <li>In a plane, a transversal creates a pair of corresponding angles: (2x + 10)° and 70°. Find the value of x.</li>
+  <li>If two co-interior angles are (3y)° and (2y + 20)°, what is the value of y?</li>
+</ol>
+
+<div style="background:#f8f9fa;padding:0.8rem;border:1px dashed #1e3a5f;margin-top:0.8rem;border-radius:6px;">
+  <strong>✅ Answers:</strong><br>
+  1. 48° (alternate interior angles are equal)<br>
+  2. 2x + 10 = 70 → 2x = 60 → x = <strong>30</strong><br>
+  3. 3y + (2y + 20) = 180 → 5y + 20 = 180 → 5y = 160 → y = <strong>32</strong>
+</div>

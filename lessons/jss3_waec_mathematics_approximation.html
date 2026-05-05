@@ -1,0 +1,81 @@
+<div class="lesson">
+  <h1>Approximation in Mathematics</h1>
+  <p><strong>Topic:</strong> Approximation (Rounding numbers to significant figures, decimal places, and nearest whole numbers)</p>
+
+  <!-- Animated SVG Diagram -->
+  <svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+    <rect x="10" y="10" width="380" height="180" fill="#f0f8ff" stroke="#2c3e50" stroke-width="2" rx="10"/>
+    <text x="200" y="40" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">Rounding to Nearest 10</text>
+    
+    <!-- Number line -->
+    <line x1="50" y1="100" x2="350" y2="100" stroke="#34495e" stroke-width="3"/>
+    
+    <!-- Ticks -->
+    <line x1="50" y1="90" x2="50" y2="110" stroke="#34495e" stroke-width="2"/>
+    <text x="50" y="85" text-anchor="middle" font-size="12" fill="#2c3e50">10</text>
+    
+    <line x1="150" y1="90" x2="150" y2="110" stroke="#34495e" stroke-width="2"/>
+    <text x="150" y="85" text-anchor="middle" font-size="12" fill="#2c3e50">20</text>
+    
+    <line x1="250" y1="90" x2="250" y2="110" stroke="#34495e" stroke-width="2"/>
+    <text x="250" y="85" text-anchor="middle" font-size="12" fill="#2c3e50">30</text>
+    
+    <line x1="350" y1="90" x2="350" y2="110" stroke="#34495e" stroke-width="2"/>
+    <text x="350" y="85" text-anchor="middle" font-size="12" fill="#2c3e50">40</text>
+    
+    <!-- Animated point -->
+    <circle cx="180" cy="100" r="8" fill="#e74c3c">
+      <animate attributeName="cx" values="180;230;180" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="180" y="140" text-anchor="middle" font-size="12" fill="#e74c3c">
+      <animate attributeName="x" values="180;230;180" dur="4s" repeatCount="indefinite"/>
+      23 ≈ 20
+    </text>
+    
+    <!-- Arrow showing rounding -->
+    <line x1="180" y1="110" x2="150" y2="125" stroke="#27ae60" stroke-width="2" stroke-dasharray="4,2">
+      <animate attributeName="x1" values="180;230;180" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="150;250;150" dur="4s" repeatCount="indefinite"/>
+    </line>
+  </svg>
+
+  <!-- Bullet-point explanations -->
+  <h2>Key Concepts</h2>
+  <ul>
+    <li><strong>Rounding to decimal places (d.p.)</strong>: Look at the digit after the required decimal place. If it's 5 or more, round up; if less than 5, round down.</li>
+    <li><strong>Significant figures (s.f.)</strong>: Count from the first non-zero digit. Round the last required digit based on the next digit.</li>
+    <li><strong>Nearest whole number</strong>: Look at the tenths digit. 5 or more → round up; less than 5 → round down.</li>
+    <li><strong>Estimation</strong>: Round numbers to 1 s.f. first, then calculate to get a quick approximate answer.</li>
+  </ul>
+
+  <!-- Nigerian Examples -->
+  <h2>Nigerian Examples</h2>
+  <div class="example">
+    <p><strong>Example 1:</strong> The population of Lagos is approximately 14,368,000. Round this to 2 significant figures.</p>
+    <p><em>Solution:</em> 14,368,000 → first non-zero digit is 1. The second digit is 4. The third digit is 3 (less than 5), so we round down. Answer: <strong>14,000,000</strong> (2 s.f.)</p>
+  </div>
+  <div class="example">
+    <p><strong>Example 2:</strong> In a market in Onitsha, a trader sells yam for ₦2,850.50. Round this to the nearest naira.</p>
+    <p><em>Solution:</em> Look at the tenths digit (5). Since it is 5 or more, round up the whole number. ₦2,850.50 → <strong>₦2,851</strong> (to nearest naira)</p>
+  </div>
+
+  <!-- Fun Fact Block -->
+  <div class="fun-fact" style="background-color: #f9f3e6; border-left: 5px solid #f39c12; padding: 10px; margin: 15px 0;">
+    <p><strong>💡 Fun Fact:</strong> The ancient Egyptians used approximation to build the pyramids! They rounded measurements to the nearest cubit (about 52.4 cm) to make construction faster and easier. Even today, engineers use approximation to check if their calculations make sense.</p>
+  </div>
+
+  <!-- Practice Questions -->
+  <h2>Practice Questions</h2>
+  <ol>
+    <li>Round 0.006789 to 2 significant figures.</li>
+    <li>Round 3.14159 to 3 decimal places.</li>
+    <li>Estimate the cost of 48 bags of rice at ₦12,850 each by rounding both numbers to 1 significant figure.</li>
+  </ol>
+
+  <h3>Answers</h3>
+  <ol>
+    <li>0.0068 (2 s.f.)</li>
+    <li>3.142 (3 d.p.)</li>
+    <li>50 × ₦10,000 = ₦500,000 (Estimation)</li>
+  </ol>
+</div>

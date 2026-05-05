@@ -1,0 +1,100 @@
+<div class="lesson-content">
+  <h2>Electrochemistry: Redox Reactions &amp; Electrochemical Cells</h2>
+
+  <!-- Animated SVG Diagram -->
+  <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" style="display:block; margin:0 auto; max-width:100%; background:#f0f8ff; border-radius:12px;">
+    <defs>
+      <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" style="stop-color:#4a90e2;stop-opacity:0.8"/>
+        <stop offset="100%" style="stop-color:#1c3d6e;stop-opacity:0.9"/>
+      </linearGradient>
+      <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" style="stop-color:#e67e22;stop-opacity:0.9"/>
+        <stop offset="100%" style="stop-color:#c0392b;stop-opacity:0.9"/>
+      </linearGradient>
+      <filter id="glow">
+        <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+        <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+
+    <!-- Beaker 1 (Anode) -->
+    <rect x="40" y="180" width="140" height="100" rx="5" fill="none" stroke="#333" stroke-width="2"/>
+    <rect x="40" y="180" width="140" height="100" rx="5" fill="#d5e8d4" opacity="0.4"/>
+    <text x="110" y="270" text-anchor="middle" font-size="11" fill="#333">ZnSO₄ (aq)</text>
+
+    <!-- Beaker 2 (Cathode) -->
+    <rect x="320" y="180" width="140" height="100" rx="5" fill="none" stroke="#333" stroke-width="2"/>
+    <rect x="320" y="180" width="140" height="100" rx="5" fill="#f8cecc" opacity="0.4"/>
+    <text x="390" y="270" text-anchor="middle" font-size="11" fill="#333">CuSO₄ (aq)</text>
+
+    <!-- Zn Electrode -->
+    <rect x="80" y="80" width="20" height="100" fill="url(#grad1)" rx="3"/>
+    <text x="90" y="75" text-anchor="middle" font-size="12" fill="#1c3d6e" font-weight="bold">Zn</text>
+    <!-- Cu Electrode -->
+    <rect x="400" y="80" width="20" height="100" fill="url(#grad2)" rx="3"/>
+    <text x="410" y="75" text-anchor="middle" font-size="12" fill="#c0392b" font-weight="bold">Cu</text>
+
+    <!-- Salt Bridge -->
+    <path d="M190 210 Q250 140 310 210" fill="none" stroke="#8e44ad" stroke-width="6" stroke-dasharray="8,4"/>
+    <text x="250" y="130" text-anchor="middle" font-size="10" fill="#8e44ad" font-weight="bold">Salt Bridge</text>
+    <text x="250" y="145" text-anchor="middle" font-size="9" fill="#6c3483">(KCl / KNO₃)</text>
+
+    <!-- Wire and current flow -->
+    <line x1="90" y1="80" x2="90" y2="30" stroke="#333" stroke-width="2"/>
+    <line x1="410" y1="80" x2="410" y2="30" stroke="#333" stroke-width="2"/>
+    <line x1="90" y1="30" x2="410" y2="30" stroke="#333" stroke-width="2"/>
+    <circle cx="250" cy="30" r="15" fill="#f1c40f" filter="url(#glow)"/>
+    <text x="250" y="35" text-anchor="middle" font-size="10" fill="#333" font-weight="bold">V</text>
+
+    <!-- Electron flow animation -->
+    <circle r="4" fill="#2c3e50">
+      <animateMotion dur="2s" repeatCount="indefinite" path="M90,30 L410,30"/>
+    </circle>
+    <circle r="4" fill="#2c3e50">
+      <animateMotion dur="2s" repeatCount="indefinite" begin="1s" path="M90,30 L410,30"/>
+    </circle>
+
+    <!-- Ion movement arrows -->
+    <text x="110" y="200" font-size="10" fill="#1c3d6e">Zn²⁺ →</text>
+    <text x="370" y="200" font-size="10" fill="#c0392b">← Cu²⁺</text>
+
+    <!-- Labels -->
+    <text x="250" y="295" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">Daniel Cell (Zn-Cu Electrochemical Cell)</text>
+  </svg>
+
+  <h3>Key Concepts</h3>
+  <ul style="line-height:1.8; padding-left:20px;">
+    <li><strong>Electrochemistry</strong> deals with the interconversion of chemical energy and electrical energy via redox reactions.</li>
+    <li>An <strong>electrochemical cell</strong> consists of two half-cells: <em>anode</em> (oxidation) and <em>cathode</em> (reduction).</li>
+    <li>The <strong>salt bridge</strong> completes the circuit by allowing ions to flow, maintaining electrical neutrality.</li>
+    <li>Electrons flow from anode to cathode through the external wire — this is the <strong>electric current</strong>.</li>
+    <li>In the Daniel cell: Zn (anode) oxidises: Zn → Zn²⁺ + 2e⁻; Cu²⁺ (cathode) reduces: Cu²⁺ + 2e⁻ → Cu.</li>
+  </ul>
+
+  <h3>🇳🇬 Nigerian Examples</h3>
+  <div style="background:#e8f5e9; padding:10px; border-left:4px solid #2e7d32; margin:10px 0; border-radius:4px;">
+    <strong>Example 1:</strong> In the <em>Obajana Cement Factory</em> (Kogi State), electrochemistry principles are used in the electrolytic refining of metals used in machinery parts, where impure copper is purified via electrolysis.
+  </div>
+  <div style="background:#fff3e0; padding:10px; border-left:4px solid #e65100; margin:10px 0; border-radius:4px;">
+    <strong>Example 2:</strong> <em>Battery-powered inverters</em> common in Nigerian homes (e.g., during power outages) rely on electrochemical cells — lead-acid batteries store chemical energy and convert it to electrical energy when needed.
+  </div>
+
+  <div style="background:#fce4ec; padding:12px; border:2px dashed #c62828; border-radius:8px; margin:15px 0;">
+    <span style="font-size:1.5em;">⚡</span> <strong>Fun Fact:</strong> The world's first battery (the Voltaic Pile) was invented by Alessandro Volta in 1800. It used alternating discs of zinc and copper separated by cloth soaked in brine — just like the Daniel cell you just studied!
+  </div>
+
+  <h3>Practice Questions</h3>
+  <ol style="line-height:2.0;">
+    <li>In the Daniel cell, which electrode is the anode and what happens there?</li>
+    <li>What is the function of the salt bridge in an electrochemical cell?</li>
+    <li>Write the overall redox reaction for the Zn-Cu cell and calculate the standard cell potential (E°cell) given: Zn²⁺/Zn = -0.76V, Cu²⁺/Cu = +0.34V.</li>
+  </ol>
+
+  <h4>Answers</h4>
+  <div style="background:#f5f5f5; padding:10px; border-radius:6px;">
+    <p><strong>1.</strong> The zinc electrode is the anode. Oxidation occurs: Zn → Zn²⁺ + 2e⁻ (zinc loses electrons and dissolves into solution).</p>
+    <p><strong>2.</strong> The salt bridge allows migration of ions (e.g., K⁺ and Cl⁻) between half-cells to maintain electrical neutrality and prevent charge buildup, thereby completing the circuit.</p>
+    <p><strong>3.</strong> Overall reaction: Zn + Cu²⁺ → Zn²⁺ + Cu. Standard cell potential E°cell = E°cathode - E°anode = (+0.34 V) - (-0.76 V) = <strong>+1.10 V</strong>.</p>
+  </div>
+</div>

@@ -1,0 +1,92 @@
+<div class="lesson">
+  <h2>AC Circuits (Physics - SSS3 WAEC Syllabus)</h2>
+
+  <!-- Animated SVG Diagram: AC Sine Wave and Phasor -->
+  <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" style="display:block; margin:0 auto 20px; background:#f5f9fc; border-radius:12px;">
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50" />
+      </marker>
+    </defs>
+    <!-- Axes -->
+    <line x1="50" y1="150" x2="550" y2="150" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)" />
+    <line x1="50" y1="30" x2="50" y2="270" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)" />
+    <text x="540" y="170" font-size="14" fill="#2c3e50">Time (t)</text>
+    <text x="20" y="40" font-size="14" fill="#2c3e50">V, I</text>
+    <text x="40" y="155" font-size="12" fill="#7f8c8d">0</text>
+
+    <!-- Sine wave for Voltage -->
+    <path d="M50,150 Q100,50 150,150 T250,150 T350,150 T450,150 T550,150" 
+          fill="none" stroke="#e74c3c" stroke-width="3" stroke-dasharray="5,3">
+      <animate attributeName="d" 
+               values="M50,150 Q100,50 150,150 T250,150 T350,150 T450,150 T550,150;
+                       M50,150 Q100,250 150,150 T250,150 T350,150 T450,150 T550,150;
+                       M50,150 Q100,50 150,150 T250,150 T350,150 T450,150 T550,150"
+               dur="4s" repeatCount="indefinite" />
+    </path>
+    <text x="480" y="80" fill="#e74c3c" font-size="12">V(t) = V₀ sin(ωt)</text>
+
+    <!-- Rotating phasor arrow -->
+    <line x1="50" y1="150" x2="200" y2="50" stroke="#2980b9" stroke-width="3">
+      <animateTransform attributeName="transform" type="rotate"
+                        values="0 50 150; 360 50 150" dur="4s" repeatCount="indefinite" />
+    </line>
+    <circle cx="50" cy="150" r="4" fill="#2980b9" />
+    <text x="210" y="50" fill="#2980b9" font-size="12">Phasor (V₀)</text>
+
+    <!-- Current wave (lagging) -->
+    <path d="M50,150 Q120,90 190,150 T330,150 T470,150 T550,150" 
+          fill="none" stroke="#27ae60" stroke-width="2" opacity="0.7">
+      <animate attributeName="d"
+               values="M50,150 Q120,90 190,150 T330,150 T470,150 T550,150;
+                       M50,150 Q120,210 190,150 T330,150 T470,150 T550,150;
+                       M50,150 Q120,90 190,150 T330,150 T470,150 T550,150"
+               dur="4s" repeatCount="indefinite" />
+    </path>
+    <text x="480" y="200" fill="#27ae60" font-size="12">I(t) = I₀ sin(ωt - φ)</text>
+
+    <!-- Phase difference annotation -->
+    <line x1="150" y1="145" x2="190" y2="145" stroke="#34495e" stroke-width="1.5" stroke-dasharray="2,2" />
+    <text x="155" y="140" fill="#34495e" font-size="11">φ (phase lag)</text>
+  </svg>
+
+  <!-- Bullet-point explanations -->
+  <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.8; font-size: 16px;">
+    <li><strong>Alternating Current (AC)</strong> flows in a circuit with periodic reversal of direction, unlike Direct Current (DC).</li>
+    <li>The <strong>voltage</strong> and <strong>current</strong> vary sinusoidally with time: V(t) = V₀ sin(ωt) and I(t) = I₀ sin(ωt ± φ).</li>
+    <li><strong>Phase difference (φ)</strong> occurs when the circuit contains reactive components (inductors or capacitors). For a pure resistor, φ = 0°.</li>
+    <li><strong>Inductive reactance</strong> (X<sub>L</sub> = 2πfL) causes current to <em>lag</em> voltage by 90°; <strong>capacitive reactance</strong> (X<sub>C</sub> = 1/(2πfC)) causes current to <em>lead</em> voltage by 90°.</li>
+    <li><strong>Impedance (Z)</strong> is the total opposition to AC flow: Z = √(R² + (X<sub>L</sub> - X<sub>C</sub>)²).</li>
+    <li><strong>RMS values</strong> are used for power calculations: V<sub>rms</sub> = V₀/√2, I<sub>rms</sub> = I₀/√2.</li>
+  </ul>
+
+  <!-- Nigerian Examples -->
+  <div style="background: #fff4e6; padding: 12px 18px; border-left: 5px solid #e67e22; margin: 20px 0; border-radius: 6px;">
+    <h3 style="margin: 0 0 8px 0; color: #d35400;">🇳🇬 Nigerian Examples</h3>
+    <p><strong>Example 1:</strong> A radio transmitter in Lagos uses an inductor of 2.5 mH and a capacitor of 100 µF in its tuning circuit. Calculate the resonant frequency (f₀) of the circuit. (Use f₀ = 1/(2π√(LC)))</p>
+    <p style="background: #f9f9f9; padding: 6px 10px; border-radius: 4px;"><strong>Solution:</strong> L = 2.5 × 10⁻³ H, C = 100 × 10⁻⁶ F → √(LC) = √(2.5e-3 × 100e-6) = √(2.5e-7) = 5.0 × 10⁻⁴. f₀ = 1/(2π × 5.0e-4) ≈ 318.3 Hz.</p>
+    <p><strong>Example 2:</strong> A household fan in Port Harcourt has a coil with resistance 20 Ω and inductive reactance 15 Ω. What is the impedance of the fan?</p>
+    <p style="background: #f9f9f9; padding: 6px 10px; border-radius: 4px;"><strong>Solution:</strong> Z = √(R² + X<sub>L</sub>²) = √(20² + 15²) = √(400 + 225) = √625 = 25 Ω.</p>
+  </div>
+
+  <!-- Fun Fact Block -->
+  <div style="background: #eafaf1; padding: 12px 18px; border-radius: 10px; border: 2px dashed #1abc9c; margin: 20px 0;">
+    <p style="margin: 0; font-size: 16px;">💡 <strong>Fun Fact:</strong> Nigeria's national grid operates at 50 Hz (frequency). This means the voltage changes direction 100 times every second! That's why your bulb flickers 100 times per second — too fast for your eyes to notice.</p>
+  </div>
+
+  <!-- Practice Questions -->
+  <div style="background: #ecf0f1; padding: 15px 20px; border-radius: 8px; margin-top: 25px;">
+    <h3 style="margin-top: 0;">📝 Practice Questions</h3>
+    <ol style="padding-left: 20px; line-height: 1.9;">
+      <li>An AC voltage source of 240 V (rms) is connected to a 60 Ω resistor. Calculate the peak current (I₀) through the resistor.</li>
+      <li>A capacitor of 50 µF is connected to a 50 Hz AC supply. Determine its capacitive reactance (X<sub>C</sub>). (Take π = 3.14)</li>
+      <li>In an R-L series circuit, R = 30 Ω and X<sub>L</sub> = 40 Ω. If the rms current is 2 A, find the rms voltage across the circuit.</li>
+    </ol>
+    <div style="background: #fff; padding: 10px 15px; border-radius: 6px; margin-top: 10px;">
+      <p><strong>Answers:</strong></p>
+      <p>1. V₀ = 240 × √2 ≈ 339.4 V → I₀ = V₀ / R = 339.4 / 60 ≈ <strong>5.66 A</strong></p>
+      <p>2. X<sub>C</sub> = 1/(2πfC) = 1/(2 × 3.14 × 50 × 50 × 10⁻⁶) = 1/(0.0157) ≈ <strong>63.7 Ω</strong></p>
+      <p>3. Z = √(30² + 40²) = 50 Ω → V<sub>rms</sub> = I<sub>rms</sub> × Z = 2 × 50 = <strong>100 V</strong></p>
+    </div>
+  </div>
+</div>

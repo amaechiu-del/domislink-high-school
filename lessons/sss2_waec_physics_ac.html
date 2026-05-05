@@ -1,0 +1,66 @@
+<div class="lesson-content">
+  <h2>Alternating Current (AC) – SSS2 Physics (WAEC Syllabus)</h2>
+
+  <p><strong>Alternating Current (AC)</strong> is an electric current that reverses its direction periodically. Unlike Direct Current (DC), which flows in one direction, AC varies sinusoidally with time. In Nigeria, AC is the standard for power distribution (e.g., 230V, 50Hz from PHCN/DisCos).</p>
+
+  <!-- Animated SVG Diagram -->
+  <svg width="400" height="220" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+    <rect width="400" height="220" fill="#f0f8ff" rx="10"/>
+    <text x="200" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">AC Voltage vs Time (Sinusoidal Wave)</text>
+    <!-- Axes -->
+    <line x1="40" y1="180" x2="380" y2="180" stroke="#333" stroke-width="2"/>
+    <line x1="40" y1="20" x2="40" y2="200" stroke="#333" stroke-width="2"/>
+    <!-- Animated sine wave -->
+    <path d="M40,180 Q80,40 120,180 T200,180 T280,180 T360,180" fill="none" stroke="#0077be" stroke-width="3">
+      <animate attributeName="d" 
+        values="M40,180 Q80,40 120,180 T200,180 T280,180 T360,180;
+                M40,180 Q80,180 120,180 T200,180 T280,180 T360,180;
+                M40,180 Q80,40 120,180 T200,180 T280,180 T360,180"
+        dur="2s" repeatCount="indefinite"/>
+    </path>
+    <!-- Labels -->
+    <text x="20" y="110" text-anchor="middle" font-size="12" fill="#555" transform="rotate(-90,20,110)">Voltage (V)</text>
+    <text x="200" y="210" text-anchor="middle" font-size="12" fill="#555">Time (t)</text>
+    <text x="120" y="170" font-size="11" fill="#0077be">+V<sub>max</sub></text>
+    <text x="200" y="195" font-size="11" fill="#0077be">0</text>
+    <text x="280" y="170" font-size="11" fill="#0077be">-V<sub>max</sub></text>
+    <!-- Cycle annotation -->
+    <line x1="120" y1="185" x2="280" y2="185" stroke="#ff6600" stroke-dasharray="4" stroke-width="1.5"/>
+    <text x="200" y="200" text-anchor="middle" font-size="10" fill="#ff6600">One Cycle (T = 1/f)</text>
+  </svg>
+
+  <h3>Key Characteristics of AC</h3>
+  <ul>
+    <li><strong>Frequency (f):</strong> Number of cycles per second, measured in Hertz (Hz). Nigeria uses 50 Hz.</li>
+    <li><strong>Peak Voltage (V<sub>max</sub>):</strong> Maximum voltage reached during a cycle. For 230V RMS, V<sub>max</sub> ≈ 325V.</li>
+    <li><strong>RMS Value:</strong> The DC equivalent that produces the same heating effect. RMS = V<sub>max</sub> / √2.</li>
+    <li><strong>Phase:</strong> AC can lead or lag in circuits with capacitors or inductors.</li>
+    <li><strong>Waveform:</strong> Typically sinusoidal, but can be square or triangular in specialized applications.</li>
+  </ul>
+
+  <h3>Nigerian Examples</h3>
+  <div class="example">
+    <p><strong>Example 1:</strong> A household in Lagos uses an air conditioner rated at 220V RMS. Calculate the peak voltage.</p>
+    <p><em>Solution:</em> V<sub>max</sub> = V<sub>RMS</sub> × √2 = 220V × 1.414 = <strong>311.08V</strong>.</p>
+  </div>
+  <div class="example">
+    <p><strong>Example 2:</strong> In Abuja, a generator produces AC at 50 Hz. How long does one complete cycle take?</p>
+    <p><em>Solution:</em> Period T = 1/f = 1/50 = <strong>0.02 seconds</strong> (20 ms).</p>
+  </div>
+
+  <div class="fun-fact" style="background:#e6ffe6; border-left:4px solid #2e8b57; padding:10px; margin:15px 0;">
+    <strong>⚡ Fun Fact:</strong> The Nigerian power grid operates at 50 Hz. If you plug a device designed for 60 Hz (like some US appliances) into a Nigerian socket without a converter, it may overheat or malfunction because the timing of the AC cycles is different!
+  </div>
+
+  <h3>Practice Questions</h3>
+  <ol>
+    <li><strong>Question 1:</strong> The RMS voltage of an AC supply in a Nigerian school laboratory is 230V. What is the peak-to-peak voltage? (Hint: peak-to-peak = 2 × V<sub>max</sub>)</li>
+    <li><strong>Question 2:</strong> An AC current has a frequency of 50 Hz. How many complete cycles occur in 2 seconds?</li>
+    <li><strong>Question 3:</strong> A student measures the time for 10 cycles of an AC signal to be 0.2 seconds. Calculate the frequency.</li>
+  </ol>
+
+  <h4>Answers</h4>
+  <p><strong>Answer 1:</strong> V<sub>max</sub> = 230 × 1.414 = 325.22V; Peak-to-peak = 2 × 325.22 = <strong>650.44V</strong>.</p>
+  <p><strong>Answer 2:</strong> Number of cycles = frequency × time = 50 Hz × 2 s = <strong>100 cycles</strong>.</p>
+  <p><strong>Answer 3:</strong> Period for 1 cycle = 0.2 s / 10 = 0.02 s; Frequency = 1/0.02 = <strong>50 Hz</strong>.</p>
+</div>

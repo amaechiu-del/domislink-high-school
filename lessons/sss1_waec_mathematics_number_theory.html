@@ -1,0 +1,103 @@
+<div class="lesson">
+  <h2>Number Theory: Divisibility and Prime Numbers</h2>
+
+  <!-- Animated SVG Diagram -->
+  <svg width="100%" height="200" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <style>
+        @keyframes growCircle {
+          0% { r: 5; opacity: 0.3; }
+          100% { r: 25; opacity: 1; }
+        }
+        @keyframes drawLine {
+          from { stroke-dashoffset: 200; }
+          to { stroke-dashoffset: 0; }
+        }
+        .prime { fill: #e74c3c; animation: growCircle 2s ease-in-out infinite alternate; }
+        .composite { fill: #3498db; animation: growCircle 2s ease-in-out infinite alternate; }
+        .line { stroke: #2c3e50; stroke-width: 2; stroke-dasharray: 200; animation: drawLine 3s ease-in-out; }
+      </style>
+    </defs>
+    <!-- Title -->
+    <text x="300" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">Number Types</text>
+    <!-- Prime numbers (red circles) -->
+    <circle cx="100" cy="80" r="25" class="prime" />
+    <text x="100" y="85" text-anchor="middle" fill="white" font-size="12" font-weight="bold">2</text>
+    <circle cx="200" cy="120" r="25" class="prime" />
+    <text x="200" y="125" text-anchor="middle" fill="white" font-size="12" font-weight="bold">3</text>
+    <circle cx="300" cy="80" r="25" class="prime" />
+    <text x="300" y="85" text-anchor="middle" fill="white" font-size="12" font-weight="bold">5</text>
+    <circle cx="400" cy="120" r="25" class="prime" />
+    <text x="400" y="125" text-anchor="middle" fill="white" font-size="12" font-weight="bold">7</text>
+    <circle cx="500" cy="80" r="25" class="prime" />
+    <text x="500" y="85" text-anchor="middle" fill="white" font-size="12" font-weight="bold">11</text>
+    <!-- Composite numbers (blue circles) -->
+    <circle cx="100" cy="170" r="25" class="composite" />
+    <text x="100" y="175" text-anchor="middle" fill="white" font-size="12" font-weight="bold">4</text>
+    <circle cx="200" cy="170" r="25" class="composite" />
+    <text x="200" y="175" text-anchor="middle" fill="white" font-size="12" font-weight="bold">6</text>
+    <circle cx="300" cy="170" r="25" class="composite" />
+    <text x="300" y="175" text-anchor="middle" fill="white" font-size="12" font-weight="bold">8</text>
+    <circle cx="400" cy="170" r="25" class="composite" />
+    <text x="400" y="175" text-anchor="middle" fill="white" font-size="12" font-weight="bold">9</text>
+    <circle cx="500" cy="170" r="25" class="composite" />
+    <text x="500" y="175" text-anchor="middle" fill="white" font-size="12" font-weight="bold">10</text>
+    <!-- Lines connecting -->
+    <line x1="125" y1="80" x2="125" y2="145" class="line" />
+    <line x1="225" y1="120" x2="225" y2="145" class="line" />
+    <line x1="325" y1="80" x2="325" y2="145" class="line" />
+    <line x1="425" y1="120" x2="425" y2="145" class="line" />
+    <line x1="525" y1="80" x2="525" y2="145" class="line" />
+    <!-- Labels -->
+    <text x="300" y="55" text-anchor="middle" fill="#e74c3c" font-size="12">Prime Numbers (only 1 &amp; itself)</text>
+    <text x="300" y="200" text-anchor="middle" fill="#3498db" font-size="12">Composite Numbers (more than 2 factors)</text>
+  </svg>
+
+  <!-- Bullet-point explanations -->
+  <div style="margin: 20px 0;">
+    <h3>Key Concepts</h3>
+    <ul style="list-style-type: disc; padding-left: 20px;">
+      <li><strong>Divisibility:</strong> A number <em>a</em> divides <em>b</em> (written <em>a</em> | <em>b</em>) if there exists an integer <em>k</em> such that <em>b = a × k</em>. Example: 3 divides 12 because 12 = 3 × 4.</li>
+      <li><strong>Prime Numbers:</strong> A natural number greater than 1 that has exactly two distinct positive divisors: 1 and itself. Examples: 2, 3, 5, 7, 11.</li>
+      <li><strong>Composite Numbers:</strong> A natural number greater than 1 that has more than two divisors. Examples: 4 (1,2,4), 6 (1,2,3,6).</li>
+      <li><strong>Prime Factorisation:</strong> Expressing a number as a product of its prime factors. For example, 12 = 2 × 2 × 3.</li>
+      <li><strong>HCF (Highest Common Factor):</strong> The largest number that divides two or more numbers without remainder. Example: HCF of 12 and 18 is 6.</li>
+      <li><strong>LCM (Lowest Common Multiple):</strong> The smallest number that is a multiple of two or more numbers. Example: LCM of 4 and 6 is 12.</li>
+    </ul>
+  </div>
+
+  <!-- Two Nigerian examples -->
+  <div style="margin: 20px 0; background-color: #f9f9f9; padding: 15px; border-left: 4px solid #e74c3c;">
+    <h3>🇳🇬 Nigerian Examples</h3>
+    <p><strong>Example 1 (Market Shares):</strong> A trader in Lagos has 48 oranges and 60 mangoes. She wants to pack them into boxes such that each box has the same number of oranges and the same number of mangoes, with no fruit left over. What is the largest number of boxes she can use?</p>
+    <p><em>Solution:</em> Find HCF of 48 and 60. Factors of 48: 1,2,3,4,6,8,12,16,24,48. Factors of 60: 1,2,3,4,5,6,10,12,15,20,30,60. Common factors: 1,2,3,4,6,12. HCF = 12. So she can use 12 boxes.</p>
+
+    <p><strong>Example 2 (School Assembly):</strong> Students in a school in Kano line up in rows of 6, 8, or 10 without any student left out. What is the smallest possible number of students in the school?</p>
+    <p><em>Solution:</em> Find LCM of 6, 8, and 10. Prime factors: 6 = 2 × 3, 8 = 2³, 10 = 2 × 5. LCM = 2³ × 3 × 5 = 8 × 3 × 5 = 120. So the smallest number is 120 students.</p>
+  </div>
+
+  <!-- Fun Fact block -->
+  <div style="margin: 20px 0; background-color: #e8f8f5; padding: 15px; border-radius: 8px;">
+    <h3>💡 Fun Fact</h3>
+    <p>Did you know? The number 2 is the only even prime number! All other even numbers are divisible by 2, so they are composite. In ancient Nigeria, the Yoruba numbering system was base-20 and used prime numbers like 2, 3, 5, and 7 in their counting patterns.</p>
+  </div>
+
+  <!-- Practice questions with answers -->
+  <div style="margin: 20px 0;">
+    <h3>📝 Practice Questions</h3>
+    <ol style="padding-left: 20px;">
+      <li><strong>Question 1:</strong> List all prime numbers between 20 and 40.</li>
+      <li><strong>Question 2:</strong> Find the Highest Common Factor (HCF) of 36 and 54.</li>
+      <li><strong>Question 3:</strong> Find the Lowest Common Multiple (LCM) of 9 and 12.</li>
+    </ol>
+  </div>
+
+  <div style="margin: 20px 0; background-color: #fef9e7; padding: 15px; border-radius: 8px;">
+    <h3>✅ Answers</h3>
+    <ol style="padding-left: 20px;">
+      <li><strong>Answer 1:</strong> 23, 29, 31, 37 (Note: 21, 33, 39 are divisible by 3; 25 by 5; 27 by 3; 35 by 5; 37 is prime)</li>
+      <li><strong>Answer 2:</strong> 18. (Factors of 36: 1,2,3,4,6,9,12,18,36. Factors of 54: 1,2,3,6,9,18,27,54. Common: 1,2,3,6,9,18. HCF = 18)</li>
+      <li><strong>Answer 3:</strong> 36. (Multiples of 9: 9,18,27,36,45... Multiples of 12: 12,24,36,48... LCM = 36)</li>
+    </ol>
+  </div>
+</div>

@@ -1,0 +1,76 @@
+<div class="lesson">
+  <h2>Probability: The Mathematics of Chance</h2>
+
+  <svg width="100%" height="200" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <style>
+        .prob-bar { fill: #1e90ff; }
+        .prob-bar-text { font-family: Arial; font-size: 14px; fill: #333; }
+        .prob-label { font-family: Arial; font-size: 12px; fill: #555; }
+      </style>
+    </defs>
+
+    <!-- Animated spinner / probability wheel -->
+    <circle cx="150" cy="100" r="60" fill="#f0f8ff" stroke="#1e90ff" stroke-width="3" />
+    <line x1="150" y1="100" x2="150" y2="40" stroke="#ff4500" stroke-width="3">
+      <animateTransform attributeName="transform" type="rotate" from="0 150 100" to="360 150 100" dur="4s" repeatCount="indefinite" />
+    </line>
+    <circle cx="150" cy="100" r="5" fill="#ff4500" />
+    <text x="150" y="175" text-anchor="middle" class="prob-label">Spinning Wheel</text>
+
+    <!-- Animated probability bars -->
+    <rect class="prob-bar" x="300" y="70" width="50" height="40" rx="4">
+      <animate attributeName="height" values="40;20;40" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="y" values="70;90;70" dur="3s" repeatCount="indefinite" />
+    </rect>
+    <text x="325" y="130" text-anchor="middle" class="prob-bar-text">0.5</text>
+
+    <rect class="prob-bar" x="370" y="40" width="50" height="70" rx="4">
+      <animate attributeName="height" values="70;30;70" dur="2.5s" repeatCount="indefinite" />
+      <animate attributeName="y" values="40;80;40" dur="2.5s" repeatCount="indefinite" />
+    </rect>
+    <text x="395" y="130" text-anchor="middle" class="prob-bar-text">0.7</text>
+
+    <rect class="prob-bar" x="440" y="80" width="50" height="30" rx="4">
+      <animate attributeName="height" values="30;60;30" dur="3.5s" repeatCount="indefinite" />
+      <animate attributeName="y" values="80;50;80" dur="3.5s" repeatCount="indefinite" />
+    </rect>
+    <text x="465" y="130" text-anchor="middle" class="prob-bar-text">0.3</text>
+
+    <text x="385" y="160" text-anchor="middle" class="prob-label">Probability Values (0 to 1)</text>
+  </svg>
+
+  <h3>Key Concepts</h3>
+  <ul>
+    <li><strong>Probability</strong> is the measure of how likely an event is to occur, expressed as a number between 0 and 1.</li>
+    <li>Probability of an event = (Number of favourable outcomes) ÷ (Total number of possible outcomes).</li>
+    <li>All probabilities add up to 1 (or 100%).</li>
+    <li>An event with probability 0 is <em>impossible</em>; probability 1 is <em>certain</em>.</li>
+  </ul>
+
+  <h3>Nigerian Examples</h3>
+  <div style="background: #e8f5e9; padding: 10px; border-radius: 8px; margin: 10px 0;">
+    <p><strong>Example 1: Lagos Traffic</strong><br>
+    A bus driver in Lagos notes that out of 20 trips to Ikeja, 15 times he hits heavy traffic. What is the probability that on his next trip he will hit heavy traffic?<br>
+    <em>Solution:</em> P(traffic) = 15/20 = 0.75 or 75%.</p>
+  </div>
+  <div style="background: #fff3e0; padding: 10px; border-radius: 8px; margin: 10px 0;">
+    <p><strong>Example 2: Nigerian Football</strong><br>
+    In a match between Enyimba and Rangers, a coin is tossed to decide who kicks off. What is the probability that Enyimba wins the toss?<br>
+    <em>Solution:</em> P(Enyimba wins toss) = 1/2 = 0.5 or 50%.</p>
+  </div>
+
+  <div style="background: #fce4ec; padding: 10px; border-radius: 8px; margin: 15px 0;">
+    <p><strong>🎲 Fun Fact:</strong> The word "probability" comes from the Latin <em>probabilitas</em>, meaning "provable". In 1654, mathematicians Blaise Pascal and Pierre de Fermat laid the foundations of probability theory while solving a gambling problem!</p>
+  </div>
+
+  <h3>Practice Questions</h3>
+  <ol>
+    <li>A bag contains 4 red balls, 3 blue balls, and 3 green balls. If one ball is picked at random, what is the probability of picking a blue ball?<br>
+    <strong>Answer:</strong> 3/10 = 0.3</li>
+    <li>In a class of 40 SSS2 students, 16 are girls. If a student is chosen at random, what is the probability that the student is a boy?<br>
+    <strong>Answer:</strong> 24/40 = 3/5 = 0.6</li>
+    <li>A die is rolled once. What is the probability of rolling a number greater than 4?<br>
+    <strong>Answer:</strong> 2/6 = 1/3 ≈ 0.333</li>
+  </ol>
+</div>

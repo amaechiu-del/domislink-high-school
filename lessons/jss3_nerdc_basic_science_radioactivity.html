@@ -1,0 +1,104 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#1a1a2e" rx="10"/>
+  
+  <!-- Title -->
+  <text x="300" y="40" text-anchor="middle" fill="#ffd700" font-size="22" font-weight="bold">Radioactive Decay Animation</text>
+  
+  <!-- Nucleus container -->
+  <circle cx="300" cy="200" r="60" fill="#2d2d5e" stroke="#ffd700" stroke-width="3"/>
+  
+  <!-- Protons (red) and Neutrons (grey) inside nucleus -->
+  <circle cx="280" cy="185" r="8" fill="#ff4444"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></circle>
+  <circle cx="310" cy="175" r="8" fill="#aaaaaa"><animate attributeName="opacity" values="1;0.3;1" dur="2.5s" repeatCount="indefinite"/></circle>
+  <circle cx="295" cy="210" r="8" fill="#ff4444"><animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/></circle>
+  <circle cx="320" cy="200" r="8" fill="#aaaaaa"><animate attributeName="opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite"/></circle>
+  <circle cx="270" cy="205" r="8" fill="#ff4444"><animate attributeName="opacity" values="1;0.3;1" dur="2.2s" repeatCount="indefinite"/></circle>
+  <circle cx="305" cy="195" r="8" fill="#aaaaaa"><animate attributeName="opacity" values="1;0.3;1" dur="2.7s" repeatCount="indefinite"/></circle>
+  
+  <!-- Unstable nucleus glow -->
+  <circle cx="300" cy="200" r="60" fill="none" stroke="#ffd700" stroke-width="2" opacity="0.5">
+    <animate attributeName="r" values="60;70;60" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.2;0.5" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Alpha particle emission (helium nucleus) -->
+  <g>
+    <animateMotion dur="3s" repeatCount="indefinite" path="M300,200 L500,80"/>
+    <circle cx="0" cy="0" r="12" fill="#ff6600" opacity="0.9"/>
+    <text x="-4" y="4" fill="white" font-size="10" font-weight="bold">α</text>
+  </g>
+  
+  <!-- Beta particle emission (electron) -->
+  <g>
+    <animateMotion dur="2.5s" repeatCount="indefinite" path="M300,200 L100,350"/>
+    <circle cx="0" cy="0" r="6" fill="#00ccff" opacity="0.9"/>
+    <text x="-4" y="4" fill="white" font-size="8" font-weight="bold">β</text>
+  </g>
+  
+  <!-- Gamma ray emission (wavy line) -->
+  <path d="M300,200 Q350,150 400,200 Q450,250 500,200" fill="none" stroke="#ff00ff" stroke-width="3" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0;0.7" dur="1s" repeatCount="indefinite"/>
+  </path>
+  <text x="480" y="195" fill="#ff00ff" font-size="12" font-weight="bold">γ</text>
+  
+  <!-- Decay product (new nucleus) -->
+  <circle cx="300" cy="200" r="40" fill="#1a4a2e" stroke="#66ff66" stroke-width="2" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.8" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <text x="290" y="205" fill="#66ff66" font-size="10" opacity="0">New Element</text>
+  
+  <!-- Legend -->
+  <rect x="50" y="320" width="500" height="70" fill="#2d2d5e" rx="8" opacity="0.8"/>
+  <circle cx="80" cy="345" r="8" fill="#ff4444"/><text x="95" y="350" fill="white" font-size="12">Proton</text>
+  <circle cx="180" cy="345" r="8" fill="#aaaaaa"/><text x="195" y="350" fill="white" font-size="12">Neutron</text>
+  <circle cx="290" cy="345" r="8" fill="#ff6600"/><text x="305" y="350" fill="white" font-size="12">Alpha (α)</text>
+  <circle cx="400" cy="345" r="6" fill="#00ccff"/><text x="415" y="350" fill="white" font-size="12">Beta (β)</text>
+  <text x="485" y="350" fill="#ff00ff" font-size="12">Gamma (γ)</text>
+  
+  <!-- Labels -->
+  <text x="300" y="380" text-anchor="middle" fill="#ffd700" font-size="11">Unstable nucleus emits α, β, or γ radiation to become stable</text>
+</svg>
+
+<h2>What is Radioactivity?</h2>
+
+<p>Radioactivity is the <strong>spontaneous decay</strong> of an unstable atomic nucleus, releasing energy and particles. This process is also called <strong>radioactive decay</strong>. It happens naturally in some elements like uranium, thorium, and radium.</p>
+
+<h3>Key Points About Radioactivity:</h3>
+
+<ul>
+  <li><strong>Unstable atoms</strong> (radioisotopes) try to become stable by releasing excess energy.</li>
+  <li>Three main types of radiation are emitted: <strong>alpha (α)</strong>, <strong>beta (β)</strong>, and <strong>gamma (γ)</strong>.</li>
+  <li>Alpha particles are <strong>heavy</strong> and can be stopped by paper or skin.</li>
+  <li>Beta particles are <strong>lighter</strong> and can pass through paper but are stopped by aluminium.</li>
+  <li>Gamma rays are <strong>high-energy electromagnetic waves</strong> that require thick lead or concrete to stop.</li>
+  <li>Radioactivity is <strong>random</strong> — we cannot predict when a specific atom will decay.</li>
+  <li>The <strong>half-life</strong> is the time taken for half the radioactive atoms in a sample to decay.</li>
+</ul>
+
+<h3>Nigerian Examples of Radioactivity:</h3>
+
+<ol>
+  <li><strong>Jos Plateau Tin Mining:</strong> Tin mining in Plateau State has exposed radioactive thorium in the soil. Miners and local communities need to be aware of radiation safety measures to avoid long-term health effects.</li>
+  <li><strong>NNPC Oil and Gas Operations:</strong> During oil drilling in the Niger Delta, naturally occurring radioactive materials (NORM) like radium-226 are brought to the surface. The Nigerian Nuclear Regulatory Authority (NNRA) monitors this to protect workers and the environment.</li>
+</ol>
+
+<div style="background-color: #fff3cd; border-left: 5px solid #ffc107; padding: 12px; margin: 15px 0; border-radius: 5px;">
+  <strong>⭐ Fun Fact:</strong> Did you know that bananas contain a tiny amount of radioactive potassium-40? You would need to eat about 10 million bananas at once to feel any effects of radiation! This is why scientists say "banana equivalent dose" to explain small radiation amounts.
+</div>
+
+<h3>Practice Questions:</h3>
+
+<ol>
+  <li>What are the three main types of radiation emitted during radioactive decay?</li>
+  <li>Why is gamma radiation more dangerous to living cells than alpha radiation?</li>
+  <li>If a radioactive sample has a half-life of 5 years, how much of a 100g sample will remain after 15 years?</li>
+</ol>
+
+<h4>Answers:</h4>
+
+<ol>
+  <li>Alpha (α), Beta (β), and Gamma (γ) radiation.</li>
+  <li>Gamma radiation is more dangerous because it has <strong>very high penetrating power</strong> — it can pass through the body and damage internal organs and DNA, while alpha particles are stopped by skin or even a sheet of paper.</li>
+  <li>After 15 years (three half-lives): 100g → 50g (after 5 years) → 25g (after 10 years) → <strong>12.5g</strong> (after 15 years).</li>
+</ol>

@@ -1,0 +1,92 @@
+<div class="lesson-content">
+  <h2>Electronics: Semiconductor Diodes &amp; Rectification</h2>
+
+  <!-- Animated SVG Diagram: Half-wave Rectification -->
+  <div style="text-align: center; margin: 20px 0;">
+    <svg width="500" height="220" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <style>
+          .wire { stroke: #333; stroke-width: 2; fill: none; }
+          .component { fill: #f0f0f0; stroke: #222; stroke-width: 2; }
+          .text-label { font-family: Arial; font-size: 12px; fill: #222; }
+          .diode { fill: #e0e0e0; stroke: #222; stroke-width: 1.5; }
+        </style>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#d32f2f" />
+        </marker>
+      </defs>
+
+      <!-- AC Source -->
+      <text x="20" y="40" class="text-label" font-weight="bold">AC Input</text>
+      <circle cx="50" cy="80" r="15" class="component" />
+      <text x="42" y="85" class="text-label">~</text>
+      <path d="M 50 65 L 50 50" class="wire" />
+      <path d="M 50 95 L 50 110" class="wire" />
+
+      <!-- Top wire to diode -->
+      <path d="M 50 50 L 120 50 L 120 80" class="wire" />
+
+      <!-- Diode (triangle + bar) -->
+      <polygon points="120,70 140,90 120,110" class="diode" />
+      <line x1="140" y1="70" x2="140" y2="110" stroke="#222" stroke-width="2" />
+      <text x="128" y="125" class="text-label">D1</text>
+
+      <!-- Wire from diode to load -->
+      <path d="M 140 90 L 200 90" class="wire" />
+
+      <!-- Load Resistor -->
+      <rect x="200" y="70" width="40" height="40" rx="3" class="component" />
+      <text x="208" y="95" class="text-label">R<sub>L</sub></text>
+
+      <!-- Bottom wire back to source -->
+      <path d="M 240 90 L 300 90 L 300 140 L 50 140 L 50 110" class="wire" />
+
+      <!-- Output arrow -->
+      <line x1="260" y1="90" x2="260" y2="40" stroke="#d32f2f" stroke-width="2" marker-end="url(#arrowhead)" />
+      <text x="265" y="45" class="text-label" fill="#d32f2f">DC Output</text>
+
+      <!-- Animated current pulse (AC cycle) -->
+      <circle r="4" fill="#d32f2f" opacity="0.8">
+        <animateMotion dur="2s" repeatCount="indefinite" path="M50,50 L120,50 L120,80 M140,90 L200,90 L240,90 L300,90 L300,140 L50,140 L50,110" />
+      </circle>
+
+      <!-- Voltage waveform hint -->
+      <text x="30" y="170" class="text-label" font-size="10">Input: ~</text>
+      <text x="180" y="170" class="text-label" font-size="10">Output: Pulsating DC</text>
+    </svg>
+  </div>
+
+  <h3>Key Concepts</h3>
+  <ul>
+    <li><strong>Diode:</strong> A semiconductor device that allows current to flow in only one direction (forward bias). In reverse bias, it blocks current.</li>
+    <li><strong>Rectification:</strong> The process of converting alternating current (AC) to direct current (DC) using diodes.</li>
+    <li><strong>Half-wave rectification:</strong> Uses one diode to allow only the positive half of the AC cycle to pass, producing a pulsating DC output.</li>
+    <li><strong>Forward bias:</strong> Anode positive relative to cathode → diode conducts.</li>
+    <li><strong>Reverse bias:</strong> Anode negative relative to cathode → diode blocks current.</li>
+  </ul>
+
+  <h3>Nigerian Examples</h3>
+  <div style="background: #f5f5dc; padding: 10px; border-left: 4px solid #008751; margin: 15px 0;">
+    <p><strong>Example 1:</strong> A technician in Lagos repairs a radio that uses a diode (e.g., 1N4007) to convert the AC from a step-down transformer into DC for the amplifier circuit. Without the diode, the radio produces only a loud hum.</p>
+    <p><strong>Example 2:</strong> In a rural health centre in Kano, a solar-powered vaccine refrigerator uses a diode-based charge controller to prevent the battery from discharging back into the solar panel at night, protecting the vaccines.</p>
+  </div>
+
+  <div style="background: #e3f2fd; padding: 12px; border-radius: 8px; margin: 20px 0; border: 1px solid #1565c0;">
+    <p style="font-weight: bold; color: #0d47a1;">🧠 Fun Fact</p>
+    <p>Light-emitting diodes (LEDs) are used in traffic lights across Abuja and Lagos. They last up to 50,000 hours — that's over 5 years of continuous operation! Unlike filament bulbs, LEDs don't burn out suddenly; they just get dimmer over time.</p>
+  </div>
+
+  <h3>Practice Questions</h3>
+  <ol style="font-weight: bold;">
+    <li>What is the main purpose of a diode in an electronic circuit?</li>
+    <li>Explain why a half-wave rectifier produces a pulsating DC output instead of a steady DC voltage.</li>
+    <li>If a diode is connected in reverse bias in a simple DC circuit (with a resistor and battery), what would you observe if you measure the current? Why?</li>
+  </ol>
+
+  <h3>Answers</h3>
+  <ol style="color: #2e7d32;">
+    <li>To allow current to flow in only one direction (rectification) and block current in the opposite direction.</li>
+    <li>Because only the positive half-cycles of the AC input are allowed to pass through the diode; the negative half-cycles are blocked, resulting in a series of positive pulses (pulsating DC) rather than a constant voltage.</li>
+    <li>No current would flow (or negligible leakage current). This is because in reverse bias, the diode's depletion region widens and prevents charge carriers from crossing the junction.</li>
+  </ol>
+</div>

@@ -1,0 +1,66 @@
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto;max-width:100%;background:#f0f8ff;border-radius:12px;padding:10px;">
+  <defs>
+    <style>
+      .spinner { transform-origin: 200px 100px; animation: spin 4s linear infinite; }
+      @keyframes spin { 100% { transform: rotate(360deg); } }
+      .label { font-family: Arial, sans-serif; font-size: 14px; fill: #333; text-anchor: middle; }
+    </style>
+  </defs>
+  <!-- Circle divided into 3 sectors: Red, Blue, Green -->
+  <g class="spinner">
+    <!-- Red sector (0° to 120°) -->
+    <path d="M200,100 L200,20 A80,80 0 0,1 300,100 Z" fill="#e74c3c" stroke="#fff" stroke-width="2"/>
+    <!-- Blue sector (120° to 240°) -->
+    <path d="M200,100 L300,100 A80,80 0 0,1 200,180 Z" fill="#3498db" stroke="#fff" stroke-width="2"/>
+    <!-- Green sector (240° to 360°) -->
+    <path d="M200,100 L200,180 A80,80 0 0,1 200,20 Z" fill="#2ecc71" stroke="#fff" stroke-width="2"/>
+    <!-- Center dot -->
+    <circle cx="200" cy="100" r="6" fill="#222"/>
+    <!-- Arrow pointer -->
+    <polygon points="200,20 195,35 205,35" fill="#222"/>
+  </g>
+  <!-- Legend -->
+  <rect x="30" y="10" width="12" height="12" fill="#e74c3c" rx="2"/>
+  <text x="48" y="21" font-size="12" font-family="Arial">Red</text>
+  <rect x="30" y="28" width="12" height="12" fill="#3498db" rx="2"/>
+  <text x="48" y="39" font-size="12" font-family="Arial">Blue</text>
+  <rect x="30" y="46" width="12" height="12" fill="#2ecc71" rx="2"/>
+  <text x="48" y="57" font-size="12" font-family="Arial">Green</text>
+  <text x="200" y="195" class="label" font-size="14" font-weight="bold">Spinner — 3 equal sectors</text>
+</svg>
+
+<h3>What is Probability?</h3>
+<p>Probability tells us how likely something is to happen. It is always a number between <strong>0</strong> (impossible) and <strong>1</strong> (certain).</p>
+
+<ul>
+  <li><strong>Formula:</strong> Probability = (Number of favourable outcomes) ÷ (Total number of possible outcomes)</li>
+  <li>Probability can be written as a fraction, decimal, or percentage.</li>
+  <li>If an event has probability <em>p</em>, the chance it does <strong>not</strong> happen is <em>1 – p</em>.</li>
+  <li>All possible outcomes together add up to 1.</li>
+</ul>
+
+<h4>🎯 Nigerian Example 1 — School Quiz</h4>
+<p>In a JSS3 class of 40 students, 15 are boys and 25 are girls. If a student is chosen at random, what is the probability that it is a <strong>girl</strong>?</p>
+<p><strong>Solution:</strong> Favourable outcomes = 25 girls. Total outcomes = 40 students. Probability = 25/40 = <strong>5/8</strong>.</p>
+
+<h4>🎯 Nigerian Example 2 — Market Bags</h4>
+<p>A trader has 10 bags of rice, 6 bags of beans, and 4 bags of garri. If a bag is picked at random, what is the probability it is <strong>not rice</strong>?</p>
+<p><strong>Solution:</strong> Total bags = 10+6+4 = 20. Not rice means beans or garri = 6+4 = 10. Probability = 10/20 = <strong>1/2</strong>.</p>
+
+<div style="background:#fff3cd;border-left:4px solid #ffc107;padding:10px 15px;margin:15px 0;border-radius:6px;">
+  <strong>💡 Fun Fact:</strong> The word “probability” comes from the Latin <em>probabilitas</em>, meaning “provable”. The modern theory of probability began in the 1600s when French mathematicians Pascal and Fermat exchanged letters about gambling problems!
+</div>
+
+<h4>✏️ Practice Questions</h4>
+<ol style="line-height:1.8;">
+  <li>A bag contains 3 red, 5 blue, and 2 green marbles. One marble is picked at random. What is the probability of picking a blue marble?</li>
+  <li>In a school of 200 students, 80 are in JSS1, 70 in JSS2, and 50 in JSS3. If one student is chosen at random, what is the probability they are in JSS3?</li>
+  <li>A fair coin is tossed once. What is the probability of getting a tail?</li>
+</ol>
+
+<h4>✅ Answers</h4>
+<ol style="line-height:1.8;">
+  <li>Total marbles = 3+5+2 = 10. Blue = 5. Probability = 5/10 = <strong>1/2</strong>.</li>
+  <li>JSS3 students = 50. Total = 200. Probability = 50/200 = <strong>1/4</strong>.</li>
+  <li>A fair coin has 2 sides (head and tail). Probability of tail = <strong>1/2</strong>.</li>
+</ol>

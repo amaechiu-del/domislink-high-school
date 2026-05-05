@@ -1,0 +1,86 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f0f8ff"/>
+  
+  <!-- Nucleus -->
+  <circle cx="120" cy="150" r="25" fill="#ff6347" stroke="#333" stroke-width="2"/>
+  <text x="120" y="155" text-anchor="middle" fill="white" font-size="14" font-weight="bold">N</text>
+  
+  <!-- Electron orbit 1 -->
+  <ellipse cx="120" cy="150" rx="60" ry="40" fill="none" stroke="#4682b4" stroke-width="1.5" stroke-dasharray="4,3" transform="rotate(-15,120,150)">
+    <animateTransform attributeName="transform" type="rotate" from="-15 120 150" to="345 120 150" dur="4s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Electron 1 -->
+  <circle r="6" fill="#ffd700" stroke="#333" stroke-width="1">
+    <animateMotion dur="4s" repeatCount="indefinite" path="M60,130 A60,40 -15 1,1 180,130 A60,40 -15 1,1 60,130"/>
+  </circle>
+  
+  <!-- Electron orbit 2 -->
+  <ellipse cx="120" cy="150" rx="95" ry="60" fill="none" stroke="#4682b4" stroke-width="1.5" stroke-dasharray="4,3" transform="rotate(25,120,150)">
+    <animateTransform attributeName="transform" type="rotate" from="25 120 150" to="385 120 150" dur="6s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Electron 2 -->
+  <circle r="6" fill="#ffd700" stroke="#333" stroke-width="1">
+    <animateMotion dur="6s" repeatCount="indefinite" path="M25,140 A95,60 25 1,1 215,140 A95,60 25 1,1 25,140"/>
+  </circle>
+  
+  <!-- Photon emission -->
+  <line x1="180" y1="120" x2="280" y2="80" stroke="#ff4500" stroke-width="2" stroke-dasharray="5,3">
+    <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/>
+  </line>
+  
+  <!-- Wavy photon -->
+  <path d="M230,100 Q240,85 250,100 Q260,115 270,100" fill="none" stroke="#ff4500" stroke-width="2">
+    <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Label: Photon -->
+  <text x="260" y="70" text-anchor="middle" fill="#ff4500" font-size="12" font-weight="bold">Photon (hν)</text>
+  
+  <!-- Energy level labels -->
+  <text x="30" y="120" fill="#333" font-size="11">n=2</text>
+  <text x="30" y="175" fill="#333" font-size="11">n=1</text>
+  
+  <!-- Title -->
+  <text x="200" y="30" text-anchor="middle" fill="#2c3e50" font-size="18" font-weight="bold">Bohr Model: Electron Transition</text>
+  
+  <!-- Explanation box -->
+  <rect x="20" y="220" width="360" height="70" rx="8" fill="#e8f4f8" stroke="#4682b4" stroke-width="1"/>
+  <text x="200" y="245" text-anchor="middle" fill="#2c3e50" font-size="13">When an electron drops from a higher energy level</text>
+  <text x="200" y="265" text-anchor="middle" fill="#2c3e50" font-size="13">(n=2) to a lower level (n=1), it emits a photon of</text>
+  <text x="200" y="285" text-anchor="middle" fill="#2c3e50" font-size="13">energy E = hν (where h = Planck's constant)</text>
+</svg>
+
+<h3>Key Concepts in Modern Physics</h3>
+<ul>
+  <li><strong>Quantum Theory:</strong> Energy exists in discrete packets called <em>quanta</em> (photons for light). An electron can only occupy specific energy levels in an atom.</li>
+  <li><strong>Wave-Particle Duality:</strong> Light behaves as both a wave (interference) and a particle (photoelectric effect).</li>
+  <li><strong>Photoelectric Effect:</strong> When light of sufficient frequency hits a metal surface, electrons are ejected. Kinetic energy of ejected electrons = hf - φ (work function).</li>
+  <li><strong>Bohr Model:</strong> Electrons orbit the nucleus in fixed energy levels. Transition between levels emits or absorbs photons of specific frequencies.</li>
+  <li><strong>Radioactive Decay:</strong> Unstable nuclei emit alpha, beta, or gamma radiation to become stable. Half-life is the time for half the nuclei to decay.</li>
+</ul>
+
+<h3>Nigerian Examples</h3>
+<ol>
+  <li><strong>Cancer Treatment in Lagos:</strong> Teaching hospitals in Lagos use <em>gamma radiation</em> from cobalt-60 to treat cancer patients. The gamma rays target and destroy malignant cells while sparing healthy tissue, applying the principle of radioactive decay.</li>
+  <li><strong>Solar Power in Kano:</strong> Solar panels installed in Kano State use the <em>photoelectric effect</em> to convert sunlight into electricity. Photons from the sun knock electrons loose in silicon cells, generating current to power homes and schools.</li>
+</ol>
+
+<div style="background:#fff3cd; border-left:6px solid #ffc107; padding:12px 16px; margin:16px 0; border-radius:6px;">
+  <strong>💡 Fun Fact:</strong> The word "quantum" comes from the Latin <em>quantus</em> meaning "how much." In Nigeria, quantum physics helps design better <strong>LED bulbs</strong> used in many homes—they convert electricity into light with minimal heat, thanks to quantum mechanics of electron-hole recombination!
+</div>
+
+<h3>Practice Questions</h3>
+<ol>
+  <li><strong>Question 1:</strong> A metal has a work function of 2.0 eV. Light of frequency 6.0 × 10<sup>14</sup> Hz shines on it. (Planck's constant h = 4.14 × 10<sup>-15</sup> eV·s). Calculate the maximum kinetic energy of ejected electrons.</li>
+  <li><strong>Question 2:</strong> A radioactive sample has a half-life of 8 days. If you start with 80 g of the sample, how much remains after 24 days?</li>
+  <li><strong>Question 3:</strong> An electron in a hydrogen atom drops from n=3 to n=2, emitting a photon of wavelength 656 nm. Calculate the energy of this photon in joules (h = 6.63 × 10<sup>-34</sup> J·s, c = 3.0 × 10<sup>8</sup> m/s).</li>
+</ol>
+
+<h4>Answers</h4>
+<ol>
+  <li><strong>Answer 1:</strong> E = hf = (4.14×10<sup>-15</sup>)(6.0×10<sup>14</sup>) = 2.484 eV. K<sub>max</sub> = E - φ = 2.484 - 2.0 = <strong>0.484 eV</strong></li>
+  <li><strong>Answer 2:</strong> 24 days = 3 half-lives. Remaining = 80 g × (½)^3 = 80 × ⅛ = <strong>10 g</strong></li>
+  <li><strong>Answer 3:</strong> E = hc/λ = (6.63×10<sup>-34</sup>)(3.0×10<sup>8</sup>) / (656×10<sup>-9</sup>) = 1.989×10<sup>-25</sup> / 6.56×10<sup>-7</sup> = <strong>3.03 × 10<sup>-19</sup> J</strong></li>
+</ol>

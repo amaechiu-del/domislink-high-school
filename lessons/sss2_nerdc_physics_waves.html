@@ -1,0 +1,79 @@
+<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg" style="display:block; margin:0 auto; max-width:100%; height:auto;">
+  <defs>
+    <style>
+      .wave-path { fill:none; stroke:#1a5276; stroke-width:3; }
+      .label { font-family:Arial, sans-serif; font-size:14px; fill:#2c3e50; }
+      .arrow { fill:#e74c3c; }
+    </style>
+  </defs>
+  
+  <!-- Animated wave (transverse) -->
+  <path class="wave-path" stroke-dasharray="8,4" stroke="#2980b9" stroke-width="2" opacity="0.5">
+    <animate attributeName="d" dur="3s" repeatCount="indefinite"
+      values="M50,100 Q100,40 150,100 T250,100 T350,100 T450,100;
+              M50,100 Q100,160 150,100 T250,100 T350,100 T450,100;
+              M50,100 Q100,40 150,100 T250,100 T350,100 T450,100"/>
+  </path>
+  
+  <!-- Main wave (solid) -->
+  <path class="wave-path" stroke="#1a5276">
+    <animate attributeName="d" dur="4s" repeatCount="indefinite"
+      values="M20,150 Q85,80 150,150 T280,150 T410,150 T480,150;
+              M20,150 Q85,220 150,150 T280,150 T410,150 T480,150;
+              M20,150 Q85,80 150,150 T280,150 T410,150 T480,150"/>
+  </path>
+  
+  <!-- Labels -->
+  <text x="140" y="130" class="label" text-anchor="middle">Crest</text>
+  <text x="270" y="180" class="label" text-anchor="middle">Trough</text>
+  <text x="50" y="180" class="label" text-anchor="middle">Amplitude</text>
+  <text x="380" y="190" class="label" text-anchor="middle">Wavelength (λ)</text>
+  
+  <!-- Amplitude arrow -->
+  <line x1="80" y1="150" x2="80" y2="100" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="80" y1="150" x2="80" y2="200" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Wavelength double arrow -->
+  <line x1="150" y1="210" x2="280" y2="210" stroke="#e74c3c" stroke-width="2" marker-start="url(#arrowhead)" marker-end="url(#arrowhead)"/>
+  
+  <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+    <polygon points="0,0 8,3 0,6" fill="#e74c3c"/>
+  </marker>
+  
+  <!-- Source point -->
+  <circle cx="20" cy="150" r="5" fill="#e67e22">
+    <animate attributeName="r" values="5;7;5" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <text x="10" y="140" font-size="12" fill="#e67e22">Source</text>
+</svg>
+
+<h3>Key Concepts of Waves</h3>
+<ul>
+  <li><strong>Wave:</strong> A disturbance that transfers energy from one point to another without transferring matter.</li>
+  <li><strong>Crest:</strong> The highest point of a wave above the rest position.</li>
+  <li><strong>Trough:</strong> The lowest point of a wave below the rest position.</li>
+  <li><strong>Amplitude (A):</strong> Maximum displacement from rest position — determines wave energy.</li>
+  <li><strong>Wavelength (λ):</strong> Distance between two successive crests or troughs.</li>
+  <li><strong>Frequency (f):</strong> Number of complete waves passing a point per second (measured in Hertz, Hz).</li>
+  <li><strong>Wave speed (v):</strong> v = f × λ</li>
+</ul>
+
+<h3>Nigerian Examples</h3>
+<ul>
+  <li><strong>Example 1 (Sound wave):</strong> When a <em>talking drum</em> (gangan) is played in a Yoruba ceremony, the skin of the drum vibrates, creating sound waves that travel through the air to listeners. Tightening the drum skin increases frequency (higher pitch).</li>
+  <li><strong>Example 2 (Water wave):</strong> At <em>Bar Beach, Lagos</em>, ocean waves continuously crash onto the shore. These are mechanical waves where water particles move in circular orbits, transferring energy from the Atlantic Ocean to the coast.</li>
+</ul>
+
+<div style="background:#fef9e7; border-left:5px solid #f1c40f; padding:10px 15px; margin:15px 0;">
+  <strong>⚡ Fun Fact:</strong> The <em>Kainji Dam</em> in Niger State uses the energy of flowing water (wave motion) to generate electricity. The dam’s turbines convert the kinetic energy of water waves into electrical energy — enough to power millions of homes!
+</div>
+
+<h3>Practice Questions</h3>
+<ol>
+  <li><strong>Question 1:</strong> A wave has a frequency of 5 Hz and a wavelength of 2 m. Calculate the wave speed.<br>
+    <em>Answer:</em> v = f × λ = 5 × 2 = <strong>10 m/s</strong></li>
+  <li><strong>Question 2:</strong> In the SVG diagram above, what is the distance between two consecutive crests called?<br>
+    <em>Answer:</em> <strong>Wavelength (λ)</strong></li>
+  <li><strong>Question 3:</strong> A fisherman at Makoko floating school notices 10 wave crests pass his boat in 20 seconds. What is the frequency of the waves?<br>
+    <em>Answer:</em> f = number of waves / time = 10 / 20 = <strong>0.5 Hz</strong></li>
+</ol>

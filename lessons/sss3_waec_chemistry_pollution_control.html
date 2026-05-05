@@ -1,0 +1,121 @@
+<div class="chemistry-lesson">
+  <h2>Pollution Control in Chemistry</h2>
+  <p><em>SSS3 WAEC Chemistry Syllabus</em></p>
+
+  <!-- Animated SVG Diagram -->
+  <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:600px; height:auto; display:block; margin:0 auto 20px;">
+    <defs>
+      <style>
+        @keyframes smoke {
+          0% { opacity: 0.6; transform: translateY(0); }
+          50% { opacity: 0.2; transform: translateY(-20px); }
+          100% { opacity: 0.6; transform: translateY(0); }
+        }
+        @keyframes filter {
+          0% { fill: #8B4513; }
+          50% { fill: #A0522D; }
+          100% { fill: #8B4513; }
+        }
+        @keyframes clean {
+          0% { opacity: 0.3; }
+          50% { opacity: 1; }
+          100% { opacity: 0.3; }
+        }
+        .smoke1 { animation: smoke 3s ease-in-out infinite; }
+        .smoke2 { animation: smoke 4s ease-in-out 1s infinite; }
+        .filter-anim { animation: filter 5s ease-in-out infinite; }
+        .clean-air { animation: clean 2s ease-in-out infinite; }
+      </style>
+    </defs>
+    
+    <!-- Factory -->
+    <rect x="50" y="120" width="120" height="150" fill="#555" rx="5"/>
+    <rect x="60" y="90" width="30" height="30" fill="#777" rx="3"/>
+    <rect x="130" y="90" width="30" height="30" fill="#777" rx="3"/>
+    <rect x="95" y="60" width="20" height="40" fill="#888" rx="2"/>
+    
+    <!-- Chimney smoke (pollution) -->
+    <circle cx="105" cy="40" r="12" fill="#666" class="smoke1" opacity="0.5"/>
+    <circle cx="115" cy="20" r="15" fill="#777" class="smoke2" opacity="0.4"/>
+    <circle cx="95" cy="10" r="10" fill="#888" class="smoke1" opacity="0.3"/>
+    
+    <!-- Filter / Scrubber unit -->
+    <rect x="200" y="140" width="80" height="60" fill="#4CAF50" rx="10" class="filter-anim"/>
+    <text x="240" y="175" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Scrubber</text>
+    
+    <!-- Arrow from factory to scrubber -->
+    <polygon points="170,170 195,165 195,175" fill="#333"/>
+    <line x1="170" y1="170" x2="195" y2="170" stroke="#333" stroke-width="3"/>
+    
+    <!-- Clean air output -->
+    <rect x="310" y="150" width="80" height="40" fill="#2196F3" rx="8" class="clean-air"/>
+    <text x="350" y="175" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Clean Air</text>
+    
+    <!-- Arrow from scrubber to clean air -->
+    <polygon points="280,170 305,165 305,175" fill="#333"/>
+    <line x1="280" y1="170" x2="305" y2="170" stroke="#333" stroke-width="3"/>
+    
+    <!-- Trees -->
+    <circle cx="420" cy="200" r="25" fill="#2E7D32"/>
+    <rect x="416" y="200" width="8" height="30" fill="#5D4037"/>
+    <circle cx="480" cy="190" r="30" fill="#388E3C"/>
+    <rect x="476" y="190" width="8" height="35" fill="#5D4037"/>
+    <circle cx="540" cy="210" r="20" fill="#43A047"/>
+    <rect x="536" y="210" width="8" height="25" fill="#5D4037"/>
+    
+    <!-- Labels -->
+    <text x="110" y="285" text-anchor="middle" fill="#333" font-size="13" font-weight="bold">Pollution Source</text>
+    <text x="350" y="220" text-anchor="middle" fill="#2E7D32" font-size="13" font-weight="bold">Environment</text>
+    <text x="350" y="235" text-anchor="middle" fill="#2E7D32" font-size="11">(Protected)</text>
+    
+    <!-- Ground -->
+    <line x1="0" y1="270" x2="600" y2="270" stroke="#333" stroke-width="2"/>
+  </svg>
+
+  <!-- Bullet-point Explanations -->
+  <h3>Key Concepts in Pollution Control</h3>
+  <ul style="line-height:1.8; padding-left:20px;">
+    <li><strong>Pollution</strong> is the introduction of harmful substances (pollutants) into the environment, causing damage to living organisms and ecosystems.</li>
+    <li><strong>Pollution control</strong> involves methods to reduce or eliminate the release of pollutants, often using chemical, physical, or biological processes.</li>
+    <li><strong>Scrubbers</strong> (as shown in the diagram) remove acidic gases like SO₂ from industrial exhaust using alkaline solutions (e.g., lime or NaOH).</li>
+    <li><strong>Catalytic converters</strong> in vehicles convert toxic gases (CO, NOₓ, hydrocarbons) into less harmful substances (CO₂, N₂, H₂O).</li>
+    <li><strong>Bioremediation</strong> uses microorganisms to break down pollutants, e.g., oil spills or heavy metals in soil.</li>
+    <li><strong>Prevention</strong> is better than cure: using cleaner fuels, recycling, and proper waste disposal are key strategies.</li>
+  </ul>
+
+  <!-- Nigerian Examples -->
+  <h3>Nigerian Examples</h3>
+  <div style="background:#e8f5e9; padding:10px 15px; border-radius:8px; margin:10px 0;">
+    <p><strong>1. Oil Spill Cleanup in the Niger Delta:</strong> Chemical dispersants and bioremediation techniques are used to break down crude oil spills. For instance, the use of <em>Pseudomonas</em> bacteria to degrade hydrocarbons in affected soil and water.</p>
+    <p><strong>2. Industrial Scrubbers in Lagos:</strong> Many factories in Lagos (e.g., cement plants and refineries) install wet scrubbers to remove particulate matter and sulfur dioxide from exhaust gases, reducing air pollution in densely populated areas.</p>
+  </div>
+
+  <!-- Fun Fact Block -->
+  <div style="background:#fff3e0; border-left:5px solid #ff9800; padding:10px 15px; border-radius:5px; margin:15px 0;">
+    <p><strong>⚡ Fun Fact:</strong> The <em>Lagos State Environmental Protection Agency (LASEPA)</em> once used a "pollution clock" that counts the number of days the air quality is hazardous. In 2023, they introduced a <strong>citizen science program</strong> where students use simple chemical test kits to measure pH of rainwater – detecting acid rain from industrial emissions!</p>
+  </div>
+
+  <!-- Practice Questions -->
+  <h3>Practice Questions (WAEC-Style)</h3>
+  <ol style="line-height:2;">
+    <li><strong>Question 1:</strong> A factory releases sulfur dioxide into the air. Which of the following is the most effective chemical method to remove it before release?<br>
+      A. Adding calcium carbonate to the exhaust<br>
+      B. Passing the gas through water<br>
+      C. Using a catalytic converter<br>
+      D. Burning the gas</li>
+    <li><strong>Question 2:</strong> Explain why the use of leaded petrol is banned in Nigeria as a pollution control measure. Give one chemical reason.</li>
+    <li><strong>Question 3:</strong> In the Niger Delta, oil-degrading bacteria are introduced to polluted water. What type of pollution control is this?<br>
+      A. Physical control<br>
+      B. Chemical control<br>
+      C. Bioremediation<br>
+      D. Mechanical control</li>
+  </ol>
+
+  <!-- Answers -->
+  <div style="background:#f5f5f5; padding:10px 15px; border-radius:8px; margin-top:15px;">
+    <h4>Answers</h4>
+    <p><strong>Answer 1:</strong> A (Adding calcium carbonate – it reacts with SO₂ to form calcium sulfite, a solid that can be removed).</p>
+    <p><strong>Answer 2:</strong> Leaded petrol contains tetraethyl lead, which when burned releases lead oxide – a toxic heavy metal that damages the brain and nervous system. It also poisons catalytic converters. The ban reduces air and soil pollution.</p>
+    <p><strong>Answer 3:</strong> C (Bioremediation – using living organisms to break down pollutants).</p>
+  </div>
+</div>

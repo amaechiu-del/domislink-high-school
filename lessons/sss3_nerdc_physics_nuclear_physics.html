@@ -1,0 +1,105 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto;max-width:100%;background:#f0f4f8;border-radius:12px;padding:10px">
+  <defs>
+    <radialGradient id="nucleusGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="100%" stop-color="#c0392b"/>
+    </radialGradient>
+    <radialGradient id="electronGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#74b9ff"/>
+      <stop offset="100%" stop-color="#0984e3"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="35" text-anchor="middle" font-size="20" font-weight="bold" fill="#2d3436">Nuclear Fission Chain Reaction</text>
+
+  <!-- Central nucleus -->
+  <circle cx="300" cy="200" r="40" fill="url(#nucleusGrad)" stroke="#8e44ad" stroke-width="3"/>
+  <text x="300" y="205" text-anchor="middle" font-size="14" fill="white" font-weight="bold">U-235</text>
+
+  <!-- Neutron approaching -->
+  <circle cx="180" cy="160" r="8" fill="#636e72" stroke="#2d3436" stroke-width="2">
+    <animate attributeName="cx" from="100" to="260" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="cy" from="180" to="190" dur="2s" repeatCount="indefinite"/>
+  </text>
+  <text x="140" y="150" font-size="12" fill="#636e72">n</text>
+
+  <!-- Exploding fragments animation -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1" dur="3s" repeatCount="indefinite"/>
+    <!-- Fragment 1 -->
+    <circle cx="200" cy="120" r="12" fill="#fdcb6e" stroke="#e17055" stroke-width="2">
+      <animate attributeName="cx" values="300;200;180" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="200;120;90" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <text x="190" y="110" font-size="10" fill="#e17055">Ba-141</text>
+    <!-- Fragment 2 -->
+    <circle cx="400" cy="280" r="12" fill="#55efc4" stroke="#00b894" stroke-width="2">
+      <animate attributeName="cx" values="300;400;420" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="200;280;310" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <text x="400" y="300" font-size="10" fill="#00b894">Kr-92</text>
+    <!-- Neutrons released -->
+    <circle cx="250" cy="130" r="6" fill="#636e72">
+      <animate attributeName="cx" values="300;250;220" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="200;130;100" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="350" cy="270" r="6" fill="#636e72">
+      <animate attributeName="cx" values="300;350;380" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="200;270;300" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="320" cy="140" r="6" fill="#636e72">
+      <animate attributeName="cx" values="300;320;340" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="200;140;110" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Energy rays -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1;0.5;0" dur="3s" repeatCount="indefinite"/>
+    <line x1="300" y1="200" x2="150" y2="80" stroke="#f1c40f" stroke-width="2" stroke-dasharray="4,4"/>
+    <line x1="300" y1="200" x2="450" y2="320" stroke="#f1c40f" stroke-width="2" stroke-dasharray="4,4"/>
+    <line x1="300" y1="200" x2="100" y2="250" stroke="#f1c40f" stroke-width="2" stroke-dasharray="4,4"/>
+    <line x1="300" y1="200" x2="500" y2="150" stroke="#f1c40f" stroke-width="2" stroke-dasharray="4,4"/>
+  </g>
+
+  <!-- Labels -->
+  <text x="300" y="370" text-anchor="middle" font-size="14" fill="#2d3436" font-weight="bold">⚡ Energy released + 2-3 neutrons</text>
+</svg>
+
+<h3>Key Concepts in Nuclear Physics</h3>
+<ul>
+  <li><strong>Nuclear Fission:</strong> Splitting of a heavy nucleus (e.g., Uranium-235) into lighter nuclei, releasing energy and neutrons.</li>
+  <li><strong>Chain Reaction:</strong> Released neutrons trigger further fission events, sustaining the reaction if critical mass is present.</li>
+  <li><strong>Nuclear Fusion:</strong> Combining light nuclei (e.g., hydrogen isotopes) to form a heavier nucleus, releasing even more energy.</li>
+  <li><strong>Binding Energy:</strong> Energy required to hold the nucleus together; the source of energy in fission/fusion.</li>
+  <li><strong>Radioactive Decay:</strong> Unstable nuclei emit alpha, beta, or gamma radiation to become stable.</li>
+</ul>
+
+<div style="background:#e8f8f5;padding:12px;border-radius:8px;margin:12px 0;border-left:4px solid #00b894">
+  <strong>🇳🇬 Nigerian Example 1: Gamma Irradiation of Cassava</strong><br>
+  The Nigerian Nuclear Regulatory Authority (NNRA) licenses the use of gamma radiation from Cobalt-60 to sterilize pests in stored cassava and yam, prolonging shelf life without chemicals.
+</div>
+
+<div style="background:#e8f8f5;padding:12px;border-radius:8px;margin:12px 0;border-left:4px solid #00b894">
+  <strong>🇳🇬 Nigerian Example 2: Nuclear Medicine in Lagos</strong><br>
+  The Lagos University Teaching Hospital (LUTH) uses Technetium-99m (a nuclear isomer) for diagnostic imaging of cancer and heart conditions, sourced from Nigeria's research reactor at Ahmadu Bello University, Zaria.
+</div>
+
+<div style="background:#fff3cd;padding:12px;border-radius:8px;margin:12px 0;border:1px dashed #f0ad4e">
+  <strong>💡 Fun Fact:</strong> The Sun produces energy by fusing about 600 million tonnes of hydrogen into helium every second! In Nigeria, the 30 kW NIRR-1 research reactor at Ahmadu Bello University is the only nuclear reactor in the country, used for research and neutron activation analysis.
+</div>
+
+<h3>Practice Questions</h3>
+<ol style="line-height:1.8">
+  <li>Explain why a chain reaction in Uranium-235 requires a "critical mass".</li>
+  <li>A nucleus of Uranium-235 absorbs a neutron and splits into Barium-141 and Krypton-92. How many neutrons are released in this reaction? (Show your working using mass numbers.)</li>
+  <li>State two safety measures used in a nuclear reactor to control the fission rate.</li>
+</ol>
+
+<div style="background:#f0f0f0;padding:12px;border-radius:8px;margin:12px 0">
+  <strong>📝 Answers:</strong><br>
+  1. Critical mass ensures enough uranium atoms are present so that at least one neutron from each fission event causes another fission, sustaining the chain reaction. Below critical mass, too many neutrons escape without hitting nuclei.<br><br>
+  2. U-235 (mass 235) + 1 neutron → Ba-141 + Kr-92 + x neutrons. Mass balance: 236 = 141 + 92 + x → x = 3 neutrons released.<br><br>
+  3. (i) Control rods (e.g., boron or cadmium) absorb excess neutrons. (ii) Moderators (e.g., water or graphite) slow neutrons to increase fission probability. (iii) Coolant systems remove heat to prevent meltdown.
+</div>

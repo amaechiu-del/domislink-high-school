@@ -1,0 +1,87 @@
+<div class="chemistry-lesson">
+  <h2>Acids, Bases and Salts</h2>
+
+  <p><strong>Topic:</strong> Properties, reactions and applications of acids, bases and salts.</p>
+
+  <!-- Animated SVG Diagram -->
+  <svg width="100%" height="300" viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg" style="display:block; margin: 1em auto; background: #f0f8ff; border-radius: 12px;">
+    <defs>
+      <style>
+        @keyframes moveHplus { 0% { cx: 60; } 50% { cx: 200; } 100% { cx: 60; } }
+        @keyframes moveOHminus { 0% { cx: 540; } 50% { cx: 400; } 100% { cx: 540; } }
+        @keyframes flashNeutral { 0% { fill: #ff9999; } 50% { fill: #99ff99; } 100% { fill: #ff9999; } }
+        .hplus { animation: moveHplus 3s ease-in-out infinite; }
+        .ohminus { animation: moveOHminus 3s ease-in-out infinite; }
+        .neutral-flash { animation: flashNeutral 2s ease-in-out infinite; }
+      </style>
+    </defs>
+    <!-- Labels -->
+    <text x="30" y="30" font-size="16" font-weight="bold" fill="#333">Acid (HCl)</text>
+    <text x="430" y="30" font-size="16" font-weight="bold" fill="#333">Base (NaOH)</text>
+    <text x="240" y="30" font-size="16" font-weight="bold" fill="#006600">Neutralisation → Salt + Water</text>
+    <!-- Beaker left -->
+    <rect x="40" y="100" width="120" height="100" rx="10" fill="#ffcccc" stroke="#cc0000" stroke-width="2"/>
+    <text x="70" y="150" font-size="14" fill="#cc0000">H⁺ Cl⁻</text>
+    <!-- Beaker right -->
+    <rect x="440" y="100" width="120" height="100" rx="10" fill="#ccffcc" stroke="#006600" stroke-width="2"/>
+    <text x="470" y="150" font-size="14" fill="#006600">Na⁺ OH⁻</text>
+    <!-- Animated H+ ion -->
+    <circle cx="60" cy="180" r="12" class="hplus" fill="#ff0000" opacity="0.8"/>
+    <text x="54" y="185" font-size="10" fill="white">H⁺</text>
+    <!-- Animated OH- ion -->
+    <circle cx="540" cy="180" r="14" class="ohminus" fill="#008800" opacity="0.8"/>
+    <text x="530" y="185" font-size="10" fill="white">OH⁻</text>
+    <!-- Central product beaker -->
+    <rect x="220" y="120" width="160" height="80" rx="10" class="neutral-flash" stroke="#006600" stroke-width="2"/>
+    <text x="250" y="160" font-size="14" fill="#003300" font-weight="bold">NaCl (salt)</text>
+    <text x="260" y="180" font-size="12" fill="#003300">+ H₂O</text>
+    <!-- Arrow from left to centre -->
+    <line x1="160" y1="150" x2="220" y2="150" stroke="#cc0000" stroke-width="3" marker-end="url(#arrowRed)"/>
+    <line x1="380" y1="150" x2="440" y2="150" stroke="#006600" stroke-width="3" marker-end="url(#arrowGreen)"/>
+    <defs>
+      <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#cc0000"/>
+      </marker>
+      <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#006600"/>
+      </marker>
+    </defs>
+  </svg>
+
+  <!-- Bullet-point explanations -->
+  <ul style="margin-top: 1em; line-height: 1.8;">
+    <li><strong>Acids</strong> are substances that donate protons (H⁺) in solution. They taste sour, turn blue litmus red, and have pH &lt; 7. Examples: HCl (hydrochloric acid), H₂SO₄ (sulphuric acid).</li>
+    <li><strong>Bases</strong> are substances that accept protons (H⁺) or donate hydroxide ions (OH⁻) in solution. They taste bitter, feel slippery, turn red litmus blue, and have pH &gt; 7. Soluble bases are called alkalis.</li>
+    <li><strong>Salts</strong> are ionic compounds formed when an acid reacts with a base (neutralisation). General equation: Acid + Base → Salt + Water.</li>
+    <li>The pH scale ranges from 0 (strong acid) to 14 (strong base); 7 is neutral. Universal indicator shows colour changes.</li>
+  </ul>
+
+  <!-- Two Nigerian examples -->
+  <div style="background: #fffbe6; border-left: 4px solid #ffa500; padding: 0.8em; margin: 1em 0;">
+    <h4>🇳🇬 Nigerian Examples</h4>
+    <p><strong>1.</strong> <em>Local soap making (Ose Dudu):</em> Traditional black soap is made by mixing plantain peel ash (a base) with palm oil and water. The alkaline ash reacts with oils to form soap (a salt of fatty acids) – a practical neutralisation reaction.</p>
+    <p><strong>2.</strong> <em>Fufu and cassava processing:</em> Cassava contains hydrocyanic acid (toxic). To remove it, cassava is soaked and fermented, then sometimes treated with lime water (calcium hydroxide, a base) to neutralise the acid, making it safe to eat.</p>
+  </div>
+
+  <!-- Fun Fact block -->
+  <div style="background: #e6f7ff; border: 2px dashed #0099cc; border-radius: 10px; padding: 0.8em; margin: 1em 0;">
+    <p><strong>🧪 Fun Fact:</strong> The word "alkali" comes from the Arabic <em>al-qaly</em> meaning "the calcined ashes". Ancient Nigerians (Nok culture) used wood ash to preserve food – the alkaline ash neutralised acids from spoilage!</p>
+  </div>
+
+  <!-- Practice Questions -->
+  <div style="margin-top: 1.5em; border-top: 2px solid #333; padding-top: 1em;">
+    <h3>📝 Practice Questions</h3>
+    <ol style="line-height: 2;">
+      <li><strong>Question 1:</strong> What is the pH of a solution that turns blue litmus paper red? Name one common acid found in the home.</li>
+      <li><strong>Question 2:</strong> Write the balanced chemical equation for the reaction between sodium hydroxide (NaOH) and hydrochloric acid (HCl).</li>
+      <li><strong>Question 3:</strong> A farmer wants to reduce the acidity of his soil for planting yams. Should he add lime (calcium oxide) or vinegar? Explain why.</li>
+    </ol>
+
+    <h4>✅ Answers</h4>
+    <ol style="line-height: 2; list-style-type: none; padding-left: 0;">
+      <li><strong>Answer 1:</strong> pH less than 7 (acidic). Example: Vinegar (acetic acid) or lemon juice (citric acid).</li>
+      <li><strong>Answer 2:</strong> NaOH + HCl → NaCl + H₂O (sodium chloride salt and water).</li>
+      <li><strong>Answer 3:</strong> He should add lime (calcium oxide). Lime is a base that neutralises soil acidity. Vinegar is an acid and would make the soil more acidic.</li>
+    </ol>
+  </div>
+</div>

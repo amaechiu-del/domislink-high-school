@@ -1,0 +1,122 @@
+<div class="lesson-content">
+  <h2>Economic Growth</h2>
+  
+  <svg viewBox="0 0 600 350" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto; max-width: 100%;">
+    <defs>
+      <linearGradient id="growthGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#2ecc71" />
+        <stop offset="100%" stop-color="#27ae60" />
+      </linearGradient>
+      <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#f39c12" />
+        <stop offset="100%" stop-color="#e67e22" />
+      </linearGradient>
+    </defs>
+    
+    <!-- Grid lines -->
+    <line x1="80" y1="50" x2="80" y2="280" stroke="#ddd" stroke-width="1" />
+    <line x1="80" y1="280" x2="550" y2="280" stroke="#ddd" stroke-width="1" />
+    
+    <!-- Y-axis -->
+    <line x1="80" y1="50" x2="80" y2="280" stroke="#333" stroke-width="2" />
+    <!-- X-axis -->
+    <line x1="80" y1="280" x2="550" y2="280" stroke="#333" stroke-width="2" />
+    
+    <!-- Y-axis label -->
+    <text x="25" y="170" transform="rotate(-90, 25, 170)" text-anchor="middle" font-size="14" fill="#555">Real GDP</text>
+    <!-- X-axis label -->
+    <text x="315" y="330" text-anchor="middle" font-size="14" fill="#555">Time (Years)</text>
+    
+    <!-- Grid horizontal lines -->
+    <line x1="80" y1="100" x2="550" y2="100" stroke="#eee" stroke-width="0.5" stroke-dasharray="4" />
+    <line x1="80" y1="150" x2="550" y2="150" stroke="#eee" stroke-width="0.5" stroke-dasharray="4" />
+    <line x1="80" y1="200" x2="550" y2="200" stroke="#eee" stroke-width="0.5" stroke-dasharray="4" />
+    <line x1="80" y1="250" x2="550" y2="250" stroke="#eee" stroke-width="0.5" stroke-dasharray="4" />
+    
+    <!-- Growth curve (animated) -->
+    <path d="M 80 270 Q 200 240 300 200 T 450 120 T 530 80" 
+          fill="none" 
+          stroke="url(#growthGrad)" 
+          stroke-width="3" 
+          stroke-linecap="round">
+      <animate attributeName="stroke-dashoffset" from="800" to="0" dur="2s" fill="freeze" />
+      <animate attributeName="stroke-dasharray" from="800" to="800" dur="0.01s" fill="freeze" />
+    </path>
+    
+    <!-- Upward arrow -->
+    <polygon points="530,80 545,95 520,95" fill="url(#arrowGrad)">
+      <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2s" fill="freeze" />
+    </polygon>
+    <line x1="535" y1="95" x2="535" y2="130" stroke="url(#arrowGrad)" stroke-width="2">
+      <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2s" fill="freeze" />
+    </line>
+    
+    <!-- Data points -->
+    <circle cx="80" cy="270" r="5" fill="#2ecc71">
+      <animate attributeName="r" values="5;8;5" dur="1s" begin="1s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="300" cy="200" r="5" fill="#2ecc71">
+      <animate attributeName="r" values="5;8;5" dur="1s" begin="1.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="450" cy="120" r="5" fill="#2ecc71">
+      <animate attributeName="r" values="5;8;5" dur="1s" begin="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="530" cy="80" r="5" fill="#2ecc71">
+      <animate attributeName="r" values="5;8;5" dur="1s" begin="2.5s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Labels for points -->
+    <text x="80" y="295" text-anchor="middle" font-size="10" fill="#555">Y₁</text>
+    <text x="300" y="225" text-anchor="middle" font-size="10" fill="#555">Y₂</text>
+    <text x="450" y="145" text-anchor="middle" font-size="10" fill="#555">Y₃</text>
+    <text x="530" y="105" text-anchor="middle" font-size="10" fill="#555">Y₄</text>
+    
+    <!-- Title -->
+    <text x="315" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">Economic Growth Trend</text>
+  </svg>
+
+  <div style="margin: 20px 0;">
+    <h3>Key Points on Economic Growth</h3>
+    <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+      <li><strong>Definition:</strong> Economic growth is the sustained increase in a country's production of goods and services over time, measured by the rise in real Gross Domestic Product (GDP).</li>
+      <li><strong>Measurement:</strong> It is calculated as the percentage increase in real GDP per capita, accounting for population changes.</li>
+      <li><strong>Factors:</strong> Key drivers include natural resources, human capital, capital formation, technological innovation, and institutional stability.</li>
+      <li><strong>Indicators:</strong> Rising GDP, improved infrastructure, higher employment rates, and increased industrial output signal growth.</li>
+      <li><strong>Importance:</strong> Growth leads to higher living standards, poverty reduction, and increased government revenue for public services.</li>
+    </ul>
+  </div>
+
+  <div style="background-color: #f0f9f4; border-left: 4px solid #27ae60; padding: 12px; margin: 20px 0; border-radius: 4px;">
+    <h4 style="margin: 0 0 8px 0; color: #27ae60;">🇳🇬 Nigerian Examples</h4>
+    <p><strong>1. Agricultural Sector Growth (2019-2022):</strong> Nigeria's agricultural sector grew by 2.3% annually due to government policies like the Anchor Borrowers' Programme, which boosted rice and cassava production. States like Kebbi and Ogun saw increased yields, contributing to national GDP.</p>
+    <p><strong>2. Telecom Boom (2001-2021):</strong> The liberalization of Nigeria's telecommunications sector led to massive growth. From less than 1 million lines in 2001, mobile subscriptions rose to over 222 million by 2021, driving GDP growth through services, employment, and innovation.</p>
+  </div>
+
+  <div style="background-color: #fff8e1; border: 1px solid #f39c12; border-radius: 8px; padding: 12px; margin: 20px 0;">
+    <span style="font-size: 20px;">💡</span>
+    <strong>Fun Fact:</strong> Did you know? Nigeria's economy grew by over 7% annually between 2000 and 2014, making it one of the fastest-growing economies in Africa during that period! This was largely driven by oil revenues and reforms in banking and telecommunications.
+  </div>
+
+  <div style="margin-top: 30px;">
+    <h3>Practice Questions</h3>
+    
+    <div style="background: #f8f9fa; padding: 15px; border-radius: 6px; margin: 10px 0;">
+      <p><strong>Question 1:</strong> Define economic growth and explain two factors that can accelerate it in a developing country like Nigeria.</p>
+    </div>
+    
+    <div style="background: #f8f9fa; padding: 15px; border-radius: 6px; margin: 10px 0;">
+      <p><strong>Question 2:</strong> Using the diagram above, explain why the curve slopes upward over time. What does the distance between Y₁ and Y₄ represent?</p>
+    </div>
+    
+    <div style="background: #f8f9fa; padding: 15px; border-radius: 6px; margin: 10px 0;">
+      <p><strong>Question 3:</strong> Distinguish between economic growth and economic development. Provide one Nigerian example for each.</p>
+    </div>
+
+    <div style="background: #eaf2f8; padding: 15px; border-radius: 6px; margin: 20px 0;">
+      <h4 style="margin: 0 0 10px 0;">📝 Answers</h4>
+      <p><strong>Answer 1:</strong> Economic growth is the sustained increase in a country's real GDP over time. Two factors: (i) Investment in human capital (education/training) improves productivity. (ii) Technological innovation (e.g., mobile banking) boosts efficiency across sectors.</p>
+      <p><strong>Answer 2:</strong> The curve slopes upward because real GDP increases over time due to factors like capital accumulation, technology, and labor growth. The distance Y₁ to Y₄ represents the total increase in real GDP over the period shown.</p>
+      <p><strong>Answer 3:</strong> Economic growth is a quantitative increase in output (e.g., Nigeria's 7% GDP growth in 2014). Economic development is qualitative improvement in living standards (e.g., Nigeria's increase in literacy rate from 57% in 2000 to 77% in 2021). Growth can occur without development if benefits are not widely shared.</p>
+    </div>
+  </div>
+</div>

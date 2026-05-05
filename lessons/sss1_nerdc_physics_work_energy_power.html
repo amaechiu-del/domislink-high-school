@@ -1,0 +1,99 @@
+<svg width="100%" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB"/>
+      <stop offset="100%" style="stop-color:#E0F0FF"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#228B22"/>
+      <stop offset="100%" style="stop-color:#006400"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect x="0" y="0" width="800" height="220" fill="url(#sky)"/>
+
+  <!-- Ground -->
+  <rect x="0" y="220" width="800" height="80" fill="url(#ground)"/>
+
+  <!-- Ramp -->
+  <polygon points="100,220 350,220 350,100" fill="#8B4513" stroke="#5C3317" stroke-width="2"/>
+  <polygon points="100,220 350,220 350,100" fill="#A0522D" opacity="0.5"/>
+
+  <!-- Box on ramp (animated) -->
+  <rect x="310" y="80" width="40" height="40" fill="#FF6347" stroke="#CC0000" stroke-width="2" rx="3">
+    <animateTransform attributeName="transform" type="translate" 
+      values="0,0; -180,120" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#FF6347;#FFD700;#FF6347" dur="3s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Arrow showing force -->
+  <line x1="330" y1="60" x2="330" y2="20" stroke="#0000FF" stroke-width="3" marker-end="url(#arrowBlue)"/>
+  <text x="340" y="40" font-size="14" fill="#0000FF" font-weight="bold">Force (F)</text>
+
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0000FF"/>
+    </marker>
+  </defs>
+
+  <!-- Distance label -->
+  <line x1="100" y1="235" x2="350" y2="235" stroke="#333" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="190" y="255" font-size="14" fill="#333" font-weight="bold">Distance (d)</text>
+
+  <!-- Height label -->
+  <line x1="365" y1="100" x2="365" y2="220" stroke="#FF6600" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="370" y="165" font-size="14" fill="#FF6600" font-weight="bold">Height (h)</text>
+
+  <!-- Work done text -->
+  <text x="450" y="60" font-size="16" fill="#333" font-weight="bold">Work = Force × Distance</text>
+  <text x="450" y="85" font-size="14" fill="#555">W = F × d  (in Joules)</text>
+
+  <!-- Kinetic Energy indicator -->
+  <text x="450" y="120" font-size="16" fill="#FF6347" font-weight="bold">Kinetic Energy (KE)</text>
+  <text x="450" y="145" font-size="14" fill="#555">KE = ½ mv²</text>
+
+  <!-- Potential Energy indicator -->
+  <text x="450" y="180" font-size="16" fill="#FF6600" font-weight="bold">Potential Energy (PE)</text>
+  <text x="450" y="205" font-size="14" fill="#555">PE = mgh</text>
+
+  <!-- Sun -->
+  <circle cx="700" cy="40" r="25" fill="#FFD700">
+    <animate attributeName="r" values="25;28;25" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>
+
+<h3>Key Concepts</h3>
+<ul>
+  <li><strong>Work (W)</strong> – Done when a force moves an object over a distance. <em>W = F × d</em> (unit: Joules, J)</li>
+  <li><strong>Energy (E)</strong> – The ability to do work. Two main forms: Kinetic (movement) and Potential (stored).</li>
+  <li><strong>Power (P)</strong> – The rate at which work is done or energy is transferred. <em>P = W / t</em> (unit: Watts, W)</li>
+  <li><strong>Law of Conservation of Energy</strong> – Energy cannot be created or destroyed, only transformed from one form to another.</li>
+  <li><strong>Efficiency</strong> – (Useful energy output / Total energy input) × 100%</li>
+</ul>
+
+<h3>🇳🇬 Nigerian Examples</h3>
+<p><strong>Example 1:</strong> A student in Lagos pushes a 40 kg desk across a classroom floor with a force of 120 N over a distance of 5 m. How much work is done?<br>
+<em>Solution:</em> W = F × d = 120 N × 5 m = <strong>600 J</strong></p>
+
+<p><strong>Example 2:</strong> A generator in Abuja supplies 5000 W of power for 2 hours to run fans during a NEPA outage. How much energy is supplied?<br>
+<em>Solution:</em> Energy = Power × Time = 5000 W × (2 × 3600 s) = 5000 × 7200 = <strong>36,000,000 J (36 MJ)</strong></p>
+
+<div style="background-color:#FFF3CD; border-left:5px solid #FFC107; padding:12px; margin:15px 0; border-radius:5px;">
+  <h4 style="margin:0 0 5px 0;">⚡ Fun Fact</h4>
+  <p style="margin:0;">Did you know? One serving of <strong>eba and egusi soup</strong> provides about 1,200 kJ of energy! That's enough energy to lift a 50 kg bag of rice over 2,400 meters into the air — or power a 60W light bulb for over 5 hours!</p>
+</div>
+
+<h3>📝 Practice Questions</h3>
+<ol>
+  <li><strong>Question 1:</strong> A boy uses a force of 80 N to push a wheelbarrow carrying sand through a distance of 12 m. Calculate the work done.</li>
+  <li><strong>Question 2:</strong> A 2 kg book falls from a shelf 1.5 m high. What is its potential energy before falling? (Take g = 10 m/s²)</li>
+  <li><strong>Question 3:</strong> A machine does 3600 J of work in 30 seconds. What is its power output?</li>
+</ol>
+
+<h4>✅ Answers</h4>
+<ol>
+  <li><strong>Answer 1:</strong> W = 80 N × 12 m = <strong>960 J</strong></li>
+  <li><strong>Answer 2:</strong> PE = mgh = 2 kg × 10 m/s² × 1.5 m = <strong>30 J</strong></li>
+  <li><strong>Answer 3:</strong> P = W / t = 3600 J / 30 s = <strong>120 W</strong></li>
+</ol>

@@ -1,0 +1,69 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px;height:auto;background:#f0f8ff;border:1px solid #ccc;border-radius:8px;display:block;margin:0 auto 1.5em;">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  <!-- Y-axis -->
+  <line x1="100" y1="50" x2="100" y2="350" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="30" y="200" font-size="14" fill="#333" transform="rotate(-90,30,200)">Concentration</text>
+  <!-- X-axis -->
+  <line x1="100" y1="350" x2="550" y2="350" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="300" y="380" font-size="14" fill="#333" text-anchor="middle">Time</text>
+
+  <!-- Reactant curve (N₂O₄) -->
+  <path d="M120,300 Q200,250 300,180 Q400,120 500,100" fill="none" stroke="#d32f2f" stroke-width="3" stroke-dasharray="6,3">
+    <animate attributeName="stroke-dashoffset" from="0" to="100" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <text x="510" y="95" font-size="13" fill="#d32f2f">N₂O₄ (reactant)</text>
+
+  <!-- Product curve (NO₂) -->
+  <path d="M120,100 Q200,150 300,220 Q400,280 500,300" fill="none" stroke="#1565c0" stroke-width="3" stroke-dasharray="6,3">
+    <animate attributeName="stroke-dashoffset" from="0" to="100" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <text x="510" y="310" font-size="13" fill="#1565c0">NO₂ (product)</text>
+
+  <!-- Equilibrium region -->
+  <rect x="380" y="90" width="130" height="220" fill="rgba(0,200,0,0.08)" rx="5"/>
+  <text x="420" y="220" font-size="12" fill="#2e7d32" font-weight="bold">Equilibrium</text>
+  <text x="420" y="240" font-size="11" fill="#2e7d32">region</text>
+
+  <!-- Dashed horizontal lines for plateau -->
+  <line x1="380" y1="100" x2="520" y2="100" stroke="#d32f2f" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="380" y1="300" x2="520" y2="300" stroke="#1565c0" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Animation text -->
+  <text x="300" y="40" font-size="14" fill="#333" text-anchor="middle" font-weight="bold">
+    Dynamic Equilibrium: N₂O₄(g) ⇌ 2NO₂(g)
+  </text>
+</svg>
+
+<h3>Key Concepts of Chemical Equilibrium</h3>
+<ul style="list-style-type:disc;padding-left:1.5em;line-height:1.8;">
+  <li><strong>Reversible Reaction:</strong> A reaction that can proceed in both forward and backward directions simultaneously.</li>
+  <li><strong>Dynamic Equilibrium:</strong> When the <em>rate</em> of the forward reaction equals the <em>rate</em> of the reverse reaction. Concentrations remain constant, not necessarily equal.</li>
+  <li><strong>Le Chatelier's Principle:</strong> If a system at equilibrium is disturbed, it shifts to minimise the disturbance (change in concentration, temperature, or pressure).</li>
+  <li><strong>Equilibrium Constant (K<sub>c</sub>):</strong> For aA + bB ⇌ cC + dD, K<sub>c</sub> = [C]<sup>c</sup>[D]<sup>d</sup> / [A]<sup>a</sup>[B]<sup>b</sup> (at constant temperature).</li>
+</ul>
+
+<h3>Nigerian Examples</h3>
+<ol style="line-height:1.8;">
+  <li><strong>Haber Process in Kaduna Fertiliser Plant:</strong> N₂(g) + 3H₂(g) ⇌ 2NH₃(g). High pressure (200 atm) and moderate temperature (450°C) are used to shift equilibrium toward ammonia production, vital for fertilisers used in Nigerian agriculture.</li>
+  <li><strong>Contact Process for Sulphuric Acid (used in Nigerian industries):</strong> 2SO₂(g) + O₂(g) ⇌ 2SO₃(g). Vanadium(V) oxide catalyst is used to speed up attainment of equilibrium without affecting the position.</li>
+</ol>
+
+<div style="background:#fff3cd;border-left:5px solid #ffc107;padding:0.8em 1.2em;margin:1em 0;border-radius:4px;">
+  <strong>💡 Fun Fact:</strong> Your blood relies on equilibrium! Haemoglobin (Hb) binds oxygen reversibly: Hb + 4O₂ ⇌ Hb(O₂)₄. At high altitudes (like Jos plateau), lower oxygen pressure shifts equilibrium to release more O₂ to tissues — that's why you breathe faster!
+</div>
+
+<h3>Practice Questions</h3>
+<ol style="line-height:2;">
+  <li>For the reaction: 2SO₂(g) + O₂(g) ⇌ 2SO₃(g) ΔH = -197 kJ/mol. What will be the effect of <em>increasing temperature</em> on the equilibrium position?<br>
+  <strong>Answer:</strong> The equilibrium shifts to the left (toward reactants) because the forward reaction is exothermic. Le Chatelier's principle: system opposes the added heat.</li>
+
+  <li>Write the equilibrium constant expression (K<sub>c</sub>) for: N₂(g) + 3H₂(g) ⇌ 2NH₃(g).<br>
+  <strong>Answer:</strong> K<sub>c</sub> = [NH₃]² / ([N₂][H₂]³)</li>
+
+  <li>A mixture of N₂O₄ (colourless) and NO₂ (brown) is at equilibrium in a syringe. If the <em>volume is suddenly decreased</em> (pressure increased), what colour change is observed? (Reaction: N₂O₄(g) ⇌ 2NO₂(g))<br>
+  <strong>Answer:</strong> The colour becomes lighter (less brown) because increased pressure shifts equilibrium to the side with fewer gas molecules (left, toward colourless N₂O₄).</li>
+</ol>

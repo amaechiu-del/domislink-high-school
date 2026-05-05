@@ -1,0 +1,90 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" style="display:block; margin:0 auto; max-width:100%; background:#f0f9ff; border-radius:12px; padding:10px;">
+  <defs>
+    <style>
+      @keyframes flow1 { 0%{opacity:0.3} 50%{opacity:1} 100%{opacity:0.3} }
+      @keyframes flow2 { 0%{opacity:1} 50%{opacity:0.3} 100%{opacity:1} }
+      @keyframes pulse { 0%{r:5} 50%{r:8} 100%{r:5} }
+      .arrow { fill:none; stroke:#1e3a5f; stroke-width:2.5; marker-end:url(#arrowhead); }
+      .flow1 { animation: flow1 2s infinite; }
+      .flow2 { animation: flow2 2s infinite; }
+      .pulse { animation: pulse 1.5s infinite; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1e3a5f"/>
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-size="22" font-weight="bold" fill="#0b3b5c" font-family="Arial">Circular Flow of National Income</text>
+  <!-- Households -->
+  <rect x="50" y="120" width="160" height="70" rx="10" fill="#4ca3dd" opacity="0.9"/>
+  <text x="130" y="158" text-anchor="middle" font-size="16" fill="white" font-weight="bold">Households</text>
+  <text x="130" y="178" text-anchor="middle" font-size="12" fill="#e6f2ff">(Consumers)</text>
+  <!-- Firms -->
+  <rect x="580" y="120" width="160" height="70" rx="10" fill="#e67e22" opacity="0.9"/>
+  <text x="660" y="158" text-anchor="middle" font-size="16" fill="white" font-weight="bold">Firms</text>
+  <text x="660" y="178" text-anchor="middle" font-size="12" fill="#fef3e2">(Producers)</text>
+  <!-- Government -->
+  <rect x="320" y="20" width="150" height="55" rx="10" fill="#27ae60" opacity="0.9"/>
+  <text x="395" y="53" text-anchor="middle" font-size="15" fill="white" font-weight="bold">Government</text>
+  <!-- Factor Payments (Labour, Land, Capital) -->
+  <path class="arrow flow1" d="M 210 140 L 580 140"/>
+  <text x="395" y="130" text-anchor="middle" font-size="12" fill="#1e3a5f" font-weight="bold">Factor Payments (Wages, Rent, Interest, Profit)</text>
+  <!-- Goods & Services -->
+  <path class="arrow flow2" d="M 580 170 L 210 170" marker-end="url(#arrowhead)"/>
+  <text x="395" y="200" text-anchor="middle" font-size="12" fill="#1e3a5f" font-weight="bold">Goods &amp; Services</text>
+  <!-- Government to Households -->
+  <path class="arrow" d="M 320 75 L 130 120" stroke="#27ae60" stroke-dasharray="5,3"/>
+  <text x="200" y="95" text-anchor="middle" font-size="11" fill="#27ae60">Transfers &amp; Subsidies</text>
+  <!-- Government to Firms -->
+  <path class="arrow" d="M 470 75 L 660 120" stroke="#27ae60" stroke-dasharray="5,3"/>
+  <text x="580" y="95" text-anchor="middle" font-size="11" fill="#27ae60">Contracts &amp; Grants</text>
+  <!-- Taxes -->
+  <path class="arrow" d="M 130 190 L 395 75" stroke="#c0392b" stroke-dasharray="5,3"/>
+  <path class="arrow" d="M 660 190 L 395 75" stroke="#c0392b" stroke-dasharray="5,3"/>
+  <text x="280" y="280" text-anchor="middle" font-size="11" fill="#c0392b">Taxes (from both)</text>
+  <!-- Savings & Investment loop -->
+  <path class="arrow" d="M 50 200 Q 20 280 300 320" stroke="#8e44ad" stroke-dasharray="4,4"/>
+  <text x="150" y="310" text-anchor="middle" font-size="11" fill="#8e44ad">Savings</text>
+  <path class="arrow" d="M 740 200 Q 770 280 500 320" stroke="#8e44ad" stroke-dasharray="4,4"/>
+  <text x="650" y="310" text-anchor="middle" font-size="11" fill="#8e44ad">Investment</text>
+  <!-- Financial Sector placeholder -->
+  <rect x="300" y="330" width="190" height="40" rx="8" fill="#8e44ad" opacity="0.7"/>
+  <text x="395" y="355" text-anchor="middle" font-size="13" fill="white">Financial Sector (Banks)</text>
+  <!-- Animated nodes -->
+  <circle cx="210" cy="140" r="6" fill="#1e3a5f" class="pulse"/>
+  <circle cx="580" cy="170" r="6" fill="#1e3a5f" class="pulse"/>
+</svg>
+
+<h2 style="color:#0b3b5c; border-bottom:2px solid #4ca3dd; padding-bottom:5px;">Key Points on National Income</h2>
+<ul style="font-size:16px; line-height:1.8; list-style-type:disc; padding-left:20px;">
+  <li><strong>National Income</strong> is the total monetary value of all final goods and services produced in a country within a given period (usually one year).</li>
+  <li>It measures the <strong>economic performance</strong> of a nation and helps compare living standards between countries.</li>
+  <li>The circular flow diagram shows how money moves between households, firms, government, and the financial sector.</li>
+  <li>There are three main approaches to measuring national income: <strong>Output</strong> (production), <strong>Income</strong> (earnings), and <strong>Expenditure</strong> (spending).</li>
+  <li>Adjustments are made for <strong>inflation</strong> to get real national income (nominal vs. real GDP).</li>
+</ul>
+
+<h2 style="color:#0b3b5c; margin-top:25px;">🇳🇬 Nigerian Examples</h2>
+<div style="background:#fff8e7; border-left:5px solid #e67e22; padding:12px 18px; border-radius:6px; margin:10px 0;">
+  <p><strong>Example 1: Oil & Gas Sector</strong> — In 2023, Nigeria's crude oil production contributed about 7.2% to the nation's GDP. When oil prices rise, national income increases, affecting government revenue and household spending.</p>
+  <p><strong>Example 2: Agriculture & Tech Boom</strong> — Nigeria's agriculture sector (cassava, cocoa, yam) employs over 35% of the workforce. The rise of fintech (e.g., Flutterwave, Paystack) also adds billions to national income through services.</p>
+</div>
+
+<div style="background:#eafaf1; border:2px dashed #27ae60; border-radius:10px; padding:12px 18px; margin:20px 0;">
+  <p style="font-size:18px; font-weight:bold; margin:0; color:#1a6b3c;">💡 Fun Fact</p>
+  <p style="margin:5px 0 0 0;">Did you know? Nigeria’s rebasing of its GDP in 2014 added <strong>89%</strong> to the size of its economy overnight! This happened because new sectors (like telecoms, Nollywood, and banking) were counted for the first time — making Nigeria Africa’s largest economy.</p>
+</div>
+
+<h2 style="color:#0b3b5c; margin-top:25px;">📝 Practice Questions</h2>
+<ol style="font-size:16px; line-height:2; padding-left:20px;">
+  <li><strong>Define national income</strong> and list the three methods used to measure it.</li>
+  <li><strong>Why is the circular flow model important</strong> for understanding national income? Mention at least two sectors involved.</li>
+  <li><strong>Calculate:</strong> If a country’s total consumer spending is ₦500 billion, investment is ₦200 billion, government spending is ₦150 billion, and net exports are ₦50 billion, what is the national income (GDP) using the expenditure approach?</li>
+</ol>
+
+<h3 style="color:#1e3a5f; margin-top:20px;">✅ Answers</h3>
+<ol style="font-size:15px; line-height:1.8; padding-left:20px; background:#f5f5f5; padding:15px; border-radius:8px;">
+  <li><strong>National income</strong> is the total value of all final goods and services produced in a country in a year. The three methods are: Output method, Income method, and Expenditure method.</li>
+  <li>The circular flow model shows how money flows between households (consumers), firms (producers), government, and the financial sector. It helps economists track income, spending, and leakages (savings/taxes) or injections (investment/government spending).</li>
+  <li><strong>GDP = C + I + G + (X – M)</strong> = 500 + 200 + 150 + 50 = <strong>₦900 billion</strong>.</li>
+</ol>

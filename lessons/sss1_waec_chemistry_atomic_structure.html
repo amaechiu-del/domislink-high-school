@@ -1,0 +1,88 @@
+<div class="lesson-content">
+  <h2>Atomic Structure – SSS1 Chemistry (WAEC Syllabus)</h2>
+
+  <!-- Animated SVG Diagram -->
+  <svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+    <style>
+      @keyframes orbit1 {
+        0% { transform: rotate(0deg) translateX(80px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
+      }
+      @keyframes orbit2 {
+        0% { transform: rotate(120deg) translateX(100px) rotate(-120deg); }
+        100% { transform: rotate(480deg) translateX(100px) rotate(-480deg); }
+      }
+      @keyframes orbit3 {
+        0% { transform: rotate(240deg) translateX(60px) rotate(-240deg); }
+        100% { transform: rotate(600deg) translateX(60px) rotate(-600deg); }
+      }
+      @keyframes pulse {
+        0%, 100% { r: 25; }
+        50% { r: 28; }
+      }
+      .nucleus { animation: pulse 2s infinite; }
+      .electron { fill: #f39c12; }
+      .path { fill: none; stroke: #2c3e50; stroke-width: 1.5; stroke-dasharray: 4,4; }
+    </style>
+    <!-- Orbital paths -->
+    <ellipse cx="200" cy="150" rx="80" ry="30" class="path" />
+    <ellipse cx="200" cy="150" rx="100" ry="35" class="path" />
+    <ellipse cx="200" cy="150" rx="60" ry="22" class="path" />
+    <!-- Nucleus -->
+    <circle cx="200" cy="150" r="25" fill="#e74c3c" class="nucleus" />
+    <text x="200" y="155" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Nucleus</text>
+    <!-- Electrons with animation -->
+    <g>
+      <circle cx="280" cy="150" r="6" class="electron">
+        <animateTransform attributeName="transform" type="rotate" from="0 200 150" to="360 200 150" dur="4s" repeatCount="indefinite" />
+      </circle>
+    </g>
+    <g>
+      <circle cx="300" cy="150" r="6" class="electron">
+        <animateTransform attributeName="transform" type="rotate" from="120 200 150" to="480 200 150" dur="5s" repeatCount="indefinite" />
+      </circle>
+    </g>
+    <g>
+      <circle cx="260" cy="150" r="6" class="electron">
+        <animateTransform attributeName="transform" type="rotate" from="240 200 150" to="600 200 150" dur="3s" repeatCount="indefinite" />
+      </circle>
+    </g>
+    <text x="200" y="290" text-anchor="middle" fill="#2c3e50" font-size="14">Model of an Atom (Not to scale)</text>
+  </svg>
+
+  <!-- Bullet-point explanations -->
+  <h3>Key Concepts</h3>
+  <ul>
+    <li><strong>Atom:</strong> The smallest unit of an element that retains its chemical properties.</li>
+    <li><strong>Nucleus:</strong> Central core containing protons (positive charge) and neutrons (neutral).</li>
+    <li><strong>Electrons:</strong> Negatively charged particles that orbit the nucleus in energy levels (shells).</li>
+    <li><strong>Atomic Number (Z):</strong> Number of protons = number of electrons in a neutral atom.</li>
+    <li><strong>Mass Number (A):</strong> Sum of protons and neutrons in the nucleus.</li>
+    <li><strong>Isotopes:</strong> Atoms of the same element with same number of protons but different numbers of neutrons (e.g., Carbon-12 and Carbon-14).</li>
+  </ul>
+
+  <!-- Two Nigerian Examples -->
+  <h3>Examples from Nigeria</h3>
+  <div style="background: #f0f8ff; padding: 10px; border-left: 4px solid #2980b9; margin: 10px 0;">
+    <p><strong>Example 1: Tin (Sn) from Jos Plateau</strong><br>
+    Tin has atomic number 50 and mass number 118.69. It has 50 protons, 50 electrons, and about 69 neutrons. Tin mining is a major economic activity in Plateau State, Nigeria.</p>
+    <p><strong>Example 2: Crude Oil (Carbon and Hydrogen)</strong><br>
+    Nigerian crude oil is rich in hydrocarbons. Carbon (atomic number 6) and hydrogen (atomic number 1) are key elements. Carbon has 6 protons, 6 neutrons (most common isotope), and 6 electrons. Hydrogen has 1 proton, 0 neutrons, and 1 electron.</p>
+  </div>
+
+  <!-- Fun Fact Block -->
+  <div style="background: #fff3cd; border: 1px solid #ffc107; border-radius: 8px; padding: 10px; margin: 15px 0;">
+    <p><strong>⚡ Fun Fact:</strong> The word "atom" comes from the Greek word <em>atomos</em>, meaning "indivisible." However, we now know atoms are made of even smaller particles! In Nigeria, scientists at the Centre for Energy Research and Development (CERD) in Obafemi Awolowo University study atomic behaviour for energy solutions.</p>
+  </div>
+
+  <!-- Three Practice Questions with Answers -->
+  <h3>Practice Questions</h3>
+  <ol>
+    <li><strong>Question 1:</strong> An atom of oxygen has 8 protons and 8 neutrons. What is its atomic number and mass number?<br>
+      <em>Answer:</em> Atomic number = 8, Mass number = 16 (8 + 8).</li>
+    <li><strong>Question 2:</strong> Differentiate between an atom and an isotope, using a Nigerian element as an example.<br>
+      <em>Answer:</em> An atom is the basic unit of an element (e.g., carbon atom with 6 protons). An isotope is a variant with same number of protons but different neutrons (e.g., Carbon-12 has 6 neutrons, Carbon-14 has 8 neutrons; both are carbon atoms).</li>
+    <li><strong>Question 3:</strong> If an element has 19 protons, 20 neutrons, and 19 electrons, what is its atomic number and mass number? Which element is this?<br>
+      <em>Answer:</em> Atomic number = 19, Mass number = 39 (19+20). This is potassium (K), which is found in Nigerian soils and used in fertilizers.</li>
+  </ol>
+</div>

@@ -1,0 +1,152 @@
+<div class="lesson-content">
+  <h2>Chemical Equations</h2>
+  
+  <div class="svg-container">
+    <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <style>
+          @keyframes moveLeft {
+            0% { transform: translate(0,0); }
+            100% { transform: translate(-80px,0); }
+          }
+          @keyframes moveRight {
+            0% { transform: translate(0,0); }
+            100% { transform: translate(80px,0); }
+          }
+          @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+          }
+          .atom-h { fill: #4FC3F7; }
+          .atom-o { fill: #EF5350; }
+          .arrow { animation: fadeIn 2s ease-in-out infinite alternate; }
+          .reactant { animation: moveLeft 2s ease-in-out infinite alternate; }
+          .product { animation: moveRight 2s ease-in-out infinite alternate; }
+          .label { font-family: Arial, sans-serif; font-size: 14px; fill: #333; }
+        </style>
+      </defs>
+      
+      <!-- Background -->
+      <rect width="600" height="300" fill="#f0f8f0" rx="10"/>
+      
+      <!-- Title -->
+      <text x="300" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#2e7d32">Balancing Chemical Equations</text>
+      
+      <!-- Reactants side -->
+      <g class="reactant">
+        <circle cx="180" cy="120" r="20" class="atom-h"/>
+        <text x="180" y="125" text-anchor="middle" fill="white" font-size="12">H</text>
+        <circle cx="180" cy="120" r="20" class="atom-h" opacity="0.3"/>
+        <text x="180" y="125" text-anchor="middle" fill="white" font-size="12" opacity="0.3">H</text>
+        
+        <circle cx="220" cy="120" r="20" class="atom-h"/>
+        <text x="220" y="125" text-anchor="middle" fill="white" font-size="12">H</text>
+      </g>
+      
+      <circle cx="260" cy="120" r="25" class="atom-o"/>
+      <text x="260" y="125" text-anchor="middle" fill="white" font-size="12">O</text>
+      
+      <!-- Plus sign -->
+      <text x="150" y="120" text-anchor="middle" font-size="24" fill="#555">+</text>
+      
+      <!-- Arrow -->
+      <g class="arrow">
+        <line x1="310" y1="120" x2="370" y2="120" stroke="#2e7d32" stroke-width="3" marker-end="url(#arrowhead)"/>
+        <text x="340" y="105" text-anchor="middle" font-size="12" fill="#2e7d32">→</text>
+      </g>
+      
+      <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#2e7d32"/>
+        </marker>
+      </defs>
+      
+      <!-- Products side -->
+      <g class="product">
+        <circle cx="420" cy="120" r="20" class="atom-h"/>
+        <text x="420" y="125" text-anchor="middle" fill="white" font-size="12">H</text>
+        <circle cx="420" cy="120" r="20" class="atom-h" opacity="0.3"/>
+        <text x="420" y="125" text-anchor="middle" fill="white" font-size="12" opacity="0.3">H</text>
+        
+        <circle cx="460" cy="120" r="20" class="atom-h"/>
+        <text x="460" y="125" text-anchor="middle" fill="white" font-size="12">H</text>
+      </g>
+      
+      <circle cx="500" cy="120" r="25" class="atom-o"/>
+      <text x="500" y="125" text-anchor="middle" fill="white" font-size="12">O</text>
+      
+      <!-- Labels -->
+      <text x="220" y="180" text-anchor="middle" class="label" font-weight="bold">2H₂ + O₂</text>
+      <text x="460" y="180" text-anchor="middle" class="label" font-weight="bold">2H₂O</text>
+      
+      <text x="220" y="200" text-anchor="middle" class="label" font-size="12" fill="#666">Reactants</text>
+      <text x="460" y="200" text-anchor="middle" class="label" font-size="12" fill="#666">Products</text>
+      
+      <!-- Balance info -->
+      <text x="300" y="250" text-anchor="middle" font-size="13" fill="#1b5e20">✅ Balanced: 4 H atoms + 2 O atoms on both sides</text>
+      
+      <text x="300" y="275" text-anchor="middle" font-size="12" fill="#666">Coefficients: 2H₂ + O₂ → 2H₂O</text>
+    </svg>
+  </div>
+  
+  <div class="key-points">
+    <h3>Key Points</h3>
+    <ul>
+      <li><strong>Chemical equation</strong> shows reactants (starting materials) on the left and products (resulting substances) on the right, separated by an arrow (→).</li>
+      <li><strong>Law of Conservation of Mass</strong> requires the same number of each type of atom on both sides — this is called <em>balancing</em> the equation.</li>
+      <li><strong>Subscripts</strong> (small numbers after element symbols) show the number of atoms in a molecule, e.g., H₂O means 2 hydrogen + 1 oxygen.</li>
+      <li><strong>Coefficients</strong> (large numbers before formulas) indicate the number of molecules needed to balance the equation.</li>
+      <li><strong>State symbols</strong> can be added: (s) solid, (l) liquid, (g) gas, (aq) aqueous solution.</li>
+    </ul>
+  </div>
+  
+  <div class="nigerian-examples">
+    <h3>Nigerian Examples</h3>
+    <div class="example">
+      <p><strong>Example 1: Rusting of Iron (Common in Nigerian rain)</strong></p>
+      <p>Iron reacts with oxygen and water to form hydrated iron(III) oxide (rust):</p>
+      <p class="equation">4Fe(s) + 3O₂(g) + 2H₂O(l) → 2Fe₂O₃·H₂O(s)</p>
+      <p><em>Note:</em> This is why iron roofs in Nigeria need regular painting to prevent rust.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2: Burning of Charcoal (Common in Nigerian cooking)</strong></p>
+      <p>Carbon in charcoal burns in oxygen to produce carbon dioxide:</p>
+      <p class="equation">C(s) + O₂(g) → CO₂(g)</p>
+      <p><em>Note:</em> Incomplete combustion produces poisonous carbon monoxide (CO) — always cook in well-ventilated areas!</p>
+    </div>
+  </div>
+  
+  <div class="fun-fact">
+    <h4>🎉 Fun Fact</h4>
+    <p>Did you know? The ancient Egyptians used chemical reactions to make <strong>bread</strong> more than 5,000 years ago! When they mixed flour, water, and yeast, a chemical reaction produced carbon dioxide gas that made the dough rise. Today, the same reaction happens in every Nigerian bakery making <strong>Agege bread</strong> — it's all about balancing the ingredients!</p>
+  </div>
+  
+  <div class="practice-questions">
+    <h3>Practice Questions</h3>
+    
+    <div class="question">
+      <p><strong>Q1.</strong> Balance the following chemical equation: <br>
+      <span class="equation">___H₂ + ___O₂ → ___H₂O</span></p>
+      <details>
+        <summary>Show Answer</summary>
+        <p><strong>Answer:</strong> 2H₂ + O₂ → 2H₂O</p>
+      </details>
+    </div>
+    
+    <div class="question">
+      <p><strong>Q2.</strong> In the reaction: Mg + HCl → MgCl₂ + H₂, how many HCl molecules are needed to balance the equation?</p>
+      <details>
+        <summary>Show Answer</summary>
+        <p><strong>Answer:</strong> 2HCl molecules are needed. Balanced equation: Mg + 2HCl → MgCl₂ + H₂</p>
+      </details>
+    </div>
+    
+    <div class="question">
+      <p><strong>Q3.</strong> Write the balanced chemical equation for the thermal decomposition of calcium carbonate (limestone) used in Nigerian cement production. (Calcium carbonate → Calcium oxide + Carbon dioxide)</p>
+      <details>
+        <summary>Show Answer</summary>
+        <p><strong>Answer:</strong> CaCO₃(s) → CaO(s) + CO₂(g)</p>
+      </details>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,111 @@
+<svg width="100%" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .gene { font: bold 14px Arial; fill: #2c3e50; }
+      .label { font: 12px Arial; fill: #34495e; }
+      .allele { font: 12px Arial; fill: #c0392b; }
+      .arrow { stroke: #7f8c8d; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7f8c8d" />
+    </marker>
+  </defs>
+
+  <!-- DNA Helix Background -->
+  <g opacity="0.15">
+    <path d="M 50,50 C 100,20 150,80 200,50 C 250,20 300,80 350,50 C 400,20 450,80 500,50 C 550,20 600,80 650,50 C 700,20 750,80 800,50" stroke="#2980b9" stroke-width="4" fill="none"/>
+    <path d="M 50,250 C 100,280 150,220 200,250 C 250,280 300,220 350,250 C 400,280 450,220 500,250 C 550,280 600,220 650,250 C 700,280 750,220 800,250" stroke="#2980b9" stroke-width="4" fill="none"/>
+  </g>
+
+  <!-- Chromosome Pairs -->
+  <g>
+    <!-- Pair 1 (Homozygous dominant) -->
+    <line x1="100" y1="100" x2="100" y2="200" stroke="#e74c3c" stroke-width="8" stroke-linecap="round"/>
+    <line x1="130" y1="100" x2="130" y2="200" stroke="#e74c3c" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="100" cy="100" r="8" fill="#e74c3c"/>
+    <circle cx="100" cy="200" r="8" fill="#e74c3c"/>
+    <circle cx="130" cy="100" r="8" fill="#e74c3c"/>
+    <circle cx="130" cy="200" r="8" fill="#e74c3c"/>
+    <text x="85" y="90" class="gene">G</text>
+    <text x="115" y="90" class="gene">G</text>
+    <text x="85" y="225" class="label">GG (Homozygous)</text>
+
+    <!-- Pair 2 (Heterozygous) -->
+    <line x1="300" y1="100" x2="300" y2="200" stroke="#e74c3c" stroke-width="8" stroke-linecap="round"/>
+    <line x1="330" y1="100" x2="330" y2="200" stroke="#3498db" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="300" cy="100" r="8" fill="#e74c3c"/>
+    <circle cx="300" cy="200" r="8" fill="#e74c3c"/>
+    <circle cx="330" cy="100" r="8" fill="#3498db"/>
+    <circle cx="330" cy="200" r="8" fill="#3498db"/>
+    <text x="285" y="90" class="gene">G</text>
+    <text x="315" y="90" class="gene">g</text>
+    <text x="275" y="225" class="label">Gg (Heterozygous)</text>
+
+    <!-- Pair 3 (Homozygous recessive) -->
+    <line x1="530" y1="100" x2="530" y2="200" stroke="#3498db" stroke-width="8" stroke-linecap="round"/>
+    <line x1="560" y1="100" x2="560" y2="200" stroke="#3498db" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="530" cy="100" r="8" fill="#3498db"/>
+    <circle cx="530" cy="200" r="8" fill="#3498db"/>
+    <circle cx="560" cy="100" r="8" fill="#3498db"/>
+    <circle cx="560" cy="200" r="8" fill="#3498db"/>
+    <text x="515" y="90" class="gene">g</text>
+    <text x="545" y="90" class="gene">g</text>
+    <text x="505" y="225" class="label">gg (Homozygous recessive)</text>
+  </g>
+
+  <!-- Animated Punnett Square -->
+  <g transform="translate(680, 50)">
+    <rect x="0" y="0" width="90" height="90" fill="none" stroke="#2c3e50" stroke-width="2"/>
+    <line x1="30" y1="0" x2="30" y2="90" stroke="#2c3e50" stroke-width="2"/>
+    <line x1="60" y1="0" x2="60" y2="90" stroke="#2c3e50" stroke-width="2"/>
+    <line x1="0" y1="30" x2="90" y2="30" stroke="#2c3e50" stroke-width="2"/>
+    <line x1="0" y1="60" x2="90" y2="60" stroke="#2c3e50" stroke-width="2"/>
+
+    <!-- Animated alleles -->
+    <text x="10" y="20" class="allele">G</text>
+    <text x="40" y="20" class="allele">g</text>
+    <text x="5" y="50" class="allele">G</text>
+    <text x="5" y="80" class="allele">g</text>
+
+    <text x="40" y="50" class="gene" fill="#27ae60">GG</text>
+    <text x="70" y="50" class="gene" fill="#27ae60">Gg</text>
+    <text x="40" y="80" class="gene" fill="#27ae60">Gg</text>
+    <text x="70" y="80" class="gene" fill="#27ae60">gg</text>
+  </g>
+</svg>
+
+<h3>Key Concepts in Genetics</h3>
+<ul>
+  <li><strong>Gene</strong> – A unit of heredity on a chromosome that controls a specific trait (e.g., seed colour).</li>
+  <li><strong>Allele</strong> – Different versions of the same gene (e.g., <em>G</em> for green pods, <em>g</em> for yellow pods).</li>
+  <li><strong>Genotype</strong> – The genetic makeup of an organism (e.g., GG, Gg, gg).</li>
+  <li><strong>Phenotype</strong> – The observable physical trait (e.g., green or yellow pods).</li>
+  <li><strong>Dominant allele</strong> – An allele that masks the expression of another (written in capital letter).</li>
+  <li><strong>Recessive allele</strong> – An allele expressed only when two copies are present (written in small letter).</li>
+  <li><strong>Homozygous</strong> – Having two identical alleles for a trait (GG or gg).</li>
+  <li><strong>Heterozygous</strong> – Having two different alleles for a trait (Gg).</li>
+</ul>
+
+<h3>Nigerian Examples</h3>
+<ol>
+  <li><strong>Cassava (Manihot esculenta)</strong> – In Nigeria, cassava varieties bred for high starch content (dominant trait) are crossed with local low-starch varieties (recessive). The F1 generation shows all high-starch plants, confirming dominance.</li>
+  <li><strong>Cowpea (Vigna unguiculata)</strong> – Nigerian farmers select cowpeas for pest resistance. The resistance allele (R) is dominant over susceptibility (r). A cross between RR and rr yields all Rr resistant plants in the first generation.</li>
+</ol>
+
+<div style="background: #fef9e7; border-left: 5px solid #f39c12; padding: 12px; margin: 15px 0; border-radius: 4px;">
+  <strong>🧬 Fun Fact:</strong> The term "genetics" was coined by the British biologist <strong>William Bateson</strong> in 1905. He also introduced the words "allele", "homozygous", and "heterozygous"! In Nigeria, genetic research at IITA (Ibadan) has developed over 50 improved cassava varieties since 1970.
+</div>
+
+<h3>Practice Questions</h3>
+<ol>
+  <li>In guinea pigs, black fur (B) is dominant over white fur (b). If a heterozygous black guinea pig is crossed with a white guinea pig, what percentage of the offspring will be black?</li>
+  <li>In garden peas, tall stem (T) is dominant over short stem (t). What are the possible genotypes of a tall pea plant? Explain.</li>
+  <li>A farmer in Kano crosses a homozygous red-flowered sorghum (RR) with a homozygous white-flowered sorghum (rr). All F1 plants have red flowers. If the F1 plants are self-pollinated, what ratio of flower colours would you expect in the F2 generation?</li>
+</ol>
+
+<h4>Answers</h4>
+<ol>
+  <li><strong>50%</strong> – The cross is Bb × bb. Offspring: 2 Bb (black) and 2 bb (white) = 50% black.</li>
+  <li><strong>TT or Tt</strong> – A tall plant can be homozygous dominant (TT) or heterozygous (Tt). Both genotypes produce the tall phenotype because T is dominant.</li>
+  <li><strong>3 red : 1 white</strong> – F1 are all Rr. Self-pollination gives RR (red), Rr (red), Rr (red), rr (white) = 3:1 ratio.</li>
+</ol>

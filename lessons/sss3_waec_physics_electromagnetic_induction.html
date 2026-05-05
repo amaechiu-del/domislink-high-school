@@ -1,0 +1,108 @@
+<div class="physics-lesson">
+  <h2>Electromagnetic Induction (SSS3 Physics – WAEC Syllabus)</h2>
+
+  <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:600px; background:#f9f9f9; border:1px solid #ccc; border-radius:8px; display:block; margin:0 auto 20px;">
+    <defs>
+      <style>
+        .field-line { stroke: #2a7; stroke-width: 2; fill: none; }
+        .field-label { fill: #2a7; font-size: 14px; font-family: Arial; }
+        .coil { stroke: #b33; stroke-width: 3; fill: none; }
+        .magnet { fill: #555; }
+        .magnet-n { fill: #d44; }
+        .magnet-s { fill: #44a; }
+        .arrow { fill: #e80; }
+        .text { font-family: Arial; font-size: 13px; }
+      </style>
+      <!-- Animated motion -->
+      <animateTransform id="moveMagnet" attributeName="transform" type="translate" values="0,0; 120,0; 0,0" dur="3s" repeatCount="indefinite" />
+    </defs>
+
+    <!-- Magnetic field lines -->
+    <path class="field-line" d="M 180,80 Q 250,50 320,80" stroke-dasharray="4,4">
+      <animate attributeName="stroke-dashoffset" values="0; -20" dur="1s" repeatCount="indefinite" />
+    </path>
+    <path class="field-line" d="M 180,100 Q 250,70 320,100" stroke-dasharray="4,4">
+      <animate attributeName="stroke-dashoffset" values="0; -20" dur="1.2s" repeatCount="indefinite" />
+    </path>
+    <path class="field-line" d="M 180,120 Q 250,90 320,120" stroke-dasharray="4,4">
+      <animate attributeName="stroke-dashoffset" values="0; -20" dur="0.8s" repeatCount="indefinite" />
+    </path>
+    <text x="220" y="60" class="field-label">B</text>
+
+    <!-- Coil (solenoid) -->
+    <g class="coil">
+      <ellipse cx="400" cy="100" rx="20" ry="40" />
+      <ellipse cx="430" cy="100" rx="20" ry="40" />
+      <ellipse cx="460" cy="100" rx="20" ry="40" />
+      <ellipse cx="490" cy="100" rx="20" ry="40" />
+      <line x1="380" y1="100" x2="350" y2="100" stroke="#b33" stroke-width="3" />
+      <line x1="510" y1="100" x2="540" y2="100" stroke="#b33" stroke-width="3" />
+    </g>
+
+    <!-- Galvanometer -->
+    <rect x="530" y="80" width="40" height="40" rx="5" fill="#eee" stroke="#333" stroke-width="2" />
+    <text x="545" y="105" class="text" font-size="10">G</text>
+    <line x1="550" y1="90" x2="550" y2="110" stroke="#c00" stroke-width="2">
+      <animate attributeName="x2" values="550; 560; 550" dur="1.5s" repeatCount="indefinite" />
+      <animate attributeName="x1" values="550; 540; 550" dur="1.5s" repeatCount="indefinite" />
+    </line>
+
+    <!-- Moving magnet (animated group) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="-60,0; 120,0; -60,0" dur="3s" repeatCount="indefinite" />
+      <rect x="90" y="70" width="80" height="60" rx="8" class="magnet" />
+      <rect x="90" y="70" width="40" height="60" rx="8" class="magnet-n" />
+      <text x="105" y="105" fill="white" font-weight="bold" font-family="Arial">N</text>
+      <rect x="130" y="70" width="40" height="60" rx="8" class="magnet-s" />
+      <text x="142" y="105" fill="white" font-weight="bold" font-family="Arial">S</text>
+    </g>
+
+    <!-- Labels -->
+    <text x="100" y="170" class="text" fill="#555">Magnet moved in/out</text>
+    <text x="400" y="170" class="text" fill="#b33">Coil</text>
+    <text x="540" y="140" class="text" fill="#c00">Induced current</text>
+
+    <!-- Arrow indicating motion -->
+    <polygon class="arrow" points="160,200 180,190 180,210" />
+    <polygon class="arrow" points="260,200 240,190 240,210" />
+    <text x="190" y="220" class="text" fill="#e80">Motion</text>
+  </svg>
+
+  <h3>Key Principles</h3>
+  <ul>
+    <li><strong>Electromagnetic induction</strong> is the production of an electromotive force (EMF) across a conductor when it experiences a changing magnetic field.</li>
+    <li>Faraday’s Law: The induced EMF is proportional to the rate of change of magnetic flux linkage.</li>
+    <li>Lenz’s Law: The direction of induced current opposes the change that produced it (conservation of energy).</li>
+    <li>Induced current can be increased by: moving the magnet faster, using a stronger magnet, or increasing the number of turns in the coil.</li>
+  </ul>
+
+  <h3>Nigerian Examples</h3>
+  <div style="background:#e8f5e9; padding:10px; border-left:4px solid #2a7; margin:15px 0;">
+    <strong>Example 1: Power Generation at Kainji Dam</strong><br>
+    At Kainji Hydroelectric Power Station (Niger State), falling water spins turbines connected to large magnets inside coils. The changing magnetic field induces EMF, generating electricity for millions of Nigerians.
+  </div>
+  <div style="background:#e3f2fd; padding:10px; border-left:4px solid #1565c0; margin:15px 0;">
+    <strong>Example 2: Induction Cookers in Nigerian Homes</strong><br>
+    Many modern kitchens in Lagos and Abuja use induction cooktops. A coil beneath the ceramic surface produces a rapidly changing magnetic field, which induces eddy currents in the iron pot, heating it directly without an open flame.
+  </div>
+
+  <div style="background:#fff3e0; padding:12px; border-radius:8px; border:1px dashed #e65100; margin:20px 0;">
+    <strong>⚡ Fun Fact:</strong> The world's first practical transformer—essential for stepping up voltage in Nigeria's national grid—was demonstrated by Michael Faraday in 1831 using the same principle of electromagnetic induction you're learning today!
+  </div>
+
+  <h3>Practice Questions</h3>
+  <ol style="font-weight:bold;">
+    <li>State Faraday’s law of electromagnetic induction.</li>
+    <li>A magnet is pushed into a coil connected to a galvanometer. Explain what happens and why.</li>
+    <li>List two factors that affect the magnitude of induced EMF in a coil.</li>
+  </ol>
+
+  <div style="background:#f5f5f5; padding:12px; border-radius:8px; margin-top:15px;">
+    <h4>Answers</h4>
+    <ol>
+      <li><strong>Faraday’s law:</strong> The magnitude of induced EMF is directly proportional to the rate of change of magnetic flux linkage through the coil.</li>
+      <li><strong>Explanation:</strong> The galvanometer needle deflects, showing an induced current. As the magnet moves, the magnetic flux through the coil changes, inducing an EMF. When the magnet stops, the needle returns to zero.</li>
+      <li><strong>Factors:</strong> (i) Speed of motion of the magnet (or rate of change of flux). (ii) Number of turns in the coil. (iii) Strength of the magnet.</li>
+    </ol>
+  </div>
+</div>

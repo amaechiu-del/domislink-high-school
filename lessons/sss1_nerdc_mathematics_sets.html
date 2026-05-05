@@ -1,0 +1,74 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto 1em;max-width:100%">
+  <rect width="400" height="300" fill="#f0f8ff" rx="10"/>
+  <text x="200" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#2c3e50">Sets: Venn Diagram of Students Taking Subjects</text>
+
+  <!-- Universal set U -->
+  <ellipse cx="200" cy="160" rx="180" ry="120" fill="none" stroke="#2c3e50" stroke-width="2.5" stroke-dasharray="6,3"/>
+  <text x="340" y="55" font-size="13" fill="#2c3e50" font-weight="bold">U (All SSS1 students)</text>
+
+  <!-- Set A: Mathematics -->
+  <circle cx="140" cy="150" r="70" fill="#3498db" fill-opacity="0.25" stroke="#2980b9" stroke-width="2.5"/>
+  <text x="140" y="110" text-anchor="middle" font-size="14" font-weight="bold" fill="#2980b9">Mathematics</text>
+  <text x="140" y="130" text-anchor="middle" font-size="11" fill="#2c3e50">25 students</text>
+
+  <!-- Set B: English -->
+  <circle cx="260" cy="150" r="70" fill="#e74c3c" fill-opacity="0.25" stroke="#c0392b" stroke-width="2.5"/>
+  <text x="260" y="110" text-anchor="middle" font-size="14" font-weight="bold" fill="#c0392b">English</text>
+  <text x="260" y="130" text-anchor="middle" font-size="11" fill="#2c3e50">20 students</text>
+
+  <!-- Intersection -->
+  <text x="200" y="155" text-anchor="middle" font-size="13" font-weight="bold" fill="#8e44ad">8</text>
+  <text x="200" y="175" text-anchor="middle" font-size="10" fill="#8e44ad">both</text>
+
+  <!-- Outside both -->
+  <text x="200" y="270" text-anchor="middle" font-size="12" fill="#7f8c8d">10 students take neither</text>
+
+  <!-- Animated elements -->
+  <circle r="6" fill="#f1c40f" opacity="0.8">
+    <animateMotion dur="6s" repeatCount="indefinite"
+      path="M140,150 Q200,100 260,150 Q200,200 140,150"/>
+  </circle>
+  <circle r="6" fill="#e67e22" opacity="0.8">
+    <animateMotion dur="8s" repeatCount="indefinite"
+      path="M260,150 Q200,200 140,150 Q200,100 260,150"/>
+  </circle>
+</svg>
+
+<h3>What is a Set?</h3>
+<p>A <strong>set</strong> is a well-defined collection of distinct objects, called <strong>elements</strong> or <strong>members</strong>. In mathematics, we use curly braces <code>{ }</code> to list elements.</p>
+
+<ul>
+  <li><strong>Universal Set (U):</strong> The set containing all elements under consideration (e.g., all SSS1 students).</li>
+  <li><strong>Intersection (∩):</strong> Elements common to two sets (e.g., students taking both Mathematics and English).</li>
+  <li><strong>Union (∪):</strong> All elements from both sets combined.</li>
+  <li><strong>Complement (A'):</strong> Elements not in set A but present in the universal set.</li>
+  <li><strong>Empty Set (∅):</strong> A set with no elements.</li>
+</ul>
+
+<h3>Nigerian Examples</h3>
+<div style="background:#fff9e6;padding:10px;border-left:4px solid #f39c12;margin:10px 0;">
+  <strong>Example 1:</strong> In an SSS1 class of 40 students, 18 play football, 15 play basketball, and 8 play both. How many play neither?
+  <br><em>Solution:</em> Football only = 18 - 8 = 10. Basketball only = 15 - 8 = 7. Total playing = 10 + 7 + 8 = 25. Neither = 40 - 25 = <strong>15 students</strong>.
+</div>
+<div style="background:#fff9e6;padding:10px;border-left:4px solid #f39c12;margin:10px 0;">
+  <strong>Example 2:</strong> Set A = {Lagos, Abuja, Kano} and Set B = {Kano, Enugu, Port Harcourt}. Find A ∩ B.
+  <br><em>Solution:</em> The common city is Kano. So A ∩ B = <strong>{Kano}</strong>.
+</div>
+
+<div style="background:#e8f8f5;padding:12px;border-radius:8px;margin:15px 0;">
+  <span style="font-size:1.5em;">💡</span> <strong>Fun Fact:</strong> The word "set" was first used in mathematics by the German mathematician <strong>Georg Cantor</strong> in the 1870s. He called sets "Menge" in German, and his work led to a whole new branch of math called <strong>Set Theory</strong>, which is the foundation of all modern mathematics!
+</div>
+
+<h3>Practice Questions</h3>
+<ol>
+  <li>If U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, A = {2, 4, 6, 8, 10}, and B = {1, 3, 5, 7, 9}, what is A ∪ B?</li>
+  <li>In a school, 30 students take Chemistry, 25 take Physics, and 12 take both. If there are 50 students in total, how many take neither Chemistry nor Physics?</li>
+  <li>If P = {x | x is a vowel in the word "MATHEMATICS"}, list the elements of P.</li>
+</ol>
+
+<div style="background:#f0f0f0;padding:12px;border-radius:8px;margin:15px 0;">
+  <strong>Answers:</strong><br>
+  1. A ∪ B = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10} = U<br>
+  2. Chemistry only = 30 - 12 = 18. Physics only = 25 - 12 = 13. Total taking either = 18 + 13 + 12 = 43. Neither = 50 - 43 = <strong>7 students</strong>.<br>
+  3. The vowels in "MATHEMATICS" are A, E, I. So P = <strong>{A, E, I}</strong>.
+</div>

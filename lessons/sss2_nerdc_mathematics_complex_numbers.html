@@ -1,0 +1,112 @@
+<svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto;max-width:100%;background:#f9f9f9;border-radius:8px;">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  <!-- Axes -->
+  <line x1="30" y1="160" x2="370" y2="160" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="200" y1="300" x2="200" y2="20" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Axis labels -->
+  <text x="375" y="165" font-size="14" fill="#333" font-weight="bold">Re</text>
+  <text x="210" y="20" font-size="14" fill="#333" font-weight="bold">Im</text>
+  <!-- Grid lines (light) -->
+  <line x1="60" y1="20" x2="60" y2="300" stroke="#ddd" stroke-width="1"/>
+  <line x1="100" y1="20" x2="100" y2="300" stroke="#ddd" stroke-width="1"/>
+  <line x1="140" y1="20" x2="140" y2="300" stroke="#ddd" stroke-width="1"/>
+  <line x1="180" y1="20" x2="180" y2="300" stroke="#ddd" stroke-width="1"/>
+  <line x1="220" y1="20" x2="220" y2="300" stroke="#ddd" stroke-width="1"/>
+  <line x1="260" y1="20" x2="260" y2="300" stroke="#ddd" stroke-width="1"/>
+  <line x1="300" y1="20" x2="300" y2="300" stroke="#ddd" stroke-width="1"/>
+  <line x1="340" y1="20" x2="340" y2="300" stroke="#ddd" stroke-width="1"/>
+  <line x1="30" y1="120" x2="370" y2="120" stroke="#ddd" stroke-width="1"/>
+  <line x1="30" y1="80" x2="370" y2="80" stroke="#ddd" stroke-width="1"/>
+  <line x1="30" y1="200" x2="370" y2="200" stroke="#ddd" stroke-width="1"/>
+  <line x1="30" y1="240" x2="370" y2="240" stroke="#ddd" stroke-width="1"/>
+  <!-- Tick marks -->
+  <line x1="60" y1="155" x2="60" y2="165" stroke="#333" stroke-width="1.5"/>
+  <line x1="100" y1="155" x2="100" y2="165" stroke="#333" stroke-width="1.5"/>
+  <line x1="140" y1="155" x2="140" y2="165" stroke="#333" stroke-width="1.5"/>
+  <line x1="180" y1="155" x2="180" y2="165" stroke="#333" stroke-width="1.5"/>
+  <line x1="220" y1="155" x2="220" y2="165" stroke="#333" stroke-width="1.5"/>
+  <line x1="260" y1="155" x2="260" y2="165" stroke="#333" stroke-width="1.5"/>
+  <line x1="300" y1="155" x2="300" y2="165" stroke="#333" stroke-width="1.5"/>
+  <line x1="340" y1="155" x2="340" y2="165" stroke="#333" stroke-width="1.5"/>
+  <line x1="195" y1="80" x2="205" y2="80" stroke="#333" stroke-width="1.5"/>
+  <line x1="195" y1="120" x2="205" y2="120" stroke="#333" stroke-width="1.5"/>
+  <line x1="195" y1="200" x2="205" y2="200" stroke="#333" stroke-width="1.5"/>
+  <line x1="195" y1="240" x2="205" y2="240" stroke="#333" stroke-width="1.5"/>
+  <!-- Numbers on axes -->
+  <text x="55" y="178" font-size="11" fill="#555">-3</text>
+  <text x="95" y="178" font-size="11" fill="#555">-2</text>
+  <text x="135" y="178" font-size="11" fill="#555">-1</text>
+  <text x="195" y="178" font-size="11" fill="#555">0</text>
+  <text x="218" y="178" font-size="11" fill="#555">1</text>
+  <text x="258" y="178" font-size="11" fill="#555">2</text>
+  <text x="298" y="178" font-size="11" fill="#555">3</text>
+  <text x="338" y="178" font-size="11" fill="#555">4</text>
+  <text x="207" y="84" font-size="11" fill="#555">2</text>
+  <text x="207" y="124" font-size="11" fill="#555">1</text>
+  <text x="207" y="204" font-size="11" fill="#555">-1</text>
+  <text x="207" y="244" font-size="11" fill="#555">-2</text>
+  <!-- Point z = 3 + 2i -->
+  <circle cx="260" cy="80" r="6" fill="#e74c3c" opacity="0.9">
+    <animate attributeName="r" values="6;9;6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="270" y="75" font-size="13" fill="#e74c3c" font-weight="bold">z = 3 + 2i</text>
+  <!-- Arrow from origin to point -->
+  <line x1="200" y1="160" x2="260" y2="80" stroke="#e74c3c" stroke-width="2.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <!-- Point w = -2 + i -->
+  <circle cx="100" cy="120" r="6" fill="#2ecc71" opacity="0.9">
+    <animate attributeName="r" values="6;9;6" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="70" y="115" font-size="13" fill="#2ecc71" font-weight="bold">w = -2 + i</text>
+  <!-- Arrow from origin to w -->
+  <line x1="200" y1="160" x2="100" y2="120" stroke="#2ecc71" stroke-width="2.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <!-- Legend -->
+  <rect x="30" y="260" width="340" height="35" rx="5" fill="#fff" stroke="#ccc" opacity="0.9"/>
+  <circle cx="60" cy="278" r="5" fill="#e74c3c"/>
+  <text x="70" y="282" font-size="11" fill="#333">Real = 3, Imaginary = 2</text>
+  <circle cx="220" cy="278" r="5" fill="#2ecc71"/>
+  <text x="230" y="282" font-size="11" fill="#333">Real = -2, Imaginary = 1</text>
+</svg>
+
+<h3 style="color:#1a5276;margin-top:15px;">Key Concepts</h3>
+<ul style="list-style-type:disc;padding-left:20px;line-height:1.8;">
+  <li><strong>Complex Number</strong>: A number of the form <em>z = a + bi</em>, where <em>a</em> and <em>b</em> are real numbers, and <em>i</em> = √(-1).</li>
+  <li><strong>Real Part</strong>: <em>Re(z) = a</em> (the horizontal coordinate on the complex plane).</li>
+  <li><strong>Imaginary Part</strong>: <em>Im(z) = b</em> (the vertical coordinate on the complex plane).</li>
+  <li><strong>Complex Plane (Argand Diagram)</strong>: A 2D graph where the x-axis represents real numbers and the y-axis represents imaginary numbers.</li>
+  <li><strong>Conjugate</strong>: For <em>z = a + bi</em>, the conjugate is <em>z̄ = a – bi</em> (reflects across the real axis).</li>
+</ul>
+
+<h3 style="color:#1a5276;margin-top:20px;">🇳🇬 Nigerian Examples</h3>
+<div style="background:#eaf2f8;padding:12px;border-left:5px solid #2980b9;margin:10px 0;">
+  <strong>Example 1 (Lagos Bus Fare):</strong><br>
+  A bus fare from Oshodi to Ikeja costs ₦300, but due to traffic, the journey takes 2 hours extra. Represent the total cost and time as a complex number where cost is the real part and extra time is the imaginary part.<br>
+  <em>Solution:</em> z = 300 + 2i (₦300 real, 2 hours imaginary).
+</div>
+<div style="background:#eaf2f8;padding:12px;border-left:5px solid #2980b9;margin:10px 0;">
+  <strong>Example 2 (Abuja Temperature & Humidity):</strong><br>
+  In Abuja, the temperature is 35°C and the humidity index is 15. Write this as a complex number and find its conjugate.<br>
+  <em>Solution:</em> z = 35 + 15i. Conjugate: z̄ = 35 – 15i.
+</div>
+
+<div style="background:#fef9e7;padding:12px;border-radius:8px;border:1px solid #f1c40f;margin:15px 0;">
+  <strong>⭐ Fun Fact!</strong><br>
+  The symbol <em>i</em> for √(-1) was introduced by Swiss mathematician Leonhard Euler in the 18th century. Complex numbers are essential in electrical engineering — Nigerian engineers use them to design power grids and communication networks!
+</div>
+
+<h3 style="color:#1a5276;margin-top:20px;">📝 Practice Questions</h3>
+<ol style="line-height:2.0;padding-left:20px;">
+  <li>If <em>z = 4 – 7i</em>, what are <em>Re(z)</em> and <em>Im(z)</em>?</li>
+  <li>Plot the complex number <em>w = -3 + 2i</em> on the Argand diagram. What is its conjugate?</li>
+  <li>A student scores 85 in Mathematics (real) and 20 in Further Maths (imaginary). Express this as a complex number and find its modulus (distance from origin) to 1 decimal place.</li>
+</ol>
+
+<div style="background:#f0f0f0;padding:12px;border-radius:8px;margin-top:15px;">
+  <strong>✅ Answers:</strong><br>
+  1. Re(z) = 4, Im(z) = -7<br>
+  2. Conjugate of w = -3 – 2i (point reflected across real axis)<br>
+  3. z = 85 + 20i; Modulus = √(85² + 20²) = √(7225 + 400) = √7625 ≈ 87.3
+</div>

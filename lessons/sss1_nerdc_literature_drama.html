@@ -1,0 +1,146 @@
+<svg viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg" style="display:block; margin:0 auto 20px auto; max-width:100%; background:#f7f3e8; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+  <defs>
+    <linearGradient id="stageGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B4513" />
+      <stop offset="100%" stop-color="#A0522D" />
+    </linearGradient>
+    <linearGradient id="curtainGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B22222" />
+      <stop offset="50%" stop-color="#DC143C" />
+      <stop offset="100%" stop-color="#B22222" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background sky -->
+  <rect x="0" y="0" width="500" height="350" fill="#1a1a2e" />
+  <circle cx="80" cy="50" r="25" fill="#FFD700" opacity="0.7" filter="url(#glow)" />
+  <circle cx="80" cy="50" r="15" fill="#FFD700" opacity="0.9" />
+
+  <!-- Stage floor -->
+  <path d="M30 280 L470 280 L490 340 L10 340 Z" fill="#3E2723" stroke="#5D4037" stroke-width="2" />
+  <path d="M30 280 L470 280" stroke="#8D6E63" stroke-width="3" />
+
+  <!-- Curtain left -->
+  <path d="M40 50 Q70 100 50 180 Q60 230 40 280 L40 50 Z" fill="url(#curtainGrad)" opacity="0.9">
+    <animate attributeName="d" values="M40 50 Q70 100 50 180 Q60 230 40 280 L40 50 Z;M40 50 Q90 100 70 180 Q80 230 40 280 L40 50 Z;M40 50 Q70 100 50 180 Q60 230 40 280 L40 50 Z" dur="4s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Curtain right -->
+  <path d="M460 50 Q430 100 450 180 Q440 230 460 280 L460 50 Z" fill="url(#curtainGrad)" opacity="0.9">
+    <animate attributeName="d" values="M460 50 Q430 100 450 180 Q440 230 460 280 L460 50 Z;M460 50 Q410 100 430 180 Q420 230 460 280 L460 50 Z;M460 50 Q430 100 450 180 Q440 230 460 280 L460 50 Z" dur="4s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Curtain top -->
+  <rect x="40" y="45" width="420" height="25" rx="5" fill="#8B0000" stroke="#5D0000" stroke-width="2" />
+
+  <!-- Stage title -->
+  <text x="250" y="70" text-anchor="middle" fill="#FFD700" font-family="Georgia, serif" font-size="22" font-weight="bold" filter="url(#glow)">DRAMA</text>
+
+  <!-- Spotlight effect -->
+  <ellipse cx="250" cy="160" rx="100" ry="80" fill="#FFFF99" opacity="0.08">
+    <animate attributeName="opacity" values="0.08;0.15;0.08" dur="3s" repeatCount="indefinite" />
+  </ellipse>
+
+  <!-- Actor figure 1 -->
+  <g transform="translate(170, 160)">
+    <circle cx="0" cy="-30" r="12" fill="#FFCC80" stroke="#5D4037" stroke-width="1.5" />
+    <rect x="-10" y="-18" width="20" height="30" rx="5" fill="#E53935" stroke="#5D4037" stroke-width="1" />
+    <line x1="-8" y1="12" x2="-15" y2="30" stroke="#5D4037" stroke-width="2" />
+    <line x1="8" y1="12" x2="15" y2="30" stroke="#5D4037" stroke-width="2" />
+    <line x1="-5" y1="10" x2="5" y2="10" stroke="#5D4037" stroke-width="2" />
+    <circle cx="-4" cy="-32" r="2" fill="#333" />
+    <circle cx="4" cy="-32" r="2" fill="#333" />
+    <path d="M-4 -27 Q0 -24 4 -27" stroke="#333" stroke-width="1.5" fill="none" />
+  </g>
+
+  <!-- Actor figure 2 -->
+  <g transform="translate(330, 160)">
+    <circle cx="0" cy="-30" r="12" fill="#D7A86E" stroke="#5D4037" stroke-width="1.5" />
+    <rect x="-10" y="-18" width="20" height="30" rx="5" fill="#1E88E5" stroke="#5D4037" stroke-width="1" />
+    <line x1="-8" y1="12" x2="-15" y2="30" stroke="#5D4037" stroke-width="2" />
+    <line x1="8" y1="12" x2="15" y2="30" stroke="#5D4037" stroke-width="2" />
+    <line x1="-5" y1="10" x2="5" y2="10" stroke="#5D4037" stroke-width="2" />
+    <circle cx="-4" cy="-32" r="2" fill="#333" />
+    <circle cx="4" cy="-32" r="2" fill="#333" />
+    <path d="M-4 -27 Q0 -24 4 -27" stroke="#333" stroke-width="1.5" fill="none" />
+  </g>
+
+  <!-- Speech bubbles -->
+  <g>
+    <ellipse cx="200" cy="120" rx="40" ry="18" fill="white" stroke="#333" stroke-width="1" opacity="0.9" />
+    <text x="200" y="124" text-anchor="middle" fill="#333" font-size="10" font-family="Arial">Hello!</text>
+  </g>
+  <g>
+    <ellipse cx="300" cy="115" rx="50" ry="18" fill="white" stroke="#333" stroke-width="1" opacity="0.9" />
+    <text x="300" y="119" text-anchor="middle" fill="#333" font-size="10" font-family="Arial">Welcome!</text>
+  </g>
+
+  <!-- Masks (comedy/tragedy) -->
+  <g transform="translate(60, 200)">
+    <circle cx="0" cy="0" r="10" fill="#FFE0B2" stroke="#5D4037" stroke-width="1.5" />
+    <path d="M-6 -3 Q0 -8 6 -3" stroke="#5D4037" stroke-width="1.5" fill="none" />
+    <path d="M-5 2 Q0 6 5 2" stroke="#5D4037" stroke-width="1.5" fill="none" />
+    <circle cx="-3" cy="-2" r="1.5" fill="#333" />
+    <circle cx="3" cy="-2" r="1.5" fill="#333" />
+  </g>
+  <g transform="translate(440, 200)">
+    <circle cx="0" cy="0" r="10" fill="#FFE0B2" stroke="#5D4037" stroke-width="1.5" />
+    <path d="M-6 -3 Q0 -8 6 -3" stroke="#5D4037" stroke-width="1.5" fill="none" />
+    <path d="M-5 3 Q0 -1 5 3" stroke="#5D4037" stroke-width="1.5" fill="none" />
+    <circle cx="-3" cy="-2" r="1.5" fill="#333" />
+    <circle cx="3" cy="-2" r="1.5" fill="#333" />
+  </g>
+
+  <!-- Bottom label -->
+  <text x="250" y="325" text-anchor="middle" fill="#FFD700" font-family="Georgia, serif" font-size="14" font-style="italic">A story told through action and dialogue</text>
+</svg>
+
+<h2 style="color:#8B0000; font-family:Georgia, serif; border-bottom:3px solid #8B0000; padding-bottom:5px;">What is Drama?</h2>
+<p style="font-family:Georgia, serif; font-size:16px; line-height:1.6;">Drama is a form of literature written to be performed by actors on a stage before an audience. It tells a story through <strong>dialogue</strong> (spoken words), <strong>action</strong> (movement and gestures), and <strong>conflict</strong> (struggle between characters or ideas). Unlike novels or poems, drama comes alive only when it is acted out.</p>
+
+<h3 style="color:#A0522D; font-family:Georgia, serif;">Key Elements of Drama</h3>
+<ul style="font-family:Arial, sans-serif; font-size:15px; line-height:1.7; background:#f9f4ec; padding:15px 25px; border-radius:8px; list-style-type:square;">
+  <li><strong>Plot</strong> – The sequence of events that make up the story (beginning, middle, end).</li>
+  <li><strong>Characters</strong> – The people (or beings) who drive the story forward through their choices.</li>
+  <li><strong>Dialogue</strong> – Conversations between characters that reveal their thoughts and move the plot.</li>
+  <li><strong>Conflict</strong> – The central struggle (man vs man, man vs society, man vs self, man vs nature).</li>
+  <li><strong>Setting</strong> – Where and when the story takes place (e.g., a village, a palace, modern city).</li>
+  <li><strong>Theme</strong> – The big idea or message the playwright wants to share (e.g., love, betrayal, justice).</li>
+  <li><strong>Stage Directions</strong> – Instructions in the script about lighting, movement, and tone (e.g., <em>“enters left, weeping”</em>).</li>
+</ul>
+
+<h3 style="color:#A0522D; font-family:Georgia, serif;">Nigerian Examples of Drama</h3>
+<div style="background:#e8f0e8; padding:12px 18px; border-left:5px solid #2E7D32; border-radius:6px; margin:12px 0;">
+  <p style="margin:5px 0; font-family:Arial, sans-serif;"><strong>1. <em>The Gods Are Not To Blame</em> by Ola Rotimi</strong><br>
+  A classic Nigerian tragedy that adapts the Greek story of Oedipus into a Yoruba setting. It explores themes of fate, pride, and family loyalty. The play uses traditional Yoruba songs, proverbs, and drumming to bring the story to life.</p>
+</div>
+<div style="background:#e8f0e8; padding:12px 18px; border-left:5px solid #2E7D32; border-radius:6px; margin:12px 0;">
+  <p style="margin:5px 0; font-family:Arial, sans-serif;"><strong>2. <em>The Trials of Brother Jero</em> by Wole Soyinka</strong><br>
+  A comedy that satirizes religious hypocrisy in modern Nigeria. The play follows Brother Jero, a self-proclaimed prophet, as he tricks and manipulates his followers on a Lagos beach. It uses humour and irony to criticize corruption in the church.</p>
+</div>
+
+<div style="background:#fff3cd; border:2px dashed #cc8800; border-radius:10px; padding:12px 18px; margin:20px 0;">
+  <p style="font-size:18px; font-weight:bold; color:#8B4513; margin:0 0 6px 0;">🎭 Fun Fact</p>
+  <p style="font-family:Arial, sans-serif; margin:0;">The longest-running play in Nigerian history is <strong>“King Emene”</strong> by Tunde Adegbola. It was performed for over 500 consecutive nights in Ibadan in the 1980s! Drama in Nigeria often blends English with local languages like Yoruba, Igbo, and Hausa to reach wider audiences.</p>
+</div>
+
+<h3 style="color:#A0522D; font-family:Georgia, serif;">Practice Questions</h3>
+<ol style="font-family:Arial, sans-serif; font-size:15px; line-height:1.8; background:#f0f4f8; padding:15px 30px; border-radius:8px;">
+  <li><strong>What is the main difference between drama and a novel?</strong></li>
+  <li><strong>In <em>The Gods Are Not To Blame</em>, what is the central conflict that drives the plot?</strong></li>
+  <li><strong>Give two examples of stage directions a playwright might include in a script.</strong></li>
+</ol>
+
+<h4 style="color:#2E7D32; font-family:Georgia, serif;">Answers</h4>
+<div style="background:#e8f5e9; padding:12px 18px; border-radius:8px; font-family:Arial, sans-serif; font-size:14px; line-height:1.7;">
+  <p><strong>Answer 1:</strong> Drama is written to be performed on stage with actors, dialogue, and action, while a novel is meant to be read silently. Drama relies heavily on performance, whereas a novel uses description and narration.</p>
+  <p><strong>Answer 2:</strong> The central conflict is the struggle between fate (the prophecy that Odewale will kill his father and marry his mother) and his attempts to avoid it. It is a man vs. fate conflict, showing that no one can escape destiny.</p>
+  <p><strong>Answer 3:</strong> Examples include: <em>“She exits stage left, sobbing”</em> (movement/emotion) and <em>“Lights dim to a single spotlight on the king”</em> (lighting/atmosphere). Stage directions tell actors and directors how to perform the scene.</p>
+</div>

@@ -384,3 +384,35 @@ body {
     color: white;
     cursor: pointer;
 }
+
+/* Paystack modern button */
+.paystack-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, #0ba95a 0%, #0ca34e 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(11, 169, 90, 0.4);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: fit-content;
+    margin: 20px auto;
+}
+.paystack-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(11, 169, 90, 0.5);
+}
+.paystack-btn .btn-icon {
+    font-size: 1.4rem;
+}
+.status-msg {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 10px;
+}

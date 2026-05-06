@@ -573,3 +573,9 @@ window.onload = init;
 
 
 
+
+function switchView(viewId) {
+    document.querySelectorAll('.view').forEach(v => v.classList.add('hidden'));
+    const target = document.getElementById(viewId);
+    if (target) target.classList.remove('hidden');
+}

@@ -1,4 +1,10 @@
-﻿function getTopicId(level, syllabus, subject, topic) {
+﻿// Global state
+window.state = {
+    currentLevel: "sss1",
+    currentSyllabus: "waec",
+    currentSubject: null
+};
+function getTopicId(level, syllabus, subject, topic) {
     const sanitize = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, '_');
     return `${sanitize(level)}_${sanitize(syllabus)}_${sanitize(subject)}_${sanitize(topic)}`;
 }
@@ -578,4 +584,7 @@ function switchView(viewId) {
     document.querySelectorAll('.view').forEach(v => v.classList.add('hidden'));
     const target = document.getElementById(viewId);
     if (target) target.classList.remove('hidden');
+    if (viewId === 'syllabus-view' && typeof renderSyllabus === 'function') {
+        renderSyllabus();
+    }
 }

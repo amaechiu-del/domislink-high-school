@@ -1,4 +1,62 @@
-﻿// Global state
+﻿// === AUTO‑LOAD SYLLABUSES & RENDER SUBJECTS ===
+(async function initSyllabus() {
+    try {
+        const res = await fetch('syllabuses.json');
+        if (!res.ok) throw new Error('Failed to fetch syllabuses.json');
+        window.syllabuses = await res.json();
+        console.log('✅ syllabuses.json loaded');
+        // Render subjects immediately if the Learn view is visible
+        if (document.getElementById('syllabus-view') && !document.getElementById('syllabus-view').classList.contains('hidden')) {
+            renderSyllabus();
+        }
+    } catch (err) {
+        console.error('❌ Could not load syllabuses:', err);
+        // Retry after 3 seconds
+        setTimeout(initSyllabus, 3000);
+    }
+})();
+
+// ========== RENDER SUBJECTS ==========
+function renderSyllabus() {
+    const list = document.getElementById('subject-list');
+    if (!list) return;
+    list.innerHTML = '';
+    if (!window.syllabuses || !window.state || !window.state.currentLevel || !window.state.currentSyllabus) {
+        list.innerHTML = '<p>⏳ Loading syllabus data...</p>';
+        return;
+    }
+    const levelData = window.syllabuses[window.state.currentLevel]?.[window.state.currentSyllabus];
+    if (!levelData || !levelData.subjects) {
+        list.innerHTML = '<p>No subjects found for this level/syllabus.</p>';
+        return;
+    }
+    Object.keys(levelData.subjects).forEach(subject => {
+        // Standard subject button
+        const btn = document.createElement('button');
+        btn.className = 'btn-subject';
+        btn.textContent = subject;
+        btn.onclick = () => { if (typeof showTopics === 'function') showTopics(subject); };
+        list.appendChild(btn);
+        // Textbook button
+        const tb = document.createElement('button');
+        tb.className = 'btn-subject';
+        tb.textContent = '📘 ' + subject;
+        tb.onclick = () => { if (typeof openTextbookForSubject === 'function') openTextbookForSubject(window.state.currentLevel, window.state.currentSyllabus, subject); };
+        list.appendChild(tb);
+    });
+    console.log('✅ Subjects rendered:', Object.keys(levelData.subjects).length);
+}
+
+// ========== SWITCH VIEW (with auto‑render) ==========
+function switchView(viewId) {
+    document.querySelectorAll('.view').forEach(v => v.classList.add('hidden'));
+    const target = document.getElementById(viewId);
+    if (target) target.classList.remove('hidden');
+    if (viewId === 'syllabus-view') {
+        renderSyllabus();
+    }
+}
+// Global state
 window.state = {
     currentLevel: "sss1",
     currentSyllabus: "waec",

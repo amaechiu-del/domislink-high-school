@@ -376,5 +376,22 @@
     </script>
     <script src="app.js"></script>
     <script src="security.js"></script>
+<script>
+// Force subject rendering when Learn is clicked (backup)
+document.addEventListener('DOMContentLoaded', function() {
+    const learnBtn = document.querySelector('.nav-item[data-view="syllabus-view"]');
+    if (learnBtn) {
+        learnBtn.addEventListener('click', function() {
+            if (typeof switchView === 'function') {
+                switchView('syllabus-view');
+            } else {
+                document.querySelectorAll('.view').forEach(v => v.classList.add('hidden'));
+                document.getElementById('syllabus-view').classList.remove('hidden');
+                if (typeof renderSyllabus === 'function') renderSyllabus();
+            }
+        });
+    }
+});
+</script>
 </body>
 </html>

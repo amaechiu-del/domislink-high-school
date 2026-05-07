@@ -1,4 +1,72 @@
-﻿// DomisLink High School Academy - Complete App
+﻿// === AUTO‑LOAD SYLLABUSES & RENDER SUBJECTS ===
+(async function initSyllabus() {
+    try {
+        const res = await fetch('syllabuses.json');
+        if (!res.ok) throw new Error('Failed to fetch syllabuses.json');
+        window.syllabuses = await res.json();
+        console.log('✅ syllabuses.json loaded');
+        // Render subjects immediately if the Learn view is visible
+        if (document.getElementById('syllabus-view') && !document.getElementById('syllabus-view').classList.contains('hidden')) {
+            renderSyllabus();
+        }
+    } catch (err) {
+        console.error('❌ Could not load syllabuses:', err);
+        // Retry after 3 seconds
+        setTimeout(initSyllabus, 3000);
+    }
+})();
+
+// ========== RENDER SUBJECTS ==========
+function renderSyllabus() {
+    const list = document.getElementById('subject-list');
+    if (!list) return;
+    list.innerHTML = '';
+    if (!window.syllabuses || !window.state || !window.state.currentLevel || !window.state.currentSyllabus) {
+        list.innerHTML = '<p>⏳ Loading syllabus data...</p>';
+        return;
+    }
+    const levelData = window.syllabuses[window.state.currentLevel]?.[window.state.currentSyllabus];
+    if (!levelData || !levelData.subjects) {
+        list.innerHTML = '<p>No subjects found for this level/syllabus.</p>';
+        return;
+    }
+    Object.keys(levelData.subjects).forEach(subject => {
+        // Standard subject button
+        const btn = document.createElement('button');
+        btn.className = 'btn-subject';
+        btn.textContent = subject;
+        btn.onclick = () => { if (typeof showTopics === 'function') showTopics(subject); };
+        list.appendChild(btn);
+        // Textbook button
+        const tb = document.createElement('button');
+        tb.className = 'btn-subject';
+        tb.textContent = '📘 ' + subject;
+        tb.onclick = () => { if (typeof openTextbookForSubject === 'function') openTextbookForSubject(window.state.currentLevel, window.state.currentSyllabus, subject); };
+        list.appendChild(tb);
+    });
+    console.log('✅ Subjects rendered:', Object.keys(levelData.subjects).length);
+}
+
+// ========== SWITCH VIEW (with auto‑render) ==========
+function switchView(viewId) {
+    document.querySelectorAll('.view').forEach(v => v.classList.add('hidden'));
+    const target = document.getElementById(viewId);
+    if (target) target.classList.remove('hidden');
+    if (viewId === 'syllabus-view') {
+        renderSyllabus();
+    }
+}
+// Global state
+window.state = {
+    currentLevel: "sss1",
+    currentSyllabus: "waec",
+    currentSubject: null
+};
+function getTopicId(level, syllabus, subject, topic) {
+    const sanitize = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, '_');
+    return `${sanitize(level)}_${sanitize(syllabus)}_${sanitize(subject)}_${sanitize(topic)}`;
+}
+// DomisLink High School Academy - Complete App
 const PAYSTACK_PUBLIC_KEY = "pk_live_b9ce8aa36118824d41d49c09824d49161a824a5b";
 const XP_PER_TOPIC = 100;
 const XP_PER_QUIZ_RIGHT = 20;
@@ -218,32 +286,46 @@ function renderSyllabus() {
     }
     const subjects = Object.keys(levelData.subjects);
     subjects.forEach(subject => {
+        // Original topic button
         const btn = document.createElement("button");
         btn.innerText = subject;
         btn.className = "btn-subject";
         btn.onclick = () => { showTopics(subject); fetchSubjectTrivia(subject); };
         list.appendChild(btn);
+        // NEW: Textbook button
+        const textbookBtn = document.createElement("button");
+        textbookBtn.innerText = `📘 ${subject}`;
+        textbookBtn.className = "btn-subject";
+        textbookBtn.onclick = () => {
+            if (typeof openTextbookForSubject === 'function') {
+                openTextbookForSubject(state.currentLevel, state.currentSyllabus, subject);
+            } else {
+                alert("Textbook feature loading...");
+            }
+        };
+        list.appendChild(textbookBtn);
     });
 }
 
-async function callGemini(prompt) {
-    const response = await fetch("/api/gemini", {
+async function callGemini(prompt, provider = 'deepseek') {
+    const response = await fetch(`/api/llm?provider=${provider}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
     });
-    if (!response.ok) throw new Error(`Gemini API error: ${response.status}`);
+    if (!response.ok) throw new Error(`LLM API error: ${response.status}`);
     const data = await response.json();
-    if (!data.candidates || !data.candidates[0]) throw new Error("No response from Gemini");
+    if (!data.candidates || !data.candidates[0]) throw new Error("No response from LLM");
     return data.candidates[0].content.parts[0].text;
 }
+
 
 async function fetchSubjectTrivia(subject) {
     const triviaEl = document.getElementById("subject-trivia");
     triviaEl.classList.add("hidden");
     try {
         const prompt = `Provide one short, amazing fun fact or trivia about ${subject} in a Nigerian context for a ${state.currentLevel.toUpperCase()} student. Keep it under 30 words. Language: ${state.currentLanguage}`;
-        const text = await callGemini(prompt);
+        const text = await await callGemini(prompt);
         triviaEl.innerHTML = `<strong>Empire Trivia:</strong> ${text}`;
         triviaEl.classList.remove("hidden");
     } catch (e) { console.warn("Trivia failed", e); }
@@ -254,7 +336,7 @@ async function fetchTopicTrivia(subject, topic) {
     triviaEl.classList.add("hidden");
     try {
         const prompt = `Provide one mind-blowing, short fun fact about the specific topic "${topic}" in "${subject}" for a ${state.currentLevel.toUpperCase()} student. Use ${state.currentLanguage}. Keep it under 25 words.`;
-        const text = await callGemini(prompt);
+        const text = await await callGemini(prompt);
         triviaEl.innerHTML = `<strong>Topic Trivia:</strong> ${text}`;
         triviaEl.classList.remove("hidden");
     } catch (e) { console.warn("Topic trivia failed", e); }
@@ -335,7 +417,7 @@ async function startTeaching(subject, topic) {
         const syllabusName = levelData?.name || "Nigerian Curriculum";
         const langInstruction = state.currentLanguage === "english" ? "in simple English" : `in ${state.currentLanguage}`;
         const prompt = `You are a world-class ${state.currentLevel.toUpperCase()} teacher in Nigeria. Teach a detailed and interactive lesson on the topic "${topic}" in the subject "${subject}" based on the ${syllabusName} syllabus, ${langInstruction}. Include: 1. An Animated SVG illustration. 2. A "Fun Fact" trivia snippet. 3. Examples. 4. 3 practice questions.`;
-        const lessonText = await callGemini(prompt);
+        const lessonText = await await callGemini(prompt);
         await new Promise(resolve => setTimeout(resolve, 200));
         clearInterval(interval);
         progressFill.style.width = "100%";
@@ -363,7 +445,7 @@ async function takeQuiz() {
     quizBox.classList.remove("hidden");
     try {
         const prompt = `Generate a 3-question multiple-choice quiz about ${state.currentTopic} for ${state.currentLevel.toUpperCase()} students in ${state.currentLanguage}. Return ONLY valid JSON in this format: [{"q": "Question", "o": ["Opt1", "Opt2", "Opt3", "Opt4"], "a": 0}] where 'a' is the index of correct option.`;
-        const responseText = await callGemini(prompt);
+        const responseText = await await callGemini(prompt);
         const cleanJson = responseText.replace(/```json/g, "").replace(/```/g, "");
         const questions = JSON.parse(cleanJson);
         renderQuiz(questions);
@@ -508,7 +590,7 @@ async function askFollowUp() {
     try {
         const langInstruction = state.currentLanguage === "english" ? "in English" : `in ${state.currentLanguage}`;
         const prompt = `I am a ${state.currentLevel.toUpperCase()} student. We just discussed "${state.currentTopic}" in "${state.currentSubject}". I have a follow-up question: "${question}". Please answer simply and clearly ${langInstruction}.`;
-        const answer = await callGemini(prompt);
+        const answer = await await callGemini(prompt);
         resultBox.innerHTML = `<strong>You asked:</strong> ${question}<br><br><strong>Teacher:</strong> ${formatContent(answer)}`;
     } catch (e) {
         resultBox.innerHTML = "Sorry, I couldn't answer that right now. Please try again.";
@@ -552,3 +634,15 @@ function payWithPaystack() {
 }
 
 window.onload = init;
+
+
+
+
+function switchView(viewId) {
+    document.querySelectorAll('.view').forEach(v => v.classList.add('hidden'));
+    const target = document.getElementById(viewId);
+    if (target) target.classList.remove('hidden');
+    if (viewId === 'syllabus-view' && typeof renderSyllabus === 'function') {
+        renderSyllabus();
+    }
+}

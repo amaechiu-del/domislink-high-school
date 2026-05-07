@@ -416,3 +416,57 @@ body {
     font-weight: 600;
     margin-top: 10px;
 }
+
+/* Subject buttons */
+.btn-subject {
+    display: block;
+    width: 100%;
+    padding: 14px 18px;
+    margin: 8px 0;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+}
+.btn-subject:hover {
+    background: #357abd;
+}
+.btn-subject:active {
+    transform: scale(0.98);
+}
+
+/* Topic items */
+.topic-item {
+    padding: 14px;
+    margin: 6px 0;
+    background: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.topic-item:hover {
+    background: #e0e0e0;
+}
+
+/* Paystack button */
+.paystack-btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background: #0ba95a;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    margin: 16px 0;
+}
+.paystack-btn:hover {
+    background: #08944d;
+}

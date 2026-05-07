@@ -21,15 +21,29 @@ function renderSyllabus() {
     var list = document.getElementById('subject-list');
     if (!list) return;
     list.innerHTML = '';
-    if (!window.syllabuses || !window.state) {
+
+    var levelSelect = document.getElementById('level-toggle');
+    var syllabusSelect = document.getElementById('syllabus-toggle');
+    
+    var level = levelSelect ? levelSelect.value : 'jss1';
+    var syllabus = syllabusSelect ? syllabusSelect.value : 'waec';
+    
+    window.state.currentLevel = level;
+    window.state.currentSyllabus = syllabus;
+
+    if (!window.syllabuses) {
         list.innerHTML = '<p>Loading syllabus data...</p>';
         return;
     }
-    var levelData = window.syllabuses['jss1_waec'] || window.syllabuses['jss1'];
+
+    var key = level + '_' + syllabus;
+    var levelData = window.syllabuses[key] || window.syllabuses[level];
+
     if (!levelData || !levelData.subjects) {
-        list.innerHTML = '<p>No subjects found.</p>';
+        list.innerHTML = '<p>No subjects found for ' + key + '. Try a different level/syllabus.</p>';
         return;
     }
+
     var subjects = Object.keys(levelData.subjects);
     for (var i = 0; i < subjects.length; i++) {
         var subject = subjects[i];
@@ -49,7 +63,7 @@ function renderSyllabus() {
         tb.onclick = (function(s) {
             return function() {
                 if (typeof openTextbookForSubject === 'function') {
-                    openTextbookForSubject('jss1', 'waec', s);
+                    openTextbookForSubject(level, syllabus, s);
                 }
             };
         })(subject);
@@ -94,7 +108,8 @@ function openTextbookForSubject(level, syllabus, subject) {
     switchView('textbook-view');
     var title = document.getElementById('textbook-title');
     if (title) title.textContent = '📖 ' + subject;
-    var levelData = window.syllabuses['jss1_waec'] || window.syllabuses['jss1'];
+    var key = level + '_' + syllabus;
+    var levelData = window.syllabuses[key] || window.syllabuses[level];
     if (!levelData || !levelData.subjects || !levelData.subjects[subject]) return;
     var wrapper = document.getElementById('textbook-slides-wrapper');
     if (!wrapper) return;
@@ -120,6 +135,27 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var i = 0; i < navButtons.length; i++) {
         navButtons[i].addEventListener('click', function() {
             switchView(this.getAttribute('data-view'));
+        });
+    }
+
+    var applyBtn = document.getElementById('apply-settings-btn');
+    if (applyBtn) {
+        applyBtn.addEventListener('click', function() {
+            renderSyllabus();
+        });
+    }
+
+    var backBtn = document.getElementById('back-to-subjects');
+    if (backBtn) {
+        backBtn.addEventListener('click', function() {
+            switchView('syllabus-view');
+        });
+    }
+
+    var backTopicsBtn = document.getElementById('back-to-topics');
+    if (backTopicsBtn) {
+        backTopicsBtn.addEventListener('click', function() {
+            switchView('topics-view');
         });
     }
     

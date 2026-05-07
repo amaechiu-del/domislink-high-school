@@ -6,10 +6,7 @@
 };
 
 function switchView(viewId) {
-    var views = document.querySelectorAll('.view');
-    for (var i = 0; i < views.length; i++) {
-        views[i].classList.add('hidden');
-    }
+    document.querySelectorAll('.view').forEach(function(v) { v.classList.add('hidden'); });
     var target = document.getElementById(viewId);
     if (target) target.classList.remove('hidden');
     if (viewId === 'syllabus-view' && typeof renderSyllabus === 'function') {
@@ -32,27 +29,37 @@ function renderSyllabus() {
     window.state.currentSyllabus = syllabus;
 
     if (!window.syllabuses) {
-        list.innerHTML = '<p>Loading syllabus data...</p>';
+        list.innerHTML = '<p>⏳ Loading syllabus data...</p>';
         return;
     }
 
-    var key = level + '_' + syllabus;
-    var levelData = window.syllabuses[key] || window.syllabuses[level];
-
-    if (!levelData || !levelData.subjects) {
-        list.innerHTML = '<p>No subjects found for ' + key + '. Try a different level/syllabus.</p>';
+    // syllabuses.json has: { jss1: { waec: { subjects: {...} }, nerdc: {...} } }
+    var levelObj = window.syllabuses[level];
+    if (!levelObj) {
+        list.innerHTML = '<p>Level ' + level + ' not found. Available: ' + Object.keys(window.syllabuses).join(', ') + '</p>';
         return;
     }
 
-    var subjects = Object.keys(levelData.subjects);
+    var syllabusObj = levelObj[syllabus];
+    if (!syllabusObj) {
+        list.innerHTML = '<p>Syllabus ' + syllabus + ' not found for ' + level + '. Available: ' + Object.keys(levelObj).join(', ') + '</p>';
+        return;
+    }
+
+    if (!syllabusObj.subjects) {
+        list.innerHTML = '<p>No subjects key found in ' + level + '/' + syllabus + '</p>';
+        return;
+    }
+
+    var subjects = Object.keys(syllabusObj.subjects);
     for (var i = 0; i < subjects.length; i++) {
         var subject = subjects[i];
         var btn = document.createElement('button');
         btn.className = 'btn-subject';
         btn.textContent = subject;
-        btn.onclick = (function(s) {
-            return function() { showTopics(s, levelData.subjects[s]); };
-        })(subject);
+        btn.onclick = (function(s, data) {
+            return function() { showTopics(s, data[s]); };
+        })(subject, syllabusObj.subjects);
         list.appendChild(btn);
         
         var tb = document.createElement('button');
@@ -69,6 +76,7 @@ function renderSyllabus() {
         })(subject);
         list.appendChild(tb);
     }
+    console.log('✅ Rendered ' + subjects.length + ' subjects for ' + level + '/' + syllabus);
 }
 
 function showTopics(subject, topics) {
@@ -108,13 +116,14 @@ function openTextbookForSubject(level, syllabus, subject) {
     switchView('textbook-view');
     var title = document.getElementById('textbook-title');
     if (title) title.textContent = '📖 ' + subject;
-    var key = level + '_' + syllabus;
-    var levelData = window.syllabuses[key] || window.syllabuses[level];
-    if (!levelData || !levelData.subjects || !levelData.subjects[subject]) return;
+    var levelObj = window.syllabuses[level];
+    if (!levelObj) return;
+    var syllabusObj = levelObj[syllabus];
+    if (!syllabusObj || !syllabusObj.subjects || !syllabusObj.subjects[subject]) return;
     var wrapper = document.getElementById('textbook-slides-wrapper');
     if (!wrapper) return;
     wrapper.innerHTML = '';
-    var topics = levelData.subjects[subject];
+    var topics = syllabusObj.subjects[subject];
     for (var i = 0; i < topics.length; i++) {
         var slide = document.createElement('div');
         slide.className = 'swiper-slide';
@@ -131,32 +140,25 @@ function openTextbookForSubject(level, syllabus, subject) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    var navButtons = document.querySelectorAll('.nav-item[data-view]');
-    for (var i = 0; i < navButtons.length; i++) {
-        navButtons[i].addEventListener('click', function() {
+    document.querySelectorAll('.nav-item[data-view]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
             switchView(this.getAttribute('data-view'));
         });
-    }
+    });
 
     var applyBtn = document.getElementById('apply-settings-btn');
     if (applyBtn) {
-        applyBtn.addEventListener('click', function() {
-            renderSyllabus();
-        });
+        applyBtn.addEventListener('click', renderSyllabus);
     }
 
     var backBtn = document.getElementById('back-to-subjects');
     if (backBtn) {
-        backBtn.addEventListener('click', function() {
-            switchView('syllabus-view');
-        });
+        backBtn.addEventListener('click', function() { switchView('syllabus-view'); });
     }
 
     var backTopicsBtn = document.getElementById('back-to-topics');
     if (backTopicsBtn) {
-        backTopicsBtn.addEventListener('click', function() {
-            switchView('topics-view');
-        });
+        backTopicsBtn.addEventListener('click', function() { switchView('topics-view'); });
     }
     
     var payBtn = document.getElementById('paystack-trigger');
@@ -173,15 +175,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     ref: 'DOM_' + Math.floor(Math.random() * 1000000000),
                     callback: function(r) {
                         var s = document.getElementById('payment-status');
-                        if (s) s.textContent = '✅ Payment successful! Ref: ' + r.reference;
+                        if (s) { s.textContent = '✅ Payment successful! Ref: ' + r.reference; s.style.color = '#27ae60'; }
+                        localStorage.setItem('pro_unlocked', 'true');
                     },
                     onClose: function() {
                         var s = document.getElementById('payment-status');
-                        if (s) s.textContent = 'Payment cancelled.';
+                        if (s) { s.textContent = 'Payment cancelled.'; s.style.color = '#e67e22'; }
                     }
                 }).openIframe();
-            } else {
-                alert('Payment system loading. Please refresh.');
             }
         });
     }
@@ -197,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(function() {
                 var list = document.getElementById('subject-list');
-                if (list) list.innerHTML = '<p>⚠️ Syllabus data not available.</p>';
+                if (list) list.innerHTML = '<p>⚠️ Syllabus data not available. Check your connection.</p>';
             });
     }
 });

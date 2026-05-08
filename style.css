@@ -505,3 +505,16 @@ body {
 #speak-btn { background: #e67e22; }
 #video-btn { background: #e74c3c; }
 #quiz-btn { background: #6f42c1; }
+
+/* Ensure views toggle properly */
+.view { display: none; }
+.view:not(.hidden) { display: block; }
+.hidden { display: none !important; }
+
+/* Textbook visible when active */
+#textbook-view:not(.hidden) {
+    display: block;
+    padding: 16px;
+    background: #fff;
+    min-height: 70vh;
+}

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>DomisLink Store</title>
+    <meta name="theme-color" content="#1a237e">
+    <link rel="manifest" href="data:application/json,{'name':'DomisLink Store','short_name':'DomisLink Store','start_url':'.','display':'standalone','background_color':'#1a237e','theme_color':'#1a237e'}">
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: system-ui, -apple-system, sans-serif; background: #0d1b2a; color: #e0e0e0; padding-bottom: 80px; }
+        .header { background: linear-gradient(135deg, #1a237e, #283593); color: #D4AF37; padding: 20px; text-align: center; position: sticky; top: 0; z-index: 50; }
+        .header h1 { font-size: 1.5rem; }
+        .header p { font-size: 0.8rem; color: #aaa; margin-top: 4px; }
+        
+        .container { padding: 16px; max-width: 600px; margin: 0 auto; }
+        
+        /* Category tabs */
+        .categories { display: flex; gap: 8px; overflow-x: auto; padding: 8px 0; margin-bottom: 16px; scrollbar-width: none; }
+        .categories::-webkit-scrollbar { display: none; }
+        .cat-btn { padding: 8px 16px; border-radius: 20px; border: 1px solid #2a3a4a; background: #1b2838; color: #e0e0e0; white-space: nowrap; cursor: pointer; font-size: 0.85rem; transition: all 0.2s; }
+        .cat-btn.active { background: #D4AF37; color: #1a237e; border-color: #D4AF37; font-weight: bold; }
+        
+        /* Section title */
+        .section-title { font-size: 1.2rem; color: #D4AF37; margin: 20px 0 12px; display: flex; align-items: center; gap: 8px; }
+        .section-title span { font-size: 1.4rem; }
+        
+        /* Product grid */
+        .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .product-card { background: #1b2838; border-radius: 16px; overflow: hidden; border: 1px solid #2a3a4a; cursor: pointer; transition: all 0.2s; }
+        .product-card:hover { border-color: #D4AF37; transform: translateY(-2px); }
+        .product-card.featured { grid-column: 1 / -1; display: flex; flex-direction: column; }
+        .card-img { height: 100px; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+        .card-img.math { background: linear-gradient(135deg, #1a237e, #4a90e2); }
+        .card-img.eng { background: linear-gradient(135deg, #4a148c, #9c27b0); }
+        .card-img.sci { background: linear-gradient(135deg, #004d40, #009688); }
+        .card-img.soc { background: linear-gradient(135deg, #bf360c, #ff7043); }
+        .card-img.biz { background: linear-gradient(135deg, #0d47a1, #42a5f5); }
+        .card-img.agr { background: linear-gradient(135deg, #33691e, #8bc34a); }
+        .card-img.home { background: linear-gradient(135deg, #880e4f, #ec407a); }
+        .card-img.civ { background: linear-gradient(135deg, #e65100, #ff9800); }
+        .card-img.ict { background: linear-gradient(135deg, #1b5e20, #4caf50); }
+        .card-img.phe { background: linear-gradient(135deg, #b71c1c, #ef5350); }
+        .card-img.bundle { background: linear-gradient(135deg, #D4AF37, #b8960f); }
+        .card-img.sub { background: linear-gradient(135deg, #311b92, #7c4dff); }
+        .card-info { padding: 12px; }
+        .card-info h3 { font-size: 0.9rem; margin-bottom: 4px; color: #e0e0e0; }
+        .card-info .meta { font-size: 0.7rem; color: #888; margin-bottom: 4px; }
+        .card-info .price { font-size: 1.1rem; font-weight: bold; color: #D4AF37; }
+        .card-info .old-price { font-size: 0.8rem; color: #666; text-decoration: line-through; margin-left: 6px; }
+        .card-info .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.65rem; font-weight: bold; margin-bottom: 4px; }
+        .badge-bestseller { background: #D4AF37; color: #1a237e; }
+        .badge-new { background: #27ae60; color: white; }
+        .badge-sale { background: #e74c3c; color: white; }
+        
+        /* Full-width card */
+        .wide-card { background: #1b2838; border-radius: 16px; padding: 20px; border: 1px solid #2a3a4a; margin-bottom: 12px; display: flex; gap: 16px; align-items: center; cursor: pointer; transition: all 0.2s; }
+        .wide-card:hover { border-color: #D4AF37; }
+        .wide-icon { font-size: 2.5rem; min-width: 60px; text-align: center; }
+        .wide-info { flex: 1; }
+        .wide-info h3 { color: #e0e0e0; margin-bottom: 4px; }
+        .wide-info p { color: #888; font-size: 0.8rem; }
+        .wide-price { font-size: 1.2rem; font-weight: bold; color: #D4AF37; text-align: right; }
+        
+        /* Modal */
+        .modal { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.9); z-index: 100; padding: 20px; overflow-y: auto; }
+        .modal.show { display: block; }
+        .modal-content { background: #1b2838; border-radius: 20px; padding: 24px; max-width: 500px; margin: 40px auto; border: 2px solid #2a3a4a; }
+        .modal-close { float: right; background: none; border: none; color: #888; font-size: 1.5rem; cursor: pointer; }
+        .modal h2 { color: #D4AF37; margin-bottom: 8px; font-size: 1.3rem; }
+        .modal .topics { color: #aaa; font-size: 0.85rem; margin: 12px 0; }
+        .modal .topics li { margin: 4px 0; }
+        .modal .btn { display: block; width: 100%; padding: 16px; border: none; border-radius: 14px; font-size: 1.1rem; font-weight: bold; cursor: pointer; margin-top: 16px; }
+        .btn-buy { background: linear-gradient(135deg, #D4AF37, #b8960f); color: #1a237e; }
+        .btn-sub { background: linear-gradient(135deg, #27ae60, #219a52); color: white; }
+        
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: #1a237e; display: flex; justify-content: space-around; padding: 10px 0; z-index: 50; border-top: 2px solid #D4AF37; }
+        .nav-item { background: none; border: none; color: #aaa; cursor: pointer; text-align: center; font-size: 0.65rem; padding: 4px 8px; }
+        .nav-item.active { color: #D4AF37; }
+        .nav-item span { display: block; font-size: 1.3rem; }
+        
+        .toast { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: #27ae60; color: white; padding: 12px 24px; border-radius: 30px; z-index: 200; font-weight: bold; }
+        
+        #search-box { width: 100%; padding: 12px 16px; border-radius: 25px; border: 1px solid #2a3a4a; background: #1b2838; color: #e0e0e0; font-size: 0.95rem; margin-bottom: 16px; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>👑 DomisLink Store</h1>
+    <p>JSS1-SSS3 • WAEC • NECO • NERDC • BECE</p>
+</div>
+
+<div class="container">
+    <input type="text" id="search-box" placeholder="🔍 Search subjects, bundles, or plans..." oninput="filterProducts()">
+
+    <!-- Categories -->
+    <div class="categories" id="categories">
+        <button class="cat-btn active" onclick="filterCategory('all', this)">All</button>
+        <button class="cat-btn" onclick="filterCategory('subscription', this)">⭐ Subscriptions</button>
+        <button class="cat-btn" onclick="filterCategory('bundle', this)">🎁 Bundles</button>
+        <button class="cat-btn" onclick="filterCategory('jss1', this)">JSS 1</button>
+        <button class="cat-btn" onclick="filterCategory('jss2', this)">JSS 2</button>
+        <button class="cat-btn" onclick="filterCategory('jss3', this)">JSS 3</button>
+        <button class="cat-btn" onclick="filterCategory('sss1', this)">SSS 1</button>
+        <button class="cat-btn" onclick="filterCategory('sss2', this)">SSS 2</button>
+        <button class="cat-btn" onclick="filterCategory('sss3', this)">SSS 3</button>
+    </div>
+
+    <!-- SUBSCRIPTIONS -->
+    <h3 class="section-title" id="sub-section"><span>⭐</span> Subscription Plans (All Access)</h3>
+    <div class="product-grid" id="subscription-grid">
+        <div class="product-card featured" data-category="subscription" data-name="Daily Plan">
+            <div class="card-img sub">📅</div>
+            <div class="card-info">
+                <span class="badge badge-bestseller">POPULAR</span>
+                <h3>Daily Access Pass</h3>
+                <div class="meta">All subjects • All levels • 24 hours</div>
+                <div class="price">₦300 <span class="old-price">₦500</span></div>
+            </div>
+        </div>
+        <div class="product-card" data-category="subscription" data-name="Weekly Plan">
+            <div class="card-img sub">📆</div>
+            <div class="card-info"><h3>Weekly Plan</h3><div class="meta">7 days full access</div><div class="price">₦1,000</div></div>
+        </div>
+        <div class="product-card" data-category="subscription" data-name="Monthly Plan">
+            <div class="card-img sub">📅</div>
+            <div class="card-info"><span class="badge badge-sale">BEST VALUE</span><h3>Monthly Plan</h3><div class="meta">30 days • Save 33%</div><div class="price">₦2,000</div></div>
+        </div>
+        <div class="product-card" data-category="subscription" data-name="Termly Plan">
+            <div class="card-img sub">📖</div>
+            <div class="card-info"><h3>Termly Plan</h3><div class="meta">90 days • Full term</div><div class="price">₦5,000</div></div>
+        </div>
+        <div class="product-card" data-category="subscription" data-name="Yearly Plan">
+            <div class="card-img sub">👑</div>
+            <div class="card-info"><h3>Yearly Plan</h3><div class="meta">365 days • Best deal</div><div class="price">₦10,000</div></div>
+        </div>
+    </div>
+
+    <!-- BUNDLES -->
+    <h3 class="section-title"><span>🎁</span> Bundles (Own Forever)</h3>
+    <div class="product-grid" id="bundle-grid">
+        <div class="product-card featured" data-category="bundle" data-name="JSS1 Bundle">
+            <div class="card-img bundle">📚</div>
+            <div class="card-info">
+                <span class="badge badge-bestseller">BESTSELLER</span>
+                <h3>JSS1 Complete Bundle</h3>
+                <div class="meta">10 subjects • 90+ topics • 270+ quizzes</div>
+                <div class="price">₦3,500 <span class="old-price">₦5,000</span></div>
+            </div>
+        </div>
+        <div class="product-card" data-category="bundle" data-name="Junior Bundle">
+            <div class="card-img bundle">🏫</div>
+            <div class="card-info"><h3>Junior School (JSS1-3)</h3><div class="meta">All JSS subjects</div><div class="price">₦8,000</div></div>
+        </div>
+        <div class="product-card" data-category="bundle" data-name="Senior Bundle">
+            <div class="card-img bundle">🎓</div>
+            <div class="card-info"><h3>Senior School (SSS1-3)</h3><div class="meta">All SSS subjects</div><div class="price">₦10,000</div></div>
+        </div>
+        <div class="product-card featured" data-category="bundle" data-name="Full Pack">
+            <div class="card-img bundle">👑</div>
+            <div class="card-info">
+                <span class="badge badge-new">COMPLETE</span>
+                <h3>Full School Pack</h3>
+                <div class="meta">JSS1-SSS3 • All subjects • 500+ topics</div>
+                <div class="price">₦15,000 <span class="old-price">₦25,000</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JSS1 SUBJECTS -->
+    <h3 class="section-title"><span>📚</span> JSS 1 Subjects</h3>
+    <div class="product-grid" id="jss1-grid">
+        <div class="product-card" data-category="jss1" data-name="JSS1 Mathematics" data-price="500" data-topics="11" data-quiz="33">
+            <div class="card-img math">🔢</div>
+            <div class="card-info"><h3>Mathematics</h3><div class="meta">11 topics • 33 quizzes</div><div class="price">₦500</div></div>
+        </div>
+        <div class="product-card" data-category="jss1" data-name="JSS1 English" data-price="500" data-topics="11" data-quiz="33">
+            <div class="card-img eng">📝</div>
+            <div class="card-info"><h3>English Studies</h3><div class="meta">11 topics • 33 quizzes</div><div class="price">₦500</div></div>
+        </div>
+        <div class="product-card" data-category="jss1" data-name="JSS1 Basic Science" data-price="500" data-topics="10" data-quiz="30">
+            <div class="card-img sci">🔬</div>
+            <div class="card-info"><h3>Basic Science</h3><div class="meta">10 topics • 30 quizzes</div><div class="price">₦500</div></div>
+        </div>
+        <div class="product-card" data-category="jss1" data-name="JSS1 Social Studies" data-price="500" data-topics="8" data-quiz="24">
+            <div class="card-img soc">🌍</div>
+            <div class="card-info"><h3>Social Studies</h3><div class="meta">8 topics • 24 quizzes</div><div class="price">₦500</div></div>
+        </div>
+        <div class="product-card" data-category="jss1" data-name="JSS1 Business Studies" data-price="500" data-topics="9" data-quiz="27">
+            <div class="card-img biz">💼</div>
+            <div class="card-info"><h3>Business Studies</h3><div class="meta">9 topics • 27 quizzes</div><div class="price">₦500</div></div>
+        </div>
+        <div class="product-card" data-category="jss1" data-name="JSS1 Agric Science" data-price="500" data-topics="9" data-quiz="27">
+            <div class="card-img agr">🌾</div>
+            <div class="card-info"><h3>Agric Science</h3><div class="meta">9 topics • 27 quizzes</div><div class="price">₦500</div></div>
+        </div>
+        <div class="product-card" data-category="jss1" data-name="JSS1 Home Economics" data-price="500" data-topics="9" data-quiz="27">
+            <div class="card-img home">🏠</div>
+            <div class="card-info"><h3>Home Economics</h3><div class="meta">9 topics • 27 quizzes</div><div class="price">₦500</div></div>
+        </div>
+        <div class="product-card" data-category="jss1" data-name="JSS1 Civic Education" data-price="500" data-topics="7" data-quiz="21">
+            <div class="card-img civ">⚖️</div>
+            <div class="card-info"><h3>Civic Education</h3><div class="meta">7 topics • 21 quizzes</div><div class="price">₦500</div></div>
+        </div>
+        <div class="product-card" data-category="jss1" data-name="JSS1 Computer Studies" data-price="500" data-topics="8" data-quiz="24">
+            <div class="card-img ict">💻</div>
+            <div class="card-info"><h3>Computer Studies</h3><div class="meta">8 topics • 24 quizzes</div><div class="price">₦500</div></div>
+        </div>
+        <div class="product-card" data-category="jss1" data-name="JSS1 PHE" data-price="500" data-topics="8" data-quiz="24">
+            <div class="card-img phe">⚽</div>
+            <div class="card-info"><h3>PHE</h3><div class="meta">8 topics • 24 quizzes</div><div class="price">₦500</div></div>
+        </div>
+    </div>
+</div>
+
+<!-- Product Modal -->
+<div class="modal" id="product-modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <h2 id="modal-title"></h2>
+        <p id="modal-desc" style="color:#aaa;"></p>
+        <ul class="topics" id="modal-topics"></ul>
+        <p style="font-size:1.5rem;font-weight:bold;color:#D4AF37;" id="modal-price"></p>
+        <button class="btn btn-buy" id="btn-buy-now" onclick="buyNow()">💳 Buy Now</button>
+        <button class="btn btn-sub" id="btn-subscribe" onclick="subscribeNow()" style="display:none;">⭐ Subscribe Now</button>
+    </div>
+</div>
+
+<nav class="bottom-nav">
+    <button class="nav-item active" onclick="window.location.href='/'"><span>🏠</span>App</button>
+    <button class="nav-item" onclick="window.location.reload()"><span>🛒</span>Store</button>
+</nav>
+
+<script>
+var currentProduct = null;
+var currentType = null; // 'subscription' or 'product'
+
+var subscriptions = {
+    'Daily Plan': { amount: 30000, days: 1, desc: 'All subjects, all levels. 24 hours access.' },
+    'Weekly Plan': { amount: 100000, days: 7, desc: 'All subjects, all levels. 7 days access.' },
+    'Monthly Plan': { amount: 200000, days: 30, desc: 'All subjects, all levels. 30 days access. Best value!' },
+    'Termly Plan': { amount: 500000, days: 90, desc: 'All subjects, all levels. Full school term.' },
+    'Yearly Plan': { amount: 1000000, days: 365, desc: 'All subjects, all levels. 365 days. Ultimate access.' }
+};
+
+var topicsList = {
+    'JSS1 Mathematics': ['Whole Numbers & Number Bases','Fractions, Decimals & Percentages','Factors, Multiples & Prime Numbers','Integers & Directed Numbers','Algebraic Processes & Expressions','Simple Linear Equations','Plane Shapes & Geometry','Perimeter, Area & Volume','Ratio, Proportion & Rates','Statistics & Data Representation','Probability (Introduction)'],
+    'JSS1 English': ['Parts of Speech','Adjectives & Adverbs','Conjunctions & Prepositions','Tenses & Sentence Construction','Direct & Indirect Speech','Active & Passive Voice','Reading Comprehension','Essay Writing','Letter Writing','Oral English','Vocabulary Development'],
+    'JSS1 Basic Science': ['Living & Non-Living Things','Classification','Cell & Human Development','Matter','Energy','Human Body','Earth & Space','Simple Machines','Pollution','Reproduction'],
+    'JSS1 Social Studies': ['Meaning & Scope','Physical Environment','The Family','Socialization','Culture','Social Issues','Community Living','Citizenship & Rights'],
+    'JSS1 Business Studies': ['Introduction','The Office','Office Equipment','Commerce','Bookkeeping','Banking','Insurance','Consumer Rights','Entrepreneurship'],
+    'JSS1 Agric Science': ['Meaning & Importance','Subsistence & Commercial','Crops','Soil','Farm Tools','Farm Animals','Fishery','Pests & Diseases','Food Preservation'],
+    'JSS1 Home Economics': ['Introduction','Family & Home','Cleaning','Personal Hygiene','Food & Nutrition','Cooking Methods','Sewing & Textiles','Consumer Education','Child Care'],
+    'JSS1 Civic Education': ['National Values','Rights & Duties','Democracy','Constitution','National Symbols','Government','Human Rights'],
+    'JSS1 Computer Studies': ['History of Computers','Hardware & Peripherals','Software','Operating System','Word Processing','Internet & Email','Computer Ethics','Programming Intro'],
+    'JSS1 PHE': ['Physical Fitness','Athletics','Ball Games','Swimming','First Aid','Nutrition','Drug Education','Hygiene'],
+    'JSS1 Bundle': ['ALL 10 JSS1 Subjects','90+ Topics','270+ Quiz Questions','Audio Support','Video Links','Offline Access'],
+    'Junior Bundle': ['ALL JSS1, JSS2, JSS3 Subjects','200+ Topics','600+ Quizzes','Complete Junior School'],
+    'Senior Bundle': ['ALL SSS1, SSS2, SSS3 Subjects','200+ Topics','600+ Quizzes','Complete Senior School'],
+    'Full Pack': ['JSS1 to SSS3 All Subjects','500+ Topics','1000+ Quizzes','Everything Included']
+};
+
+document.querySelectorAll('.product-card').forEach(function(card) {
+    card.addEventListener('click', function() {
+        var name = this.getAttribute('data-name');
+        var category = this.getAttribute('data-category');
+        var price = this.getAttribute('data-price');
+        
+        currentProduct = name;
+        
+        if (category === 'subscription') {
+            currentType = 'subscription';
+            var sub = subscriptions[name];
+            document.getElementById('modal-title').textContent = name;
+            document.getElementById('modal-desc').textContent = sub.desc;
+            document.getElementById('modal-topics').innerHTML = '<li>✅ All JSS1-SSS3 Subjects</li><li>✅ All Quizzes & Audio</li><li>✅ Offline Access</li><li>✅ ' + sub.days + ' days validity</li>';
+            document.getElementById('modal-price').textContent = '₦' + (sub.amount / 100).toFixed(0);
+            document.getElementById('btn-buy-now').style.display = 'none';
+            document.getElementById('btn-subscribe').style.display = 'block';
+        } else {
+            currentType = 'product';
+            document.getElementById('modal-title').textContent = name;
+            document.getElementById('modal-desc').textContent = (this.getAttribute('data-topics')||'') + ' topics • ' + (this.getAttribute('data-quiz')||'') + ' quizzes';
+            var topics = topicsList[name] || [];
+            var topicHtml = topics.map(function(t) { return '<li>📖 ' + t + '</li>'; }).join('');
+            document.getElementById('modal-topics').innerHTML = topicHtml;
+            document.getElementById('modal-price').textContent = '₦' + (price || '500');
+            document.getElementById('btn-buy-now').style.display = 'block';
+            document.getElementById('btn-subscribe').style.display = 'none';
+        }
+        
+        document.getElementById('product-modal').classList.add('show');
+    });
+});
+
+function closeModal() {
+    document.getElementById('product-modal').classList.remove('show');
+}
+
+function buyNow() {
+    var email = prompt('Enter your email for receipt:');
+    if (!email) return;
+    var amount = parseInt(document.getElementById('modal-price').textContent.replace('₦','')) * 100;
+    PaystackPop.setup({
+        key: 'pk_live_b9ce8aa36118824d41d49c09824d49161a824a5b',
+        email: email, amount: amount, currency: 'NGN',
+        ref: 'BUY_' + Date.now(),
+        metadata: { product: currentProduct, type: 'purchase' },
+        callback: function(r) {
+            var owned = JSON.parse(localStorage.getItem('owned') || '{}');
+            owned[currentProduct] = { ref: r.reference, date: new Date().toISOString() };
+            localStorage.setItem('owned', JSON.stringify(owned));
+            showToast('✅ ' + currentProduct + ' purchased! Access granted forever.');
+            closeModal();
+        },
+        onClose: function() { alert('Payment cancelled.'); }
+    }).openIframe();
+}
+
+function subscribeNow() {
+    var email = prompt('Enter your email for receipt:');
+    if (!email) return;
+    var sub = subscriptions[currentProduct];
+    PaystackPop.setup({
+        key: 'pk_live_b9ce8aa36118824d41d49c09824d49161a824a5b',
+        email: email, amount: sub.amount, currency: 'NGN',
+        ref: 'SUB_' + Date.now(),
+        metadata: { plan: currentProduct, days: sub.days, type: 'subscription' },
+        callback: function(r) {
+            var subData = { plan: currentProduct, expiry: Date.now() + (sub.days * 86400000), email: email, ref: r.reference };
+            localStorage.setItem('sub', JSON.stringify(subData));
+            showToast('✅ ' + currentProduct + ' activated! ' + sub.days + ' days access.');
+            closeModal();
+        },
+        onClose: function() { alert('Payment cancelled.'); }
+    }).openIframe();
+}
+
+function filterCategory(cat, btn) {
+    document.querySelectorAll('.cat-btn').forEach(function(b) { b.classList.remove('active'); });
+    if (btn) btn.classList.add('active');
+    document.querySelectorAll('.product-card').forEach(function(card) {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+            card.style.display = '';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+    // Show/hide sections
+    document.getElementById('sub-section').style.display = (cat === 'all' || cat === 'subscription') ? '' : 'none';
+    document.getElementById('subscription-grid').style.display = (cat === 'all' || cat === 'subscription') ? '' : 'none';
+    document.getElementById('bundle-grid').parentElement.style.display = (cat === 'all' || cat === 'bundle') ? '' : 'none';
+}
+
+function filterProducts() {
+    var query = document.getElementById('search-box').value.toLowerCase();
+    document.querySelectorAll('.product-card').forEach(function(card) {
+        var name = (card.getAttribute('data-name') || '').toLowerCase();
+        if (name.includes(query)) { card.style.display = ''; }
+        else { card.style.display = 'none'; }
+    });
+}
+
+function showToast(msg) {
+    var t = document.createElement('div');
+    t.className = 'toast';
+    t.textContent = msg;
+    document.body.appendChild(t);
+    setTimeout(function() { t.remove(); }, 3000);
+}
+
+// Check owned products
+var owned = JSON.parse(localStorage.getItem('owned') || '{}');
+if (Object.keys(owned).length > 0) {
+    console.log('Owned products:', Object.keys(owned));
+}
+</script>
+</body>
+</html>

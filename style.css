@@ -470,3 +470,38 @@ body {
 .paystack-btn:hover {
     background: #08944d;
 }
+
+/* Fix opaque text */
+.lesson-content-wrapper, #lesson-content, .swiper-slide {
+    color: #222 !important;
+    background: #fff !important;
+    opacity: 1 !important;
+    line-height: 1.6;
+    padding: 16px;
+}
+
+/* Fix textbook slides clickable */
+.swiper-slide {
+    cursor: pointer;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    min-height: 200px;
+}
+.swiper-slide:hover {
+    border-color: #4a90e2;
+}
+
+/* Make buttons visible in lesson */
+#speak-btn, #video-btn, #quiz-btn {
+    display: inline-block !important;
+    padding: 10px 16px;
+    margin: 4px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+#speak-btn { background: #e67e22; }
+#video-btn { background: #e74c3c; }
+#quiz-btn { background: #6f42c1; }
